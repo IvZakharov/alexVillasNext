@@ -1,7 +1,114 @@
 @import "styles/variables";
 
 .footer {
+  height: 376px;
+  background: black;
 
+  .icons{
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    max-width: 266px;
+    padding-top: 64px;
+    margin-left: 13px;
+    .social{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .menu{
+    margin-top: 124px;
+    margin-left: 127px;
+    ul{
+      li{
+        font-family: 'Clash Grotesk';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        /* identical to box height */
+
+        letter-spacing: 0.05em;
+
+        color: #FFFFFF;
+        margin-bottom: 19px;
+      }
+    }
+  }
+  .address{
+    width: 202px;
+    margin-left: 236px;
+    margin-top: 124px;
+    p{
+      font-family: 'Clash Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+
+      color: #FFFFFF;
+    }
+  }
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 124px;
+    margin-left: 127px;
+    .email{
+      font-family: 'Clash Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+
+      color: #FFFFFF;
+      margin-bottom: 9px;
+    }
+    .phone{
+      font-family: 'Clash Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      text-decoration-line: underline;
+
+      color: #FFFFFF;
+    }
+  }
+
+  .underFooter{
+    display: flex;
+    width: 539px;
+    margin: 91px auto 64px 25rem;
+    .privace{
+      font-family: 'Clash Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      text-decoration-line: underline;
+
+      color: rgba(255, 255, 255, 0.5);
+      margin-right: 225px;
+    }
+    .copyright{
+      font-family: 'Clash Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      /* identical to box height */
+
+      letter-spacing: 0.05em;
+
+      color: rgba(255, 255, 255, 0.5);
+
+    }
+  }
 }
 
 

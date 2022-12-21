@@ -1,6 +1,68 @@
 @import "styles/variables";
 
 .hero {
+  position: relative;
+  height: 100%;
+  .background{
+    position: absolute;
+    background: rgba(0, 0, 0);
+    top: 0;
+    z-index: -1;
+  }
+  .h1Block{
+    padding-top: 200px;
+    width: 1372px;
+    position: relative;
+    .h1{
+      text-transform: uppercase;
+      font-family: 'Marsden Slim';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 120px;
+      line-height: 110px;
+      /* identical to box height */
+      text-align: left;
+      letter-spacing: 0.025em;
+      height: 230px;
+      color: #FFFFFF;
+      span{
+        float: right;
+        color: #FF9900;
+      }
+    }
+    .subLable{
+      position: absolute;
+      top: 210px;
+      right: 0;
+      font-family: 'Marsden Slim';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      text-align: right;
+      letter-spacing: 0.025em;
+      text-decoration-line: underline;
+      color: white;
+    }
+  }
+  .textBlock{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    .text{
+      margin-top: 23px;
+      font-family: 'Clash Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 128.02%;
+      /* or 26px */
+      color: #FFFFFF;
+      white-space: break-spaces;
+      max-width: 384px;
+    }
+  }
 
 }
 
