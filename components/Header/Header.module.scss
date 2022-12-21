@@ -1,6 +1,42 @@
 @import "styles/variables";
 
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  .logo{
+    width: 266px;
+    height: 133px;
+
+  }
+  .links{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+  }
+  .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FF9900;
+    border-radius: 28px;
+    width: 180px;
+    height: 32px;
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+  }
 
 }
 
