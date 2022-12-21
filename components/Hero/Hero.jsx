@@ -3,7 +3,7 @@ import Image from "next/image";
 import FormContactHero from "../FormContactHero/FormContactHero";
 import HeroMenu from "../HeroMenu/HeroMenu";
 
-const Hero = ({imageUrl, h1first, h1second, text, subLable}) => {
+const Hero = ({h1first, h1second, text, subLable}) => {
     const heroArr = [
         {
             lable: 'CONSTRUCTION',
@@ -27,7 +27,7 @@ const Hero = ({imageUrl, h1first, h1second, text, subLable}) => {
               <div className={styles.background}>
                   <Image
                       alt="ALEX VILLAS"
-                      src={imageUrl}
+                      src={'/images/hero.png'}
                       quality={80}
                       width={1440}
                       height={780}

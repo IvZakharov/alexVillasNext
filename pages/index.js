@@ -11,7 +11,7 @@ export default function Home() {
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
     >
-      <Hero imageUrl={'/images/hero.png'} h1first={'Alex Villas'} h1second={'Agency'} text={'High-performing \nproperty agency \nin prime locations of Bali'} subLable={'STARTING FROM $189.000'}/>
+      <Hero h1first={'Alex Villas'} h1second={'Agency'} text={'High-performing \nproperty agency \nin prime locations of Bali'} subLable={'STARTING FROM $189.000'}/>
       {/*<div className={"text-5xl text-amber-600"}>Контент для главной</div>*/}
     </MainLayout>
   );
