@@ -37,6 +37,7 @@ const About = () => {
           />
         </div>
         <div className={styles.content}>
+          <p className={"text-2xl text-white"}> text 2 xl</p>
           <p className={styles.text}>
             Alex Villas is the industry-leading real estate company in Bali.
           </p>

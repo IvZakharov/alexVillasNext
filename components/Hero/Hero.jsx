@@ -4,7 +4,7 @@ import FormContactHero from "../FormContactHero/FormContactHero";
 import HeroMenu from "../HeroMenu/HeroMenu";
 import { Oswald } from "@next/font/google";
 
-const oswald = Oswald({ subsets: ["latin"] });
+const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
 
 const Hero = ({ h1first, h1second, text, subLable }) => {
   const heroArr = [

@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -22,6 +25,9 @@ module.exports = {
       spacing: {
         33: "8.313rem",
         61: "15.563rem",
+      },
+      fontFamily: {
+        sans: ["var(--font-mainFont)", ...fontFamily.sans],
       },
     },
   },
