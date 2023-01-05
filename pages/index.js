@@ -1,5 +1,8 @@
 import { MainLayout } from "../layouts/MainLayout";
 import Hero from "../components/Hero/Hero";
+import About from "../components/About/About";
+import WhyBali from "../components/WhyBali/WhyBali";
+import ProjectsGrid from "../components/ProjectsGrid/ProjectsGrid";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
         text={"High-performing \nproperty agency \nin prime locations of Bali"}
         subLable={"STARTING FROM $189.000"}
       />
+      <About />
+      <ProjectsGrid />
+      <WhyBali />
     </MainLayout>
   );
 }
