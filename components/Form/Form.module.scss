@@ -1,0 +1,48 @@
+
+.form{
+  position: absolute;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 518px;
+  height: 175px;
+
+  input{
+    margin-bottom: 29px;
+    background: unset;
+    border-bottom: 1px solid #858585;
+    color: white;
+    &::placeholder{
+      font-family: 'Clash Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 128.02%;
+      /* or 13px */
+      color: #FFFFFF;
+    }
+    &:focus, &:active, &:target{
+      background: unset;
+      color: #FFFFFF;
+    }
+  }
+  .buttonBlock{
+    display: flex;
+    align-items: center;
+    margin-top: 37px;
+    .button{
+      font-family: 'Marsden Slim';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      letter-spacing: 0.025em;
+      color: #FF9900;
+      margin-right: 22px;
+    }
+    .arrow{
+      display: flex;
+    }
+  }
+
+}
