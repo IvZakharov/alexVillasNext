@@ -22,9 +22,33 @@ export default function Home() {
       <ProjectsGrid />
       <WhyBali />
       <Cta
-        title={"GET IN TOUCH WITH US:"}
-        label={"HOPE TO HEAR FROM YOU!"}
+        title={"GET IN TOUCH \n <span>WITH US:</span>"}
+        label={"HOPE TO HEAR \n FROM YOU!"}
         imageUrl={"/images/cta/bg.jpg"}
+        fields={[
+          {
+            id: 0,
+            name: "userName",
+            type: "text",
+            required: true,
+            placeholder: "Your Name:",
+          },
+          {
+            id: 1,
+            name: "userPhone",
+            type: "tel",
+            required: true,
+            placeholder: "Phone number:",
+          },
+          {
+            id: 2,
+            name: "userMessage",
+            type: "text",
+            required: false,
+            placeholder: "Your message:",
+          },
+        ]}
+        submitButtonText={"Send"}
       />
     </MainLayout>
   );

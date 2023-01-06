@@ -62,7 +62,10 @@ const Hero = ({ h1first, h1second, text, subLable }) => {
             ""
           )}
         </div>
-        <HeroMenu menuArr={heroArr} />
+
+        <div className={"hidden md:block"}>
+          <HeroMenu menuArr={heroArr} />
+        </div>
       </div>
     </section>
   );
