@@ -17,14 +17,10 @@ module.exports = {
 
         screens: {
           sm: "576px",
-          md: "728px",
+          md: "768px",
           lg: "984px",
-          xl: "1440px",
+          xl: "1200px",
         },
-      },
-      spacing: {
-        33: "8.313rem",
-        61: "15.563rem",
       },
       fontFamily: {
         sans: ["var(--font-mainFont)", ...fontFamily.sans],

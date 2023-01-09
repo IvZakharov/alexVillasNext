@@ -1,36 +1,67 @@
 import styles from "./Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import HeroMenu from "../HeroMenu/HeroMenu";
+import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import {useEffect} from "react";
 
-const Header = () => {
+const Header = ({onClickMenu, openedMenu}) => {
+  const heroArr = [
+    {
+      lable: "CONSTRUCTION",
+      link: "/123123/",
+    },
+    {
+      lable: "AGENCY",
+      link: "#",
+    },
+    {
+      lable: "MANAGEMENT",
+      link: "#",
+    },
+    {
+      lable: "RENOVATION",
+      link: "#",
+    },
+  ];
+
+  const menuArr = [
+    {
+      link: "#",
+      lable: "Companies",
+    },
+    {
+      link: "#",
+      lable: "Projects",
+    },
+    {
+      link: "#",
+      lable: "Journal",
+    },
+  ]
   return(
   <header className={`${styles.header}`}>
-    <div className="container px-3 pt-6">
-      <div className="columns-5 flex items-center">
-        <div className={`${styles.logo}`}>
-          <Image
-              src={'/images/logo.png'}
-              quality={80}
-              width={266}
-              height={133}
-              alt={'logo'}
-          />
-        </div>
-        <Link href={'#'} className={`${styles.links} ml-36`}>
-          Companies
-        </Link>
-        <Link href={'#'} className={`${styles.links} ml-33`}>
-          Projects
-        </Link>
-        <Link href={'#'} className={`${styles.links} ml-33`}>
-          Journal
-        </Link>
-        <Link href={'#'} className={`${styles.contact} ml-60`}>
-          Contact Us
-        </Link>
-      </div>
+    <div className={styles.background}>
+      <Image
+          alt="ALEX VILLAS"
+          src={"/images/hero.png"}
+          quality={80}
+          fill
+          priority
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            opacity: 0.5,
+          }}
+      />
     </div>
-
+    <HeaderMenu menuarr={menuArr}  heroArr={heroArr}/>
+    {openedMenu && <MobileMenu menuarr={menuArr} heroArr={heroArr} OnClickClose={(bool) => onClickMenu(bool)} />}
+    <button onClick={() => onClickMenu(true)} className={`block md:hidden ${styles.menuBtn}`}>
+      <span></span>
+      <span></span>
+    </button>
 
   </header>
   );

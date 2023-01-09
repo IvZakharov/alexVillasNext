@@ -1,65 +1,123 @@
 @import "styles/variables";
 
 .hero {
-  position: relative;
   height: 100%;
-  .background{
-    position: absolute;
-    background: rgba(0, 0, 0);
-    top: 0;
-    z-index: -1;
-  }
   .h1Block{
-    padding-top: 200px;
-    width: 1372px;
+    margin-top: 113px;
+    width: fit-content;
     position: relative;
+    @media (max-width: 768px) {
+      margin-top: 10px;
+    }
     .h1{
       text-transform: uppercase;
-      font-style: normal;
       font-weight: 700;
-      font-size: 120px;
-      line-height: 110px;
+      font-size: 82px;
+      line-height: 85px;
       /* identical to box height */
       text-align: left;
       letter-spacing: 0.025em;
-      height: 230px;
+      height: 174px;
       color: #FFFFFF;
-      span{
-        float: right;
-        color: #FF9900;
+      position: relative;
+      @media (max-width: 983px) {
+        font-size: 75px;
+        line-height: 80px;
       }
+      @media (max-width: 768px) {
+        font-size: 65px;
+        line-height: 70px;
+        height: 130px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      @media (max-width: 473px) {
+        font-size: 55px;
+        line-height: 60px;
+        height: 110px;
+        margin-bottom: 35px;
+      }
+      @media (max-width: 409px) {
+        font-size: 45px;
+        line-height: 50px;
+        margin-bottom: 10px;
+      }
+      span{
+        float:right;
+        color: #FF9900;
+        @media (max-width: 768px) {
+          float: unset;
+        }
+      }
+
     }
     .subLable{
       position: absolute;
-      top: 210px;
-      right: 0;
+      top: 110px;
+      left: 0;
 
-      font-style: normal;
       font-weight: 700;
-      font-size: 26px;
-      line-height: 31px;
+      font-size: 18px;
+      line-height: 23px;
       text-align: right;
       letter-spacing: 0.025em;
       text-decoration-line: underline;
       color: white;
+      @media (max-width: 983px) {
+        top: 100px;
+      }
+      @media (max-width: 768px) {
+        top: 150px;
+        left: 25%;
+      }
+      @media (max-width: 473px) {
+        top: 125px;
+        left: 28%;
+        font-size: 17px;
+      }
+      @media (max-width: 409px) {
+        top: 105px;
+        font-size: 14px;
+      }
+    }
+  }
+  .FormText{
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      width: 100%;
     }
   }
   .textBlock{
-    width: 40%;
-    margin: 0 auto;
+    max-width: 305px;
     display: flex;
+    margin-left: 43px;
     justify-content: flex-end;
+    @media (max-width: 768px) {
+      width: fit-content;
+      max-width: unset;
+      justify-content: unset;
+      margin: 0 auto;
+    }
     .text{
-      margin-top: 23px;
-
-      font-style: normal;
+      margin-top: 15px;
       font-weight: 400;
-      font-size: 20px;
-      line-height: 128.02%;
+      font-size: 17px;
+      line-height: 25px;
       /* or 26px */
       color: #FFFFFF;
       white-space: break-spaces;
       max-width: 384px;
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 23px;
+        white-space: normal;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 409px) {
+        font-size: 14px;
+        text-align: center;
+      }
     }
   }
 

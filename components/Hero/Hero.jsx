@@ -26,43 +26,35 @@ const Hero = ({ h1first, h1second, text, subLable }) => {
     },
   ];
   return (
-    <section className={`container p-0`}>
+    <section className="container">
       <div className={styles.hero}>
-        <div className={styles.background}>
-          <Image
-            alt="ALEX VILLAS"
-            src={"/images/hero.png"}
-            quality={80}
-            width={1440}
-            height={780}
-            style={{
-              objectFit: "cover",
-              opacity: 0.5,
-            }}
-          />
-        </div>
         <div className={`${styles.h1Block} mx-auto`}>
           <h1 className={`${styles.h1} ${oswald.className}`}>
             {h1first}
             <br />
-            <span>{h1second}</span>
+            <span className={oswald.className}>{h1second}</span>
           </h1>
-          <FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />
-          {text !== null ? (
-            <div className={styles.textBlock}>
-              {" "}
-              <div className={styles.text}>{text}</div>
-            </div>
-          ) : (
-            ""
-          )}
+          <div className={styles.FormText}>
+            <FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />
+            {text !== null ? (
+                <div className={styles.textBlock}>
+                  {" "}
+                  <div className={styles.text}>{text}</div>
+                </div>
+            ) : (
+                ""
+            )}
+          </div>
           {subLable !== null ? (
-            <div className={styles.subLable}>{subLable}</div>
+            <div className={`${styles.subLable} ${oswald.className}`}>{subLable}</div>
           ) : (
             ""
           )}
         </div>
-        <HeroMenu menuArr={heroArr} />
+        <div className="hidden md:block">
+          <HeroMenu menuArr={heroArr} />
+        </div>
+
       </div>
     </section>
   );

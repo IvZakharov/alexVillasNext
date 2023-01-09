@@ -1,36 +1,61 @@
 .HeroMenu{
-  width: 1258px;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin-top: 95px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
   ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 150px;
-
+    justify-content: space-around;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
     li{
-      width: 352px;
+      width: 200px;
       height: 79px;
 
       display: flex;
       justify-content: center;
       align-items: center;
+      @media (max-width: 768px) {
+        height: fit-content;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #FFFFFF;
+      }
       &:hover{
         background: rgba(217, 217, 217, 0.3);
         border-radius: 7px;
+        @media (max-width: 768px) {
+          background: unset;
+          border-radius: unset;
+        }
+      }
+      &:first-child{
+        margin-left: 129px;
+        @media (max-width: 1439px) {
+          margin-left: unset;
+        }
+      }
+      &:last-child{
+        margin-right: 202px;
+        @media (max-width: 1439px) {
+          margin-right: unset;
+        }
       }
     }
     .links{
-      font-family: 'Marsden Slim';
-      font-style: normal;
       font-weight: 700;
-      font-size: 26px;
-      line-height: 31px;
+      font-size: 20px;
+      line-height: 25px;
       text-align: center;
       letter-spacing: 0.04em;
 
       color: #FFFFFF;
+      @media (max-width: 768px) {
+        font-size: 25px;
+      }
     }
   }
+
 }

@@ -12,9 +12,9 @@ export default function Home() {
       metaKeywords={"alex villas"}
     >
       <Hero
-        h1first={"Alex Villas"}
-        h1second={"Agency"}
-        text={"High-performing \nproperty agency \nin prime locations of Bali"}
+        h1first={"Инвестируйте"}
+        h1second={"На бали"}
+        text={"Invest safely in upscale \nproperties in the hottest \nlocations of Bali, Indonesia"}
         subLable={"STARTING FROM $189.000"}
       />
       <About />

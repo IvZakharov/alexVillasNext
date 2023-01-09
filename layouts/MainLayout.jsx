@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -11,6 +11,10 @@ export const MainLayout = ({
   metaKeywords,
   metaImage,
 }) => {
+    const [openedMenu, setOpenedMenu] = useState(false);
+    useEffect(()=>{
+        console.log(openedMenu)
+    })
   return (
     <>
       <Head>
@@ -19,7 +23,7 @@ export const MainLayout = ({
         <meta name="keywords" content={metaKeywords} />
         <meta property="og:image" content={metaImage} />
       </Head>
-      <Header />
+        <Header onClickMenu={(bool)=>setOpenedMenu(bool)}  openedMenu={openedMenu}/>
 
       <div className="main">{children}</div>
       <Footer />

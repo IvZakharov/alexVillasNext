@@ -1,8 +1,103 @@
 @import "styles/variables";
 
-.mobileMenu {
+.mobileMenu{
+  @media (min-width: 768px) {
+    display: none;
+  }
+  background: black;
+  position: fixed;
+  top:0;
+  z-index: 100;
+  min-width: 100vw;
+  height: 100vh;
+  .logo{
+    width: fit-content;
+  }
+  .nav{
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    .menu{
+      width: fit-content;
+      li{
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #FFFFFF;
+        &:last-child{
+          margin-bottom: unset;
+        }
+        .links{
+          display: block;
+          width: 200px;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 25px;
+          text-align: center;
+          text-transform: uppercase;
+          /* identical to box height */
+          color: #FFFFFF;
+          letter-spacing: 0.08em;
+        }
+      }
+    }
+  }
 
+  .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #FF9900;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 28px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    /* identical to box height */
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-top: 30px;
+  }
+
+  .menuBtn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 80;
+    top: -50px;
+    right: 50px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(80px);
+    transition: all 0.2s ease-in-out;
+
+    span {
+      width: 50px;
+      height: 5px;
+      margin: 5px 0;
+      background-color: white;
+      &:first-child{
+        transform: rotateZ(316deg);
+        transition: all 2s ease-in-out;
+      }
+      &:last-child {
+        position: absolute;
+        transform: rotateZ(43deg);
+      }
+    }
+  }
 }
+
 
 
 
