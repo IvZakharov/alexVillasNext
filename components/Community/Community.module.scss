@@ -1,0 +1,34 @@
+@import "styles/variables";
+
+.community {
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0.025em;
+      color: $primary;
+      transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      @media (min-width: 768px) {
+        font-size: 26px;
+        line-height: 31px;
+      }
+    }
+
+    i {
+      transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    }
+
+    &:hover {
+      i {
+        transform: translateX(10px);
+      }
+    }
+  }
+}

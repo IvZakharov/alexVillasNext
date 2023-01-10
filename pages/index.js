@@ -3,7 +3,11 @@ import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import WhyBali from "../components/WhyBali/WhyBali";
 import ProjectsGrid from "../components/ProjectsGrid/ProjectsGrid";
-import Cta from "../components/Cta/Cta";
+import CtaSection from "../components/CtaSection/CtaSection";
+import YoutubeSection from "../components/YoutubeSection";
+import Community from "../components/Community/Community";
+import Team from "../components/Team";
+import { team } from "../data/team";
 
 export default function Home() {
   return (
@@ -20,8 +24,23 @@ export default function Home() {
       />
       <About />
       <ProjectsGrid />
+
       <WhyBali />
-      <Cta
+
+      <Team teamArr={team} />
+      <Community imageUrl={"/images/team/all.jpg"} />
+      <div className={"mb-32"}>
+        <YoutubeSection
+          youtubeLinks={[
+            "https://youtu.be/BecSJqarWQ0",
+            "https://youtu.be/cwd3pbPUx08",
+            "https://www.youtube.com/watch?v=dZt-743GHlg",
+            "https://www.youtube.com/watch?v=Maf7jokcsM0",
+          ]}
+        />
+      </div>
+
+      <CtaSection
         title={"GET IN TOUCH \n <span>WITH US:</span>"}
         label={"HOPE TO HEAR \n FROM YOU!"}
         imageUrl={"/images/cta/bg.jpg"}

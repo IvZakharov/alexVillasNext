@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/Community/Community.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Community/Community.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Team/Card.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Team/Index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Team/Team.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Youtube/Thumb.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Youtube/Video.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Youtube/Youtube.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Youtube/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/youtubeParser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Cta/Cta.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Cta/Cta.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Cta/img/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JAjBaKiJ1TPcnuvbXP0FX57X6V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/iv/Documents/Projects/FullStack/alex-villas/frontend/components/Team&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/iv/Documents/Projects/FullStack/alex-villas/frontend/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/Team" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/components/Youtube" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/ui" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="" />
+      <created>1671527648174</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671527648174</updated>
+      <workItem from="1671527650797" duration="5067000" />
+      <workItem from="1671617380414" duration="134000" />
+      <workItem from="1671617518282" duration="336000" />
+      <workItem from="1671618567111" duration="11942000" />
+      <workItem from="1671700461407" duration="1935000" />
+      <workItem from="1672920628774" duration="6695000" />
+      <workItem from="1672947330483" duration="4906000" />
+      <workItem from="1673001599368" duration="1947000" />
+      <workItem from="1673003572221" duration="15392000" />
+      <workItem from="1673101114482" duration="962000" />
+      <workItem from="1673102486725" duration="10549000" />
+      <workItem from="1673258884441" duration="24767000" />
+      <workItem from="1673344215999" duration="1472000" />
+      <workItem from="1673346159306" duration="11118000" />
+      <workItem from="1673362988981" duration="6587000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

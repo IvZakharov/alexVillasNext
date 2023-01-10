@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.0.7",
+    "@next/font": "^13.1.0",
     "axios": "^1.2.1",
+    "eslint-config-next": "^13.1.0",
     "html-react-parser": "^3.0.6",
-    "next": "13.0.7",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-hook-form": "^7.41.0",
-    "sass": "^1.57.1"
+    "react-intersection-observer": "^9.4.1",
+    "react-youtube": "^10.1.0",
+    "sass": "^1.57.1",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
