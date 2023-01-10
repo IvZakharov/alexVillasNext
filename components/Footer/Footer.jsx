@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
       <footer className={`${styles.footer} container`}>
-          <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between">
+          <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between pt-24">
               <div className={styles.icons}>
                       <Image
                           src={'/images/logo.png'}
