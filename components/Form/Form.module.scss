@@ -1,0 +1,70 @@
+
+.form{
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+
+  @media (min-width: 768px) {
+    max-width: 380px;
+  }
+
+  .field {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 230px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 30px;
+      max-width: none;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 45px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input{
+      width: 100%;
+      background: unset;
+      border-bottom: 1px solid #858585;
+      color: white;
+      font-size: 14px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      padding: 5px 0;
+      transition: border-color .2s ease-in-out;
+
+
+      &::placeholder{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 128%;
+        color: #FFFFFF;
+      }
+      &:focus, &:active, &:target{
+        background: unset;
+        color: #FFFFFF;
+        border-bottom-color: #fff;
+      }
+    }
+
+  }
+
+  .policyLink {
+    text-align: right;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 120%;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    transition: color .2s ease-in-out;
+
+    &:hover, &:focus {
+      color: darken(white, 20);
+    }
+
+  }
+}

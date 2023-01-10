@@ -1,8 +1,42 @@
 @import "styles/variables";
 
 .button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  min-width: 180px;
+  width: 180px;
+  background-color: transparent;
+  padding: 10px;
 
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+
+  text-align: center;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  border-radius: 50px;
+  border: 1px solid #FFFFFF;
+
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(#fff, .15)
+  }
+
+  &:active {
+    background-color: rgba(#fff, .3)
+  }
+
+  &:focus {
+    background-color: rgba(#fff, .3)
+  }
 }
+
+
 
 
 

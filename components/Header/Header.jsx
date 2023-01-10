@@ -1,10 +1,7 @@
 import styles from "./Header.module.scss";
 import Image from "next/image";
-import Link from "next/link";
-import HeroMenu from "../HeroMenu/HeroMenu";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import {useEffect} from "react";
 
 const Header = ({onClickMenu, openedMenu}) => {
   const heroArr = [
