@@ -19,10 +19,71 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-
 }
 
 * {
   box-sizing: border-box;
 }
+
+.teamSwiper {
+  .swiper-slide {
+    height: auto !important;
+  }
+}
+
+.swiper-pagination-bullet-active{
+  background-color: $primary !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: $primary !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+
+  span {
+    color: $primary;
+  }
+  
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 0.025em;
+  color: $primary;
+  text-transform: uppercase;
+
+  span {
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
 

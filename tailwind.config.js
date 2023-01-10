@@ -1,5 +1,3 @@
-/** @type {import('tailwindcss').Config} */
-
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -14,7 +12,7 @@ module.exports = {
       container: {
         padding: "1.25rem",
         center: true,
-        screens: { sm: "576px", md: "768px", lg: "984px", xl: "1200px" },
+        screens: { sm: "576px", md: "768px", lg: "984px", xl: "1240px" },
       },
       fontFamily: {
         sans: ["var(--font-mainFont)", ...fontFamily.sans],
