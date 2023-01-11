@@ -1,11 +1,9 @@
 import styles from "./CtaSection.module.scss";
 import React from "react";
 import Image from "next/image";
-import { Oswald } from "@next/font/google";
-import Form from "../Form/Form";
-import parse from 'html-react-parser'
 
-const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
+import Form from "../Form/Form";
+import parse from "html-react-parser";
 
 const CtaSection = ({
   title,
@@ -40,11 +38,11 @@ const CtaSection = ({
       >
         <div className={"md:col-end-3 md:col-span-1"}>
           <div className={styles.content}>
-            <h2 className={`${styles.title} ${oswald.className}`}>{parse(title)}</h2>
+            <h2 className={`${styles.title}`}>{parse(title)}</h2>
             {description && <p className={styles.description}>{description}</p>}
           </div>
           {label && (
-            <div className={`${styles.label} ${oswald.className}`}>
+            <div className={`${styles.label}`}>
               <p>{label}</p>
             </div>
           )}

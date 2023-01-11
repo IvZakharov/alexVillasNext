@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]" date="1673436416641" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 11.01.2023, 14:26 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="components/CtaSection/img/bg.jpeg" />
+    <option name="AFTER_PATH" value="components/CtaSection/img/bg.jpeg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/bg.jpeg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="components/YoutubeSection/img/placeholder.jpg" />
+    <option name="AFTER_PATH" value="components/YoutubeSection/img/placeholder.jpg" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/placeholder.jpg" />
+  </binary>
+</changelist>

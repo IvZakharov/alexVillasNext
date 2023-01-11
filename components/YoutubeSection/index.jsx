@@ -4,9 +4,6 @@ import Link from "next/link";
 import Video from "./Video";
 import Thumb from "./Thumb";
 
-import { Oswald } from "@next/font/google";
-const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs } from "swiper";
 
@@ -22,7 +19,7 @@ const Index = ({ youtubeLinks }) => {
     <section className={styles.youtube}>
       <div className={"container grid grid-cols-1 md:grid-cols-2 gap-8"}>
         <div className={"md:flex md:flex-col"}>
-          <h2 className={`h2 mb-8 xl:mb-16 ${oswald.className}`}>
+          <h2 className={`h2 mb-8 xl:mb-16`}>
             <span>SUBSCRIBE</span>
             <br />
             TO OUR
@@ -81,7 +78,7 @@ const Index = ({ youtubeLinks }) => {
           </ul>
 
           <Link href={""} className={styles.link}>
-            <span className={oswald.className}>STAY UP TO DATE</span>
+            <span>STAY UP TO DATE</span>
             <i>
               <svg
                 width="73"

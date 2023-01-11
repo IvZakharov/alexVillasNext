@@ -1,4 +1,4 @@
-export const team = [
+const teamData = [
   {
     id: 0,
     name: "ALEX STEFAN",
@@ -121,3 +121,5 @@ export const team = [
     linkedinLink: null,
   },
 ];
+
+export default teamData;

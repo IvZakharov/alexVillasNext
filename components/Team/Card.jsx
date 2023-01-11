@@ -1,11 +1,8 @@
 import styles from "./Team.module.scss";
-
-import { Oswald } from "@next/font/google";
 import Image from "next/image";
 import { youtubeParser } from "../../utils/youtubeParser";
 import React from "react";
 import Link from "next/link";
-const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
 
 const Card = ({
   name,
@@ -34,9 +31,7 @@ const Card = ({
         />
       </div>
       <div className={styles.info}>
-        <h3 className={`${styles.name} ${oswald.className} mb-4 md:mb-6`}>
-          {name}
-        </h3>
+        <h3 className={`${styles.name} mb-4 md:mb-6`}>{name}</h3>
         <p className={"text mb-4 md:mb-7 text-center"}>{position}</p>
         <p className={"text mb-4 md:mb-7 text-center"}>{description}</p>
         <ul className={styles.socials}>

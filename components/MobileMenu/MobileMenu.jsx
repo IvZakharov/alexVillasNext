@@ -3,49 +3,49 @@ import HeroMenu from "../HeroMenu/HeroMenu";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Oswald } from "@next/font/google";
 
-const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
-
-const MobileMenu = ({menuarr, heroArr, OnClickClose}) => {
-  return(
-      <div className={`pt-6 ${styles.mobileMenu}`}>
-          <div className="container flex flex-col md:items-center md:justify-between md:flex-row">
-              <div className={`${styles.logo}`}>
-                <Link href={'/'} onClick={() => OnClickClose(false)}>
-                    <Image
-                        src={'/images/logo.png'}
-                        quality={100}
-                        width={202}
-                        height={67}
-                        alt={'logo'}
-                    />
-                </Link>
-              </div>
-              <nav className={styles.nav}>
-                  <ul className={`${styles.menu} flex flex-col md:flex-row`}>
-                      {menuarr && menuarr.map((obj, i)=>(
-                          <li key={i}>
-                              <Link href={obj.link} className={`${styles.links} ${oswald.className}`}>
-                                  {obj.lable}
-                              </Link>
-                          </li>
-                      ))}
-                  </ul>
-              </nav>
-              <div className="md:hidden flex flex-col justify-center items-center">
-                  <HeroMenu menuArr={heroArr} />
-              </div>
-              <Link href={'#'} className={`${styles.contact} ${oswald.className}`}>
-                  Contact Us
-              </Link>
-              <button onClick={() => OnClickClose(false)} className={`block md:hidden ${styles.menuBtn}`}>
-                  <span></span>
-                  <span></span>
-              </button>
-          </div>
+const MobileMenu = ({ menuarr, heroArr, OnClickClose }) => {
+  return (
+    <div className={`pt-6 ${styles.mobileMenu}`}>
+      <div className="container flex flex-col md:items-center md:justify-between md:flex-row">
+        <div className={`${styles.logo}`}>
+          <Link href={"/"} onClick={() => OnClickClose(false)}>
+            <Image
+              src={"/images/logo.png"}
+              quality={100}
+              width={202}
+              height={67}
+              alt={"logo"}
+            />
+          </Link>
+        </div>
+        <nav className={styles.nav}>
+          <ul className={`${styles.menu} flex flex-col md:flex-row`}>
+            {menuarr &&
+              menuarr.map((obj, i) => (
+                <li key={i}>
+                  <Link href={obj.link} className={`${styles.links} `}>
+                    {obj.lable}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </nav>
+        <div className="md:hidden flex flex-col justify-center items-center">
+          <HeroMenu menuArr={heroArr} />
+        </div>
+        <Link href={"#"} className={`${styles.contact}`}>
+          Contact Us
+        </Link>
+        <button
+          onClick={() => OnClickClose(false)}
+          className={`block md:hidden ${styles.menuBtn}`}
+        >
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
+    </div>
   );
 };
 

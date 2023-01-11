@@ -1,6 +1,6 @@
 import styles from "./Team.module.scss";
 import React from "react";
-import { Oswald } from "@next/font/google";
+
 import Card from "./Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,8 +10,6 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
-
-const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
 
 const Index = ({ teamArr }) => {
   const [cardHover, setCardHover] = React.useState(false);
@@ -34,7 +32,7 @@ const Index = ({ teamArr }) => {
         }
       >
         <div>
-          <h2 className={`h2 mb-8 md:mb-0 ${oswald.className}`}>
+          <h2 className={`h2 mb-8 md:mb-0`}>
             <span>We are</span> <br /> ALEX <br /> VILLAS!
           </h2>
         </div>

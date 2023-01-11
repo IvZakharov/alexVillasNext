@@ -1,10 +1,8 @@
 import styles from "./Community.module.scss";
 import React from "react";
 import Image from "next/image";
-import { Oswald } from "@next/font/google";
-import Link from "next/link";
 
-const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
+import Link from "next/link";
 
 const Community = ({ imageUrl }) => {
   return (
@@ -15,7 +13,7 @@ const Community = ({ imageUrl }) => {
         }
       >
         <div className={"md:flex md:flex-col"}>
-          <h2 className={`h2 mb-8 ${oswald.className}`}>
+          <h2 className={`h2 mb-8`}>
             <span>COMMUNITY</span> <br /> SUPPORT
           </h2>
 
@@ -35,7 +33,7 @@ const Community = ({ imageUrl }) => {
           </p>
 
           <Link href={"#"} className={styles.link}>
-            <span className={oswald.className}>MAKE BALI A BETTER PLACE</span>
+            <span>MAKE BALI A BETTER PLACE</span>
             <i>
               <svg
                 width="73"
