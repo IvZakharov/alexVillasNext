@@ -6,7 +6,7 @@ import Link from "next/link";
 const HeaderMenu = ({ menuarr }) => {
   return (
     <div className={`container pt-6 `}>
-      <div className="flex flex-col mb:items-center mb:justify-between md:flex-row">
+      <div className="flex flex-col mb:items-center mb:justify-between md:flex-row md:items-center">
         <div className={`${styles.logo}`}>
           <Image
             src={"/images/logo.png"}
@@ -16,8 +16,8 @@ const HeaderMenu = ({ menuarr }) => {
             alt={"logo"}
           />
         </div>
-        <nav className={`${styles.nav} hidden md:block`}>
-          <ul className={`${styles.menu} flex flex-col md:flex-row`}>
+        <nav className={`${styles.nav} hidden md:block `}>
+          <ul className={`${styles.menu} flex flex-col md:flex-row `}>
             {menuarr &&
               menuarr.map((obj, i) => (
                 <li key={i}>

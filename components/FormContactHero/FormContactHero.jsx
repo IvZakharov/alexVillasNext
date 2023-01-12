@@ -1,10 +1,11 @@
 import styles from "./FormContactHero.module.scss";
+import TextField from "../../ui/TextField/TextField";
 
 const FormContactHero = ({ hrefLabel }) => {
   return (
     <form className={styles.FormContactHero}>
-      <input type="text" name="Name" placeholder="Your name: " />
-      <input type="text" name="Phone number" placeholder="Phone number: " />
+      <TextField type={'text'} name={'Name'} placeholder={'Your name: '} required/>
+      <TextField type={'text'} name={'Phone'} placeholder={'Phone number: '} required/>
       <button type="submit" className={`${styles.button}`}>
         {hrefLabel}
         <div className={styles.arrow}>

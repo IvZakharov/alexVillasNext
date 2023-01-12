@@ -10,6 +10,7 @@ const MainLayout = ({
   metaKeywords,
   metaImage,
 }) => {
+  const [openedMenu, setOpenedMenu] = React.useState(false);
   return (
     <>
       <Head>
@@ -18,7 +19,7 @@ const MainLayout = ({
         <meta name="keywords" content={metaKeywords} />
         <meta property="og:image" content={metaImage} />
       </Head>
-      <Header />
+      <Header onClickMenu={(bool)=>setOpenedMenu(bool)}  openedMenu={openedMenu}/>
 
       <div className="main">{children}</div>
       <Footer />

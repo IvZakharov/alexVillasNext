@@ -1,0 +1,39 @@
+.Contact{
+    width: 60%;
+    margin-top: 57px;
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    flex-wrap: wrap;
+    .callWrite{
+        width: 263px;
+        &:nth-child(even){
+            margin-left: 30px;
+        }
+        .lable{
+            font-family: var(--oswald-font);
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 31px;
+            letter-spacing: 0.025em;
+            margin-bottom: 15px;
+        }
+        .where{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+            text-decoration-line: underline;
+            margin-bottom: 50px;
+        }
+        .whereAddress{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+        }
+        .margin{
+            margin-left: -5px;
+        }
+    }
+}

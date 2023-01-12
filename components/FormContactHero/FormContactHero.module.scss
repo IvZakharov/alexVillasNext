@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 295px;
   height: 175px;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     width: 100%;
     height: auto;
   }
@@ -23,7 +23,7 @@
       line-height: 15px;
       /* or 13px */
       color: #FFFFFF;
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         font-size: 14px;
       }
     }
@@ -36,11 +36,11 @@
       display: flex;
       align-items: center;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 13px;
       line-height: 23px;
       letter-spacing: 0.025em;
       color: #FF9900;
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         font-size: 15px;
         width: fit-content;
         margin: 0 auto;

@@ -1,0 +1,58 @@
+.PatternHouse{
+  margin-top: 70px;
+  color: #FFFFFF;
+  .about{
+    display: flex;
+    justify-content: space-between;
+    .block{
+      margin-right: 90px;
+      .BigNum{
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 74px;
+        margin-bottom: 7px;
+      }
+      .bedroom{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.025em;
+        margin-bottom: 5px;
+      }
+      .houseformat{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.025em;
+      }
+    }
+  }
+  .second{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    .download{
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      text-align: center;
+      letter-spacing: 0.025em;
+      font-family: var(--oswald-font);
+      color: #FF9900;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .contact{
+      font-family: var(--oswald-font);
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 31px;
+      text-align: center;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+

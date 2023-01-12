@@ -90,5 +90,40 @@ a {
     line-height: 50px;
   }
 }
+.h1{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 41px;
+  /* identical to box height */
+  text-align: left;
+  letter-spacing: 0.025em;
+  height: 174px;
+  color: #FFFFFF;
+  @media (min-width: 330px) {
+    font-size: 45px;
+    line-height: 52px;
+  }
+  @media (min-width: 370px) {
+    font-size: 50px;
+    line-height: 57px;
+  }
+  @media (min-width: 405px) {
+    font-size: 55px;
+    line-height: 62px;
+  }
+  @media (min-width: 470px) {
+    font-size: 65px;
+    line-height: 70px;
+  }
+  @media (min-width: 768px) {
+    font-size: 75px;
+    line-height: 80px;
+  }
+  @media (min-width: 984px) {
+    font-size: 82px;
+    line-height: 85px;
+  }
+}
 
 

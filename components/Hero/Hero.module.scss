@@ -4,48 +4,39 @@
   height: 100%;
   .h1Block{
     margin-top: 113px;
-    width: fit-content;
+    width: 55%;
     position: relative;
-    @media (max-width: 768px) {
+    @media (max-width: 1239px) {
+      width: 70%;
+    }
+    @media (max-width: 983px) {
+      width: 80%;
+    }
+    @media (max-width: 767px) {
       margin-top: 10px;
+      width: 100%;
     }
     .h1{
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 82px;
-      line-height: 85px;
-      /* identical to box height */
-      text-align: left;
-      letter-spacing: 0.025em;
-      height: 174px;
-      color: #FFFFFF;
       position: relative;
-      @media (max-width: 983px) {
-        font-size: 75px;
-        line-height: 80px;
-      }
-      @media (max-width: 768px) {
-        font-size: 65px;
-        line-height: 70px;
+      @media (max-width: 767px) {
         height: 130px;
         text-align: center;
         margin-bottom: 40px;
       }
       @media (max-width: 473px) {
-        font-size: 55px;
-        line-height: 60px;
         height: 110px;
         margin-bottom: 35px;
       }
-      @media (max-width: 409px) {
-        font-size: 45px;
-        line-height: 50px;
-        margin-bottom: 10px;
+      @media (max-width: 405px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 329px) {
+        margin-bottom: 0px;
       }
       span{
         float:right;
         color: #FF9900;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           float: unset;
         }
       }
@@ -66,24 +57,44 @@
       @media (max-width: 983px) {
         top: 100px;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
+        top: 150px;
+        left: 26%;
+      }
+      @media (max-width: 552px) {
         top: 150px;
         left: 25%;
-      }
-      @media (max-width: 473px) {
-        top: 125px;
-        left: 28%;
         font-size: 17px;
       }
-      @media (max-width: 409px) {
+      @media (max-width: 512px) {
+        top: 150px;
+        left: 23%;
+      }
+      @media (max-width: 469px) {
+        top: 125px;
+        left: 20%;
+      }
+      @media (max-width: 405px) {
+        top: 115px;
+        font-size: 16px;
+        left: 15%;
+      }
+      @media (max-width: 369px) {
         top: 105px;
-        font-size: 14px;
+        left: 15%;
+      }
+      @media (max-width: 329px) {
+        top: 82px;
+        left: 10%;
+      }
+      @media (max-width: 297px) {
+        left: 3%;
       }
     }
   }
   .FormText{
     display: flex;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       flex-direction: column-reverse;
       width: 100%;
     }
@@ -93,7 +104,7 @@
     display: flex;
     margin-left: 43px;
     justify-content: flex-end;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       width: fit-content;
       max-width: unset;
       justify-content: unset;
@@ -108,15 +119,19 @@
       color: #FFFFFF;
       white-space: break-spaces;
       max-width: 384px;
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         font-size: 16px;
         line-height: 23px;
         white-space: normal;
         margin-bottom: 10px;
       }
-      @media (max-width: 409px) {
+      @media (max-width: 405px) {
         font-size: 14px;
         text-align: center;
+      }
+      span{
+        text-decoration-line: underline;
+        color: #FFFFFF;
       }
     }
   }

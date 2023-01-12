@@ -5,7 +5,7 @@
   width: 750px;
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: none;
     margin-top: 20px;
     width: fit-content;
@@ -18,7 +18,7 @@
     @media (max-width: 1000px) {
       margin-left: 70px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       margin-left: unset;
     }
     li{
@@ -26,7 +26,7 @@
       @media (max-width: 1000px) {
         margin-right: 50px;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         margin-right: unset;
         margin-bottom: 20px;
       }
@@ -68,7 +68,7 @@
   @media (max-width: 983px) {
     font-size: 11px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
