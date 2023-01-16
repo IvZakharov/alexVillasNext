@@ -23,8 +23,22 @@ const Hero = ({ h1first, h1second, text, subLable }) => {
     },
   ];
   return (
-    <section className="container">
-      <div className={styles.hero}>
+    <section className={styles.hero}>
+      <div className={styles.background}>
+        <Image
+          alt="ALEX VILLAS"
+          src={"/images/hero.png"}
+          quality={80}
+          fill
+          priority
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            opacity: 0.5,
+          }}
+        />
+      </div>
+      <div className="container">
         <div className={`${styles.h1Block} mx-auto`}>
           <h1 className={`${styles.h1}`}>
             {h1first}

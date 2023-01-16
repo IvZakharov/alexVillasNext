@@ -1,0 +1,203 @@
+@import "styles/variables";
+
+.grid {
+
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+
+  .info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 60px 30px;
+    z-index: 1;
+    background-color: rgba(black, .7);
+
+
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.025em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      white-space: pre-line;
+
+      @media (min-width: 1200px) {
+        font-size: 24px;
+      }
+    }
+
+    .titleLarge {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 0.025em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      white-space: pre-line;
+
+
+      @media (min-width: 768px) {
+        font-size: 38px;
+        line-height: 50px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 7px;
+      }
+
+      span {
+        font-family: var(--oswald-font);
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 31px;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+        position: relative;
+        white-space: nowrap;
+
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: white;
+        }
+      }
+    }
+
+    .properties {
+      margin-bottom: 30px;
+
+      li {
+        margin-bottom: 7px;
+      }
+    }
+
+
+  }
+
+  .soldOut {
+    position: relative;
+    z-index: 10;
+    background: rgba(94, 94, 94, 0.6);
+    border: 2px solid #FF9900;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-family: var(--oswald-font);
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    p {
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 0.025em;
+    }
+  }
+
+  .bgImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover {
+    .soldOut {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.cardLarge {
+  height: 100%;
+  min-height: 260px;
+
+  @media (min-width: 768px) {
+    min-height: 400px;
+  }
+
+  @media (min-width: 984px) {
+
+    height: 100%;
+  }
+
+  .info {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    @media (min-width: 984px) {
+      padding-top: 180px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 100px;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+
+  span {
+    font-family: var(--oswald-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    white-space: nowrap;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    color: $primary;
+    transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @media (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  i {
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &:hover {
+    i {
+      transform: translateX(10px);
+    }
+  }
+}
+
+
+
+
+
+

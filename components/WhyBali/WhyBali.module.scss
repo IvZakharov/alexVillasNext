@@ -1,7 +1,91 @@
 @import "styles/variables";
 
 .whyBali {
+  .advantagesItem {
+    margin-bottom: 30px;
 
+    @media (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+
+    a {
+      text-decoration: underline;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: darken($primary, 10);
+      }
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.025em;
+    color: #FFFFFF;
+
+    span {
+      color: $primary;
+    }
+
+    @media (min-width: 984px) {
+      font-size: 22px;
+      line-height: 31px;
+    }
+  }
+
+  .hotspot {
+
+    padding: 30px;
+    border: 1px solid white;
+    border-radius: 9px;
+
+    @media (min-width: 1240px) {
+      padding-left: 36px;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.025em;
+      color: #FF9900;
+
+      
+      @media (min-width: 768px) {
+        font-size: 26px;
+        line-height: 31px;
+      }
+    }
+
+    .list {
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        img {
+          margin-right: 8px;
+          width: 16px;
+          height: 16px;
+        }
+        
+        @media (min-width: 768px) {
+          img {
+            margin-right: 16px;
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
 }
 
 

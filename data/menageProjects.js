@@ -1,0 +1,17 @@
+export const menageProjects = [
+  { id: 0, imageUrl: "/images/menageProjects/1.jpg" },
+  { id: 1, imageUrl: "/images/menageProjects/2.jpg" },
+  { id: 2, imageUrl: "/images/menageProjects/3.jpg" },
+  { id: 3, imageUrl: "/images/menageProjects/1.jpg" },
+  { id: 4, imageUrl: "/images/menageProjects/2.jpg" },
+  { id: 5, imageUrl: "/images/menageProjects/3.jpg" },
+  { id: 6, imageUrl: "/images/menageProjects/1.jpg" },
+  { id: 7, imageUrl: "/images/menageProjects/2.jpg" },
+  { id: 8, imageUrl: "/images/menageProjects/3.jpg" },
+  { id: 9, imageUrl: "/images/menageProjects/1.jpg" },
+  { id: 10, imageUrl: "/images/menageProjects/2.jpg" },
+  { id: 11, imageUrl: "/images/menageProjects/3.jpg" },
+  { id: 12, imageUrl: "/images/menageProjects/1.jpg" },
+  { id: 13, imageUrl: "/images/menageProjects/2.jpg" },
+  { id: 14, imageUrl: "/images/menageProjects/3.jpg" },
+];

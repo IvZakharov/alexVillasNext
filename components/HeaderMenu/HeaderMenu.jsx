@@ -6,7 +6,7 @@ import Link from "next/link";
 const HeaderMenu = ({ menuarr }) => {
   return (
     <div className={`container pt-6 `}>
-      <div className="flex flex-col mb:items-center mb:justify-between md:flex-row">
+      <div className="flex flex-col md:items-center mb:justify-between md:flex-row">
         <div className={`${styles.logo}`}>
           <Image
             src={"/images/logo.png"}

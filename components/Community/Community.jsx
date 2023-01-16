@@ -9,7 +9,7 @@ const Community = ({ imageUrl }) => {
     <section className={styles.community}>
       <div
         className={
-          "container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-10"
+          "container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10"
         }
       >
         <div className={"md:flex md:flex-col"}>
@@ -19,7 +19,7 @@ const Community = ({ imageUrl }) => {
 
           <p className={"text mb-4 md:mt-auto"}>
             We firmly believe that conscious companies must contribute to
-            <span>development of local communities.</span>
+            <span> development of local communities.</span>
           </p>
 
           <p className={"text mb-4"}>
@@ -27,9 +27,10 @@ const Community = ({ imageUrl }) => {
             companies <span>to make beautiful things happen.</span>
           </p>
 
-          <p className={"text mb-4"}>
+          <p className={"text mb-4 md:mb-9"}>
             If this resonates with your vision, let’s work together on
-            <span>making Bali a better place</span> for locals and expats alike.
+            <span> making Bali a better place</span> for locals and expats
+            alike.
           </p>
 
           <Link href={"#"} className={styles.link}>
@@ -50,7 +51,7 @@ const Community = ({ imageUrl }) => {
             </i>
           </Link>
         </div>
-        <div className={"xl:col-span-3"}>
+        <div className={"xl:col-span-2"}>
           {imageUrl && (
             <Image
               alt={"alex villas team"}
@@ -58,7 +59,6 @@ const Community = ({ imageUrl }) => {
               quality={80}
               width={1000}
               height={500}
-              priority
               sizes="(max-width: 768px) 100vw,
                   (max-width: 1200px) 50vw,
                   77vw"

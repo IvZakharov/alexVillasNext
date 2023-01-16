@@ -1,5 +1,4 @@
 import "../styles/globals.scss";
-
 import localFont from "@next/font/local";
 import { Oswald } from "@next/font/google";
 const kyivSans = localFont({ src: "../fonts/KyivTypeSans-Regular.ttf" });
