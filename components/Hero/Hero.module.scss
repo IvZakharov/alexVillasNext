@@ -3,6 +3,8 @@
 .hero {
   height: 100%;
   position: relative;
+  width: 100%;
+  padding-top: 130px;
 
   .background{
     position: absolute;
@@ -14,7 +16,6 @@
   }
 
   .h1Block{
-    margin-top: 113px;
     width: 55%;
     position: relative;
     @media (max-width: 1239px) {
@@ -24,7 +25,6 @@
       width: 80%;
     }
     @media (max-width: 767px) {
-      margin-top: 10px;
       width: 100%;
     }
     .h1{

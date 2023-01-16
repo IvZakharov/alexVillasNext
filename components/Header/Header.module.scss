@@ -3,30 +3,9 @@
 .header {
   width: 100%;
 
-  position: relative;
-  padding-top: 32px;
-  @media (max-width: 767px) {
-    padding-top: unset;
-  }
-  .background{
-    position: absolute;
-    background: rgba(0, 0, 0);
-    top: 0;
-    z-index: -100;
-    width: 100%;
-    height: 774px;
-    @media (max-width: 767px) {
-      height: 512px;
-    }
-    @media (max-width: 469px) {
-      height: 480px;
-    }
-
-  }
-
-  @media (max-width: 768px) {
-    padding-top: unset;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
 
   .menuBtn {
     width: 50px;
