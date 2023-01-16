@@ -75,21 +75,26 @@
     right: 10px;
     top: -80px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 984px) {
       top: -130px;
       width: 180px;
       height: 180px;
     }
 
     p {
+      font-family: var(--oswald-font);
       font-weight: 700;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 138%;
       text-align: center;
       text-transform: uppercase;
       color: #FFFFFF;
       white-space: pre-line;
 
+
+      @media (min-width: 984px) {
+        font-size: 20px;
+      }
     }
   }
 }

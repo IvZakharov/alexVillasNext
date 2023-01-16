@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 
-const Index = ({ teamArr }) => {
+const Team = ({ teamArr }) => {
   const [cardHover, setCardHover] = React.useState(false);
   const [gridSize, setGridSize] = React.useState({ width: 0, height: 0 });
   const gridRef = React.useRef(null);
@@ -92,4 +92,4 @@ const Index = ({ teamArr }) => {
   );
 };
 
-export default Index;
+export default Team;

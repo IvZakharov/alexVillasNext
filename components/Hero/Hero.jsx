@@ -24,8 +24,22 @@ const Hero = ({ h1first, h1second, text, subLable }) => {
     },
   ];
   return (
-    <section className="container md:mb-4">
-      <div className={styles.hero}>
+    <section className={styles.hero}>
+      <div className={styles.background}>
+        <Image
+          alt="ALEX VILLAS"
+          src={"/images/hero.png"}
+          quality={80}
+          fill
+          priority
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            opacity: 0.5,
+          }}
+        />
+      </div>
+      <div className="container">
         <div className={`${styles.h1Block} mx-auto`}>
           <h1 className={`${styles.h1} h1`}>
             {h1first}
@@ -34,20 +48,14 @@ const Hero = ({ h1first, h1second, text, subLable }) => {
           </h1>
           <div className={styles.FormText}>
             <FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />
-            {text !== null ? (
+            {text && (
               <div className={styles.textBlock}>
                 {" "}
                 <div className={`${styles.text} text`}>{parse(text)}</div>
               </div>
-            ) : (
-              ""
             )}
           </div>
-          {subLable !== null ? (
-            <div className={`${styles.subLable}`}>{subLable}</div>
-          ) : (
-            ""
-          )}
+          {subLable && <div className={`${styles.subLable}`}>{subLable}</div>}
         </div>
         <div className={"hidden md:block"}>
           <HeroMenu menuArr={heroArr} />

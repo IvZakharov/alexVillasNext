@@ -1,50 +1,18 @@
 @import "styles/variables";
 
 .about {
-  padding: 60px 0;
   position: relative;
 
-  @media (min-width: 768px) {
-    padding: 80px 0;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 100px;
-  }
-
-  .content {
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 10;
-    max-width: 600px;
-  }
-
-  .text {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 128%;
-    color: #FFFFFF;
-    margin-bottom: 30px;
-    
-    @media (min-width: 768px) {
-      font-size: 32px;
-
-      padding-right: 100px;
-    }
-  }
-
   .nav {
-
     padding-top: 35px;
-
 
     ul {
       li {
         text-align: center;
-        margin-bottom: 20px;
 
         a {
-          background: #5E5E5E;
+          font-family: var(--oswald-font);
+          background: transparent;
           display: block;
           padding: 20px 0;
           border-radius: 10px;
@@ -54,23 +22,20 @@
           letter-spacing: 0.04em;
           color: #FFFFFF;
           cursor: pointer;
-          transition: background-color .2s ease-in-out;
+          transition: background-color .2s ease-in-out, border .2s ease-in-out;
           white-space: nowrap;
-          
-          @media (min-width: 1200px) {
-            font-size: 26px;
-          }
+          border: 1px solid white;
 
           &:hover {
-            background-color: #787878;
+            border-color: $primary;
           }
 
           &:active {
-            background-color: #5d5d5d;
+            background-color: rgba(white, .2);
           }
 
           &:focus {
-            background-color: #787878;
+            border-color: $primary;
           }
         }
       }
@@ -81,15 +46,17 @@
     position: relative;
     width: 100%;
     height: 250px;
-    margin-bottom: 50px;
+
+    @media (min-width: 768px) {
+      height: 450px;
+    }
 
     @media (min-width: 1200px) {
       position: absolute;
       right: 0;
       top: 0;
-      width: 720px;
-      height: 570px;
-      margin-bottom: 0px;
+      width: 900px;
+      height: 100%;
     }
 
     &:before {
@@ -99,6 +66,25 @@
       height: 100%;
       z-index: 1;
       background: linear-gradient(90.7deg, #000000 -2.93%, rgba(0, 0, 0, 0.21) 72.81%);
+    }
+  }
+
+  .playBtn {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 14;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    @media (min-width: 768px) {
+      width: 240px;
+      height: auto;
+    }
+  
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

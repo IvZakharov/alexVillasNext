@@ -9,6 +9,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  position: relative;
   overflow-x: hidden;
   font-family: var(--kyivSans-font);
 }
@@ -57,16 +58,44 @@ a {
   }
   
   @media (min-width: 768px) {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 23px;
-  }
-
-  @media (min-width: 1200px) {
-    font-size: 20px;
-    line-height: 25px;
   }
 }
 
+.h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 82px;
+  line-height: 85px;
+  text-align: left;
+  letter-spacing: 0.025em;
+  height: 174px;
+  color: #FFFFFF;
+  position: relative;
+
+  @media (max-width: 983px) {
+    font-size: 75px;
+    line-height: 80px;
+  }
+  @media (max-width: 768px) {
+    font-size: 65px;
+    line-height: 70px;
+  }
+  @media (max-width: 473px) {
+    font-size: 55px;
+    line-height: 60px;
+
+  }
+  @media (max-width: 409px) {
+    font-size: 45px;
+    line-height: 50px;
+
+  }
+  span{
+    color: $primary;
+  }
+}
 
 .h2 {
   font-weight: 700;

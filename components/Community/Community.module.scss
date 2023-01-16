@@ -14,11 +14,14 @@
       letter-spacing: 0.025em;
       color: $primary;
       transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      font-family: var(--oswald-font);
 
       @media (min-width: 768px) {
-        font-size: 26px;
-        line-height: 31px;
+        font-size: 20px;
+        line-height: 26px;
       }
+
+
     }
 
     i {

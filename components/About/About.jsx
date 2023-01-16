@@ -1,9 +1,18 @@
 import styles from "./About.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import playSvg from "./img/play.svg";
 
 const About = () => {
   const links = [
+    {
+      label: "VILLA RENTALS",
+      link: "#",
+    },
+    {
+      label: "VILLA SALES",
+      link: "#",
+    },
     {
       label: "VILLA CONSTRUCTION",
       link: "#",
@@ -17,13 +26,21 @@ const About = () => {
       link: "#",
     },
     {
-      label: "REAL ESTATE AGENCY",
+      label: "DESIGN & ARCHITECTURE",
+      link: "#",
+    },
+    {
+      label: "LAND ACQUISITION",
+      link: "#",
+    },
+    {
+      label: "LEGAL SERVICES",
       link: "#",
     },
   ];
   return (
     <section className={styles.about}>
-      <div className={"container xl:px-32"}>
+      <div className={"container xl:pl-32"}>
         <div className={styles.videoPlaceholder}>
           <Image
             alt="video placeholder"
@@ -35,24 +52,30 @@ const About = () => {
               objectFit: "cover",
             }}
           />
+          <button className={styles.playBtn}>
+            <Image src={playSvg} alt={"playSvg"} />
+          </button>
         </div>
-        <div className={styles.content}>
-          <p className={"text-2xl text-white"}> text 2 xl</p>
-          <p className={styles.text}>
-            Alex Villas is the industry-leading real estate company in Bali.
-          </p>
-          <p className={styles.text}>
-            {" "}
-            We build, manage and renovate properties that make our clients smile
-            happy.
-          </p>
-          <p className={styles.text}>
-            We are a one-stop shop that has every & each of investor’s potential
-            pains fully addressed.
-          </p>
 
+        <div className={"grid md:grid-cols-2 xl:grid-cols-3 relative z-10"}>
+          <div className={"pt-10 xl:pt-24"}>
+            <p className={"text mb-5 md:mb-8"}>
+              Alex Villas is the industry-leading real estate company in Bali.
+            </p>
+            <p className={"text mb-5 md:mb-8"}>
+              {" "}
+              We build, manage and renovate properties that make our clients
+              smile happy.
+            </p>
+            <p className={"text mb-5 md:mb-8"}>
+              We are a one-stop shop that has every & each of investor’s
+              potential pains fully addressed.
+            </p>
+          </div>
+        </div>
+        <div className={"grid grid-cols-1 xl:grid-cols-2 relative z-10"}>
           <nav className={styles.nav}>
-            <ul className={"columns-1 md:columns-2 gap-3"}>
+            <ul className={"grid grid-cols-1 sm:grid-cols-2 gap-2.5"}>
               {links &&
                 links.map((link, idx) => (
                   <li key={idx}>
