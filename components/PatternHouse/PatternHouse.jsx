@@ -5,7 +5,7 @@ import parse from "html-react-parser";
 
 const PatternHouse = ({Houses}) => {
   return (
-    <div className={`${styles.PatternHouse} container flex justify-between xl:px-32`}>
+    <div className={`${styles.PatternHouse} container md:flex md:justify-between lg:px-24`}>
       <div className={styles.about}>
         {Houses && Houses.map((obj, i) => (
             <div className={styles.block} key={i}>

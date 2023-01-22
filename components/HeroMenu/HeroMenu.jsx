@@ -1,12 +1,13 @@
 import styles from "./HeroMenu.module.scss";
 import Link from "next/link";
+import { menuhero } from '../../data/menuhero'
 
-const HeroMenu = ({ menuArr }) => {
+const HeroMenu = () => {
   return (
     <div className={styles.HeroMenu}>
       <ul>
-        {menuArr &&
-          menuArr.map((obj, i) => (
+        {menuhero &&
+          menuhero.map((obj, i) => (
             <li key={i}>
               <Link href={obj.link} className={`${styles.links}`}>
                 {obj.lable}

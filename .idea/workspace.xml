@@ -5,66 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/WhatsApp/WhatsApp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/WhatsApp/WhatsApp.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/alexvillas/alexvillas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Modal/Modal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Modal/Modal.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/menuhero.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/menutop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/nabster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_13_58_[Changes]/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_13_58_[Changes]/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_13_58_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023__13_58__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023__14_26__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeaderMenu/HeaderMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderMenu/HeaderMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeaderMenu/Headermenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderMenu/Headermenu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MainLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/components/Management/Grid.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Management/Management.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Project/Project.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Renovation/Grid.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Renovation/Renovation.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/hotspots.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/menageProjects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/projects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/projectsOnSaleFilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/About/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/About/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/About/About.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Community/Community.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Community/Community.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Community/Community.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Community/Community.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CtaSection/CtaSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/CtaSection/CtaSection.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/HeaderMenu/HeaderMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderMenu/HeaderMenu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Hero/Hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectsCard/ProjectsCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Project/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectsCard/ProjectsCard.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectsGrid/ProjectsGrid.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Project/Grid.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectsGrid/ProjectsGrid.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Team/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Team/Index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WhyBali/WhyBali.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/WhyBali/WhyBali.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WhyBali/WhyBali.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/WhyBali/WhyBali.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/YoutubeSection/Youtube.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/YoutubeSection/Youtube.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/YoutubeSection/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/YoutubeSection/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/libs/_normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/libs/_normalize.scss" afterDir="false" />
->>>>>>> ivan
+      <change beforePath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MainLayout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +56,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="ivan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,46 +81,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/iv/Documents/Projects/FullStack/alex-villas/frontend/components",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/iv/Documents/Projects/FullStack/alex-villas/frontend/node_modules/prettier",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/iv/Documents/Projects/FullStack/alex-villas/frontend/utils&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/iv/Documents/Projects/FullStack/alex-villas/frontend/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/iv/Documents/Projects/FullStack/alex-villas/frontend/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
->>>>>>> ivan
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/utils" />
-      <recent name="$PROJECT_DIR$/components/Project" />
-      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/components" />
-      <recent name="$PROJECT_DIR$/components/Management" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/components/Project" />
+      <recent name="$PROJECT_DIR$/components/Team" />
+      <recent name="$PROJECT_DIR$/components/Youtube" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\itcac\alexVillasNext\public\images\alexvillas" />
@@ -223,17 +178,8 @@
       <workItem from="1673362988981" duration="6587000" />
       <workItem from="1673435480334" duration="850000" />
       <workItem from="1673436613907" duration="733000" />
-<<<<<<< HEAD
       <workItem from="1673439995913" duration="1349000" />
-      <workItem from="1673502153676" duration="11835000" />
-=======
-      <workItem from="1673439995913" duration="28149000" />
-      <workItem from="1673545052373" duration="26561000" />
-      <workItem from="1673774033560" duration="1000" />
-      <workItem from="1673812719336" duration="11000" />
-      <workItem from="1673812748911" duration="2169000" />
-      <workItem from="1673861825836" duration="4076000" />
->>>>>>> ivan
+      <workItem from="1673502153676" duration="46149000" />
     </task>
     <servers />
   </component>

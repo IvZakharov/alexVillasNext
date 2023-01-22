@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./Headermenu.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { menutop } from "../../data/menutop";
 
-const HeaderMenu = ({ menuarr }) => {
+const HeaderMenu = () => {
   return (
     <div className={`container pt-6 `}>
       <div className="flex flex-col md:items-center md:justify-between md:flex-row">
@@ -18,8 +19,8 @@ const HeaderMenu = ({ menuarr }) => {
         </div>
         <nav className={`${styles.nav} hidden md:block `}>
           <ul className={`${styles.menu} flex flex-col md:flex-row `}>
-            {menuarr &&
-              menuarr.map((obj, i) => (
+            {menutop &&
+              menutop.map((obj, i) => (
                 <li key={i}>
                   <Link href={obj.link} className={`${styles.links}`}>
                     {obj.lable}

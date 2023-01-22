@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import MobileMenu from "../components/MobileMenu/MobileMenu";
 
 const MainLayout = ({
   children,
@@ -20,9 +21,14 @@ const MainLayout = ({
         <meta property="og:image" content={metaImage} />
       </Head>
       <Header onClickMenu={(bool)=>setOpenedMenu(bool)}  openedMenu={openedMenu}/>
-
+      
       <div className="main">{children}</div>
       <Footer />
+      {openedMenu && (
+        <MobileMenu
+          OnClickClose={(bool) => setOpenedMenu(bool)}
+        />
+      )}
     </>
   );
 };

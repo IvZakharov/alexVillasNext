@@ -1,0 +1,50 @@
+.Modal{
+
+  display: none;
+
+  &__active{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0,0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    .Modal__content{
+      width: 98vw;
+      height: 22vh;
+      background: black;
+      border-radius: 20px;
+      border: #FF9900 solid 4px;
+      padding: 1em;
+      color: #FFFFFF;
+      transform: scale(0);
+      transition: 3s;
+      @media (min-width: 350px) {
+        height: 25vh;
+      }
+      @media (min-width: 400px) {
+        height: 30vh;
+      }
+      @media (min-width: 500px) {
+        height: 35vh;
+      }
+      @media (min-width: 768px) {
+        width: 50vw;
+      }
+      @media (min-width: 984px) {
+        height: 50vh;
+      }
+    }
+    .active{
+      transform: scale(1);
+    }
+    .sizes{
+      height: 100%;
+    }
+  }
+
+}

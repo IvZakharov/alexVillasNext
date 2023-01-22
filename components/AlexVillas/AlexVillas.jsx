@@ -31,15 +31,17 @@ const Houses = [
 const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
   return (
     <section className={styles.section}>
-      <div className="container pt-12 xl:px-32">
-        <div className={`${styles.background}  mx-auto mb-14`}>
+      <div className="container">
+        <div className={`${styles.background} mx-auto mb-4 lg:mb-14`}>
           <Image src={'/images/alexvillas/alexvillas.png'}
                  quality={80}
                  priority
-                 height={600}
-                 width={700}
+                 fill
+                 sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 10vw,
+              33vw"
                  style={{
-                   objectFit: "cover",
+                   objectFit: "cale-down",
                  }}
           />
         </div>
@@ -59,8 +61,8 @@ const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
           }
         </div>
       </div>
-      <ContactAlex />
-      {/*<PatternHouse Houses={Houses}/>*/}
+      {/*<ContactAlex />*/}
+      <PatternHouse Houses={Houses}/>
     </section>
   );
 };

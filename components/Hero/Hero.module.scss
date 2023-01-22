@@ -102,6 +102,27 @@
         left: 3%;
       }
     }
+    .dot{
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: #FFFFFF;
+      display: flex;
+      @media (min-width: 984px) {
+        top:50px;
+        right: -150px;
+      }
+      .address{
+        margin-left: 6px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: right;
+        letter-spacing: 0.025em;
+        text-decoration-line: underline;
+        color: white;
+      }
+    }
   }
   .FormText{
     display: flex;

@@ -1,7 +1,28 @@
 .section{
   margin-bottom: 40px;
   .background{
-    width: fit-content;
+    width: 100%;
+    position: relative;
+    height: 100px;
+    @media (min-width: 400px) {
+      height: 120px;
+    }
+    @media (min-width: 470px) {
+      height: 140px;
+    }
+    @media (min-width: 520px) {
+      height: 160px;
+    }
+    @media (min-width: 768px) {
+      height: 230px;
+    }
+    @media (min-width: 984px) {
+      height: 290px;
+    }
+    @media (min-width: 1240px) {
+      height: 340px;
+      width: 80%;
+    }
   }
   .textBlocks{
 

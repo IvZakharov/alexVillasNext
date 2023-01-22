@@ -13,7 +13,7 @@
     position: absolute;
     z-index: 1;
     top: -50px;
-    right: 50px;
+    right: 25px;
     background-color: transparent;
     border: none;
     display: flex;
@@ -22,7 +22,9 @@
     justify-content: center;
     transform: translateY(80px);
     transition: all 0.2s ease-in-out;
-
+    @media (min-width: 580px) {
+      right: 10%;
+    }
     @media (min-width: 768px) {
       display: none;
     }

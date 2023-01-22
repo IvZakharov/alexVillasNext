@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ContactAlex = () => {
   return (
-    <div className={`container xl:px-32`}>
+    <div className={`container`}>
       <div className={styles.Contact}>
         <div className={styles.callWrite}>
           <div className={styles.lable}>

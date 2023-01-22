@@ -3,8 +3,9 @@ import HeroMenu from "../HeroMenu/HeroMenu";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { menutop } from "../../data/menutop";
 
-const MobileMenu = ({ menuarr, heroArr, OnClickClose }) => {
+const MobileMenu = ({ OnClickClose }) => {
   return (
     <div className={`pt-6 ${styles.mobileMenu}`}>
       <div className="container flex flex-col md:items-center md:justify-between md:flex-row">
@@ -21,8 +22,8 @@ const MobileMenu = ({ menuarr, heroArr, OnClickClose }) => {
         </div>
         <nav className={styles.nav}>
           <ul className={`${styles.menu} flex flex-col md:flex-row`}>
-            {menuarr &&
-              menuarr.map((obj, i) => (
+            {menutop &&
+              menutop.map((obj, i) => (
                 <li key={i}>
                   <Link href={obj.link} className={`${styles.links} `}>
                     {obj.lable}
@@ -32,7 +33,7 @@ const MobileMenu = ({ menuarr, heroArr, OnClickClose }) => {
           </ul>
         </nav>
         <div className="md:hidden flex flex-col justify-center items-center">
-          <HeroMenu menuArr={heroArr} />
+          <HeroMenu />
         </div>
         <Link href={"#"} className={`${styles.contact}`}>
           Contact Us
