@@ -21,8 +21,29 @@ import { projects } from "../data/projects";
 import CtaSection from "../components/CtaSection/CtaSection";
 import teamData from "../data/teamData";
 import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
+import Dropdown from "../ui/Dropdown/Dropdown";
 
 export default function Home() {
+  
+  const list = [
+    {
+      link: '#',
+      name: "Anna Petrova",
+    },
+    {
+      link: '#',
+      name: "Pasha Oblick",
+    },
+    {
+      link: '#',
+      name: "Dasha Ivanova",
+    },
+    {
+      link: '#',
+      name: "Sergey Avramov",
+    },
+  ]
+  
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -43,6 +64,9 @@ export default function Home() {
       
       <div className={"mb-16 xl:mb-24"}>
         <AlexVillas />
+      </div>
+      <div className={"mb-16 xl:mb-24"}>
+        <Dropdown lable={"Sales Manager"} list={list}/>
       </div>
       <div className={"mb-16 xl:mb-24"}>
         <OurClientVideo />

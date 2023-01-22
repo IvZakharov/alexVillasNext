@@ -5,38 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Modal/Modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Modal/Modal.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/menuhero.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/menutop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/nabster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_13_58_[Changes]/bg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_13_58_[Changes]/placeholder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_13_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/bg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/placeholder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023,_14_26_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023__13_58__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_01_2023__14_26__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/Dropdown/Dropdown.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlexVillas/AlexVillas.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactsAlex/ContactAlex.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeaderMenu/HeaderMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderMenu/HeaderMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/PatternHouse/PatternHouse.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MainLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Modal/Modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Modal/Modal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nabster.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nabster.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +152,7 @@
       <workItem from="1673435480334" duration="850000" />
       <workItem from="1673436613907" duration="733000" />
       <workItem from="1673439995913" duration="1349000" />
-      <workItem from="1673502153676" duration="46149000" />
+      <workItem from="1673502153676" duration="49263000" />
     </task>
     <servers />
   </component>
