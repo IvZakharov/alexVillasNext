@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -19,6 +20,14 @@
       <change beforePath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MainLayout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/nabster.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nabster.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/About/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/About/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/About/About.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/KyivTypeSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
+>>>>>>> 32b749c541c9db3494822043a9df5d2472e14c20
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +97,7 @@
       <recent name="$PROJECT_DIR$/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fonts" />
       <recent name="D:\itcac\alexVillasNext\public\images\alexvillas" />
     </key>
   </component>
