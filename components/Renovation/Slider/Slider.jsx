@@ -25,6 +25,7 @@ const RenovationSlider = ({ images }) => {
         }}
         centeredSlides={true}
         pagination={true}
+        loop
         slidesPerView={"auto"}
         breakpoints={{
           320: {
