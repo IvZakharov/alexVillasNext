@@ -19,7 +19,7 @@ import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
 import { menageProjects } from "../data/menageProjects";
 
-export default function Management() {
+export default function Agency() {
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -73,18 +73,21 @@ export default function Management() {
           ]}
         />
       </div>
-      <div className={"mb-16 md:mb-24 xl:mb-36"}>
-        <ManagementGrid
-          projects={menageProjects}
-          link={"#"}
-          linkLabel={"MORE MANAGED PROPERTIES"}
-          full
+      <div className={"mb-16 xl:mb-24"}>
+        <RenovationSlider images={renovationImages} />
+      </div>
+      <div className={"mb-16 xl:mb-24"}>
+        <OurClientVideo />
+      </div>
+      <div className={"mb-16 xl:mb-32"}>
+        <OurBusiness
+          text={"COMPANY \n<span>YOU CAN</span>\n<span>RELY ON</span>"}
         />
       </div>
 
       <CtaSection
         title={
-          "  GET YOUR PROPERTY \n<span>UNDER ALEX VILLAS</span>\n <span>MANAGEMENT</span>"
+          "FILL THE FORM BELOW \n<span>AND WILL SEND YOU</span>\n <span>AGENCY PDF</span>"
         }
         description={
           "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."

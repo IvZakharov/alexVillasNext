@@ -13,7 +13,7 @@ const RenovationGrid = ({ imageBefore, imageAfter }) => {
           IN RENOVATION
         </h2>
 
-        <div className={"grid sm:grid-cols-2 lg:grid-cols-3 gap-5"}>
+        <div className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"}>
           <div className={styles.imageBefore}>
             <Image
               alt={"Project name"}
@@ -50,7 +50,7 @@ const RenovationGrid = ({ imageBefore, imageAfter }) => {
 
           <div
             className={
-              "flex justify-end sm:col-span-2 lg:col-span-1 lg:items-end"
+              "flex justify-end sm:col-span-2 lg:col-span-1 lg:items-end "
             }
           >
             <Link href={"#"} className={styles.link}>

@@ -109,6 +109,7 @@ export default function Home() {
         imageUrl={"/images/cta/bg.jpg"}
         label={"HOPE TO HEAR\nFROM YOU!"}
         submitButtonText={"send"}
+        gradient
         fields={[
           {
             name: "userName",

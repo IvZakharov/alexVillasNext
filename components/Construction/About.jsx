@@ -2,20 +2,22 @@ import styles from "./Construction.module.scss";
 import React from "react";
 
 const ConstructionAbout = () => {
-
   return (
     <section>
       <div className={"container"}>
-        <div className={'grid gap-10'}>
-          <h2 className={'h2'}>
-            <span>WE STARTED</span> <br/> OUR OWN <br/> PRODUCTION
+        <div className={"grid gap-10"}>
+          <h2 className={"h2"}>
+            <span>WE STARTED</span> <br /> OUR OWN <br /> PRODUCTION
           </h2>
-          
-          <div >
-            <p className={'text mb-10 md:mb-16'}>Alex Villas announces the start of its own <span>production facilities!</span></p>
-            
-            <div className={'sm:flex sm:gap-8 md:gap-12 mb-8'}>
-              <div className={"mb-8"}>
+
+          <div>
+            <p className={"text mb-10 md:mb-16"}>
+              Alex Villas announces the start of its own{" "}
+              <span>production facilities!</span>
+            </p>
+
+            <div className={"flex flex-wrap gap-8 md:gap-12 mb-8"}>
+              <div>
                 <i className={"block mb-5"}>
                   <svg
                     width="18"
@@ -37,8 +39,8 @@ const ConstructionAbout = () => {
                   HIGHER COST <br /> EFFICIENCY
                 </h4>
               </div>
-  
-              <div className={"mb-8"}>
+
+              <div>
                 <i className={"block mb-5"}>
                   <svg
                     width="18"
@@ -57,10 +59,11 @@ const ConstructionAbout = () => {
                   </svg>
                 </i>
                 <h4 className={"text-white uppercase text-xl"}>
-                  UNIQUE <br />INTERIORS
+                  UNIQUE <br />
+                  INTERIORS
                 </h4>
               </div>
-  
+
               <div className={"mb-8"}>
                 <i className={"block mb-5"}>
                   <svg
@@ -80,11 +83,12 @@ const ConstructionAbout = () => {
                   </svg>
                 </i>
                 <h4 className={"text-white uppercase text-xl"}>
-                  BETTER <br />DURABILITY
+                  BETTER <br />
+                  DURABILITY
                 </h4>
               </div>
             </div>
-  
+
             <ul className={styles.list}>
               <li>COMPETITIVE ANALYSIS</li>
               <li>TECHNICAL ANALYSIS</li>

@@ -5,6 +5,14 @@ import ProjectSlider from "../../components/Project/Slider";
 import { projectImages } from "../../data/projectImages";
 import AlexVillas from "../../components/AlexVillas/AlexVillas";
 import PatternHouse from "../../components/PatternHouse/PatternHouse";
+import WhatsApp from "../../components/WhatsApp/WhatsApp";
+import InvestExample from "../../components/InvestExample/InvestExample";
+import WhyBali from "../../components/WhyBali/WhyBali";
+import Principles from "../../components/Principles/Principles";
+import { principlesArr } from "../../data/principlesArr";
+import OurClientVideo from "../../components/OurClientVideo/OurClientVideo";
+import OurBusiness from "../../components/OurBusiness/OurBusiness";
+import ConstructionAbout from "../../components/Construction/About";
 
 export default function Project() {
   return (
@@ -23,7 +31,6 @@ export default function Project() {
           subLable={"STARTING FROM $189.000"}
         />
       </div>
-
       <div>
         <AlexVillas
           textBlock1={
@@ -61,16 +68,51 @@ export default function Project() {
           ]}
         />
       </div>
-
-      <div className={"mb-16 xl:mb-24"}>
+      <div className={"mb-10"}>
         <ProjectSlider images={projectImages} />
+      </div>
+      <div className={"mb-16 md:mb-24"}>
+        <WhatsApp
+          text={"Talk to a live person and get the investor’s materials pack."}
+        />
+      </div>
+      <div className={"mb-16 md:mb-24"}>
+        <InvestExample
+          title={"<span>INVEST\nIN OUR\nNEWEST</span>\nVILLA\nCOMPLEX"}
+        />
+      </div>
+      <div className={"mb-16 xl:mb-24"}>
+        <WhyBali />
+      </div>
+      <div className={"mb-16 md:mb-20"}>
+        <Principles
+          title={
+            "<span>EVERYTHING\nWE RENOVATE\nFOLLOWS</span> \nTHESE 5\nPRINCIPLES"
+          }
+          principles={principlesArr}
+        />
+      </div>
+      <div className={"mb-16 xl:mb-24"}>
+        <OurClientVideo />
+      </div>
+      <div className={"mb-16 md:mb-24"}>
+        <ConstructionAbout />
+      </div>
+      <div className={"mb-16 xl:mb-32"}>
+        <OurBusiness
+          text={"COMPANY \n<span>YOU CAN</span>\n<span>RELY ON</span>"}
+        />
       </div>
 
       <CtaSection
-        title={"GET IN TOUCH \n<span>WITH US:</span>"}
-        imageUrl={"/images/cta/bg.jpg"}
-        label={"HOPE TO HEAR\nFROM YOU!"}
+        title={"EARLY BIRD \n<span>SPECIAL OFFER</span>"}
+        imageUrl={"/images/cta/bg2.jpg"}
+        description={
+          "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."
+        }
+        label={"ONLY 3\nVILLAS\nLEFT"}
         submitButtonText={"send"}
+        gradient
         fields={[
           {
             name: "userName",
@@ -83,12 +125,6 @@ export default function Project() {
             type: "tel",
             placeholder: "Phone number:",
             required: true,
-          },
-          {
-            name: "userMessage",
-            type: "text",
-            placeholder: "Your message:",
-            required: false,
           },
         ]}
       />

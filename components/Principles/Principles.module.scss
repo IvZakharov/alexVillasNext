@@ -6,8 +6,8 @@
   line-height: 2.75rem;
 
   @media (min-width: 1200px) {
-    font-size: 3rem;
-    line-height: 3.25rem;
+    font-size: 60px;
+    line-height: 70px;
   }
 }
 
@@ -19,7 +19,7 @@
   background-color: #292929;
   display: flex;
   flex-direction: column;
-  
+
   @media (min-width: 768px) {
     flex-direction: row;
   }
@@ -67,7 +67,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 15px;
-  
+
   @media (min-width: 768px) {
     right: calc(50% + 30px);
   }

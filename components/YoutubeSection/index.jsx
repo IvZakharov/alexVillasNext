@@ -113,12 +113,8 @@ const Index = ({ youtubeLinks }) => {
               }}
             >
               {youtubeLinks.map((link, idx) => (
-                <SwiperSlide>
-                  <Video
-                    key={idx}
-                    videoUrl={link}
-                    isActive={activeSlideIndex === idx}
-                  />
+                <SwiperSlide key={idx}>
+                  <Video videoUrl={link} isActive={activeSlideIndex === idx} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -132,8 +128,8 @@ const Index = ({ youtubeLinks }) => {
               modules={[Thumbs]}
             >
               {youtubeLinks.map((link, idx) => (
-                <SwiperSlide>
-                  <Thumb key={idx} videoUrl={link} />
+                <SwiperSlide key={idx}>
+                  <Thumb videoUrl={link} />
                 </SwiperSlide>
               ))}
             </Swiper>

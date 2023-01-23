@@ -7,8 +7,8 @@ const Form = ({ fields, submitButtonText }) => {
   return (
     <form className={styles.form}>
       {fields &&
-        fields.map((obj) => (
-          <div className={"mb-6 md:mb-9 w-60 md:w-96"} key={obj.id}>
+        fields.map((obj, idx) => (
+          <div className={"mb-6 md:mb-9 w-60 md:w-96"} key={idx}>
             <TextField
               name={obj.name}
               type={obj.type}

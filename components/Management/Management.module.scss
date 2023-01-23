@@ -1,17 +1,13 @@
 @import "styles/variables";
 
-.grid {
-
-}
-
 .card {
   position: relative;
   height: 260px;
-  
+
   @media (min-width: 640px) {
     height: 100px;
   }
-  
+
   @media (min-width: 768px) {
     height: 130px;
   }
@@ -31,23 +27,21 @@
   gap: 15px;
 
   span {
-    font-family: var(--oswald-font);
+    font-family: var(--robotoCondensed-font);
     font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 21px;
     white-space: nowrap;
-    letter-spacing: 0.025em;
     color: $primary;
     transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     @media (min-width: 768px) {
-      font-size: 22px;
-      line-height: 31px;
+      font-size: 18px;
     }
   }
 
   i {
-    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   &:hover {
@@ -56,7 +50,3 @@
     }
   }
 }
-
-
-
-

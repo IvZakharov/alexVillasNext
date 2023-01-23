@@ -1,12 +1,7 @@
 import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/Hero/Hero";
 import CtaSection from "../components/CtaSection/CtaSection";
-import RenovationSlider from "../components/Renovation/Slider/Slider";
-import WhatsApp from "../components/WhatsApp/WhatsApp";
-import InvestExample from "../components/InvestExample/InvestExample";
-import Table from "../components/Table/Table";
-import RenovationSteps from "../components/Renovation/Steps/Steps";
-import Principles from "../components/Principles/Principles";
+
 // data
 import { renovationImages } from "../data/renovationImages";
 import { investModeling } from "../data/investModeling";
@@ -16,8 +11,10 @@ import PatternHouse from "../components/PatternHouse/PatternHouse";
 import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
 import React from "react";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
+import ManagementGrid from "../components/Management/Grid";
+import { menageProjects } from "../data/menageProjects";
 
-export default function Renovation() {
+export default function Management() {
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -71,51 +68,18 @@ export default function Renovation() {
           ]}
         />
       </div>
-      <div className={"mb-16 xl:mb-24"}>
-        <RenovationSlider images={renovationImages} />
-      </div>
-      <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Gain more from your own property with higher ADR"} />
-      </div>
-      <div className={"mb-16 md:mb-24"}>
-        <InvestExample
-          title={"<span>THE MATH\nBEHIND</span>\nVILLA\nRENOVATION"}
-        />
-      </div>
-      <div className={"container mb-16 md:mb-24 xl:pl-32 xl:pr-64"}>
-        <Table tableData={investModeling} />
-      </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
-        <RenovationSteps
-          imageAfter={"/images/renovation/card.jpg"}
-          imageBefore={"/images/renovation/card.jpg"}
-        />
-      </div>
-      <div className={"mb-16 md:mb-24 xl:mb-28"}>
-        <Principles
-          title={
-            "<span>EVERYTHING\nWE RENOVATE\nFOLLOWS</span> \nTHESE 5\nPRINCIPLES"
-          }
-          principles={principlesArr}
-        />
-      </div>
-      <div className={"mb-16 md:mb-24 xl:mb-28"}>
-        <WhatsApp
-          text={"Talk to a live person and get the investor’s materials pack."}
-        />
-      </div>
-      <div className={"mb-16 xl:mb-24"}>
-        <OurClientVideo />
-      </div>
-      <div className={"mb-16 xl:mb-32"}>
-        <OurBusiness
-          text={"COMPANY \n<span>YOU CAN</span>\n<span>RELY ON</span>"}
+        <ManagementGrid
+          projects={menageProjects}
+          link={"#"}
+          linkLabel={"MORE MANAGED PROPERTIES"}
+          full
         />
       </div>
 
       <CtaSection
         title={
-          " FILL THE FORM BELOW \n<span>AND WILL SEND YOU</span>\n <span>THE CALCULATION PDF</span>"
+          "  GET YOUR PROPERTY \n<span>UNDER ALEX VILLAS</span>\n <span>MANAGEMENT</span>"
         }
         description={
           "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."

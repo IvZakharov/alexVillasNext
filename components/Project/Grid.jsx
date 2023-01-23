@@ -16,6 +16,7 @@ const ProjectsGrid = ({ title, projects, link, linkLabel }) => {
           {projects &&
             projects.slice(0, 3).map((obj, idx) => (
               <div
+                key={obj.id}
                 className={`${
                   idx === 0 ? "md:col-span-2 lg:row-span-2" : "md:col-span-1"
                 }`}

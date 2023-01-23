@@ -12,17 +12,17 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const Team = ({ teamArr }) => {
-  const [cardHover, setCardHover] = React.useState(false);
-  const [gridSize, setGridSize] = React.useState({ width: 0, height: 0 });
-  const gridRef = React.useRef(null);
-
-  const handleMouseEnter = (event) => {
-    setCardHover(true);
-  };
-
-  const handleMouseLeave = () => {
-    setCardHover(false);
-  };
+  // const [cardHover, setCardHover] = React.useState(false);
+  // const [gridSize, setGridSize] = React.useState({ width: 0, height: 0 });
+  // const gridRef = React.useRef(null);
+  //
+  // const handleMouseEnter = (event) => {
+  //   setCardHover(true);
+  // };
+  //
+  // const handleMouseLeave = () => {
+  //   setCardHover(false);
+  // };
 
   return (
     <section className={styles.team}>
@@ -49,17 +49,20 @@ const Team = ({ teamArr }) => {
         <Swiper
           pagination={true}
           modules={[Pagination]}
-          slidesPerView={1}
+          slidesPerView={"auto"}
           className={"teamSwiper"}
           breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
             576: {
               slidesPerView: 2,
             },
           }}
         >
           {teamArr &&
-            teamArr.map((obj) => (
-              <SwiperSlide key={obj.id}>
+            teamArr.map((obj, idx) => (
+              <SwiperSlide key={idx}>
                 <Card
                   name={obj.name}
                   position={obj.position}
@@ -75,8 +78,8 @@ const Team = ({ teamArr }) => {
 
       <div className={"container hidden lg:flex lg:flex-wrap relative"}>
         {teamArr &&
-          teamArr.map((obj) => (
-            <div className={styles.cardWrapper}>
+          teamArr.map((obj, idx) => (
+            <div className={styles.cardWrapper} key={idx}>
               <Card
                 name={obj.name}
                 position={obj.position}

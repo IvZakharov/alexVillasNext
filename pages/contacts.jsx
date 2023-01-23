@@ -18,6 +18,7 @@ import React from "react";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
 import { menageProjects } from "../data/menageProjects";
+import ContactAlex from "../components/ContactsAlex/ContactAlex";
 
 export default function Agency() {
   return (
@@ -36,63 +37,24 @@ export default function Agency() {
           subLable={"STARTING FROM $189.000"}
         />
       </div>
-      <div>
+      <div className={"mb-16"}>
         <AlexVillas
-          textBlock1={
-            "Renovate your own residential or commercial property\n" +
-            "or find the perfect one with us."
-          }
-          textBlock2={
-            "We have every piece of hands-on experience you may need to <span>make rental property a good business.</span>"
-          }
-        />
-      </div>
-      <div className={"mb-16 xl:mb-24"}>
-        <PatternHouse
-          Houses={[
-            {
-              title: "10",
-              bedroom: "1-BEDROOM",
-              housformat: "TOWNHOUSES",
-            },
-            {
-              title: "2",
-              bedroom: "1-BEDROOM",
-              housformat: "SMART VILLAS",
-            },
-            {
-              title: "3",
-              bedroom: "2-BEDROOM",
-              housformat: "SMART VILLAS",
-            },
-            {
-              title: "1",
-              bedroom: "3-BEDROOM",
-              housformat: "SMART VILLAS",
-            },
-          ]}
-        />
-      </div>
-      <div className={"mb-16 xl:mb-24"}>
-        <RenovationSlider images={renovationImages} />
-      </div>
-      <div className={"mb-16 xl:mb-24"}>
-        <OurClientVideo />
-      </div>
-      <div className={"mb-16 xl:mb-32"}>
-        <OurBusiness
-          text={"COMPANY \n<span>YOU CAN</span>\n<span>RELY ON</span>"}
+          textBlock1={"Alex Villas is open for your enquieries 24/7."}
         />
       </div>
 
+      <div className={"mb-16"}>
+        <ContactAlex />
+      </div>
+
+      <WhatsApp
+        text={"Talk to a live person and get the investor’s materials pack."}
+      />
+
       <CtaSection
-        title={
-          "FILL THE FORM BELOW \n<span>AND WILL SEND YOU</span>\n <span>AGENCY PDF</span>"
-        }
-        description={
-          "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."
-        }
-        imageUrl={"/images/cta/bg2.jpg"}
+        title={"GET IN TOUCH \n<span>WITH US:</span>"}
+        imageUrl={"/images/cta/bg.jpg"}
+        label={"HOPE TO HEAR\nFROM YOU!"}
         submitButtonText={"send"}
         fields={[
           {
@@ -106,6 +68,12 @@ export default function Agency() {
             type: "tel",
             placeholder: "Phone number:",
             required: true,
+          },
+          {
+            name: "userMessage",
+            type: "text",
+            placeholder: "Your message:",
+            required: false,
           },
         ]}
       />

@@ -11,6 +11,10 @@ import { principlesArr } from "../data/principlesArr";
 import { projectsOnSaleFilter } from "../utils/projectsOnSaleFilter";
 import { projects } from "../data/projects";
 import ConstructionAbout from "../components/Construction/About";
+import PatternHouse from "../components/PatternHouse/PatternHouse";
+import React from "react";
+import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
+import OurBusiness from "../components/OurBusiness/OurBusiness";
 
 export default function Construction() {
   return (
@@ -29,13 +33,45 @@ export default function Construction() {
           subLable={"STARTING FROM $189.000"}
         />
       </div>
-      
-  
-
       <div className={"mb-16 xl:mb-24"}>
-        <AlexVillas textBlock1={'<span>Alex Villas Complex No. 3</span> \n is already under construction.'} textBlock2={'It is located right next door to \n the famous <span>FINNS beach club.</span>'} textBlock3={' <span>We added the best of our best practices to this villa complex which is a product of our successful experience in Canggu area.</span> '} />
+        <AlexVillas
+          textBlock1={
+            "<span>Alex Villas Complex No. 3</span> \n is already under construction."
+          }
+          textBlock2={
+            "It is located right next door to \n the famous <span>FINNS beach club.</span>"
+          }
+          textBlock3={
+            " <span>We added the best of our best practices to this villa complex which is a product of our successful experience in Canggu area.</span> "
+          }
+        />
       </div>
-  
+      <div className={"mb-16 xl:mb-24"}>
+        <PatternHouse
+          Houses={[
+            {
+              title: "10",
+              bedroom: "1-BEDROOM",
+              housformat: "TOWNHOUSES",
+            },
+            {
+              title: "2",
+              bedroom: "1-BEDROOM",
+              housformat: "SMART VILLAS",
+            },
+            {
+              title: "3",
+              bedroom: "2-BEDROOM",
+              housformat: "SMART VILLAS",
+            },
+            {
+              title: "1",
+              bedroom: "3-BEDROOM",
+              housformat: "SMART VILLAS",
+            },
+          ]}
+        />
+      </div>
       <div className={"mb-10 xl:mb-16"}>
         <ProjectsGrid
           projects={projectsOnSaleFilter(projects, true)}
@@ -44,7 +80,6 @@ export default function Construction() {
           linkLabel={"MORE PROJECTS ON SALE"}
         />
       </div>
-  
       <div className={"mb-10 xl:mb-16"}>
         <ProjectsGrid
           projects={projectsOnSaleFilter(projects, false)}
@@ -53,28 +88,37 @@ export default function Construction() {
           linkLabel={"MORE COMPLETED PROJECTS"}
         />
       </div>
-
       <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Build you dream villa and let us make it rock the market"} />
+        <WhatsApp
+          text={"Build you dream villa and let us make it rock the market"}
+        />
       </div>
-  
       <div className={"mb-16 md:mb-24"}>
         <ConstructionAbout />
       </div>
-  
-
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <Principles
-          title={
-            "<span>WE STARTED</span> \nOUR OWN\nPRODUCTION"
-          }
+          title={"<span>WE STARTED</span> \nOUR OWN\nPRODUCTION"}
           principles={principlesArr}
         />
       </div>
+      <div className={"mb-16 xl:mb-24"}>
+        <OurClientVideo />
+      </div>
+      <div className={"mb-16 xl:mb-32"}>
+        <OurBusiness
+          text={"COMPANY \n<span>YOU CAN</span>\n<span>RELY ON</span>"}
+        />
+      </div>
+
       <CtaSection
-        title={"GET IN TOUCH \n<span>WITH US:</span>"}
+        title={
+          "FILL THE FORM BELOW \n<span>AND WILL SEND YOU</span>\n<span>INVESTORS PDF</span>"
+        }
         imageUrl={"/images/cta/bg.jpg"}
-        description={'Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years.'}
+        description={
+          "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."
+        }
         submitButtonText={"send"}
         fields={[
           {

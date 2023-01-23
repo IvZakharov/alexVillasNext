@@ -10,7 +10,7 @@
 
     a {
       text-decoration: underline;
-      transition: color .2s ease-in-out;
+      transition: color 0.2s ease-in-out;
 
       &:hover {
         color: darken($primary, 10);
@@ -20,23 +20,20 @@
 
   h3 {
     font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-    letter-spacing: 0.025em;
-    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
 
     span {
       color: $primary;
     }
 
     @media (min-width: 984px) {
-      font-size: 22px;
-      line-height: 31px;
+      font-size: 18px;
     }
   }
 
   .hotspot {
-
     padding: 30px;
     border: 1px solid white;
     border-radius: 9px;
@@ -47,20 +44,16 @@
 
     .title {
       font-weight: 700;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 22px;
-      letter-spacing: 0.025em;
-      color: #FF9900;
+      color: #ff9900;
 
-      
       @media (min-width: 768px) {
-        font-size: 26px;
-        line-height: 31px;
+        font-size: 18px;
       }
     }
 
     .list {
-
       li {
         display: flex;
         align-items: center;
@@ -75,7 +68,7 @@
           width: 16px;
           height: 16px;
         }
-        
+
         @media (min-width: 768px) {
           img {
             margin-right: 16px;
@@ -87,7 +80,3 @@
     }
   }
 }
-
-
-
-

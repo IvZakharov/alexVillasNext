@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Principles.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {EffectFade, Navigation } from "swiper";
+import { EffectFade, Navigation } from "swiper";
 
 import parse from "html-react-parser";
 import Image from "next/image";
@@ -14,14 +14,14 @@ const Principles = ({ title, principles }) => {
   const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
   const arrowPrev = React.useRef(null);
   const arrowNext = React.useRef(null);
-  
+
   return (
     <section>
       <div className={"grid grid-cols-1 lg:grid-cols-3 container "}>
-        <div className={"mb-12 lg:mb-0 lg:flex items-center"}>
+        <div className={"mb-12 lg:mb-0 xl:py-10"}>
           <h2 className={`h2 ${styles.title}`}>{parse(title)}</h2>
         </div>
-        <div className={'relative lg:col-span-2'}>
+        <div className={"relative lg:col-span-2"}>
           <Swiper
             navigation={{
               prevEl: arrowPrev.current,
@@ -55,7 +55,11 @@ const Principles = ({ title, principles }) => {
                       }}
                     />
                   </div>
-                  <div className={"p-4 pb-6 md:px-6 md:py-8 xl:px-8 xl:py-10 md:w-1/2"}>
+                  <div
+                    className={
+                      "p-4 pb-6 md:px-6 md:py-8 xl:px-8 xl:py-10 md:w-1/2"
+                    }
+                  >
                     <h3 className={styles.slideTitle}>{obj.title}</h3>
                     <p className={`${styles.description} text`}>
                       {obj.description}
@@ -64,12 +68,9 @@ const Principles = ({ title, principles }) => {
                 </div>
               </SwiperSlide>
             ))}
-    
+
             <div className={styles.nav}>
-              <button
-                className={styles.arrowPrev}
-                ref={arrowPrev}
-              >
+              <button className={styles.arrowPrev} ref={arrowPrev}>
                 <svg
                   width="20"
                   height="6"
@@ -83,15 +84,12 @@ const Principles = ({ title, principles }) => {
                   />
                 </svg>
               </button>
-      
+
               <span>
-                      { activeSlideIndex + 1}/{principles.length}
+                {activeSlideIndex + 1}/{principles.length}
               </span>
-      
-              <button
-                className={styles.arrowNext}
-                ref={arrowNext}
-              >
+
+              <button className={styles.arrowNext} ref={arrowNext}>
                 <svg
                   width="20"
                   height="6"
@@ -108,7 +106,6 @@ const Principles = ({ title, principles }) => {
             </div>
           </Swiper>
         </div>
-       
       </div>
     </section>
   );

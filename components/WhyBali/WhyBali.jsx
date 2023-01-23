@@ -44,7 +44,7 @@ const WhyBali = () => {
               <h3 className={"mb-4"}>
                 REAL ESTATE <span>SUPER-HOTSPOT</span>{" "}
               </h3>
-              <p className={"text"}>
+              <p className={"text textSmall"}>
                 With the return of tourist arrivals the market{" "}
                 <span>
                   went crazy. <Link href={"#"}>Check the report!</Link>
@@ -56,7 +56,7 @@ const WhyBali = () => {
               <h3 className={"mb-4"}>
                 YOUNG & <span>GROWING ECONOMY</span>
               </h3>
-              <p className={"text"}>
+              <p className={"text textSmall"}>
                 Indonesia enjoys the influx of foreign investments and{" "}
                 <span>
                   <Link href={"#"}>unseen yearly GDP growth.</Link>
@@ -68,7 +68,7 @@ const WhyBali = () => {
               <h3 className={"mb-4"}>
                 ANNUAL RETURNS AT <span>10-22%</span>
               </h3>
-              <p className={"text"}>
+              <p className={"text textSmall"}>
                 Just compare it to the current normal{" "}
                 <span>5-6% in developed markets!</span>
               </p>
@@ -78,7 +78,7 @@ const WhyBali = () => {
               <h3 className={"mb-4"}>
                 CRYPTO-FRIENDLY <span>REGULATIONS</span>{" "}
               </h3>
-              <p className={"text"}>
+              <p className={"text textSmall"}>
                 No tricks to put your cryptocurrency to work any longer!{" "}
                 <span>100% legal and easy.</span>
               </p>
@@ -129,7 +129,7 @@ const WhyBali = () => {
                               alt={"svg icon"}
                             />
                             <span
-                              className={`text ${
+                              className={`text textSmall ${
                                 !item.isCheck ? "opacity-50" : ""
                               }`}
                             >
