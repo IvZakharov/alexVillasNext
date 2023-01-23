@@ -1,0 +1,31 @@
+@import "styles/variables";
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  li {
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-weight: 500;
+    height: 70px;
+    font-size: 1rem;
+    line-height: 23px;
+    text-align: center;
+    color: #ffffff;
+
+    @media (min-width: 768px) {
+      width: 180px;
+      height: 180px;
+      font-size: 1.25rem;
+      line-height: 26px;
+    }
+  }
+}

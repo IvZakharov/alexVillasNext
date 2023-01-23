@@ -10,7 +10,7 @@ import AlexVillas from "../components/AlexVillas/AlexVillas";
 import WhatsApp from "../components/WhatsApp/WhatsApp";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
-import RenovationGrid from "../components/Renovation/Grid";
+import RenovationGrid from "../components/Renovation/Grid/Grid";
 import TeamData from "../data/teamData";
 import Team from "../components/Team";
 

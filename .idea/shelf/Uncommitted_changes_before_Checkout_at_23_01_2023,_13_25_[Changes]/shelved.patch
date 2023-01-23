@@ -1,0 +1,53 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,11 +5,40 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/ui/Dropdown/Dropdown.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Construction/About.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Construction/Construction.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/InvestExample/InvestExample.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/InvestExample/InvestExample.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Principles/Principles.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Principles/Principles.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Project/Slider.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Renovation/Grid/Grid.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Renovation/Slider/Slider.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Renovation/Slider/Slider.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Renovation/Steps/Steps.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Renovation/Steps/Steps.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Table/Table.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/components/Table/Table.module.scss" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/data/investModeling.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/data/principlesArr.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/data/projectImages.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/data/renovationImages.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/pages/construction.jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/pages/projects/[slug].jsx" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/pages/renovation.jsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/components/Modal/Modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Modal/Modal.module.scss" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/nabster.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nabster.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/components/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/About/About.module.scss" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/components/CtaSection/CtaSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CtaSection/CtaSection.jsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/components/CtaSection/CtaSection.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/CtaSection/CtaSection.module.scss" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/components/Form/Form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Form/Form.module.scss" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/components/Project/Project.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Project/Project.module.scss" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/components/Renovation/Grid.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Renovation/Grid/Grid.jsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/components/Renovation/Renovation.module.scss" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />

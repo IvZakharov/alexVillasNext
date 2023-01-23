@@ -1,0 +1,103 @@
+@import "styles/variables";
+
+.renovationSlider {
+  .image {
+    position: relative;
+    height: 160px;
+
+    @media (min-width: 410px) {
+      height: 180px;
+    }
+
+    @media (min-width: 576px) {
+      height: 240px;
+    }
+
+    @media (min-width: 768px) {
+      height: 360px;
+    }
+
+    @media (min-width: 976px) {
+      height: 450px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 540px;
+    }
+  }
+
+  .imageActive {
+    -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0);
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .arrowPrev {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%) scale(0.7);
+    left: 10px;
+
+    @media (min-width: 768px) {
+      left: 15px;
+      transform: translateY(-50%) scale(1);
+    }
+
+    @media (min-width: 992px) {
+      left: 20px;
+    }
+
+    @media (min-width: 1280px) {
+      left: 80px;
+      padding-right: 5px;
+    }
+  }
+
+  .arrowNext {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg) scale(0.7);
+    right: 10px;
+
+    @media (min-width: 768px) {
+      right: 15px;
+      transform: translateY(-50%) rotate(180deg) scale(1);
+    }
+
+    @media (min-width: 992px) {
+      right: 20px;
+    }
+
+    @media (min-width: 1280px) {
+      right: 80px;
+      padding-right: 5px;
+    }
+  }
+
+  .arrowPrev,
+  .arrowNext {
+    @media (min-width: 1280px) {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(white, 0.2);
+      }
+
+      &:active {
+        background-color: rgba(white, 0.6);
+      }
+    }
+  }
+}

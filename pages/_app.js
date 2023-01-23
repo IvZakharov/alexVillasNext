@@ -1,17 +1,23 @@
 import "../styles/globals.scss";
-import localFont from "@next/font/local";
-import { Oswald } from "@next/font/google";
-const kyivSans = localFont({ src: "../fonts/KyivTypeSans-Regular.ttf" });
+import { Roboto } from "@next/font/google";
 
-const oswald = Oswald({ subsets: ["latin", "cyrillic"] });
+const roboto = Roboto({
+  weight: ["300", "400", "500"],
+  style: ["normal"],
+  subsets: ["latin", "cyrillic"],
+});
+// const robotoCondensed = RobotoCondensed({
+//   weight: ["500"],
+//   style: ["normal"],
+//   subsets: ["latin", "cyrillic"],
+// });
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       <style jsx global>{`
         :root {
-          --oswald-font: ${oswald.style.fontFamily};
-          --kyivSans-font: ${kyivSans.style.fontFamily};
+          --roboto-font: ${roboto.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} />

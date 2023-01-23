@@ -12,9 +12,10 @@ const CtaSection = ({
   label,
   fields,
   submitButtonText,
+  gradient
 }) => {
   return (
-    <section className={styles.cta} id={"form"}>
+    <section className={`${styles.cta} ${gradient ? styles.gradient : ''}`} id={"form"}>
       {imageUrl && (
         <div className={styles.image}>
           <Image
@@ -39,7 +40,7 @@ const CtaSection = ({
         <div className={"md:col-end-3 md:col-span-1"}>
           <div className={styles.content}>
             <h2 className={`${styles.title}`}>{parse(title)}</h2>
-            {description && <p className={styles.description}>{description}</p>}
+            {description && <p className={`${styles.description} text`}>{description}</p>}
           </div>
           {label && (
             <div className={`${styles.label}`}>
