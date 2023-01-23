@@ -8,7 +8,7 @@ const Dropdown = ({lable, list}) => {
       <span className={`${styles.lable} text`}>
         {lable}
         <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.42871 0.5L10.0001 9.5L18.5716 0.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.42871 0.5L10.0001 9.5L18.5716 0.5" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </span>
       <ul>

@@ -22,6 +22,9 @@ import CtaSection from "../components/CtaSection/CtaSection";
 import teamData from "../data/teamData";
 import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
 import Dropdown from "../ui/Dropdown/Dropdown";
+import ContactAlex from "../components/ContactsAlex/ContactAlex";
+import PatternHouse from "../components/PatternHouse/PatternHouse";
+import React from "react";
 
 export default function Home() {
   
@@ -44,6 +47,29 @@ export default function Home() {
     },
   ]
   
+  const Houses = [
+    {
+      title: '10',
+      bedroom: '1-BEDROOM',
+      housformat: 'TOWNHOUSES',
+    },
+    {
+      title: '2',
+      bedroom: '1-BEDROOM' ,
+      housformat: 'SMART VILLAS',
+    },
+    {
+      title: '3',
+      bedroom: '2-BEDROOM',
+      housformat: 'SMART VILLAS',
+    },
+    {
+      title: '1',
+      bedroom: '3-BEDROOM',
+      housformat: 'SMART VILLAS',
+    },
+  ]
+  
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -63,7 +89,16 @@ export default function Home() {
       </div>
       
       <div className={"mb-16 xl:mb-24"}>
-        <AlexVillas />
+        <AlexVillas  textBlock1={"<span>Alex Villas Complex No. 6</span> is already under construction."}
+          textBlock2={"It is located right next door to  the famous <span>FINNS beach club.</span>"}
+          textBlock3={"<span>We added the best of our best practices to this villa complex which is a product of our successful experience in Canggu area.</span>"}
+        />
+      </div>
+      <div className={"mb-16 xl:mb-24"}>
+        <ContactAlex />
+      </div>
+      <div className={"mb-16 xl:mb-24"}>
+        <PatternHouse Houses={Houses}/>
       </div>
       <div className={"mb-16 xl:mb-24"}>
         <Dropdown lable={"Sales Manager"} list={list}/>

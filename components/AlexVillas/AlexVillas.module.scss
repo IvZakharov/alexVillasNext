@@ -25,18 +25,38 @@
     }
   }
   .textBlocks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    @media (min-width: 1240px) {
+      margin-left: 100px;
+    }
+
+    .text{
+      width: 90%;
+      @media (min-width: 768px) {
+        width: 300px;
+      }
+      span{
+        color: #FF9900;
+      }
+    }
+    .blockThree{
+      width: 90%;
+      @media (min-width: 768px) {
+        width: 370px;
+      }
+
+      span{
+        color: #FF9900;
+      }
+    }
 
   }
-  .text{
-    width: 300px;
-    span{
-      color: #FF9900;
-    }
-  }
-  .blockThree{
-    width: 370px;
-    span{
-      color: #FF9900;
-    }
-  }
+
 }

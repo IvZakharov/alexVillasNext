@@ -2,31 +2,6 @@ import React from "react";
 import styles from "./AlexVillas.module.scss"
 import Image from "next/image";
 import parse from "html-react-parser";
-import PatternHouse from "../PatternHouse/PatternHouse";
-import ContactAlex from "../ContactsAlex/ContactAlex";
-
-const Houses = [
-  {
-    title: '10',
-    bedroom: '1-BEDROOM',
-    housformat: 'TOWNHOUSES',
-  },
-  {
-    title: '2',
-    bedroom: '1-BEDROOM' ,
-    housformat: 'SMART VILLAS',
-  },
-  {
-    title: '3',
-    bedroom: '2-BEDROOM',
-    housformat: 'SMART VILLAS',
-  },
-  {
-    title: '1',
-    bedroom: '3-BEDROOM',
-    housformat: 'SMART VILLAS',
-  },
-]
 
 const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
   return (
@@ -45,7 +20,7 @@ const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
                  }}
           />
         </div>
-        <div className="flex md:justify-between">
+        <div className={`flex md:justify-between ${styles.textBlocks}`}>
           <div className={`${styles.text}`}>
             {textBlock1 &&
               <p className="text mb-10">{parse(textBlock1)}</p>
@@ -61,8 +36,6 @@ const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
           }
         </div>
       </div>
-      {/*<ContactAlex />*/}
-      <PatternHouse Houses={Houses}/>
     </section>
   );
 };

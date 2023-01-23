@@ -12,7 +12,7 @@ const OurClientVideo = () => {
           <div className={`${styles.OutLine} mx-auto`}>
             <div className={`${styles.play} flex justify-center items-center`}>
               <svg width="75" height="93" viewBox="0 0 75 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.16895 1.42896V91.5708L73.5874 46.4999L1.16895 1.42896Z" stroke="#FF9900" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.16895 1.42896V91.5708L73.5874 46.4999L1.16895 1.42896Z" stroke="#FF9900" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
           </div>
