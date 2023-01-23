@@ -12,7 +12,7 @@ import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
 import RenovationGrid from "../components/Renovation/Grid/Grid";
 import TeamData from "../data/teamData";
-import Team from "../components/Team";
+import Team from "../components/Team/Team";
 
 import { projectsOnSaleFilter } from "../utils/projectsOnSaleFilter";
 
