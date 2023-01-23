@@ -29,20 +29,16 @@ const ProjectSlider = ({ images }) => {
         centeredSlides={true}
         pagination={true}
         slidesPerView={"auto"}
-        spaceBetween={10}
         loop
         breakpoints={{
           320: {
             slidesPerView: 1.3,
-            spaceBetween: 10,
           },
           768: {
             slidesPerView: 1.2,
-            spaceBetween: 24,
           },
           1200: {
             slidesPerView: "auto",
-            spaceBetween: 24,
           },
         }}
         modules={[Navigation, Thumbs]}
