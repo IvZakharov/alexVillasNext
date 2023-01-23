@@ -34,13 +34,14 @@
         margin-right: unset;
       }
       .links{
+        text-transform: uppercase;
         font-weight: 500;
         font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
+        line-height: 14px;
         /* identical to box height */
-        color: #FFFFFF;
+        font-style: normal;
         letter-spacing: 0.08em;
+        color: #FFFFFF;
         @media (max-width: 983px) {
           font-size: 11px;
         }
@@ -57,13 +58,13 @@
   border-radius: 28px;
   width: 180px;
   height: 32px;
+  text-transform: uppercase;
   font-weight: 500;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 14px;
   /* identical to box height */
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.05em;
+  font-style: normal;
+  letter-spacing: 0.08em;
   color: #FFFFFF;
   @media (max-width: 983px) {
     font-size: 11px;

@@ -9,17 +9,9 @@ const FormContactHero = ({ hrefLabel }) => {
       <button type="submit" className={`${styles.button}`}>
         {hrefLabel}
         <div className={styles.arrow}>
-          <svg
-            width="40"
-            height="6"
-            viewBox="0 0 40 6"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M40 3L35 0.113249V5.88675L40 3ZM0 3.5L35.5 3.5V2.5L0 2.5L0 3.5Z"
-              fill="#FF9900"
-            />
+  
+          <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z" fill="#FF9900"/>
           </svg>
         </div>
       </button>

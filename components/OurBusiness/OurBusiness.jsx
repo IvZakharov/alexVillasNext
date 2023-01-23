@@ -58,7 +58,7 @@ const OurBusiness = ({text}) => {
              </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-between">
+        <div className={styles.logosBlock}>
           <div className={styles.logos}>
             <svg width="210" height="55" viewBox="0 0 210 55" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.5" clipPath="url(#clip0_333_736)">

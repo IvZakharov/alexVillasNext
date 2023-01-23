@@ -10,7 +10,7 @@ import AlexVillas from "../components/AlexVillas/AlexVillas";
 import WhatsApp from "../components/WhatsApp/WhatsApp";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
-import RenovationGrid from "../components/Renovation/Grid";
+import RenovationGrid from "../components/Renovation/Grid/Grid";
 import TeamData from "../data/teamData";
 import Team from "../components/Team";
 
@@ -55,9 +55,9 @@ export default function Home() {
           h1first={"Инвестируйте"}
           h1second={"На бали"}
           text={
-            "Invest safely in upscale \nproperties in the hottest \nlocations of <span>Bali, Indonesia</span>"
+            "Invest safely in upscale properties in \nthe hottest locations of <span>Bali, Indonesia</span>"
           }
-          subLable={"STARTING FROM $189.000"}
+          subLable={"STARTING AT $189.000"}
           dot={"BERAWA, CANGGU"}
         />
       </div>

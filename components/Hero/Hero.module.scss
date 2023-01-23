@@ -5,6 +5,10 @@
   position: relative;
   width: 100%;
   padding-top: 130px;
+  margin-bottom: 64px;
+  @media(min-width: 1240px){
+    margin-bottom: 96px;
+  }
 
   .background{
     position: absolute;
@@ -16,7 +20,7 @@
   }
 
   .h1Block{
-    width: 55%;
+    width: 56%;
     position: relative;
     @media (max-width: 1239px) {
       width: 70%;
@@ -28,26 +32,43 @@
       width: 100%;
     }
     .h1{
-      position: relative;
-      @media (max-width: 767px) {
-        height: 130px;
+      font-weight: 500;
+      font-size: 100px;
+      line-height: 117px;
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
+      margin-bottom: 1.2em;
+      @media (max-width: 983px) {
         text-align: center;
-        margin-bottom: 40px;
-      }
-      @media (max-width: 473px) {
-        height: 110px;
-        margin-bottom: 35px;
-      }
-      @media (max-width: 405px) {
         margin-bottom: 20px;
       }
-      @media (max-width: 329px) {
-        margin-bottom: 0px;
+      @media (max-width: 767px) {
+        font-size: 80px;
+        line-height: 97px;
+        text-align: center;
+        margin-bottom: 10px;
+        height: fit-content;
+      }
+      @media (max-width: 553px) {
+        font-size: 70px;
+        line-height: 87px;
+      }
+      @media (max-width: 484px) {
+        font-size: 60px;
+        line-height: 77px;
+      }
+      @media (max-width: 416px) {
+        font-size: 50px;
+        line-height: 67px;
+      }
+      @media (max-width: 356px) {
+        font-size: 45px;
+        line-height: 62px;
       }
       span{
         float:right;
         color: #FF9900;
-        @media (max-width: 767px) {
+        @media (max-width: 983px) {
           float: unset;
         }
       }
@@ -55,72 +76,53 @@
     }
     .subLable{
       position: absolute;
-      top: 110px;
+      bottom: 200px;
       left: 0;
 
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 23px;
-      text-align: right;
-      letter-spacing: 0.025em;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 30px;
       text-decoration-line: underline;
       color: white;
-      @media (max-width: 983px) {
-        top: 100px;
-      }
       @media (max-width: 767px) {
-        top: 150px;
-        left: 26%;
+        font-size: 15px;
+        line-height: 19px;
       }
-      @media (max-width: 552px) {
-        top: 150px;
-        left: 25%;
-        font-size: 17px;
-      }
-      @media (max-width: 512px) {
-        top: 150px;
-        left: 23%;
-      }
-      @media (max-width: 469px) {
-        top: 125px;
-        left: 20%;
-      }
-      @media (max-width: 405px) {
-        top: 115px;
-        font-size: 16px;
-        left: 15%;
-      }
-      @media (max-width: 369px) {
-        top: 105px;
-        left: 15%;
-      }
-      @media (max-width: 329px) {
-        top: 82px;
-        left: 10%;
-      }
-      @media (max-width: 297px) {
-        left: 3%;
+      @media (max-width: 983px) {
+        position: unset;
+        text-align: center;
       }
     }
     .dot{
-      position: absolute;
-      top: -40px;
-      right: 0;
+      position: unset;
+      margin-left: auto;
+      margin-right: auto;
       color: #FFFFFF;
       display: flex;
+      width: fit-content;
+
       @media (min-width: 984px) {
+        top: -30px;
+        right: 0px;
+        position: absolute;
+      }
+      @media (min-width: 1240px) {
         top:50px;
-        right: -150px;
+        right: -250px;
+        position: absolute;
       }
       .address{
         margin-left: 6px;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 23px;
-        text-align: right;
-        letter-spacing: 0.025em;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 30px;
         text-decoration-line: underline;
-        color: white;
+
+        color: #FFFFFF;
+        @media (max-width: 767px) {
+          font-size: 15px;
+          line-height: 19px;
+        }
       }
     }
   }
@@ -129,13 +131,17 @@
     @media (max-width: 767px) {
       flex-direction: column-reverse;
       width: 100%;
+      padding-bottom: 1em;
     }
   }
   .textBlock{
-    max-width: 305px;
+    max-width: 350px;
     display: flex;
     margin-left: 43px;
     justify-content: flex-end;
+    @media (max-width: 983px) {
+      max-width: 40%;
+    }
     @media (max-width: 767px) {
       width: fit-content;
       max-width: unset;
@@ -143,14 +149,18 @@
       margin: 0 auto;
     }
     .text{
-      margin-top: 15px;
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 25px;
+      margin-top: 23px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 128.02%;
       /* or 26px */
       color: #FFFFFF;
       white-space: break-spaces;
       max-width: 384px;
+      @media (max-width: 983px) {
+        white-space: normal;
+        max-width: 100%;
+      }
       @media (max-width: 767px) {
         font-size: 16px;
         line-height: 23px;

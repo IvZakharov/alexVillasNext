@@ -2,8 +2,10 @@
 .FormContactHero{
   display: flex;
   flex-direction: column;
-  width: 295px;
-  height: 175px;
+  width: 315px;
+  @media (max-width: 983px) {
+    width: 60%;
+  }
   @media (max-width: 767px) {
     width: 100%;
     height: auto;
@@ -36,9 +38,8 @@
       display: flex;
       align-items: center;
       font-weight: 700;
-      font-size: 13px;
-      line-height: 23px;
-      letter-spacing: 0.025em;
+      font-size: 18px;
+      line-height: 21px;
       color: #FF9900;
       @media (max-width: 767px) {
         font-size: 15px;

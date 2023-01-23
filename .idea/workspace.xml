@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ui/Dropdown/Dropdown.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_01_2023__13_25__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Modal/Modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Modal/Modal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormContactHero/FormContactHero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeaderMenu/Headermenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeaderMenu/Headermenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Hero/Hero.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Hero/Hero.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroMenu/HeroMenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/MobileMenu/MobileMenu.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurBusiness/OurBusiness.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/MainLayout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/nabster.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nabster.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +161,7 @@
       <workItem from="1673435480334" duration="850000" />
       <workItem from="1673436613907" duration="733000" />
       <workItem from="1673439995913" duration="1349000" />
-      <workItem from="1673502153676" duration="49263000" />
+      <workItem from="1673502153676" duration="57990000" />
     </task>
     <servers />
   </component>

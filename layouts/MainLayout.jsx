@@ -20,7 +20,7 @@ const MainLayout = ({
         <meta name="keywords" content={metaKeywords} />
         <meta property="og:image" content={metaImage} />
       </Head>
-      <Header onClickMenu={(bool)=>setOpenedMenu(bool)}  openedMenu={openedMenu}/>
+      <Header onClickMenu={(bool)=>setOpenedMenu(bool)}/>
       
       <div className="main">{children}</div>
       <Footer />

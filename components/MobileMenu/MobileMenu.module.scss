@@ -31,9 +31,9 @@
         .links{
           display: block;
           width: 200px;
-          font-weight: 700;
-          font-size: 25px;
-          line-height: 25px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 20px;
           text-align: center;
           text-transform: uppercase;
           /* identical to box height */
@@ -52,17 +52,14 @@
     margin-right: auto;
     margin-left: auto;
     border-radius: 28px;
-    width: 200px;
-    height: 50px;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 25px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
     /* identical to box height */
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    margin-top: 30px;
     @media (max-width: 767px) {
       width: fit-content;
       height: fit-content;
@@ -76,7 +73,7 @@
     position: absolute;
     z-index: 80;
     top: -50px;
-    right: 50px;
+    right: 25px;
     background-color: transparent;
     border: none;
     display: flex;
@@ -85,7 +82,9 @@
     justify-content: center;
     transform: translateY(80px);
     transition: all 0.2s ease-in-out;
-
+    @media (min-width: 580px) {
+      right: 10%;
+    }
     span {
       width: 50px;
       height: 5px;

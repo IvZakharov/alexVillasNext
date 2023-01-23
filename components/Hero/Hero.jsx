@@ -21,23 +21,8 @@ const Hero = ({ h1first, h1second, text, subLable, dot }) => {
           }}
         />
       </div>
-      <div className="container">
-        <div className={`${styles.h1Block} mx-auto`}>
-          <h1 className={`${styles.h1} h1`}>
-            {h1first}
-            <br />
-            <span>{h1second}</span>
-          </h1>
-          <div className={styles.FormText}>
-            <FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />
-            {text && (
-              <div className={styles.textBlock}>
-                {" "}
-                <div className={`${styles.text} text`}>{parse(text)}</div>
-              </div>
-            )}
-          </div>
-          {subLable && <div className={`${styles.subLable}`}>{subLable}</div>}
+      <div className="container md:p-0">
+        <div className={`${styles.h1Block} mx-auto xl:ml-72`}>
           {dot && (
             <div className={styles.dot}>
               <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,6 +32,23 @@ const Hero = ({ h1first, h1second, text, subLable, dot }) => {
               <div className={styles.address}>{parse(dot)}</div>
             </div>
           )}
+          <h1 className={`${styles.h1}`}>
+            {h1first}
+            <br />
+            <span>{h1second}</span>
+          </h1>
+          {subLable && <div className={`${styles.subLable}`}>{subLable}</div>}
+          <div className={styles.FormText}>
+            <FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />
+            {text && (
+              <div className={styles.textBlock}>
+                {" "}
+                <div className={`${styles.text} text`}>{parse(text)}</div>
+              </div>
+            )}
+          </div>
+          
+
         </div>
         <div className={"hidden md:block"}>
           <HeroMenu />
