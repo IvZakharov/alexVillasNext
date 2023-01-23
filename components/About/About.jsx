@@ -40,8 +40,8 @@ const About = () => {
   ];
   return (
     <section className={styles.about}>
-      <div className={"container xl:pl-32 pt-10 xl:pt-32 xl:pb-32"}>
-        <div className={styles.videoPlaceholder}>
+      <div className={"container xl:pl-32 xl:pt-32 xl:pb-32"}>
+        <div className={`${styles.videoPlaceholder} mb-10 md:mb-0`}>
           <Image
             alt="video placeholder"
             src={"/images/about/placeholder.jpg"}
