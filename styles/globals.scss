@@ -19,8 +19,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--roboto-font);
-  font-weight: 500;
+  font-family: var(--robotoCondensed-font);
+  font-weight: 700;
 }
 
 body {
@@ -142,16 +142,22 @@ a {
   }
 }
 
+.textSmall {
+  font-size: 16px;
+  line-height: 18px;
+}
+
 .text-primary {
   color: $primary;
 }
 
 .h2 {
-  font-weight: 700;
   font-size: 32px;
   line-height: 36px;
-  letter-spacing: 0.025em;
+  letter-spacing: -0.01em;
   color: $primary;
+  font-family: var(--robotoCondensed-font);
+  font-weight: 700;
   text-transform: uppercase;
 
   span {
@@ -174,6 +180,7 @@ a {
   font-size: 34px;
   line-height: 41px;
   /* identical to box height */
+  font-family: var(--robotoCondensed-font);
   text-align: left;
   letter-spacing: 0.025em;
   height: 174px;

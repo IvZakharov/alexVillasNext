@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15c96c0b-d696-4de3-9594-a823cdfede3c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ui/Dropdown/Dropdown.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Modal/Modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/Modal/Modal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/OurClientVideo/OurClientVideo.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/nabster.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nabster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/About/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/About/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/About/About.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/About/About.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/KyivTypeSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +80,7 @@
       <recent name="$PROJECT_DIR$/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fonts" />
       <recent name="D:\itcac\alexVillasNext\public\images\alexvillas" />
     </key>
   </component>
