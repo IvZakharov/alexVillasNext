@@ -51,7 +51,7 @@
       height: 450px;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1280px) {
       position: absolute;
       right: 0;
       top: 0;
@@ -81,6 +81,14 @@
     @media (min-width: 768px) {
       width: 240px;
       height: auto;
+
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+    }
+
+    @media (min-width: 1280px) {
+      top: calc(50% - 100px);
+      left: calc(50% - 100px);
     }
   
     &:hover {

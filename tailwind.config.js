@@ -15,7 +15,7 @@ module.exports = {
         screens: { sm: "576px", md: "768px", lg: "984px", xl: "1240px" },
       },
       fontFamily: {
-        sans: ["var(--font-kyivSans)", ...fontFamily.sans],
+        sans: ["var(--font-roboto)", ...fontFamily.sans],
       },
     },
   },
