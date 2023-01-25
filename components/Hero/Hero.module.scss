@@ -20,7 +20,8 @@
   }
 
   .h1Block{
-    width: 56%;
+    min-width: 56%;
+    width: fit-content;
     position: relative;
     @media (max-width: 1239px) {
       width: 70%;
@@ -38,6 +39,7 @@
       letter-spacing: -0.03em;
       color: #FFFFFF;
       margin-bottom: 1.2em;
+      text-transform: uppercase;
       @media (max-width: 983px) {
         text-align: center;
         margin-bottom: 20px;
@@ -135,7 +137,7 @@
     }
   }
   .textBlock{
-    max-width: 350px;
+    max-width: 363px;
     display: flex;
     margin-left: 43px;
     justify-content: flex-end;

@@ -28,10 +28,10 @@ export default function Agency() {
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
-          h1first={"GET UP TO 20% "}
-          h1second={"YEARLY"}
+          h1first={"ALEX VILLAS"}
+          h1second={"AGENCY "}
           text={
-            "Invest safely in upscale \n properties in the hottest \n locations of <span>Bali, Indonesia</span>"
+            "High-performing \nproperty renovations \n in prime locations of Bali"
           }
           subLable={"STARTING FROM $189.000"}
         />
@@ -70,6 +70,24 @@ export default function Agency() {
               bedroom: "3-BEDROOM",
               housformat: "SMART VILLAS",
             },
+          ]}
+          
+          links={[
+            {
+              name: 'download',
+              link: '#',
+              lable: 'DOWNLOAD PDF',
+            },
+            {
+              name: 'contact',
+              link: '#',
+              lable: 'contact us'
+            },
+            // {
+            //   name: 'button',
+            //   link: '#',
+            //   lable: 'SCHEDULE A TOUR'
+            // }
           ]}
         />
       </div>

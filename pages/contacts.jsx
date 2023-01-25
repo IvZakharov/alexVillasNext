@@ -29,12 +29,9 @@ export default function Agency() {
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
-          h1first={"GET UP TO 20% "}
-          h1second={"YEARLY"}
-          text={
-            "Invest safely in upscale \n properties in the hottest \n locations of <span>Bali, Indonesia</span>"
-          }
-          subLable={"STARTING FROM $189.000"}
+          h1first={"GET IN"}
+          h1second={"TOUCH"}
+          form
         />
       </div>
       <div className={"mb-16"}>

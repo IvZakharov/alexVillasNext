@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./PatternHouse.module.scss";
 import Link from "next/link";
+import Button from "../../ui/Button/Button";
 
-const PatternHouse = ({ Houses }) => {
+const PatternHouse = ({ Houses, links }) => {
   return (
     <section className="container">
       <div
-        className={`${styles.PatternHouse} container md:flex md:justify-between lg:px-24`}
+        className={`${styles.PatternHouse} container md:flex md:justify-between xl:px-24`}
       >
         <div className={styles.about}>
           {Houses &&
@@ -19,13 +20,13 @@ const PatternHouse = ({ Houses }) => {
             ))}
         </div>
         <div className={styles.second}>
-          <div className={styles.download}>
-            <Link href={"#"}>Download PDF</Link>
-          </div>
-          <div className={styles.contact}>
-            <Link href={"#"}>Contact us</Link>
-          </div>
+        {links && links.map((obj, i)=>(
+            <div key={i} className={obj.name == 'download' ? styles.download : obj.name == 'contact'?  styles.contact : styles.button}>
+              { obj.name != 'button' ? <Link href={obj.link}>{obj.lable}</Link> : <Button color={'#FF9900'}  children={obj.lable} /> }
+            </div>
+        ))}
         </div>
+        
       </div>
     </section>
   );

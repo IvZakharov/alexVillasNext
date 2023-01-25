@@ -1,12 +1,9 @@
 @import "styles/variables";
 
 .footer {
-  height: 332px;
-
   .icons{
     display: flex;
     flex-direction: column;
-    //justify-content: center;
     max-width: 266px;
     .social{
       display: flex;
@@ -18,12 +15,22 @@
     justify-content: space-between;
     width: 65%;
     margin-top: 40px;
-    @media (max-width: 1024px) {
-      width: fit-content;
+    @media (max-width: 983px) {
+      width: 75%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    @media (max-width: 556px) {
       justify-content: center;
-      flex-direction: column;
+    }
+    @media (max-width: 315px) {
+      flex-wrap: wrap;
     }
     .menu{
+      @media (max-width: 556px) {
+        margin-right: 30px;
+      }
       ul{
         li{
           font-weight: 500;
@@ -38,42 +45,58 @@
         }
       }
     }
-    .address{
-      width: 202px;
-      p{
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        letter-spacing: 0.05em;
-
-        color: #FFFFFF;
-      }
-    }
-    .contacts{
-      @media (max-width: 1024px) {
-        margin-top: 20px;
-      }
+    .BlockAdCont{
       display: flex;
-      flex-direction: column;
-      .email{
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        letter-spacing: 0.05em;
-
-        color: #FFFFFF;
-        margin-bottom: 9px;
+      flex-wrap: wrap;
+      @media (max-width: 556px) {
+        width: 200px;
       }
-      .phone{
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        letter-spacing: 0.05em;
-        text-decoration-line: underline;
 
-        color: #FFFFFF;
+      .address{
+        max-width: 202px;
+        margin-right: 8rem;
+        @media (max-width: 1239px) {
+          margin-right: 2.5rem;
+        }
+        @media (max-width: 767px) {
+          margin-right: 30px;
+        }
+        @media (max-width: 556px) {
+          margin-right: unset;
+        }
+        p{
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: 0.05em;
+
+          color: #FFFFFF;
+        }
+      }
+      .contacts{
+        display: flex;
+        flex-direction: column;
+        .email{
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: 0.05em;
+
+          color: #FFFFFF;
+          margin-bottom: 9px;
+        }
+        .phone{
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          letter-spacing: 0.05em;
+          text-decoration-line: underline;
+
+          color: #FFFFFF;
+        }
       }
     }
+
   }
 
   .underFooter{

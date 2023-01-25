@@ -4,7 +4,7 @@ import FormContactHero from "../FormContactHero/FormContactHero";
 import HeroMenu from "../HeroMenu/HeroMenu";
 import parse from "html-react-parser";
 
-const Hero = ({ h1first, h1second, text, subLable, dot }) => {
+const Hero = ({ h1first, h1second, text, subLable, dot, form }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.background}>
@@ -22,7 +22,7 @@ const Hero = ({ h1first, h1second, text, subLable, dot }) => {
         />
       </div>
       <div className="container md:p-0">
-        <div className={`${styles.h1Block} mx-auto xl:ml-72`}>
+        <div className={`${styles.h1Block} mx-auto xl:ml-52`}>
           {dot && (
             <div className={styles.dot}>
               <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,15 +38,18 @@ const Hero = ({ h1first, h1second, text, subLable, dot }) => {
             <span>{h1second}</span>
           </h1>
           {subLable && <div className={`${styles.subLable}`}>{subLable}</div>}
-          <div className={styles.FormText}>
-            <FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />
-            {text && (
-              <div className={styles.textBlock}>
-                {" "}
-                <div className={`${styles.text} text`}>{parse(text)}</div>
-              </div>
-            )}
-          </div>
+          {!form && (
+            <div className={styles.FormText}>
+              <FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />
+              {text && (
+                <div className={styles.textBlock}>
+                  {" "}
+                  <div className={`${styles.text} text`}>{parse(text)}</div>
+                </div>
+              )}
+            </div>
+          )}
+          
           
 
         </div>

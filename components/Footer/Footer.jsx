@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className={`${styles.footer} container`}>
-      <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between pt-24">
+      <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between py-24">
         <div className={styles.icons}>
           <Image
             src={"/images/logo.png"}
@@ -42,22 +42,24 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className={styles.address}>
-            <p>
-              ALEX VILLAS PROPERTY Jl. Raya Semat, Tibubeneng, Kec. Kuta Utara,
-              Kabupaten Badung, Bali
-            </p>
-          </div>
-          <div className={styles.contacts}>
-            <Link
-              href={"mailto:alexvillasmarketing@gmail.com"}
-              className={styles.email}
-            >
-              alexvillasmarketing@gmail.com
-            </Link>
-            <Link href={"tel:+62 821 4759 2387"} className={styles.phone}>
-              +62 821 4759 2387
-            </Link>
+          <div className={styles.BlockAdCont}>
+            <div className={styles.address}>
+              <p>
+                ALEX VILLAS PROPERTY Jl. Raya Semat, Tibubeneng, Kec. Kuta Utara,
+                Kabupaten Badung, Bali
+              </p>
+            </div>
+            <div className={styles.contacts}>
+              <Link
+                href={"mailto:alexvillasmarketing@gmail.com"}
+                className={styles.email}
+              >
+                alexvillasmarketing@gmail.com
+              </Link>
+              <Link href={"tel:+62 821 4759 2387"} className={styles.phone}>
+                +62 821 4759 2387
+              </Link>
+            </div>
           </div>
         </div>
       </div>

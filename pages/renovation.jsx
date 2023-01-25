@@ -29,9 +29,8 @@ export default function Renovation() {
           h1first={"GET UP TO 20% "}
           h1second={"YEARLY"}
           text={
-            "Invest safely in upscale \n properties in the hottest \n locations of <span>Bali, Indonesia</span>"
+            "High-performing \nproperty renovations \n in prime locations of Bali"
           }
-          subLable={"STARTING FROM $189.000"}
         />
       </div>
       <div>

@@ -30,8 +30,8 @@ export default function Home() {
     >
       <div className={"mb-16 xl:mb-0"}>
         <Hero
-          h1first={"Инвестируйте"}
-          h1second={"На бали"}
+          h1first={"INVEST IN PROPERTY"}
+          h1second={"IN BALI    "}
           text={
             "Invest safely in upscale \nproperties in the hottest \nlocations of <span>Bali, Indonesia</span>"
           }
