@@ -3,6 +3,7 @@ import styles from "./Headermenu.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { menutop } from "../../data/menutop";
+import { menutopru } from "../../data/menutopru";
 
 const HeaderMenu = () => {
   return (
@@ -21,8 +22,8 @@ const HeaderMenu = () => {
         </div>
         <nav className={`${styles.nav} hidden md:block `}>
           <ul className={`${styles.menu} flex flex-col md:flex-row `}>
-            {menutop &&
-              menutop.map((obj, i) => (
+            {menutopru &&
+              menutopru.map((obj, i) => (
                 <li key={i}>
                   <Link href={obj.link} className={`${styles.links}`}>
                     {obj.lable}
@@ -32,7 +33,7 @@ const HeaderMenu = () => {
           </ul>
         </nav>
         <Link href={"#"} className={`${styles.contact} hidden md:block`}>
-          Contact Us
+          НАПИШИТЕ НАМ
         </Link>
       </div>
     </div>

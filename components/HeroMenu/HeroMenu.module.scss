@@ -58,6 +58,41 @@
         line-height: 20px;
       }
     }
+    .links{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 0.005em;
+      color: #FFFFFF;
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+    .linksRu{
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      padding: 5px 10px;
+      @media (max-width: 767px) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    .liRu{
+      width: fit-content;
+      &:first-child{
+        margin-left: unset;
+      }
+      &:last-child{
+        margin-right: unset;
+      }
+    }
   }
 
 }

@@ -1,0 +1,184 @@
+.Invest{
+  position: relative;
+  //height: 30.55vh;
+  .background{
+    width: 90%;
+    left: 5%;
+    height: 60vh;
+    top:-430px;
+    border-bottom: 1px solid #ff9900;
+    border-left: 1px solid #ff9900;
+    border-right: 1px solid #ff9900;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -101;
+  }
+  .arrowBot{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: -80px;
+    left: 0;
+  }
+  .h2Titile{
+    display: flex;
+    justify-content: center;
+    h2{
+      margin-bottom: 18%;
+    }
+  }
+
+  .static{
+    border: 1px solid #FFFFFF;
+    padding: 10px;
+    border-radius:15px 0px 15px 15px;
+    min-height: 70px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0.5em;
+    .vertLine{
+      border: 2px solid #FFFFFF;
+      height: 3em;
+    }
+    .firstBlock{
+      flex-direction: column;
+    }
+
+    .textBlock{
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 21px;
+      color: #FFFFFF;
+      .bolder{
+        font-weight: 700;
+      }
+      .bigNum{
+        font-size: 44px;
+        line-height: 68px;
+        color: #ff9900;
+        margin-right: 0.5em;
+      }
+    }
+  }
+  .offstatic{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.87);
+    margin-bottom: 4em;
+  }
+  .BlockCheks{
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    margin-bottom: 4em;
+    .lineFirst, .lineSecond, .lineThird{
+      display: none;
+    }
+    @media (min-width: 1000px) {
+      .lineFirst, .lineSecond, .lineThird{
+        display: unset;
+      }
+      .lineFirst{
+        position: absolute;
+        top:5%;
+        border-bottom: 1px dashed #fff;
+        width: 70%;
+        left: 15%;
+        z-index: -1;
+      }
+      .lineSecond{
+        position: absolute;
+        top:39%;
+        border-bottom: 1px dashed #fff;
+        width: 70%;
+        left: 15%;
+        z-index: -1;
+      }
+      .lineThird{
+        position: absolute;
+        top:72%;
+        border-bottom: 1px dashed #fff;
+        width: 70%;
+        left: 15%;
+        z-index: -1;
+      }
+    }
+
+
+    .Block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 260px;
+      margin-bottom: 3em;
+      .Image{
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .Scheme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .NedWig{
+      width: 90%;
+      min-height: 70px;
+      background: #212121;
+      border-radius: 20px 0px 20px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+      padding: 1em 0.5em;
+      margin-bottom: 4em;
+      @media (min-width: 768px) {
+        width: 70%;
+      }
+      p{
+        width: 80%;
+        font-size: 25px;
+        color: white;
+      }
+    }
+    .arrowBot{
+      position: absolute;
+      top:35%;
+    }
+    .ThreeBlocks{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .block{
+        width: 40%;
+        border: 1px dashed #ff9900;
+        border-radius: 15px 0px 15px 15px;
+        color: #FFFFFF;
+        padding: 1em 2em;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 2em;
+        &:last-child{
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: unset;
+        }
+      }
+    }
+  }
+}
+

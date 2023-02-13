@@ -1,0 +1,45 @@
+.ComplexPlash{
+    width: 90%;
+    min-height: 70px;
+    background: #212121;
+    border-radius: 20px 0px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 1em 0.5em;
+    position: absolute;
+    top: -150px;
+    @media (min-width: 768px) {
+        width: 70%;
+        padding: 2em;
+    }
+    .Items{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        margin-bottom: 1em;
+        &:last-child{
+            margin-bottom: unset;
+        }
+        @media (min-width: 768px) {
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: unset;
+        }
+
+        .bot{
+            margin-top: 5px;
+            text-align: center;
+            color:#FF9900;
+        }
+        b{
+            font-weight: unset;
+            color:#FF9900;
+        }
+    }
+}
+

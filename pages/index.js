@@ -20,6 +20,16 @@ import { menageProjects } from "../data/menageProjects";
 import { projects } from "../data/projects";
 import CtaSection from "../components/CtaSection/CtaSection";
 import teamData from "../data/teamData";
+// const arr = {
+//     type: 'video',
+//     url: 'https://chinas-lafa.ru/wp-content/uploads/2018/HeroVideo.webm',
+//     urlSecond: 'https://drive.google.com/u/0/uc?id=1Kw19-kjQlh5H8q2De2Nb8FKLC16sGeyS&export=download',
+// }
+const arr = {
+    type: 'image',
+    url: '/images/hero.png',
+    alt: 'background image',
+}
 
 export default function Home() {
   return (
@@ -30,12 +40,15 @@ export default function Home() {
     >
       <div className={"mb-16 xl:mb-0"}>
         <Hero
-          h1first={"INVEST IN PROPERTY"}
-          h1second={"IN BALI    "}
+          h1first={"НЕДВИЖИМОСТЬ"}
+          h1second={"НА БАЛИ"}
+          // h1first={"РЕНОВАЦИЯ"}
+          // h1second={"ВИЛЛ НА БАЛИ"}
           text={
-            "Invest safely in upscale \nproperties in the hottest \nlocations of <span>Bali, Indonesia</span>"
+            "Инвестируйте от $70.000 с доходностью 10-30% годовых"
           }
-          subLable={"STARTING FROM $189.000"}
+          back = {arr}
+          // subLable={"STARTING FROM $189.000"}
         />
       </div>
 

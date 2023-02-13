@@ -1,10 +1,11 @@
 @import "styles/variables";
 
 .hero {
-  height: 100%;
+  height: 100vh;
   position: relative;
   width: 100%;
-  padding-top: 130px;
+  padding-top: 210px;
+  padding-bottom: 64px;
   margin-bottom: 64px;
   @media(min-width: 1240px){
     margin-bottom: 96px;
@@ -17,28 +18,36 @@
     z-index: -100;
     width: 100%;
     height: 100%;
+    .videoBack{
+      opacity: 0.6;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-size: cover;
+    }
   }
 
   .h1Block{
-    min-width: 56%;
-    width: fit-content;
+    width: 100%;
     position: relative;
-    @media (max-width: 1239px) {
-      width: 70%;
-    }
-    @media (max-width: 983px) {
-      width: 80%;
-    }
-    @media (max-width: 767px) {
-      width: 100%;
-    }
+    //@media (max-width: 1239px) {
+    //  width: 70%;
+    //}
+    //@media (max-width: 983px) {
+    //  width: 80%;
+    //}
+    //@media (max-width: 767px) {
+    //  width: 100%;
+    //}
     .h1{
+      display: flex;
+      flex-direction: column;
       font-weight: 500;
       font-size: 100px;
       line-height: 117px;
       letter-spacing: -0.03em;
       color: #FFFFFF;
-      margin-bottom: 1.2em;
+      //margin-bottom: 1.2em;
       text-transform: uppercase;
       @media (max-width: 983px) {
         text-align: center;
@@ -67,8 +76,11 @@
         font-size: 45px;
         line-height: 62px;
       }
-      span{
-        float:right;
+      .white{
+
+      }
+      .yellow{
+        padding-left: 32%;
         color: #FF9900;
         @media (max-width: 983px) {
           float: unset;
@@ -137,9 +149,10 @@
     }
   }
   .textBlock{
+    position: absolute;
+    top:140px;
     max-width: 363px;
     display: flex;
-    margin-left: 43px;
     justify-content: flex-end;
     @media (max-width: 983px) {
       max-width: 40%;
@@ -177,6 +190,27 @@
         text-decoration-line: underline;
         color: #FFFFFF;
       }
+    }
+  }
+  .link{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FF9900;
+    @media (max-width: 767px) {
+      font-size: 15px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    a{
+      display: flex;
+      align-items: center;
+    }
+
+    svg{
+      margin-left: 24px;
     }
   }
 
