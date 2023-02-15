@@ -16,7 +16,7 @@ const Hero = ({ h1first, h1second, text, subLable, dot, form, link, back }) => {
           </video>
           ) : (
           <Image
-          alt={back.type}
+          alt={"ALEX VILLAS"}
           src={back.url}
           quality={80}
           fill

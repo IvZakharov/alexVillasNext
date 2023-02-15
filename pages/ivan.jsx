@@ -5,6 +5,11 @@ import { fetchAPI } from "../lib/api";
 import FinanceModeling from "../components/Project/FinanceModeling/FinanceModeling";
 
 export default function Ivan({ properties, projects, global }) {
+  const arr = {
+    type: 'image',
+    url: '/images/hero.png',
+    alt: 'background image',
+  }
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -18,6 +23,7 @@ export default function Ivan({ properties, projects, global }) {
           text={
             "High-performing \nproperty renovations \n in prime locations of Bali"
           }
+          back={arr}
         />
       </div>
 

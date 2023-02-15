@@ -27,7 +27,7 @@ const ParamCard = ({Param, index}) => {
             className={styles.mySwiper}
           >
             {Param.slider && Param.slider.map((obj, i)=>(
-              <SwiperSlide><img src={obj} /></SwiperSlide>
+              <SwiperSlide key={i}><img src={obj} /></SwiperSlide>
             ))}
           </Swiper>
         </div>

@@ -15,6 +15,11 @@ import OurBusiness from "../../components/OurBusiness/OurBusiness";
 import ConstructionAbout from "../../components/Construction/About";
 
 export default function Project() {
+  const arr = {
+    type: 'image',
+    url: '/images/hero.png',
+    alt: 'background image',
+  }
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -29,6 +34,7 @@ export default function Project() {
             "Invest safely in upscale \n properties in the hottest \n locations of <span>Bali, Indonesia</span>"
           }
           subLable={"STARTING FROM $189.000"}
+          back={arr}
         />
       </div>
       <div>

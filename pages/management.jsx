@@ -15,6 +15,11 @@ import ManagementGrid from "../components/Management/Grid";
 import { menageProjects } from "../data/menageProjects";
 
 export default function Management() {
+  const arr = {
+    type: 'image',
+    url: '/images/hero.png',
+    alt: 'background image',
+  }
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -29,6 +34,7 @@ export default function Management() {
             "High-performing \nproperty renovations \n in prime locations of Bali"
           }
           subLable={"STARTING FROM $189.000"}
+          back={arr}
         />
       </div>
       <div>

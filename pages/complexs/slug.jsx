@@ -12,6 +12,11 @@ import Investor from "../../components/Project/Investor/Investor";
 
 
 const Slug = () => {
+  const arr = {
+    type: 'image',
+    url: '/images/hero.png',
+    alt: 'background image',
+  }
   const complex = [
     {
       lable: "Средняя окупаемость:",
@@ -38,6 +43,7 @@ const Slug = () => {
           text={
             "с доходностью от 10 до 33 годовых в $"
           }
+          back={arr}
         />
       <ComplexPlash items={complex} />
       <div className={"mb-16"}>

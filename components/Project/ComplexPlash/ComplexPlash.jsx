@@ -12,18 +12,6 @@ const ComplexPlash = ({items}) => {
             <span className={styles.bot}>{obj.sublable}</span>
           </div>
         ))}
-        {/*<div className={styles.Items}>*/}
-        {/* <span> Средняя окупаемость:</span>*/}
-        {/*  <span className={styles.bot}>5-6 лет</span>*/}
-        {/*</div>*/}
-        {/*<div className={styles.Items}>*/}
-        {/* <span> Инвестиции от</span>*/}
-        {/*  <span className={styles.bot}>175.000$ - 445.000$</span>*/}
-        {/*</div>*/}
-        {/*<div className={styles.Items}>*/}
-        {/*  <span>Топ локация <b>Чангу,</b></span>*/}
-        {/*  <span className={styles.bot}>5 минут до океана</span>*/}
-        {/*</div>*/}
       </div>
     </div>
   );
