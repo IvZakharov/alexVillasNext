@@ -4,16 +4,21 @@
     text-transform: uppercase;
   }
   p{
-    width: 50%;
-    font-size: 25px;
+    width: 100%;
     color: #FFFFFF;
     margin-bottom: 2em;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
     span{
       color:#ff9900;
     }
   }
   .mySwiper{
-    width: 80%;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 80%;
+    }
   }
 
 

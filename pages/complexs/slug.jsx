@@ -6,6 +6,10 @@ import InvestInBaly from "../../components/Project/InvestInBaly/InvestInBaly";
 import SliderBaly from "../../components/Project/SliderBaly/SliderBaly";
 import ComplexPlan from "../../components/Project/ComplexPlan/ComplexPlan";
 import VillasParam from "../../components/Project/VillasParam/VillasParam";
+import Infrastruct from "../../components/Infrastruct/Infrastruct";
+import { infrac } from "../../data/infrac";
+import Investor from "../../components/Project/Investor/Investor";
+
 
 const Slug = () => {
   const complex = [
@@ -47,6 +51,12 @@ const Slug = () => {
       </div>
       <div className={"mb-16"}>
         <VillasParam />
+      </div>
+      <div className={"mb-16"}>
+        <Infrastruct data={infrac} />
+      </div>
+      <div className={"mb-16"}>
+        <Investor />
       </div>
       
     </MainLayout>

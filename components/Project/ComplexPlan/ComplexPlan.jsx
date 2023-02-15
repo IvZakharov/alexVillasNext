@@ -7,7 +7,7 @@ const ComplexPlan = () => {
     <section className={styles.ComplexPlan}>
       <div className="container">
         <h2 className="h2">План Комплекса</h2>
-        <p className={styles.AfterH2}><span>Alex Complex</span> 5 в самой топовой<br /> локации Чангу, 900 м до океана</p>
+        <p className={`${styles.AfterH2} text`}><span>Alex Complex</span> 5 в самой топовой<br /> локации Чангу, 900 м до океана</p>
         <div className={styles.PlanBlock}>
           <div className={styles.PlanImg}>
             <Image src={'/images/projects/photo.png'} fill={'cover'} />
@@ -15,7 +15,7 @@ const ComplexPlan = () => {
           <div className="container flex justify-center relative">
             <div className={styles.AcceptToBye}>
               <div className={styles.BlockAccept}>
-                <p >К покупке доступны:</p>
+                <p className={"text"}>К покупке доступны:</p>
                 <ul className={"text"}>
                   <li>1 трехспальная смарт-вилла</li>
                   <li>2 односпальные смарт-виллы</li>

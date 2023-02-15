@@ -4,10 +4,12 @@
     margin-bottom: 22px;
   }
   .AfterH2{
-    width: 50%;
-    font-size: 25px;
+    width: 100%;
     color: #FFFFFF;
     margin-bottom: 2em;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
     span{
       color:#ff9900;
     }
@@ -17,15 +19,19 @@
     height: 100%;
     .PlanImg{
       width: 100%;
-      height: 860px;
+      height: 300px;
       position: relative;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 2em;
+      margin-bottom: 6em;
+      @media (min-width: 768px) {
+        height: 860px;
+        margin-bottom: 2em;
+      }
     }
     .AcceptToBye{
       position: absolute;
-      width: 90%;
+      width: 95%;
       min-height: 70px;
       background: #ff9900;
       border-radius: 20px 0px 20px 20px;
@@ -34,36 +40,55 @@
       justify-content: space-around;
       align-items: baseline;
       padding: 1em 0.5em;
-      bottom: 0;
+      bottom: 0px;
       @media (min-width: 768px) {
         width: 80%;
+        bottom: 0;
       }
 
       .BlockAccept{
         display: flex;
+        width: 100%;
         align-items: center;
+        flex-direction: column;
         justify-content: space-around;
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
         p{
-          width: 20%;
+          width: 100%;
+          text-align: center;
           color: #ffffff;
-          font-size: 25px;
+          margin-bottom: 1em;
+          @media (min-width: 768px) {
+            width: 20%;
+            text-align: unset;
+          }
         }
         ul{
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           justify-content: space-between;
           li{
-            font-size: 18px;
-            width: 23%;
+            width: 40%;
             position: relative;
+            margin-left: 1.2em;
+            @media (min-width: 768px) {
+              width: 23%;
+            }
           }
           li:before{
             content: "";
             position: absolute;
-            width: 15px;
+            width: 10px;
             border-bottom: 2px solid #fff;
-            left: -25px;
+            left: -20px;
             top: 20%;
+            @media (min-width: 768px) {
+              width: 15px;
+              left: -25px;
+            }
           }
         }
       }
@@ -79,10 +104,13 @@
         justify-content: center;
         background: #ff9900;
         padding: 10px;
-        width: 20%;
+        width: 50%;
         min-height: 50px;
         text-transform: uppercase;
         font-weight: 500;
+        @media (min-width: 768px) {
+          width: 20%;
+        }
       }
     }
   }

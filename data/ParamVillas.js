@@ -135,5 +135,31 @@ export const ParamVillas = [
       "https://thumb.tildacdn.com/tild6638-3330-4539-b136-343336663766/-/cover/480x330/center/center/-/format/webp/1.png",
     ]
   },
+  {
+    title: "апартамента",
+    blocks: [
+      {
+        lable: "стоимость апартамента",
+        value: "175 000$",
+      },
+      {
+        lable: "площадь юнита",
+        value: "80 м2",
+      },
+      {
+        lable: "ежемесячный пассивный доход",
+        value: "2.148$",
+      },
+      {
+        lable: "окупаемость 4 года",
+        value: "ROI: 33%",
+      },
+    ],
+    slider: [
+      "https://thumb.tildacdn.com/tild3465-3133-4938-a432-313339336330/-/cover/480x330/center/center/-/format/webp/2.png",
+      "https://thumb.tildacdn.com/tild6431-3764-4532-b566-643233663662/-/cover/480x330/center/center/-/format/webp/3.png",
+      "https://thumb.tildacdn.com/tild6638-3330-4539-b136-343336663766/-/cover/480x330/center/center/-/format/webp/1.png",
+    ]
+  },
   
 ];

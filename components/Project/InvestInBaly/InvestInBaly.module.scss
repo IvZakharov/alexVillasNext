@@ -2,30 +2,51 @@
   position: relative;
   //height: 30.55vh;
   .background{
-    width: 90%;
-    left: 5%;
+    width: 110%;
+    left: -5%;
     height: 60vh;
-    top:-430px;
+    top:-320px;
     border-bottom: 1px solid #ff9900;
     border-left: 1px solid #ff9900;
     border-right: 1px solid #ff9900;
     position: absolute;
-    border-radius: 100%;
+    border-radius: 50%;
     z-index: -101;
+    @media (min-width: 768px) {
+      top:-430px;
+      width: 90%;
+      left: 5%;
+      height: 60vh;
+    }
   }
   .arrowBot{
     display: flex;
     justify-content: center;
     position: absolute;
     width: 100%;
-    bottom: -80px;
+    bottom: -60px;
     left: 0;
+    @media (min-width: 768px) {
+      bottom: -80px;
+    }
+    svg{
+      height: 60px;
+      @media (min-width: 768px) {
+        height: 80px;
+      }
+    }
   }
   .h2Titile{
     display: flex;
     justify-content: center;
     h2{
-      margin-bottom: 18%;
+      text-align: center;
+      margin-bottom: 40%;
+      @media (min-width: 768px) {
+        text-align: unset;
+        margin-bottom: 18%;
+      }
+
     }
   }
 
@@ -34,56 +55,101 @@
     padding: 10px;
     border-radius:15px 0px 15px 15px;
     min-height: 70px;
-    width: 70%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 0.5em;
+    @media (min-width: 768px) {
+      width: 70%;
+      flex-direction: row;
+    }
     .vertLine{
       border: 2px solid #FFFFFF;
-      height: 3em;
+      height: 0.2em;
+      width: 50%;
+      margin-bottom: 1em;
+      @media (min-width: 768px) {
+        border: 2px solid #FFFFFF;
+        height: 3em;
+        width: unset;
+      }
+
     }
     .firstBlock{
-      flex-direction: column;
-    }
+      margin-bottom: 1em;
+      flex-direction: row!important;
+      @media (min-width: 768px) {
+        flex-direction: column;
+      }
 
+    }
+    .bloks{
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+    }
     .textBlock{
       display: flex;
+      flex-direction: column;
       align-items: center;
+
       font-size: 18px;
       line-height: 21px;
       color: #FFFFFF;
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
       .bolder{
+        margin-right: 0.3em;
         font-weight: 700;
+        display: contents;
+        @media (min-width: 768px) {
+          margin-right: unset;
+        }
       }
       .bigNum{
-        font-size: 44px;
-        line-height: 68px;
+        font-size: 25px;
+        line-height: 31px;
         color: #ff9900;
         margin-right: 0.5em;
+        @media (min-width: 768px) {
+          font-size: 44px;
+          line-height: 68px;
+        }
       }
     }
   }
   .offstatic{
+    text-align: center;
+    font-size: 10px;
+    line-height: 13px;
     display: flex;
     justify-content: center;
-    font-size: 14px;
-    line-height: 17px;
     color: rgba(255, 255, 255, 0.87);
     margin-bottom: 4em;
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
   }
   .BlockCheks{
     color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     position: relative;
     margin-bottom: 4em;
+    @media (min-width: 768px) {
+      width: 80%;
+    }
     .lineFirst, .lineSecond, .lineThird{
       display: none;
     }
@@ -125,6 +191,14 @@
       text-align: center;
       width: 260px;
       margin-bottom: 3em;
+      &:last-child{
+        margin-left: auto;
+        margin-right: auto;
+        @media (min-width: 768px) {
+          margin-left: unset;
+          margin-right: unset;
+        }
+      }
       .Image{
         margin-bottom: 1em;
       }
@@ -136,7 +210,7 @@
     align-items: center;
     position: relative;
     .NedWig{
-      width: 90%;
+      width: 100%;
       min-height: 70px;
       background: #212121;
       border-radius: 20px 0px 20px 20px;
@@ -145,26 +219,34 @@
       justify-content: space-around;
       align-items: baseline;
       padding: 1em 0.5em;
-      margin-bottom: 4em;
+      margin-bottom: 1em;
       @media (min-width: 768px) {
         width: 70%;
+        margin-bottom: 4em;
       }
       p{
         width: 80%;
-        font-size: 25px;
         color: white;
       }
     }
-    .arrowBot{
-      position: absolute;
-      top:35%;
+    .arrowWing{
+      margin-bottom: 1em;
+      @media (min-width: 768px) {
+        position: absolute;
+        top:35%;
+      }
+
     }
     .ThreeBlocks{
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between;
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
       .block{
-        width: 40%;
+        width: 100%;
         border: 1px dashed #ff9900;
         border-radius: 15px 0px 15px 15px;
         color: #FFFFFF;
@@ -172,6 +254,9 @@
         font-size: 18px;
         text-align: center;
         margin-bottom: 2em;
+        @media (min-width: 768px) {
+          width: 40%;
+        }
         &:last-child{
           margin-right: auto;
           margin-left: auto;

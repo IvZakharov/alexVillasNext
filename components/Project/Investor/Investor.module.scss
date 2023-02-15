@@ -1,0 +1,33 @@
+.Investor{
+  .textBlock{
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 55%;
+    }
+
+    .title{
+      margin-bottom: 2em;
+    }
+    .text{
+      color: #FFFFFF;
+      width: 45%;
+      margin-bottom: 3em;
+      .lable{
+        color: #ff9900;
+        text-transform: unset;
+        margin-bottom: 0.2em;
+      }
+    }
+
+  }
+  .imageBlock{
+    display: unset;
+    @media (min-width: 768px) {
+      display: block;
+      width: 40%;
+    }
+    .img{
+      position: relative;
+    }
+  }
+}

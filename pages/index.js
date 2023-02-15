@@ -20,16 +20,16 @@ import { menageProjects } from "../data/menageProjects";
 import { projects } from "../data/projects";
 import CtaSection from "../components/CtaSection/CtaSection";
 import teamData from "../data/teamData";
-// const arr = {
-//     type: 'video',
-//     url: 'https://chinas-lafa.ru/wp-content/uploads/2018/HeroVideo.webm',
-//     urlSecond: 'https://drive.google.com/u/0/uc?id=1Kw19-kjQlh5H8q2De2Nb8FKLC16sGeyS&export=download',
-// }
 const arr = {
-    type: 'image',
-    url: '/images/hero.png',
-    alt: 'background image',
+    type: 'video',
+    url: 'https://chinas-lafa.ru/wp-content/uploads/2018/HeroVideo.webm',
+    urlSecond: 'https://drive.google.com/u/0/uc?id=1Kw19-kjQlh5H8q2De2Nb8FKLC16sGeyS&export=download',
 }
+// const arr = {
+//     type: 'image',
+//     url: '/images/hero.png',
+//     alt: 'background image',
+// }
 
 export default function Home() {
   return (
