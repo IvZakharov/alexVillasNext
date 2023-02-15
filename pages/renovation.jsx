@@ -16,6 +16,7 @@ import PatternHouse from "../components/PatternHouse/PatternHouse";
 import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
 import React from "react";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
+import Promo from "../components/Promo/Promo";
 
 export default function Renovation() {
   return (
@@ -26,59 +27,62 @@ export default function Renovation() {
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
-          h1first={"GET UP TO 20% "}
-          h1second={"YEARLY"}
+          h1first={"РЕНОВАЦИЯ"}
+          h1second={"ВИЛЛ НА БАЛИ"}
           text={
-            "High-performing \nproperty renovations \n in prime locations of Bali"
+            "Инвестируйте в арендную \nнедвижимость. Цикл: 3 года.\n" +
+            "Доходность: 15-30% годовых"
           }
+          form
+          link
         />
       </div>
       <div>
         <AlexVillas
           textBlock1={
-            "Renovate your own residential or commercial property\n" +
-            "or find the perfect one with us."
+            "Реновируйте свою жилую или коммерческую недвижимость для  заметного повышения доходности или подберите идеальный объект с нами."
           }
           textBlock2={
-            "We have every piece of hands-on experience you may need to <span>make rental property a good business.</span>"
+            "В нашей команде есть весь необходимый опыт и эффективные инструменты для того чтобы <span>сделать арендную недвижимость очень эффективным бизнесом.</span>"
           }
         />
       </div>
       <div className={"mb-16 xl:mb-24"}>
-        <PatternHouse
-          Houses={[
+        <Promo
+          Data = {[
             {
-              title: "10",
-              bedroom: "1-BEDROOM",
-              housformat: "TOWNHOUSES",
+              title: "15-30<span class='text'>%</span>",
+              lable: "годовая доходность",
             },
             {
-              title: "2",
-              bedroom: "1-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: "3<span class='text'>года</span>",
+              lable: "Срок инвестиций",
             },
             {
-              title: "3",
-              bedroom: "2-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: "$70К",
+              lable: "МИНИМАЛЬНАЯ СУММА ВЛОЖЕНИЙ",
             },
             {
-              title: "1",
-              bedroom: "3-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: "50+",
+              lable: "ОТРЕСТАВРИРОВАННЫХ ВИЛЛ",
+            },
+            {
+              title: "8 <span class='text'>лет</span>",
+              lable: "ОПЫТА НА РЫНКЕ БАЛИ",
             },
           ]}
+          width
         />
       </div>
       <div className={"mb-16 xl:mb-24"}>
         <RenovationSlider images={renovationImages} />
       </div>
       <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Gain more from your own property with higher ADR"} />
+        <WhatsApp text={"Повысьте заполняемость и средний чек вашего объекта"} />
       </div>
       <div className={"mb-16 md:mb-24"}>
         <InvestExample
-          title={"<span>THE MATH\nBEHIND</span>\nVILLA\nRENOVATION"}
+          title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"}
         />
       </div>
       <div className={"container mb-16 md:mb-24 xl:pl-32 xl:pr-64"}>
@@ -93,7 +97,7 @@ export default function Renovation() {
       <div className={"mb-16 md:mb-24 xl:mb-28"}>
         <Principles
           title={
-            "<span>EVERYTHING\nWE RENOVATE\nFOLLOWS</span> \nTHESE 5\nPRINCIPLES"
+            "<span>ВСЕ НАШИ\nWE ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ"
           }
           principles={principlesArr}
         />
@@ -108,7 +112,7 @@ export default function Renovation() {
       </div>
       <div className={"mb-16 xl:mb-32"}>
         <OurBusiness
-          text={"COMPANY \n<span>YOU CAN</span>\n<span>RELY ON</span>"}
+          text={"Почему \n<span>Alex</span>\n<span>Villas?</span>"}
         />
       </div>
 

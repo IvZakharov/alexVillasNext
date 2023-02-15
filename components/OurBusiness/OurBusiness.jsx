@@ -2,7 +2,7 @@ import React from "react";
 import styles from './OurBusiness.module.scss'
 import parse from "html-react-parser";
 
-const OurBusiness = ({text}) => {
+const  OurBusiness = ({text}) => {
   return (
     <section className="container ">
       <div className={styles.OurBusiness}>

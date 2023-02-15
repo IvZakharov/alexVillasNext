@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import playSvg from "./img/play.svg";
 import VideoModal from "../Modal/VideoModal/VideoModal";
+import { aboutData } from "../../data/AboutData";
 
-const About = () => {
+const About = ({ru}) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false)
   
   const closeModal = () => {
@@ -15,41 +16,17 @@ const About = () => {
   const openModal = () => {
     setModalIsOpen(true)
   }
-  
-  const links = [
-    {
-      label: "VILLA RENTALS",
-      link: "#",
-    },
-    {
-      label: "VILLA SALES",
-      link: "#",
-    },
-    {
-      label: "VILLA CONSTRUCTION",
-      link: "#",
-    },
-    {
-      label: "VILLA RENOVATION",
-      link: "#",
-    },
-    {
-      label: "PROPERTY MANAGEMENT",
-      link: "#",
-    },
-    {
-      label: "DESIGN & ARCHITECTURE",
-      link: "#",
-    },
-    {
-      label: "LAND ACQUISITION",
-      link: "#",
-    },
-    {
-      label: "LEGAL SERVICES",
-      link: "#",
-    },
-  ];
+
+  let links;
+  let text;
+  if(ru){
+    links = aboutData[0].link
+    text = aboutData[0].text
+  }else{
+    links = aboutData[1].link
+    text = aboutData[1].text
+  }
+
   return (
     <section className={styles.about}>
       <div className={"container xl:pl-32 xl:pt-32 xl:pb-32"}>
@@ -71,17 +48,11 @@ const About = () => {
 
         <div className={"grid md:grid-cols-2 xl:grid-cols-3 relative z-10 "}>
           <div className={""}>
-            <p className={"text textSmall mb-5 md:mb-8"}>
-              Alex Villas is the industry-leading real estate company in Bali.
-            </p>
-            <p className={"text textSmall mb-5 md:mb-8"}>
-              We build, manage and renovate properties that make our clients
-              smile happy.
-            </p>
-            <p className={"text textSmall mb-5 md:mb-8"}>
-              We are a one-stop shop that has every & each of investor’s
-              potential pains fully addressed.
-            </p>
+            {text && text.map((obj, i) => (
+              <p className={"text ruText mb-5 md:mb-8"} key={i}>
+                {obj}
+              </p>
+            ))}
           </div>
         </div>
         <div className={"grid grid-cols-1 xl:grid-cols-2 relative z-10"}>

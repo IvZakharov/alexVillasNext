@@ -120,6 +120,9 @@ a {
     }
   }
 }
+.ruText{
+  letter-spacing: normal;
+}
 
 .text {
   font-weight: 300;
@@ -141,7 +144,6 @@ a {
     line-height: 23px;
   }
 }
-
 .textSmall {
   font-size: 14px;
   line-height: 130%;
@@ -181,8 +183,8 @@ a {
   line-height: 41px;
   font-family: var(--robotoCondensed-font);
   text-align: left;
-  letter-spacing: 0.025em;
-  height: 174px;
+  letter-spacing: -0.03em;
+  //height: 174px;
   color: #ffffff;
 
   span {
@@ -212,6 +214,10 @@ a {
   @media (min-width: 984px) {
     font-size: 82px;
     line-height: 85px;
+  }
+  @media (min-width: 1240px) {
+    font-size: 100px;
+    line-height: 117px;
   }
 }
 

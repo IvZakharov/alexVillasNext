@@ -15,16 +15,25 @@
   .menu{
     margin-left: 50px;
     width: fit-content;
-    @media (max-width: 1000px) {
+    @media (max-width: 1023px) {
       margin-left: 70px;
+    }
+    @media (max-width: 983px) {
+      margin-left: 35px;
     }
     @media (max-width: 767px) {
       margin-left: unset;
     }
     li{
       margin-right: 100px;
-      @media (max-width: 1000px) {
+      @media (max-width: 1239px) {
+        margin-right: 70px;
+      }
+      @media (max-width: 1023px) {
         margin-right: 50px;
+      }
+      @media (max-width: 983px) {
+        margin-right: 40px;
       }
       @media (max-width: 767px) {
         margin-right: unset;
@@ -40,7 +49,7 @@
         line-height: 14px;
         /* identical to box height */
         font-style: normal;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.02em;
         color: #FFFFFF;
         @media (max-width: 983px) {
           font-size: 11px;

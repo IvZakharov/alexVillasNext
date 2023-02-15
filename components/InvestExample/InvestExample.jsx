@@ -11,14 +11,10 @@ const InvestExample = ({ title }) => {
 
           <div className={"md:col-span-2"}>
             <p className={"text mb-5"}>
-              The safest way to diversify your capital
-              <br />
-              with <span>10-22% yearly passive income.</span>
+              Иногда требуется лишь минимальное<br /> вмешательство, чтобы радикально <br />улучшить отдачу для инвестора.
             </p>
             <p className={"text mb-10"}>
-              In simple words, your payback period
-              <br />
-              is expected to be <span>from 4 to 6 years.</span>
+              Мы умеем находить такие объекты, <br />проводить точечную реновацию <br />и в дальнейшем выгодно их сдавать.
             </p>
             <div className={styles.investDemo}>
               <div className={"grid md:grid-cols-2 gap-8 md:gap-0"}>
