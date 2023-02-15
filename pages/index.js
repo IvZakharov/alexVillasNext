@@ -94,7 +94,7 @@ export default function Home() {
 
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <ManagementGrid
-          title={"ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ "}
+          title={"ОБЪЕКТЫ \nВ УПРАВЛЕНИИ "}
           description={
             "Инвестируйте от $70.000 c доходностью 15-25% годовых. Цикл инвестиций 3 года."
           }
