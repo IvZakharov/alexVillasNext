@@ -3,7 +3,7 @@ import HeroMenu from "../HeroMenu/HeroMenu";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { menutop } from "../../data/menutop";
+import { menutopru } from "../../data/menutopru";
 
 const MobileMenu = ({ OnClickClose }) => {
   return (
@@ -22,8 +22,8 @@ const MobileMenu = ({ OnClickClose }) => {
         </div>
         <nav className={styles.nav}>
           <ul className={`${styles.menu} flex flex-col md:flex-row`}>
-            {menutop &&
-              menutop.map((obj, i) => (
+            {menutopru &&
+              menutopru.map((obj, i) => (
                 <li key={i}>
                   <Link href={obj.link} className={`${styles.links} `}>
                     {obj.lable}
@@ -36,7 +36,7 @@ const MobileMenu = ({ OnClickClose }) => {
           <HeroMenu />
         </div>
         <Link href={"#"} className={`${styles.contact}`}>
-          Contact Us
+          Напишите Нам
         </Link>
         <button
           onClick={() => OnClickClose(false)}

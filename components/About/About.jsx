@@ -4,15 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import playSvg from "./img/play.svg";
 import VideoModal from "../Modal/VideoModal/VideoModal";
+import { aboutData } from "../../data/AboutData";
 
+<<<<<<< HEAD
 const About = () => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
+=======
+const About = ({ru}) => {
+  const [modalIsOpen, setModalIsOpen] = React.useState(false)
+  
+>>>>>>> nabster
   const closeModal = () => {
     setModalIsOpen(false);
   };
 
   const openModal = () => {
+<<<<<<< HEAD
     setModalIsOpen(true);
   };
 
@@ -85,6 +93,21 @@ const About = () => {
       link: "#",
     },
   ];
+=======
+    setModalIsOpen(true)
+  }
+
+  let links;
+  let text;
+  if(ru){
+    links = aboutData[0].link
+    text = aboutData[0].text
+  }else{
+    links = aboutData[1].link
+    text = aboutData[1].text
+  }
+
+>>>>>>> nabster
   return (
     <section className={styles.about}>
       <div className={"container"}>
@@ -105,6 +128,7 @@ const About = () => {
             </button>
           </div>
 
+<<<<<<< HEAD
           <div
             className={
               "grid md:grid-cols-2 xl:grid-cols-3 relative z-10 transform: xl:translate-x-32"
@@ -135,6 +159,15 @@ const About = () => {
                   ))}
               </ul>
             </nav>
+=======
+        <div className={"grid md:grid-cols-2 xl:grid-cols-3 relative z-10 "}>
+          <div className={""}>
+            {text && text.map((obj, i) => (
+              <p className={"text ruText mb-5 md:mb-8"} key={i}>
+                {obj}
+              </p>
+            ))}
+>>>>>>> nabster
           </div>
         </div>
       </div>

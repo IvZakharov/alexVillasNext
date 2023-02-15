@@ -22,9 +22,9 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
 
           <div className={'md:col-span-5 xl:col-span-6'}>
             <p className={"text mb-9 md:pr-48 xl:pr-12"}>
-              <span>Alex Villas Renovation </span>focuses on every detail of
-              client’s rental business aiming to extract extra value out of each
-              step.
+              <span>Alex Villas Renovation </span> уделяет внимание
+              деталям арендного бизнеса клиента,
+              чтобы извлечь выгоду из каждого шага.
             </p>
             <div className={"grid grid-cols-2 md:grid-cols-4"}>
               <div className={"mb-4 mb-8"}>
@@ -45,9 +45,8 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
                     />
                   </svg>
                 </i>
-                <h4 className={"text-white uppercase text-xl"}>
-                  Long-term <br />
-                  benefits
+                <h4 className={"text-white uppercase textSmall"}>
+                  ДОЛГОСРОЧНЫЕ<br />ПРЕИМУЩЕСТВА
                 </h4>
               </div>
               <div className={"mb-8"}>
@@ -68,9 +67,8 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
                     />
                   </svg>
                 </i>
-                <h4 className={"text-white uppercase text-xl"}>
-                  Budget-wise <br />
-                  renovation
+                <h4 className={"text-white uppercase textSmall"}>
+                  ОСТОРОЖНЫЙ <br />РАСХОД БЮДЖЕТА
                 </h4>
               </div>
 
@@ -92,9 +90,8 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
                     />
                   </svg>
                 </i>
-                <h4 className={"text-white uppercase text-xl"}>
-                  increased <br />
-                  daily rates
+                <h4 className={"text-white uppercase textSmall"}>
+                  ВЫСОКИЕ <br />СУТОЧНЫЕ СТАВКИ
                 </h4>
               </div>
               <div className={"mb-8"}>
@@ -115,9 +112,8 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
                     />
                   </svg>
                 </i>
-                <h4 className={"text-white uppercase text-xl"}>
-                  HIGHER <br />
-                  OCCUPANCY
+                <h4 className={"text-white uppercase textSmall"}>
+                  ВЫСОКАЯ <br />ЗАПОЛНЯЕМОСТЬ
                 </h4>
               </div>
             </div>
@@ -126,26 +122,26 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
 
         <div className={styles.step}>
           <span className={styles.count}>1</span>
-          <h3 className={styles.title}>VILLA ACQUISITION</h3>
+          <h3 className={styles.title}>ПОИСК ОБЪЕКТА</h3>
           <p className={styles.text}>
-            Alex Villas Renovation has developed a specific framework for
-            ultra-efficient villa scouting with future management and rental
-            experiences in mind.
+            В Alex Villas Renovation разработан собственный подход к
+            сверх-эффективному поиску объектов, учитывающий будущую
+            реновацию и управление.
           </p>
           <ul className={styles.servicesList}>
-            <li>COMPETITIVE ANALYSIS</li>
-            <li>TECHNICAL ANALYSIS</li>
-            <li>FINANCIAL MODELLING</li>
+            <li>АНАЛИЗ КОНКУРЕНТОВ</li>
+            <li>ТЕХНИЧЕСКИЙ АНАЛИЗ</li>
+            <li>ФИНАНСОВОЕ МОДЕЛИРОВАНИЕ</li>
           </ul>
         </div>
 
         <div className={styles.step}>
           <span className={styles.count}>2</span>
-          <h3 className={styles.title}>RENOVATION</h3>
+          <h3 className={styles.title}>РЕНОВАЦИЯ</h3>
           <p className={styles.text}>
-            At Alex Villas Renovation, we thoroughly pick only the most
-            value-providing enhancements to increase market value of property
-            without breaking the bank.
+            В Alex Villas Renovation, мы тщательно отбираем только те
+            улучшения, которые дадут максимальную ценность для аренды
+            без перерасхода бюджета.
           </p>
           <div className={"grid sm:grid-cols-2 xl:pr-52"}>
             <div className={styles.imageBefore}>
@@ -186,24 +182,24 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
 
         <div className={styles.step}>
           <span className={styles.count}>3</span>
-          <h3 className={styles.title}>PROPERTY MANAGEMENT</h3>
+          <h3 className={styles.title}>УПРАВЛЕНИЕ ОБЪЕКТОМ</h3>
           <p className={styles.text}>
-            Owners can’t get new customers for higher daily rates without proper
-            management. Our team has the highest expertise in putting more money
-            on client’s table.
+            Сложно найти арендаторов по повышенным ставкам без грамотно
+            выстроенного менеджмента. Мы - те самые эксперты, которые
+            сделают разницу.
           </p>
           <ul className={styles.servicesList}>
             <li>
               {" "}
-              <span>COMPETITIVE ANALYSIS</span>{" "}
+              <span>ЗАМЕТНОСТЬ ОБЪЕКТА НА РЫНКЕ</span>{" "}
             </li>
             <li>
               {" "}
-              <span>TECHNICAL ANALYSIS</span>{" "}
+              <span>ПОВЫШЕННЫЕ АРЕНДНЫЕ СТАВКИ</span>{" "}
             </li>
             <li>
               {" "}
-              <span>FINANCIAL MODELLING</span>{" "}
+              <span>ВЫСОКИЙ ROI ДЛЯ КЛИЕНТОВ</span>{" "}
             </li>
           </ul>
         </div>

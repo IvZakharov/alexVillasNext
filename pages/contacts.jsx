@@ -19,7 +19,11 @@ import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
 import { menageProjects } from "../data/menageProjects";
 import ContactAlex from "../components/ContactsAlex/ContactAlex";
-
+ const arr = {
+     type: 'image',
+     url: '/images/head/DSC09103.JPG',
+    alt: 'background image',
+ }
 export default function Agency() {
   return (
     <MainLayout
@@ -28,7 +32,12 @@ export default function Agency() {
       metaKeywords={"alex villas"}
     >
       <div className={"mb-16 xl:mb-24"}>
-        <Hero h1first={"GET IN"} h1second={"TOUCH"} form />
+        <Hero
+          h1first={"Мы всегда"}
+          h1second={"на связи"}
+          link
+          back={arr}
+        />
       </div>
       <div className={"mb-16"}>
         <AlexVillas
@@ -48,7 +57,7 @@ export default function Agency() {
 
       <CtaSection
         title={"GET IN TOUCH \n<span>WITH US:</span>"}
-        imageUrl={"/images/cta/bg.jpg"}
+        imageUrl={"/images/contact/DSC09476.JPG"}
         label={"HOPE TO HEAR\nFROM YOU!"}
         submitButtonText={"send"}
         fields={[

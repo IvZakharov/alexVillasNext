@@ -16,8 +16,8 @@ const Hero = ({ h1first, h1second, text, subLable, dot, form, link, back }) => {
           </video>
           ) : (
           <Image
-          alt="ALEX VILLAS"
-          src={"/images/hero.png"}
+          alt={back.alt}
+          src={back.url}
           quality={80}
           fill
           priority
@@ -30,7 +30,7 @@ const Hero = ({ h1first, h1second, text, subLable, dot, form, link, back }) => {
         )}
       </div>
       <div className="container flex flex-col justify-between h-full sm:p-0">
-        <div className={`${styles.h1Block} mx-auto lg:mx-0 md:ml-14 lg:ml-48`}>
+        <div className={`${styles.h1Block} mx-auto lg:mx-0 lg:ml-48`}>
           {dot && (
             <div className={styles.dot}>
               <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,22 +40,29 @@ const Hero = ({ h1first, h1second, text, subLable, dot, form, link, back }) => {
               <div className={styles.address}>{parse(dot)}</div>
             </div>
           )}
-          <h1 className={`${styles.h1}`}>
+          <h1 className={`${styles.h1} h1`}>
             <span className={styles.white}>{h1first}</span>
             <span className={styles.yellow}>{h1second}</span>
           </h1>
           {subLable && <div className={`${styles.subLable}`}>{subLable}</div>}
-          {!form && (
-            <div className={styles.FormText}>
-              {/*<FormContactHero hrefLabel={"PICK YOUR INVESTMENT TYPE"} />*/}
-              {text && (
-                <div className={styles.textBlock}>
-                  {" "}
-                  <div className={`${styles.text} text`}>{parse(text)}</div>
-                </div>
-              )}
-            </div>
-          )}
+          <div className={styles.FormText}>
+            {form && (
+              <FormContactHero hrefLabel={"ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ И ФИНАНСОВУЮ МОДЕЛЬ"} />
+            )}
+            
+            {text && !form && (
+              <div className={styles.textBlock}>
+                {" "}
+                <div className={`${styles.text} text`}>{parse(text)}</div>
+              </div>
+            )}
+            {text && form && (
+              <div className={styles.textBlockWithForm}>
+                {" "}
+                <div className={`${styles.text} text`}>{parse(text)}</div>
+              </div>
+            )}
+          </div>
           {!link && (
             <div className={styles.link}>
               <Link href={'#'}>ПОДБЕРИТЕ ВАШ ТИП ИНВЕСТИЦИЙ
