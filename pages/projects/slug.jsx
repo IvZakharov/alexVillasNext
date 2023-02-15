@@ -74,6 +74,8 @@ export default function Project() {
       <div className={"mb-16 md:mb-24"}>
         <WhatsApp
           text={"Talk to a live person and get the investor’s materials pack."}
+          link={""}
+          linkLabel={""}
         />
       </div>
       <div className={"mb-16 md:mb-24"}>

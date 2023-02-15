@@ -74,7 +74,11 @@ export default function Renovation() {
         <RenovationSlider images={renovationImages} />
       </div>
       <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Gain more from your own property with higher ADR"} />
+        <WhatsApp
+          text={"Gain more from your own property with higher ADR"}
+          link={""}
+          linkLabel={""}
+        />
       </div>
       <div className={"mb-16 md:mb-24"}>
         <InvestExample
@@ -101,6 +105,7 @@ export default function Renovation() {
       <div className={"mb-16 md:mb-24 xl:mb-28"}>
         <WhatsApp
           text={"Talk to a live person and get the investor’s materials pack."}
+          link={""}
         />
       </div>
       <div className={"mb-16 xl:mb-24"}>

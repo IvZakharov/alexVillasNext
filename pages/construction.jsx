@@ -91,6 +91,8 @@ export default function Construction() {
       <div className={"mb-16 md:mb-24"}>
         <WhatsApp
           text={"Build you dream villa and let us make it rock the market"}
+          link={"#"}
+          linkLabel={""}
         />
       </div>
       <div className={"mb-16 md:mb-24"}>

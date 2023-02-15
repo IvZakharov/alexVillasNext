@@ -28,11 +28,7 @@ export default function Agency() {
       metaKeywords={"alex villas"}
     >
       <div className={"mb-16 xl:mb-24"}>
-        <Hero
-          h1first={"GET IN"}
-          h1second={"TOUCH"}
-          form
-        />
+        <Hero h1first={"GET IN"} h1second={"TOUCH"} form />
       </div>
       <div className={"mb-16"}>
         <AlexVillas
@@ -46,6 +42,8 @@ export default function Agency() {
 
       <WhatsApp
         text={"Talk to a live person and get the investor’s materials pack."}
+        link={"#"}
+        linkLabel={"PROCEED TO WHATSAPP"}
       />
 
       <CtaSection
