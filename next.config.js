@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: false,
   images: {
     loader: "default",
-    domains: ["img.youtube.com"],
+    domains: ["img.youtube.com", "alexvillas.sgp1.digitaloceanspaces.com"],
   },
 };
 

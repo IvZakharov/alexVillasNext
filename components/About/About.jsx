@@ -1,9 +1,21 @@
 import styles from "./About.module.scss";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import playSvg from "./img/play.svg";
+import VideoModal from "../Modal/VideoModal/VideoModal";
 
 const About = () => {
+  const [modalIsOpen, setModalIsOpen] = React.useState(false)
+  
+  const closeModal = () => {
+    setModalIsOpen(false)
+  }
+  
+  const openModal = () => {
+    setModalIsOpen(true)
+  }
+  
   const links = [
     {
       label: "VILLA RENTALS",
@@ -52,7 +64,7 @@ const About = () => {
               objectFit: "cover",
             }}
           />
-          <button className={styles.playBtn}>
+          <button className={styles.playBtn} onClick={openModal}>
             <Image src={playSvg} alt={"playSvg"} />
           </button>
         </div>
@@ -85,6 +97,8 @@ const About = () => {
           </nav>
         </div>
       </div>
+      
+      <VideoModal active={modalIsOpen} closeModal={closeModal} videoUrl={'https://www.youtube.com/watch?v=eR3m3iYuZD8'} />
     </section>
   );
 };

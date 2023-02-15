@@ -1,0 +1,49 @@
+@import "styles/variables";
+
+.propertiesGallery {
+  .item {
+    .title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+
+      span {
+        color: $primary;
+      }
+
+      @media (min-width: 984px) {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .image {
+      height: 100px;
+      position: relative;
+      margin-bottom: 16px;
+
+      @media (min-width: 576px) {
+        height: 150px;
+      }
+
+      @media (min-width: 768px) {
+        height: 220px;
+      }
+
+      @media (min-width: 768px) {
+        height: 220px;
+      }
+
+      @media (min-width: 1024px) {
+        height: 280px;
+      }
+
+      @media (min-width: 1240px) {
+        height: 210px;
+      }
+    }
+  }
+}
