@@ -3,15 +3,25 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ManagementGrid = ({ projects, linkLabel, link, full }) => {
+const ManagementGrid = ({
+  title,
+  description,
+  projects,
+  linkLabel,
+  link,
+  full,
+}) => {
   return (
     <section className={`${styles.grid}`}>
       <div className={"container"}>
-        <h2 className={"h2 mb-7 lg:mb-12"}>
-          PROPERTIES
-          <br />
-          WE MANAGE
-        </h2>
+        <div
+          className={
+            "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-7 lg:mb-12 "
+          }
+        >
+          <h2 className={"h2 whitespace-pre-line"}>{title}</h2>
+          <p className={"text textSmall md:mt-auto"}>{description}</p>
+        </div>
 
         {projects && (
           <div

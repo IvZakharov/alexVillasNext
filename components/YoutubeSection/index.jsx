@@ -1,15 +1,15 @@
-import styles from './Youtube.module.scss';
-import React from 'react';
-import Link from 'next/link';
-import Video from './Video';
-import Thumb from './Thumb';
+import styles from "./Youtube.module.scss";
+import React from "react";
+import Link from "next/link";
+import Video from "./Video";
+import Thumb from "./Thumb";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Thumbs } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Thumbs } from "swiper";
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/free-mode';
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/free-mode";
 
 const Index = ({ youtubeLinks }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
@@ -17,17 +17,21 @@ const Index = ({ youtubeLinks }) => {
 
   return (
     <section className={styles.youtube}>
-      <div className={'container'}>
-        <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:pl-24 xl:pr-48'}>
-          <div className={'md:flex md:flex-col'}>
+      <div className={"container"}>
+        <div
+          className={
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:pl-24 xl:pr-48"
+          }
+        >
+          <div className={"md:flex md:flex-col"}>
             <h2 className={`h2 mb-8 xl:mb-16`}>
-              <span>SUBSCRIBE</span>
+              <span>СМОТРИТЕ</span>
               <br />
-              TO OUR
+              НАШ
               <br />
               YOUTUBE
               <br />
-              CHANNEL
+              КАНАЛ
             </h2>
 
             <ul className={styles.list}>
@@ -38,7 +42,8 @@ const Index = ({ youtubeLinks }) => {
                     height="22"
                     viewBox="0 0 32 22"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M2.16699 11.1965L11.3337 20.3631L29.667 2.02979"
                       stroke="#FF9900"
@@ -48,7 +53,9 @@ const Index = ({ youtubeLinks }) => {
                     />
                   </svg>
                 </i>
-                <p className={styles.text}>Weekly top quality videos about real estate in Bali</p>
+                <p className={"text"}>
+                  Еженедельные видео про инвестиции на Бали
+                </p>
               </li>
 
               <li className={styles.item}>
@@ -58,7 +65,8 @@ const Index = ({ youtubeLinks }) => {
                     height="22"
                     viewBox="0 0 32 22"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M2.16699 11.1965L11.3337 20.3631L29.667 2.02979"
                       stroke="#FF9900"
@@ -68,19 +76,22 @@ const Index = ({ youtubeLinks }) => {
                     />
                   </svg>
                 </i>
-                <p className={styles.text}>Actionable content from the main market players</p>
+                <p className={"text"}>
+                  Полезный контент от топовых игроков рынка
+                </p>
               </li>
             </ul>
 
-            <Link href={''} className={styles.link}>
-              <span>STAY UP TO DATE</span>
+            <Link href={""} className={styles.link}>
+              <span>ПОДПИСАТЬСЯ</span>
               <i>
                 <svg
                   width="73"
                   height="7"
                   viewBox="0 0 73 7"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M73 3.19629L68 0.309538V6.08304L73 3.19629ZM0 3.69629H68.5V2.69629H0V3.69629Z"
                     fill="#FF9900"
@@ -90,16 +101,17 @@ const Index = ({ youtubeLinks }) => {
             </Link>
           </div>
 
-          <div className={'lg:col-span-2'}>
+          <div className={"lg:col-span-2"}>
             <Swiper
               spaceBetween={20}
-              effect={'fade'}
+              effect={"fade"}
               thumbs={{ swiper: thumbsSwiper }}
               modules={[Thumbs]}
               onSlideChange={(swiperCore) => {
                 const { activeIndex } = swiperCore;
                 setActiveSlideIndex(activeIndex);
-              }}>
+              }}
+            >
               {youtubeLinks.map((link, idx) => (
                 <SwiperSlide key={idx}>
                   <Video videoUrl={link} isActive={activeSlideIndex === idx} />
@@ -110,10 +122,11 @@ const Index = ({ youtubeLinks }) => {
             <Swiper
               onSwiper={setThumbsSwiper}
               spaceBetween={10}
-              effect={'fade'}
+              effect={"fade"}
               slidesPerView={3}
               watchSlidesProgress={true}
-              modules={[Thumbs]}>
+              modules={[Thumbs]}
+            >
               {youtubeLinks.map((link, idx) => (
                 <SwiperSlide key={idx}>
                   <Thumb videoUrl={link} />

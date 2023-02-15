@@ -70,19 +70,17 @@ export default function Management() {
       </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <ManagementGrid
+          title={"ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ "}
           projects={menageProjects}
           link={"#"}
-          linkLabel={"MORE MANAGED PROPERTIES"}
+          linkLabel={"БОЛЬШЕ НАШИХ ОБЪЕКТОВ НА AIRBNB"}
           full
         />
       </div>
 
       <CtaSection
         title={
-          "  GET YOUR PROPERTY \n<span>UNDER ALEX VILLAS</span>\n <span>MANAGEMENT</span>"
-        }
-        description={
-          "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."
+          "  ПЕРЕДАЙТЕ ВАШУ \nНЕДВИЖИМОСТЬ\n<span>В УПРАВЛЕНИЕ \nALEX VILLAS\nMANAGEMENT</span>"
         }
         imageUrl={"/images/cta/bg2.jpg"}
         submitButtonText={"send"}

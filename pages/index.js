@@ -21,10 +21,11 @@ import { projects } from "../data/projects";
 import CtaSection from "../components/CtaSection/CtaSection";
 import teamData from "../data/teamData";
 const arr = {
-    type: 'video',
-    url: 'https://chinas-lafa.ru/wp-content/uploads/2018/HeroVideo.webm',
-    urlSecond: 'https://drive.google.com/u/0/uc?id=1Kw19-kjQlh5H8q2De2Nb8FKLC16sGeyS&export=download',
-}
+  type: "video",
+  url: "https://chinas-lafa.ru/wp-content/uploads/2018/HeroVideo.webm",
+  urlSecond:
+    "https://drive.google.com/u/0/uc?id=1Kw19-kjQlh5H8q2De2Nb8FKLC16sGeyS&export=download",
+};
 // const arr = {
 //     type: 'image',
 //     url: '/images/hero.png',
@@ -44,10 +45,8 @@ export default function Home() {
           h1second={"НА БАЛИ"}
           // h1first={"РЕНОВАЦИЯ"}
           // h1second={"ВИЛЛ НА БАЛИ"}
-          text={
-            "Инвестируйте от $70.000 с доходностью 10-30% годовых"
-          }
-          back = {arr}
+          text={"Инвестируйте от $70.000 с доходностью 10-30% годовых"}
+          back={arr}
           // subLable={"STARTING FROM $189.000"}
         />
       </div>
@@ -59,33 +58,49 @@ export default function Home() {
       <div className={"mb-10 xl:mb-16"}>
         <ProjectsGrid
           projects={projectsOnSaleFilter(projects, true)}
-          title={"PROJECTS\nON SALE"}
+          title={"ПРОЕКТЫ\nВ ПРОДАЖЕ"}
+          description={
+            "Наш фокус - на лучших локациях, хорошей инфраструктуре и передовой архитектуре. \nЭто гарантирует максимальные рейтинги, обеспечивая высокую доходность инвесторам."
+          }
           link={"#"}
-          linkLabel={"MORE PROJECTS ON SALE"}
+          linkLabel={"БОЛЬШЕ ПРОЕКТОВ В ПРОДАЖЕ"}
         />
       </div>
 
       <div className={"mb-10 xl:mb-16"}>
         <ProjectsGrid
           projects={projectsOnSaleFilter(projects, false)}
-          title={"COMPLETED\nPROJECTS"}
+          title={"ЗАВЕРШЁННЫЕ\nПРОЕКТЫ"}
+          description={
+            "Наш фокус - на лучших локациях, хорошей инфраструктуре и передовой архитектуре. \nЭто гарантирует максимальные рейтинги, обеспечивая высокую доходность инвесторам."
+          }
           link={"#"}
-          linkLabel={"MORE COMPLETED PROJECTS"}
+          linkLabel={"БОЛЬШЕ ЗАВЕРШЁННЫХ ПРОЕКТОВ"}
         />
       </div>
 
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <RenovationGrid
+          title={"ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ"}
+          description={
+            "Инвестируйте от $70.000 c доходностью\n15-25% годовых. Цикл инвестиций 3 года."
+          }
           imageBefore={"/images/renovation/card.jpg"}
           imageAfter={"/images/renovation/card.jpg"}
+          link={"/renovation"}
+          linkLabel={"УЗНАТЬ ПОДРОБНОСТИ"}
         />
       </div>
 
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <ManagementGrid
+          title={"ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ "}
+          description={
+            "Инвестируйте от $70.000 c доходностью 15-25% годовых. Цикл инвестиций 3 года."
+          }
           projects={menageProjects}
           link={"#"}
-          linkLabel={"MORE MANAGED PROPERTIES"}
+          linkLabel={"БОЛЬШЕ ОБ УПРАВЛЯЮЩЕЙ КОМПАНИИ"}
           full={false}
         />
       </div>
@@ -94,8 +109,20 @@ export default function Home() {
         <WhyBali />
       </div>
 
+      <div className={"mb-16 xl:mb-24"}>
+        <WhatsApp
+          text={
+            "Получите консультацию специалиста и набор материалов для инвестора."
+          }
+          link={"#"}
+          linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
+        />
+      </div>
+
       <div className={"mb-16 xl:mb-32"}>
-        <OurBusiness text={"WHY \n<span>Alex</span>\n<span>Villas</span>"} />
+        <OurBusiness
+          text={"ПОЧЕМУ \n<span>ALEX</span>\n<span>VILLAS?</span>"}
+        />
       </div>
 
       <div className={"mb-16 xl:mb-24"}>
@@ -118,28 +145,28 @@ export default function Home() {
       </div>
 
       <CtaSection
-        title={"GET IN TOUCH \n<span>WITH US:</span>"}
+        title={"ПОЛУЧИТЕ \n<span>КОНСУЛЬТАЦИЮ</span>"}
         imageUrl={"/images/cta/bg.jpg"}
-        label={"HOPE TO HEAR\nFROM YOU!"}
-        submitButtonText={"send"}
+        label={"БУДЕМ\nНА СВЯЗИ!"}
+        submitButtonText={"ОТПРАВИТЬ"}
         gradient
         fields={[
           {
             name: "userName",
             type: "text",
-            placeholder: "Your name:",
+            placeholder: "Ваше имя:",
             required: true,
           },
           {
             name: "userTel",
             type: "tel",
-            placeholder: "Phone number:",
+            placeholder: "Номер телефона:",
             required: true,
           },
           {
             name: "userMessage",
             type: "text",
-            placeholder: "Your message:",
+            placeholder: "Сообщение:",
             required: false,
           },
         ]}

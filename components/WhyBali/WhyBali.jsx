@@ -6,6 +6,7 @@ import Link from "next/link";
 import trueSvg from "./img/true.svg";
 import falseSvg from "./img/false.svg";
 import { hotspots } from "../../data/hotspots";
+import { hotspotsRu } from "../../data/hotspotsRu";
 
 const WhyBali = () => {
   return (
@@ -18,7 +19,7 @@ const WhyBali = () => {
             }
           >
             <h2 className={"h1"}>
-              WHY <br /> <span>BALI?</span>
+              Почему <br /> <span>бали?</span>
             </h2>
             <div className={"lg:hidden"}>
               <Image
@@ -42,45 +43,46 @@ const WhyBali = () => {
           >
             <div className={styles.advantagesItem}>
               <h3 className={"mb-4"}>
-                REAL ESTATE <span>SUPER-HOTSPOT</span>{" "}
+                ГОРЯЧАЯ ТОЧКА <span>ИНВЕСТИЦИЙ</span>
               </h3>
               <p className={"text textSmall"}>
-                With the return of tourist arrivals the market{" "}
+                Рынок недвижимости сошёл с ума с возвращением туризма.
                 <span>
-                  went crazy. <Link href={"#"}>Check the report!</Link>
+                  <Link href={"#"}> Читать отчёт</Link>
                 </span>
               </p>
             </div>
 
             <div className={styles.advantagesItem}>
               <h3 className={"mb-4"}>
-                YOUNG & <span>GROWING ECONOMY</span>
+                МОЛОДАЯ И РАСТУЩАЯ <span>ЭКОНОМИКА</span>
               </h3>
               <p className={"text textSmall"}>
-                Indonesia enjoys the influx of foreign investments and{" "}
+                Индонезия сегодня ассоциируется с притоком зарубежных инвестиций
+                и
                 <span>
-                  <Link href={"#"}>unseen yearly GDP growth.</Link>
+                  <Link href={"#"}> небывалым ростом ВВП.</Link>
                 </span>
               </p>
             </div>
 
             <div className={styles.advantagesItem}>
               <h3 className={"mb-4"}>
-                ANNUAL RETURNS AT <span>10-22%</span>
+                ДОХОДНОСТЬ <span>10-22%</span>
               </h3>
               <p className={"text textSmall"}>
-                Just compare it to the current normal{" "}
-                <span>5-6% in developed markets!</span>
+                Просто сравните это с
+                <span>типичными 5-6% на рынках развитых стран!</span>
               </p>
             </div>
 
             <div className={styles.advantagesItem}>
               <h3 className={"mb-4"}>
-                CRYPTO-FRIENDLY <span>REGULATIONS</span>{" "}
+                ЛЕГАЛЬНОСТЬ <span>КРИПТОВАЛЮТ</span>
               </h3>
               <p className={"text textSmall"}>
-                No tricks to put your cryptocurrency to work any longer!{" "}
-                <span>100% legal and easy.</span>
+                Больше никаких трюков, чтобы заставить вашу крипту работать!
+                <span>100% легально и просто.</span>
               </p>
             </div>
           </div>
@@ -103,12 +105,12 @@ const WhyBali = () => {
 
           <div className={"lg:col-span-2"}>
             <h3 className={"mb-7"}>
-              COMPARISON WITH OTHER <br /> <span>REAL ESTATE HOTSPOTS:</span>
+              СРАВНЕНИЕ С ДРУГИМИ <br /> <span>ПОПУЛЯРНЫМИ РЕГИОНАМИ:</span>
             </h3>
 
             <div className={"grid grid-cols-1 md:grid-cols-2 gap-6"}>
-              {hotspots &&
-                hotspots.map((hotspot, idx) => (
+              {hotspotsRu &&
+                hotspotsRu.map((hotspot, idx) => (
                   <div className={styles.hotspot} key={hotspot.id}>
                     <div className={"flex gap-2 md:gap-4 items-center mb-4"}>
                       <Image

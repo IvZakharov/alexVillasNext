@@ -33,14 +33,19 @@ const Team = ({ teamArr }) => {
       >
         <div>
           <h2 className={`h2 mb-8 md:mb-0`}>
-            <span>We are</span> <br /> ALEX <br /> VILLAS!
+            <span>Мы - </span> <br /> ALEX <br /> VILLAS!
           </h2>
         </div>
 
         <div>
-          <p className={"text mb-5"}>
-            It always takes a group of passionate professionals{" "}
-            <span>to make confident bets.</span>
+          <p className={"text textSmall mb-5"}>
+            Команда - наш самый большой актив. <br />
+            Мы собрали лучших экспертов с многолетним <br />
+            опытом работы в своих областях.
+          </p>
+          <p className={"text textSmall mb-5"}>
+            ALEX VILLAS - это молодое поколение <br /> космополитов, разделяющих{" "}
+            <br /> одни и те же ценности.
           </p>
         </div>
       </div>

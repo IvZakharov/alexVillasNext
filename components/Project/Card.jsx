@@ -55,15 +55,15 @@ const ProjectCard = ({
               <ul className={styles.properties}>
                 {properties.map((obj, idx) => (
                   <li key={idx} className={"text"}>
-                    <span>{obj.count} x </span>
                     {obj.title}
+                    <span> x {obj.count}</span>
                   </li>
                 ))}
               </ul>
             )}
 
             <p className={styles.link}>
-              <span>MORE about {title}</span>
+              <span>Подробнее о {title}</span>
               <i>
                 <svg
                   width="51"
@@ -84,7 +84,7 @@ const ProjectCard = ({
       ) : (
         <div className={styles.soldOut}>
           <p>
-            <span>SOLD OUT</span>
+            <span>ВСЁ ПРОДАНО</span>
           </p>
         </div>
       )}

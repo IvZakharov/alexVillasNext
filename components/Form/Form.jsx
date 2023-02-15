@@ -21,7 +21,7 @@ const Form = ({ fields, submitButtonText }) => {
         <Button type={"submit"}>{submitButtonText}</Button>
 
         <Link href={"#"} className={styles.policyLink}>
-          Privacy policy
+          Политика конфиденциальности
         </Link>
       </div>
     </form>

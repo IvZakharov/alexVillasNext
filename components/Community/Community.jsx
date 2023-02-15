@@ -14,27 +14,25 @@ const Community = ({ imageUrl }) => {
       >
         <div className={"md:flex md:flex-col"}>
           <h2 className={`h2 mb-8`}>
-            <span>COMMUNITY</span> <br /> SUPPORT
+            <span>ПОДДЕРЖКА </span> <br /> СООБЩЕСТВА
           </h2>
 
           <p className={"text mb-4 md:mt-auto"}>
-            We firmly believe that conscious companies must contribute to
-            <span> development of local communities.</span>
+            Мы твёрдо убедены, что каждая компания должна помогать
+            <span> развитию локального сообщества.</span>
           </p>
 
           <p className={"text mb-4"}>
-            Alongside this, we believe in fruitful co-operation with other
-            companies <span>to make beautiful things happen.</span>
+            Также, мы верим, что добрые дела рождают добрые дела. companies{" "}
           </p>
 
           <p className={"text mb-4 md:mb-9"}>
-            If this resonates with your vision, let’s work together on
-            <span> making Bali a better place</span> for locals and expats
-            alike.
+            Хотите присоединиться? Оставьте заявку, и мы расскажем как это можно
+            сделать.
           </p>
 
           <Link href={"#"} className={styles.link}>
-            <span>MAKE BALI A BETTER PLACE</span>
+            <span>ОСТАВИТЬ ЗАЯВКУ НА УЧАСТИЕ</span>
             <i>
               <svg
                 width="73"

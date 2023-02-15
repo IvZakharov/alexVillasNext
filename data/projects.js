@@ -4,13 +4,13 @@ export const projects = [
     title: "Complex 6",
     onSale: true,
     thumbnail: "/images/projects/1.jpg",
-    location: "BERAWA, CANGGU",
+    location: "БЕРАВА, ЧАНГУ",
     complexProperties: [
-      { count: "10", title: "1-bedroom townhouses" },
-      { count: "16", title: "1-bedroom apartments" },
-      { count: "5", title: "1-bedroom smart villas" },
-      { count: "3", title: "2-bedroom smart villas" },
-      { count: "1", title: "3-bedroom smart villa" },
+      { count: "10", title: "1-комнатные таунхаусы" },
+      { count: "16", title: "1-комнатные апартаменты" },
+      { count: "5", title: "1-комнатные смарт-виллы" },
+      { count: "3", title: "2-комнатные смарт-виллы" },
+      { count: "1", title: "3-комнатная смарт-вилла" },
     ],
   },
   {
@@ -18,7 +18,7 @@ export const projects = [
     title: "Complex 5",
     onSale: true,
     thumbnail: "/images/projects/1.jpg",
-    location: "BERAWA, CANGGU",
+    location: "БЕРАВА, ЧАНГУ",
     complexProperties: [
       { count: "10", title: "1-bedroom townhouses" },
       { count: "16", title: "1-bedroom apartments" },

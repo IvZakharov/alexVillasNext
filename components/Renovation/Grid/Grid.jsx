@@ -3,15 +3,25 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const RenovationGrid = ({ imageBefore, imageAfter }) => {
+const RenovationGrid = ({
+  title,
+  description,
+  imageBefore,
+  imageAfter,
+  linkLabel,
+  link,
+}) => {
   return (
     <section className={`${styles.grid}`}>
       <div className={"container"}>
-        <h2 className={"h2 mb-7 lg:mb-12"}>
-          INVESTMENTS
-          <br />
-          IN RENOVATION
-        </h2>
+        <div
+          className={
+            "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-7 lg:mb-12 "
+          }
+        >
+          <h2 className={"h2 whitespace-pre-line"}>{title}</h2>
+          <p className={"text textSmall md:mt-auto"}>{description}</p>
+        </div>
 
         <div className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"}>
           <div className={styles.imageBefore}>
@@ -28,7 +38,7 @@ const RenovationGrid = ({ imageBefore, imageAfter }) => {
                 objectFit: "cover",
               }}
             />
-            <span className={styles.label}>Before</span>
+            <span className={styles.label}>До</span>
           </div>
 
           <div className={styles.imageAfter}>
@@ -45,16 +55,16 @@ const RenovationGrid = ({ imageBefore, imageAfter }) => {
                 objectFit: "cover",
               }}
             />
-            <span className={styles.label}>After</span>
+            <span className={styles.label}>После</span>
           </div>
 
           <div
             className={
-              "flex justify-end sm:col-span-2 lg:col-span-1 lg:items-end "
+              "flex justify-end sm:col-span-2 lg:col-span-1 lg:items-end"
             }
           >
-            <Link href={"#"} className={styles.link}>
-              <span>MORE RENOVATED PROPERTIES</span>
+            <Link href={link} className={styles.link}>
+              <span>{linkLabel}</span>
               <i>
                 <svg
                   width="51"

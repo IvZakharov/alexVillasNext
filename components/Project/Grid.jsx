@@ -3,18 +3,26 @@ import React from "react";
 import ProjectCard from "./Card";
 import Link from "next/link";
 
-const ProjectsGrid = ({ title, projects, link, linkLabel }) => {
+const ProjectsGrid = ({ title, projects, link, linkLabel, description }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <section>
       <div className={"container"}>
-        <h2 className={"h2 whitespace-pre-line mb-7 lg:mb-12"}>{title}</h2>
+        <div className={"mb-7 lg:mb-12 md:flex items-end"}>
+          <h2
+            className={"h2 whitespace-pre-line mb-5 md:mb-0 md:mr-14 xl:mr-20"}
+          >
+            {title}
+          </h2>
+          <p className={"text textSmall max-w-sm"}>{description}</p>
+        </div>
+
         <div
           className={`grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-5`}
         >
           {projects &&
-            projects.slice(0, 3).map((obj, idx) => (
+            projects.slice(0, 2).map((obj, idx) => (
               <div
                 key={obj.id}
                 className={`${
