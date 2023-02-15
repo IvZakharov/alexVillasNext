@@ -19,6 +19,11 @@ import OurBusiness from "../components/OurBusiness/OurBusiness";
 import Promo from "../components/Promo/Promo";
 
 export default function Renovation() {
+  const arr = {
+    type: 'image',
+    url: '/images/hero.png',
+    alt: 'background image',
+  }
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -35,6 +40,7 @@ export default function Renovation() {
           }
           form
           link
+          back={arr}
         />
       </div>
       <div>
@@ -51,11 +57,11 @@ export default function Renovation() {
         <Promo
           Data = {[
             {
-              title: "15-30<span class='text'>%</span>",
+              title: '15-30<span class="text">%</span>',
               lable: "годовая доходность",
             },
             {
-              title: "3<span class='text'>года</span>",
+              title: '3<span class="text">года</span>',
               lable: "Срок инвестиций",
             },
             {
@@ -67,7 +73,7 @@ export default function Renovation() {
               lable: "ОТРЕСТАВРИРОВАННЫХ ВИЛЛ",
             },
             {
-              title: "8 <span class='text'>лет</span>",
+              title: '8 <span class="text">лет</span>',
               lable: "ОПЫТА НА РЫНКЕ БАЛИ",
             },
           ]}
@@ -78,7 +84,7 @@ export default function Renovation() {
         <RenovationSlider images={renovationImages} />
       </div>
       <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Повысьте заполняемость и средний чек вашего объекта"} />
+        <WhatsApp text={"Повысьте заполняемость и средний чек вашего объекта"} link={"#"} />
       </div>
       <div className={"mb-16 md:mb-24"}>
         <InvestExample
@@ -105,7 +111,7 @@ export default function Renovation() {
       <div className={"mb-16 md:mb-24 xl:mb-28"}>
         <WhatsApp
           text={"Talk to a live person and get the investor’s materials pack."}
-          link={""}
+          link={"https://google.com"}
         />
       </div>
       <div className={"mb-16 xl:mb-24"}>
