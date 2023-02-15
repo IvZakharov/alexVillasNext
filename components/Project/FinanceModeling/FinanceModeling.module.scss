@@ -1,0 +1,100 @@
+@import "styles/variables";
+
+.financeModeling {
+}
+
+.tabs {
+  margin-bottom: 25px;
+  overflow: hidden;
+  position: relative;
+
+  .tabItem {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #292929;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 12px;
+      color: white;
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 15px;
+      color: white;
+    }
+  }
+
+  .active {
+    background-color: #292929;
+  }
+}
+
+.swiper {
+  position: relative;
+
+  @media (min-width: 768px) {
+    padding: 0 30px;
+  }
+
+  .slide {
+    padding: 0 30px;
+
+    @media (min-width: 576px) {
+      padding: 0;
+    }
+  }
+}
+
+.arrowPrev,
+.arrowNext {
+  svg {
+    width: 10px;
+    height: 30px;
+    display: inline-block;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+.arrowPrev {
+  position: absolute;
+  z-index: 20;
+  top: 30px;
+  left: 0;
+  display: block !important;
+
+  @media (min-width: 768px) {
+    left: 0;
+  }
+
+  svg {
+    margin-right: 3px;
+  }
+}
+.arrowNext {
+  position: absolute;
+  z-index: 20;
+  top: 30px;
+  right: 0;
+  display: block !important;
+
+  @media (min-width: 768px) {
+    right: 0;
+  }
+}

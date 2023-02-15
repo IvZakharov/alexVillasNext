@@ -12,6 +12,7 @@ const MainLayout = ({
   metaImage,
 }) => {
   const [openedMenu, setOpenedMenu] = React.useState(false);
+
   return (
     <>
       <Head>
