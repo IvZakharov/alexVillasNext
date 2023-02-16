@@ -32,7 +32,7 @@ const HeaderMenu = () => {
               ))}
           </ul>
         </nav>
-        <Link href={"#"} className={`${styles.contact} hidden md:block`}>
+        <Link href={"/contacts"} className={`${styles.contact} hidden md:block`}>
           НАПИШИТЕ НАМ
         </Link>
       </div>

@@ -16,57 +16,57 @@ const InvestExample = ({ title }) => {
             <p className={"text mb-10"}>
               Мы умеем находить такие объекты, <br />проводить точечную реновацию <br />и в дальнейшем выгодно их сдавать.
             </p>
-            <div className={styles.investDemo}>
-              <div className={"grid md:grid-cols-2 gap-8 md:gap-0"}>
-                <div className={styles.item}>
-                  <h3 className={styles.title}>TOWNHOUSES</h3>
-                  <div className={"flex mb-2.5"}>
-                    <span className={"text-xs w-32 text-white"}>
-                      Investments:
-                    </span>
-                    <span className={"text-xs font-normal text-primary"}>
-                      $ 150 000
-                    </span>
-                  </div>
-                  <div className={"flex"}>
-                    <span className={"text-xs w-32 text-white"}>
-                      Monthly income:
-                    </span>
-                    <span className={"text-xs font-normal text-primary"}>
-                      $ 6000 to $ 9000
-                    </span>
-                  </div>
-                </div>
-
-                <div className={styles.item}>
-                  <h3 className={styles.title}>VILLAS</h3>
-                  <div className={"flex mb-2.5"}>
-                    <span className={"text-xs w-32 text-white"}>
-                      Investments:
-                    </span>
-                    <span
-                      className={
-                        "text-xs font-normal text-primary whitespace-nowrap"
-                      }
-                    >
-                      $ 350 000
-                    </span>
-                  </div>
-                  <div className={"flex"}>
-                    <span className={"text-xs w-32 text-white"}>
-                      Monthly income:
-                    </span>
-                    <span
-                      className={
-                        "text-xs font-normal text-primary whitespace-nowrap"
-                      }
-                    >
-                      $ 15 000 to $ 33 000
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/*<div className={styles.investDemo}>*/}
+            {/*  <div className={"grid md:grid-cols-2 gap-8 md:gap-0"}>*/}
+            {/*    <div className={styles.item}>*/}
+            {/*      <h3 className={styles.title}>TOWNHOUSES</h3>*/}
+            {/*      <div className={"flex mb-2.5"}>*/}
+            {/*        <span className={"text-xs w-32 text-white"}>*/}
+            {/*          Investments:*/}
+            {/*        </span>*/}
+            {/*        <span className={"text-xs font-normal text-primary"}>*/}
+            {/*          $ 150 000*/}
+            {/*        </span>*/}
+            {/*      </div>*/}
+            {/*      <div className={"flex"}>*/}
+            {/*        <span className={"text-xs w-32 text-white"}>*/}
+            {/*          Monthly income:*/}
+            {/*        </span>*/}
+            {/*        <span className={"text-xs font-normal text-primary"}>*/}
+            {/*          $ 6000 to $ 9000*/}
+            {/*        </span>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            
+            {/*    <div className={styles.item}>*/}
+            {/*      <h3 className={styles.title}>VILLAS</h3>*/}
+            {/*      <div className={"flex mb-2.5"}>*/}
+            {/*        <span className={"text-xs w-32 text-white"}>*/}
+            {/*          Investments:*/}
+            {/*        </span>*/}
+            {/*        <span*/}
+            {/*          className={*/}
+            {/*            "text-xs font-normal text-primary whitespace-nowrap"*/}
+            {/*          }*/}
+            {/*        >*/}
+            {/*          $ 350 000*/}
+            {/*        </span>*/}
+            {/*      </div>*/}
+            {/*      <div className={"flex"}>*/}
+            {/*        <span className={"text-xs w-32 text-white"}>*/}
+            {/*          Monthly income:*/}
+            {/*        </span>*/}
+            {/*        <span*/}
+            {/*          className={*/}
+            {/*            "text-xs font-normal text-primary whitespace-nowrap"*/}
+            {/*          }*/}
+            {/*        >*/}
+            {/*          $ 15 000 to $ 33 000*/}
+            {/*        </span>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>

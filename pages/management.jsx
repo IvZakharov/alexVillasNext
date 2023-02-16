@@ -12,7 +12,8 @@ import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
 import React from "react";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
-import { menageProjects } from "../data/menageProjects";
+import { menageProjects } from "../data/menageProj";
+import Promo from "../components/Promo/Promo";
 
 export default function Management() {
   const arr = {
@@ -50,36 +51,44 @@ export default function Management() {
         />
       </div>
       <div className={"mb-16 xl:mb-24"}>
-        <PatternHouse
-          Houses={[
+        <Promo
+          Data = {[
             {
-              title: "10",
-              bedroom: "1-BEDROOM",
-              housformat: "TOWNHOUSES",
+              title: '42',
+              lable: "виллы \nв управлении",
             },
             {
-              title: "2",
-              bedroom: "1-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: '3500',
+              lable: "Отзывов \nна AIRBNB",
             },
             {
-              title: "3",
-              bedroom: "2-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: "80%",
+              lable: "Средняя \nзагрузка ",
             },
             {
-              title: "1",
-              bedroom: "3-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: "10-20%",
+              lable: "Годовая \nдоходность",
+            },
+          ]}
+          links={[
+            {
+              name: "download",
+              lable: "Скачать PDF",
+              link: "#",
+            },
+            {
+              name: "contact",
+              lable: "Написать нам",
+              link: "#",
             },
           ]}
         />
       </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <ManagementGrid
-          title={"ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ "}
+          title={"ОБЪЕКТЫ \nВ УПРАВЛЕНИИ"}
           projects={menageProjects}
-          link={"#"}
+          link={"https://ru.airbnb.com/users/show/15136870"}
           linkLabel={"БОЛЬШЕ НАШИХ ОБЪЕКТОВ НА AIRBNB"}
           full
         />
@@ -89,19 +98,19 @@ export default function Management() {
         title={
           "  ПЕРЕДАЙТЕ ВАШУ \nНЕДВИЖИМОСТЬ\n<span>В УПРАВЛЕНИЕ \nALEX VILLAS\nMANAGEMENT</span>"
         }
-        imageUrl={"/images/cta/bg2.jpg"}
+        imageUrl={"/images/cta/DSC01400.JPG"}
         submitButtonText={"send"}
         fields={[
           {
             name: "userName",
             type: "text",
-            placeholder: "Your name:",
+            placeholder: "Ваше имя:",
             required: true,
           },
           {
             name: "userTel",
             type: "tel",
-            placeholder: "Phone number:",
+            placeholder: "Номер телефона:",
             required: true,
           },
         ]}

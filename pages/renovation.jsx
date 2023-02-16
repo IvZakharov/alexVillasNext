@@ -38,7 +38,7 @@ export default function Renovation() {
             "Инвестируйте в арендную \nнедвижимость. Цикл: 3 года.\n" +
             "Доходность: 15-30% годовых"
           }
-          form
+          form={"ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ \nИ ФИНАНСОВУЮ МОДЕЛЬ"}
           link
           back={arr}
         />
@@ -58,23 +58,23 @@ export default function Renovation() {
           Data = {[
             {
               title: '15-30<span class="text">%</span>',
-              lable: "годовая доходность",
+              lable: "годовая \nдоходность",
             },
             {
               title: '3<span class="text">года</span>',
-              lable: "Срок инвестиций",
+              lable: "Срок \nинвестиций",
             },
             {
               title: "$70К",
-              lable: "МИНИМАЛЬНАЯ СУММА ВЛОЖЕНИЙ",
+              lable: "МИНИМАЛЬНАЯ \nСУММА ВЛОЖЕНИЙ",
             },
             {
               title: "50+",
-              lable: "ОТРЕСТАВРИРОВАННЫХ ВИЛЛ",
+              lable: "ОТРЕСТАВРИРОВАННЫХ \nВИЛЛ",
             },
             {
               title: '8 <span class="text">лет</span>',
-              lable: "ОПЫТА НА РЫНКЕ БАЛИ",
+              lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
             },
           ]}
           width
@@ -84,7 +84,7 @@ export default function Renovation() {
         <RenovationSlider images={renovationImages} />
       </div>
       <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Повысьте заполняемость и средний чек вашего объекта"} link={"#"} />
+        <WhatsApp text={"Повысьте заполняемость и средний чек вашего объекта"} linkLabel={'ПРОДОЛЖИТЬ В WHATSAPP'} link={"#"} />
       </div>
       <div className={"mb-16 md:mb-24"}>
         <InvestExample
@@ -96,8 +96,8 @@ export default function Renovation() {
       </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <RenovationSteps
-          imageAfter={"/images/renovation/card.jpg"}
-          imageBefore={"/images/renovation/card.jpg"}
+          imageAfter={"/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"}
+          imageBefore={"/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"}
         />
       </div>
       <div className={"mb-16 md:mb-24 xl:mb-28"}>

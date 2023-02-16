@@ -7,7 +7,7 @@ const RenovationSteps = ({ imageBefore, imageAfter }) => {
     <section className={styles.steps}>
       <div className={"container"}>
         <h2 className={"h2 mb-8 md:mb-12"}>
-          <span>HOW WE DO IT</span>
+          <span>Этапы процесса</span>
         </h2>
 
         <div className={"grid md:grid-cols-6 xl:grid-cols-12"}>

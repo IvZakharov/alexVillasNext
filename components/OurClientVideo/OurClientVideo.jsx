@@ -12,8 +12,8 @@ const OurClientVideo = () => {
     <section className="container">
       <div className={styles.OurClient}>
         <h2 className={`h2 mb-8 ${styles.h2}`}>
-          HERE’S WHAT <br />
-          <span>OUR CLIENTS SAY:</span>
+          Отзывы наших <br />
+          <span>Клиентов:</span>
         </h2>
         <div
           className={`${styles.video} mb-8`}
@@ -43,7 +43,7 @@ const OurClientVideo = () => {
         </div>
         <div className={styles.text}>
           <p className="text mb-4">
-            “In simple words, your payback period is expected to be{" "}
+            “Выбрать один из отзывов{" "}
             <span>from 4 to 6 years.</span>”
           </p>
           <span className={styles.name}>THEODORE PATTERSON</span>

@@ -15,13 +15,14 @@ import PatternHouse from "../components/PatternHouse/PatternHouse";
 import React from "react";
 import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
+import Promo from "../components/Promo/Promo";
 
 export default function Construction() {
-  const arr = {
+const arr = {
     type: 'image',
     url: '/images/hero.png',
     alt: 'background image',
-  }
+}
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -30,75 +31,77 @@ export default function Construction() {
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
-          h1first={"ALEX VILLAS"}
-          h1second={"CONSTRUCTION"}
+          h1first={"СТРОИТЕЛЬСТВО"}
+          h1second={"НА БАЛИ"}
           text={
-            "High-performing \nproperty renovations \n in prime locations of Bali"
+            "Мы строим современную недвижимость в лучших локациях для жизни и инвестиций. Срок строительства: 1 год. Доходность: 10-30%."
           }
-          subLable={"STARTING FROM $189.000"}
+          form={"СВЯЗАТЬСЯ С ОТДЕЛОМ ПРОДАЖ"}
+          link
           back={arr}
         />
       </div>
       <div className={"mb-16 xl:mb-24"}>
         <AlexVillas
           textBlock1={
-            "<span>Alex Villas Complex No. 3</span> \n is already under construction."
+            "Alex Villas - это строительная компания с опытом <span>8 лет на рынке Индонезии. </span> "
           }
           textBlock2={
-            "It is located right next door to \n the famous <span>FINNS beach club.</span>"
+            "В нашем послужном списке комплексы в топовых локациях и индивидуальные проекты с высокой заполняемостью. "
           }
           textBlock3={
-            " <span>We added the best of our best practices to this villa complex which is a product of our successful experience in Canggu area.</span> "
+            " <span>Мы ценим опыт, который получаем на каждом проекте, и все последующие получаются комфортнее для гостей и выгоднее для инвесторов. Это наш путь развития.  </span> "
           }
         />
       </div>
       <div className={"mb-16 xl:mb-24"}>
-        <PatternHouse
-          Houses={[
+        <Promo
+          Data = {[
             {
-              title: "10",
-              bedroom: "1-BEDROOM",
-              housformat: "TOWNHOUSES",
+              title: '7',
+              lable: "Комплексов \nпостроенно",
             },
             {
-              title: "2",
-              bedroom: "1-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: '146',
+              lable: "Общее кол-во \nЮнитов",
             },
             {
-              title: "3",
-              bedroom: "2-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: "1 <span class='text'>год</span>",
+              lable: "Средний срок \nстроительства ",
             },
             {
-              title: "1",
-              bedroom: "3-BEDROOM",
-              housformat: "SMART VILLAS",
+              title: "30+",
+              lable: "РОЛИКОВ О СТРОЙКЕ НА  \nНАШЕМ YOUTUBE-КАНАЛЕ",
+            },
+            {
+              title: "8 <span class='text'>лет</span>",
+              lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
             },
           ]}
+          width
         />
       </div>
       <div className={"mb-10 xl:mb-16"}>
         <ProjectsGrid
           projects={projectsOnSaleFilter(projects, true)}
-          title={"PROJECTS\nON SALE"}
+          title={"ПРОЕКТЫ\nВ ПРОДАЖЕ"}
           link={"#"}
-          linkLabel={"MORE PROJECTS ON SALE"}
+          linkLabel={"БОЛЬШЕ ПРОЕКТОВ В ПРОДАЖЕ"}
         />
       </div>
       <div className={"mb-10 xl:mb-16"}>
         <ProjectsGrid
           projects={projectsOnSaleFilter(projects, false)}
-          title={"COMPLETED\nPROJECTS"}
+          title={"ЗАВЕРШЁННЫЕ\nПРОЕКТЫ"}
           link={"#"}
-          linkLabel={"MORE COMPLETED PROJECTS"}
+          linkLabel={"БОЛЬШЕ ЗАВЕРШЁННЫХ ПРОЕКТОВ"}
         />
       </div>
       <div className={"mb-16 md:mb-24"}>
         <WhatsApp
-          text={"Build you dream villa and let us make it rock the market"}
+          text={"Постройте виллу своей мечты и позвольте нам заставить ее взорвать рынок"}
           link={"#"}
-          linkLabel={""}
+          linkLabel={"Перейти в WhatsApp"}
         />
       </div>
       <div className={"mb-16 md:mb-24"}>
@@ -106,7 +109,7 @@ export default function Construction() {
       </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <Principles
-          title={"<span>WE STARTED</span> \nOUR OWN\nPRODUCTION"}
+          title={"<span>Все что мы делаем основанно</span> \nНа этих\n5 принципах"}
           principles={principlesArr}
         />
       </div>
@@ -115,30 +118,30 @@ export default function Construction() {
       </div>
       <div className={"mb-16 xl:mb-32"}>
         <OurBusiness
-          text={"COMPANY \n<span>YOU CAN</span>\n<span>RELY ON</span>"}
+          text={"Почему \n<span>ALEX</span>\n<span>VILLAS?</span>"}
         />
       </div>
 
       <CtaSection
         title={
-          "FILL THE FORM BELOW \n<span>AND WILL SEND YOU</span>\n<span>INVESTORS PDF</span>"
+          "СВЯЗАТЬСЯ С ОТДЕЛОМ  \n<span>ПРОДАЖ</span>"
         }
-        imageUrl={"/images/cta/bg.jpg"}
+        imageUrl={"/images/cta/45_are_601.jpg"}
         description={
-          "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."
+          "Мы строим современную недвижимость в лучших локациях для жизни и инвестиций. Срок строительства: 1 год. Доходность: 10-30%."
         }
-        submitButtonText={"send"}
+        submitButtonText={"СВЯЗАТЬСЯ"}
         fields={[
           {
             name: "userName",
             type: "text",
-            placeholder: "Your name:",
+            placeholder: "Ваше имя:",
             required: true,
           },
           {
             name: "userTel",
             type: "tel",
-            placeholder: "Phone number:",
+            placeholder: "Телефон:",
             required: true,
           },
         ]}

@@ -16,7 +16,7 @@ import Team from "../components/Team/Team";
 
 import { projectsOnSaleFilter } from "../utils/projectsOnSaleFilter";
 
-import { menageProjects } from "../data/menageProjects";
+import { menageProjects } from "../data/menageProj";
 import { projects } from "../data/projects";
 import CtaSection from "../components/CtaSection/CtaSection";
 import teamData from "../data/teamData";
@@ -85,8 +85,8 @@ export default function Home() {
           description={
             "Инвестируйте от $70.000 c доходностью\n15-25% годовых. Цикл инвестиций 3 года."
           }
-          imageBefore={"/images/renovation/card.jpg"}
-          imageAfter={"/images/renovation/card.jpg"}
+          imageAfter={"/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"}
+          imageBefore={"/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"}
           link={"/renovation"}
           linkLabel={"УЗНАТЬ ПОДРОБНОСТИ"}
         />
@@ -99,7 +99,7 @@ export default function Home() {
             "Инвестируйте от $70.000 c доходностью 15-25% годовых. Цикл инвестиций 3 года."
           }
           projects={menageProjects}
-          link={"#"}
+          link={"/management"}
           linkLabel={"БОЛЬШЕ ОБ УПРАВЛЯЮЩЕЙ КОМПАНИИ"}
           full={false}
         />

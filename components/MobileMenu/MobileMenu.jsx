@@ -35,7 +35,7 @@ const MobileMenu = ({ OnClickClose }) => {
         <div className="md:hidden flex flex-col justify-center items-center">
           <HeroMenu />
         </div>
-        <Link href={"#"} className={`${styles.contact}`}>
+        <Link href={"/contacts"} className={`${styles.contact}`}>
           Напишите Нам
         </Link>
         <button

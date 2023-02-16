@@ -50,34 +50,28 @@ export default function Agency() {
       </div>
 
       <WhatsApp
-        text={"Talk to a live person and get the investor’s materials pack."}
+        text={"Поговорите с живым человеком и получите пакет материалов инвестора."}
         link={"#"}
-        linkLabel={"PROCEED TO WHATSAPP"}
+        linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
       />
 
       <CtaSection
-        title={"GET IN TOUCH \n<span>WITH US:</span>"}
+        title={"Мы всегда \n<span>На связи:</span>"}
         imageUrl={"/images/contact/DSC09476.JPG"}
         label={"HOPE TO HEAR\nFROM YOU!"}
-        submitButtonText={"send"}
+        submitButtonText={"Отправить"}
         fields={[
           {
             name: "userName",
             type: "text",
-            placeholder: "Your name:",
+            placeholder: "Наше имя:",
             required: true,
           },
           {
             name: "userTel",
             type: "tel",
-            placeholder: "Phone number:",
+            placeholder: "Телефон:",
             required: true,
-          },
-          {
-            name: "userMessage",
-            type: "text",
-            placeholder: "Your message:",
-            required: false,
           },
         ]}
       />

@@ -189,7 +189,7 @@
     }
   }
   .textBlockWithForm{
-    max-width: 363px;
+    max-width: 386px;
     display: flex;
     justify-content: flex-end;
     @media (max-width: 1239px) {
@@ -214,7 +214,6 @@
       /* or 26px */
       color: #ffffff;
       white-space: break-spaces;
-      max-width: 384px;
       @media (max-width: 983px) {
         white-space: normal;
         max-width: 100%;

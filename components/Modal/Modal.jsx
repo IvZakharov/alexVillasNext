@@ -19,7 +19,7 @@ const Modal = ({ active, closeModal }) => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/OxgyLXV74kY"
+            src="https://www.youtube.com/embed/UIU1Xc0jDiE"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

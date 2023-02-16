@@ -6,19 +6,21 @@ export const projects = [
     thumbnail: "/images/projects/1.jpg",
     location: "БЕРАВА, ЧАНГУ",
     complexProperties: [
-      { count: "10", title: "1-комнатные таунхаусы" },
-      { count: "16", title: "1-комнатные апартаменты" },
-      { count: "5", title: "1-комнатные смарт-виллы" },
-      { count: "3", title: "2-комнатные смарт-виллы" },
-      { count: "1", title: "3-комнатная смарт-вилла" },
+      { count: "8", title: "1-спальные smart-виллы" },
+      { count: "8", title: "2-спальные smart-виллы" },
+      { count: "18", title: "1-спальные апартаменты" },
+      { count: "6", title: "1-спальные rooftop-апартаменты" },
+      { count: "3", title: "2-спальные апартаменты" },
+      { count: "1", title: "2-спальные rooftop-апартаменты" },
+      { count: "9", title: "таунхаусы" },
     ],
   },
   {
     id: 1,
-    title: "Complex 5",
+    title: "Complex 7",
     onSale: true,
-    thumbnail: "/images/projects/1.jpg",
-    location: "БЕРАВА, ЧАНГУ",
+    thumbnail: "/images/projects/45_are_101.jpg",
+    location: "coming soon",
     complexProperties: [
       { count: "10", title: "1-bedroom townhouses" },
       { count: "16", title: "1-bedroom apartments" },
@@ -29,9 +31,9 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Complex 6",
-    onSale: true,
-    thumbnail: "/images/projects/1.jpg",
+    title: "Complex 1",
+    onSale: false,
+    thumbnail: "/images/projects/Complex1.jpg",
     location: "BERAWA, CANGGU",
     complexProperties: [
       { count: "10", title: "1-bedroom townhouses" },
@@ -43,9 +45,9 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Complex 6",
-    onSale: true,
-    thumbnail: "/images/projects/1.jpg",
+    title: "Complex 2",
+    onSale: false,
+    thumbnail: "/images/projects/Complex2.jpg",
     location: "BERAWA, CANGGU",
     complexProperties: [
       { count: "10", title: "1-bedroom townhouses" },
@@ -57,9 +59,9 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Complex 6",
-    onSale: true,
-    thumbnail: "/images/projects/1.jpg",
+    title: "Complex 3",
+    onSale: false,
+    thumbnail: "/images/projects/Complex3.PNG",
     location: "BERAWA, CANGGU",
     complexProperties: [
       { count: "10", title: "1-bedroom townhouses" },
@@ -72,7 +74,7 @@ export const projects = [
   {
     id: 5,
     title: "Complex 6",
-    onSale: true,
+    onSale: false,
     thumbnail: "/images/projects/1.jpg",
     location: "BERAWA, CANGGU",
     complexProperties: [
@@ -86,7 +88,7 @@ export const projects = [
   {
     id: 6,
     title: "Complex 6",
-    onSale: true,
+    onSale: false,
     thumbnail: "/images/projects/1.jpg",
     location: "BERAWA, CANGGU",
     complexProperties: [
@@ -100,7 +102,7 @@ export const projects = [
   {
     id: 7,
     title: "Complex 6",
-    onSale: true,
+    onSale: false,
     thumbnail: "/images/projects/1.jpg",
     location: "BERAWA, CANGGU",
     complexProperties: [
@@ -114,7 +116,7 @@ export const projects = [
   {
     id: 8,
     title: "Complex 6",
-    onSale: true,
+    onSale: false,
     thumbnail: "/images/projects/1.jpg",
     location: "BERAWA, CANGGU",
     complexProperties: [

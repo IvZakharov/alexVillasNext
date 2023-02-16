@@ -5,15 +5,15 @@ const ConstructionAbout = () => {
   return (
     <section>
       <div className={"container"}>
-        <div className={"grid gap-10"}>
+        <div className={"grid md:grid-cols-3 gap-10"}>
           <h2 className={"h2"}>
-            <span>WE STARTED</span> <br /> OUR OWN <br /> PRODUCTION
+            <span>Мы запустили</span> <br /> собственное <br /> производство
           </h2>
 
-          <div>
+          <div className={"md:col-span-2"}>
             <p className={"text mb-10 md:mb-16"}>
-              Alex Villas announces the start of its own{" "}
-              <span>production facilities!</span>
+              Alex Villas объявляет о запуске собственного<br />
+              <span>производства!</span>
             </p>
 
             <div className={"flex flex-wrap gap-8 md:gap-12 mb-8"}>
@@ -36,7 +36,7 @@ const ConstructionAbout = () => {
                   </svg>
                 </i>
                 <h4 className={"text-white uppercase text-xl"}>
-                  HIGHER COST <br /> EFFICIENCY
+                  ВЫСОКАЯ СТОИМОСТЬ <br /> ЭФФЕКТИВНОСТЬ
                 </h4>
               </div>
 
@@ -59,8 +59,8 @@ const ConstructionAbout = () => {
                   </svg>
                 </i>
                 <h4 className={"text-white uppercase text-xl"}>
-                  UNIQUE <br />
-                  INTERIORS
+                  УНИКАЛЬНЫЕ <br />
+                  ИНТЕРЬЕРЫ
                 </h4>
               </div>
 
@@ -83,16 +83,16 @@ const ConstructionAbout = () => {
                   </svg>
                 </i>
                 <h4 className={"text-white uppercase text-xl"}>
-                  BETTER <br />
-                  DURABILITY
+                  Повышенная <br />
+                  Долговечность
                 </h4>
               </div>
             </div>
 
             <ul className={styles.list}>
-              <li>COMPETITIVE ANALYSIS</li>
-              <li>TECHNICAL ANALYSIS</li>
-              <li>FINANCIAL MODELLING</li>
+              <li>ПРОИЗВОДСТВО БЕТОНА</li>
+              <li>МЕБЕЛЬНОЕ ПРОИЗВОДСТВО</li>
+              <li>СТЕКОЛЬНОЕ ПРОИЗВОДСТВО</li>
             </ul>
           </div>
         </div>

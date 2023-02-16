@@ -22,7 +22,7 @@ const ProjectsGrid = ({ title, projects, link, linkLabel, description }) => {
           className={`grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-5`}
         >
           {projects &&
-            projects.slice(0, 2).map((obj, idx) => (
+            projects.slice(0, 3).map((obj, idx) => (
               <div
                 key={obj.id}
                 className={`${
