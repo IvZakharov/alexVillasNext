@@ -33,7 +33,7 @@ export const projects = [
     id: 2,
     title: "Complex 1",
     onSale: false,
-    thumbnail: "/images/projects/Complex1.jpg",
+    thumbnail: "/images/projects/Complex1.JPG",
     location: "BERAWA, CANGGU",
     complexProperties: [
       { count: "10", title: "1-bedroom townhouses" },
