@@ -12,7 +12,7 @@ export const menutopru = [
         lable: 'Строительная компания',
       },
       {
-        link: '/agency',
+        link: '#',
         lable: 'Агенство недвижимости',
       },
       {
