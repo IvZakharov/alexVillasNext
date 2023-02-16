@@ -23,13 +23,13 @@
   }
 
   .title {
-    font-size: 26px;
-    line-height: 32px;
+    //font-size: 26px;
+    //line-height: 32px;
     margin-bottom: 30px;
     white-space: pre-line;
-    letter-spacing: 0.04em;
-    font-weight: 700;
-    font-family: var(--robotoCondensed-font);
+    //letter-spacing: 0.04em;
+    //font-weight: 700;
+    //font-family: var(--robotoCondensed-font);
     color: #ffffff;
 
     span {
@@ -77,8 +77,8 @@
     }
 
     p {
-      font-family: var(--oswald-font);
-      font-weight: 700;
+     // font-family: var(--oswald-font);
+      font-weight: 500;
       font-size: 16px;
       line-height: 138%;
       text-align: center;

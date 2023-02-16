@@ -103,17 +103,12 @@ export default function Renovation() {
       <div className={"mb-16 md:mb-24 xl:mb-28"}>
         <Principles
           title={
-            "<span>ВСЕ НАШИ\nWE ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ"
+            "<span>ВСЕ НАШИ\n ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ"
           }
           principles={principlesArr}
         />
       </div>
-      <div className={"mb-16 md:mb-24 xl:mb-28"}>
-        <WhatsApp
-          text={"Talk to a live person and get the investor’s materials pack."}
-          link={"https://google.com"}
-        />
-      </div>
+
       <div className={"mb-16 xl:mb-24"}>
         <OurClientVideo />
       </div>

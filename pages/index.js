@@ -45,7 +45,7 @@ export default function Home() {
           h1second={"НА БАЛИ"}
           // h1first={"РЕНОВАЦИЯ"}
           // h1second={"ВИЛЛ НА БАЛИ"}
-          text={"Инвестируйте от $70.000 с доходностью 10-30% годовых"}
+          text={"Инвестируйте от $70.000 с доходностью \n10-30% годовых"}
           back={arr}
           // subLable={"STARTING FROM $189.000"}
         />
@@ -55,7 +55,7 @@ export default function Home() {
         <About />
       </div>
 
-      <div className={"mb-10 xl:mb-16"}>
+      <div className={"mb-16 xl:mb-16"}>
         <ProjectsGrid
           projects={projectsOnSaleFilter(projects, true)}
           title={"ПРОЕКТЫ\nВ ПРОДАЖЕ"}

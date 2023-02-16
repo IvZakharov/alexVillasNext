@@ -84,20 +84,20 @@ const Index = ({ youtubeLinks }) => {
 
             <Link href={""} className={styles.link}>
               <span>ПОДПИСАТЬСЯ</span>
-              <i>
-                <svg
-                  width="73"
-                  height="7"
-                  viewBox="0 0 73 7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M73 3.19629L68 0.309538V6.08304L73 3.19629ZM0 3.69629H68.5V2.69629H0V3.69629Z"
-                    fill="#FF9900"
-                  />
-                </svg>
-              </i>
+              {/*<i>*/}
+              {/*  <svg*/}
+              {/*    width="73"*/}
+              {/*    height="7"*/}
+              {/*    viewBox="0 0 73 7"*/}
+              {/*    fill="none"*/}
+              {/*    xmlns="http://www.w3.org/2000/svg"*/}
+              {/*  >*/}
+              {/*    <path*/}
+              {/*      d="M73 3.19629L68 0.309538V6.08304L73 3.19629ZM0 3.69629H68.5V2.69629H0V3.69629Z"*/}
+              {/*      fill="#FF9900"*/}
+              {/*    />*/}
+              {/*  </svg>*/}
+              {/*</i>*/}
             </Link>
           </div>
 

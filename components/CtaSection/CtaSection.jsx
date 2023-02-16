@@ -39,7 +39,7 @@ const CtaSection = ({
       >
         <div className={"md:col-end-3 md:col-span-1"}>
           <div className={styles.content}>
-            <h2 className={`${styles.title}`}>{parse(title)}</h2>
+            <h2 className={`${styles.title} h2`}>{parse(title)}</h2>
             {description && <p className={`${styles.description} text`}>{description}</p>}
           </div>
           {label && (

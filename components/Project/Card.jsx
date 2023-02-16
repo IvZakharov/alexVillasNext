@@ -20,7 +20,7 @@ const ProjectCard = ({
               large ? "md:block md:w-1/2" : ""
             }`}
           >
-            <h2 className={`${styles.title} ${large ? styles.titleLarge : ""}`}>
+            <h2 className={`${styles.title} h2 ${large ? styles.titleLarge : ""}`}>
               {large ? `Alex \n Villas \n ${title}` : title}
             </h2>
             <p className={styles.location}>

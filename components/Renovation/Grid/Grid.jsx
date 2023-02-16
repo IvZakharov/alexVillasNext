@@ -38,7 +38,7 @@ const RenovationGrid = ({
                 objectFit: "cover",
               }}
             />
-            <span className={styles.label}>До</span>
+            <span className={`${styles.label} h2`}>До</span>
           </div>
 
           <div className={styles.imageAfter}>
@@ -55,7 +55,7 @@ const RenovationGrid = ({
                 objectFit: "cover",
               }}
             />
-            <span className={styles.label}>После</span>
+            <span className={`${styles.label} h2`}>После</span>
           </div>
 
           <div

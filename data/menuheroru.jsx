@@ -1,18 +1,18 @@
 export const menuhero = [
   {
     lable: "СТРОИТЕЛЬНАЯ КОМПАНИЯ",
-    link: "#",
+    link: "/construction",
   },
   {
     lable: "АГЕНТСТВО НЕДВИЖИМОСТИ",
-    link: "#",
+    link: "/agency",
   },
   {
     lable: "УПРАВЛЯЮЩАЯ КОМПАНИЯ",
-    link: "#",
+    link: "/management",
   },
   {
     lable: "РЕНОВАЦИЯ",
-    link: "#",
+    link: "/renovation",
   },
 ];

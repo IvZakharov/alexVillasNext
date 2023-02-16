@@ -4,8 +4,8 @@ import TextField from "../../ui/TextField/TextField";
 const FormContactHero = ({ hrefLabel, arrow }) => {
   return (
     <form className={styles.FormContactHero}>
-      <TextField type={'text'} name={'Name'} placeholder={'Your name: '} required/>
-      <TextField type={'text'} name={'Phone'} placeholder={'Phone number: '} required/>
+      <TextField type={'text'} name={'Name'} placeholder={'Ваше Имя: '} required/>
+      <TextField type={'text'} name={'Phone'} placeholder={'Телефон: '} required/>
       <button type="submit" className={`${styles.button}`}>
         {hrefLabel}
         {arrow && (

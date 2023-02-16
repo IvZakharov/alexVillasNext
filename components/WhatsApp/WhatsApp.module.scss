@@ -31,17 +31,14 @@
 
   .link {
     width: fit-content;
-    font-family: var(--robotoCondensed-font);
     display: flex;
     align-items: center;
     padding: 20px;
     background: #292929;
     border: 3px solid #ffffff;
     border-radius: 50px;
-    font-size: 18px;
-    line-height: 21px;
     @media (max-width: 983px) {
-      padding: 10px;
+      padding: 20px;
     }
 
     span {

@@ -63,7 +63,7 @@ const ProjectsGrid = ({ title, projects, link, linkLabel, description }) => {
           </div>
         )}
 
-        <div className={"pt-10 flex justify-end"}>
+        <div className={"pt-10 pl-8 md:pl-0 flex justify-start md:justify-end"}>
           <Link href={link} className={styles.link}>
             <span>{linkLabel}</span>
             <i>

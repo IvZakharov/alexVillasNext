@@ -17,7 +17,7 @@ import { menageProjects } from "../data/menageProjects";
 export default function Management() {
   const arr = {
     type: 'image',
-    url: '/images/hero.png',
+    url: '/images/head/IMG_3581.JPG',
     alt: 'background image',
   }
   return (
@@ -28,23 +28,24 @@ export default function Management() {
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
-          h1first={"ALEX VILLAS"}
-          h1second={"MANAGEMENT "}
-          text={
-            "High-performing \nproperty renovations \n in prime locations of Bali"
-          }
-          subLable={"STARTING FROM $189.000"}
+          h1first={"УПРАВЛЯЮЩАЯ"}
+          h1second={"КОМПАНИЯ"}
+          form={"ПОДАТЬ ЗАЯВКУ НА УПРАВЛЕНИЕ"}
+          link
           back={arr}
+          text={"Комплексное управление объектами недвижимости на Бали для повышения доходности и качества сервиса "}
         />
       </div>
       <div>
         <AlexVillas
           textBlock1={
-            "Renovate your own residential or commercial property\n" +
-            "or find the perfect one with us."
+            "ALEX VILLAS MANAGEMENT - это управляющая компания на Бали."
           }
           textBlock2={
-            "We have every piece of hands-on experience you may need to <span>make rental property a good business.</span>"
+            "Уже 8 лет мы помогаем владельцам объектов недвижимости зарабатывать больше при значительно меньшем вовлечении."
+          }
+          textBlock3={
+            "<span>Мы ценим опыт, который получаем на каждом проекте, и все последующие получаются комфортнее для гостей и выгоднее для инвесторов. Это наш путь развития.</span>"
           }
         />
       </div>

@@ -32,6 +32,8 @@
     gap: 30px;
     padding-left: 50px;
 
+
+
     @media (min-width: 768px) {
       gap: 0;
       justify-content: space-between;
@@ -46,6 +48,9 @@
       white-space: nowrap;
       color: $primary;
       transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border: 1px solid #ff9900;
+      padding: 20px;
+      border-radius: 50px;
 
       @media (min-width: 768px) {
         font-size: 18px;

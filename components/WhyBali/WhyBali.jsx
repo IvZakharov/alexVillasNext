@@ -15,7 +15,7 @@ const WhyBali = () => {
         <div className={"grid grid-cols-1 lg:grid-cols-3 mb-10 xl:mb-10"}>
           <div
             className={
-              "flex justify-between gap-10 w-full lg:block lg:gap-0 md:mb-10 lg:mb-0"
+              "flex justify-between gap-10 w-full mb-8 lg:block lg:gap-0 md:mb-10 lg:mb-0"
             }
           >
             <h2 className={"h1"}>
@@ -46,9 +46,9 @@ const WhyBali = () => {
                 ГОРЯЧАЯ ТОЧКА <span>ИНВЕСТИЦИЙ</span>
               </h3>
               <p className={"text textSmall"}>
-                Рынок недвижимости сошёл с ума с возвращением туризма.
+                Рынок недвижимости сошёл с ума с возвращением туризма.<span> </span>
                 <span>
-                  <Link href={"#"}> Читать отчёт</Link>
+                  <Link href={"#"}>Читать отчёт</Link>
                 </span>
               </p>
             </div>
@@ -59,7 +59,7 @@ const WhyBali = () => {
               </h3>
               <p className={"text textSmall"}>
                 Индонезия сегодня ассоциируется с притоком зарубежных инвестиций
-                и
+                и<span> </span>
                 <span>
                   <Link href={"#"}> небывалым ростом ВВП.</Link>
                 </span>
@@ -71,8 +71,8 @@ const WhyBali = () => {
                 ДОХОДНОСТЬ <span>10-22%</span>
               </h3>
               <p className={"text textSmall"}>
-                Просто сравните это с
-                <span>типичными 5-6% на рынках развитых стран!</span>
+                Просто сравните это
+                <span> стипичными 5-6% на рынках развитых стран!</span>
               </p>
             </div>
 
@@ -82,7 +82,7 @@ const WhyBali = () => {
               </h3>
               <p className={"text textSmall"}>
                 Больше никаких трюков, чтобы заставить вашу крипту работать!
-                <span>100% легально и просто.</span>
+                <span> 100% легально и просто.</span>
               </p>
             </div>
           </div>

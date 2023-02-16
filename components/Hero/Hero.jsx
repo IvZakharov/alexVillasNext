@@ -47,7 +47,7 @@ const Hero = ({ h1first, h1second, text, subLable, dot, form, link, back }) => {
           {subLable && <div className={`${styles.subLable}`}>{subLable}</div>}
           <div className={styles.FormText}>
             {form && (
-              <FormContactHero hrefLabel={"ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ И ФИНАНСОВУЮ МОДЕЛЬ"} />
+              <FormContactHero hrefLabel={form == "" ? "ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ \nИ ФИНАНСОВУЮ МОДЕЛЬ" : form}  arrow/>
             )}
             
             {text && !form && (

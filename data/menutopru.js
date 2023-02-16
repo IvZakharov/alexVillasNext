@@ -16,7 +16,7 @@ export const menutopru = [
     lable: 'БЛОГ',
   },
   {
-    link: '#',
+    link: '/vacancy',
     lable: 'ВАКАНСИИ',
   },
 ];
