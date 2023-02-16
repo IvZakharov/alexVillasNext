@@ -40,6 +40,33 @@
           color: #FFFFFF;
           letter-spacing: -0.01em;
         }
+
+        &:hover{
+          .subMenu{
+            display: block;
+          }
+        }
+        .subMenu{
+          display: none;
+          li{
+            margin-top: 10px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #FFFFFF;
+            padding-bottom: 3px;
+          }
+          .linkSub{
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            /* identical to box height */
+            font-style: normal;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+
+          }
+        }
       }
     }
   }

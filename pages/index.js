@@ -51,7 +51,7 @@ export default function Home() {
         />
       </div>
 
-      <div className={"mb-16 xl:mb-24"}>
+      <div className={"mb-16 xl:mb-24"} id={"o-nas"}>
         <About />
       </div>
 

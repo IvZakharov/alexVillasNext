@@ -8,7 +8,7 @@ import { menutopru } from "../../data/menutopru";
 const MobileMenu = ({ OnClickClose }) => {
   return (
     <div className={`pt-6 ${styles.mobileMenu}`}>
-      <div className="container flex flex-col md:items-center md:justify-between md:flex-row">
+      <div className="container flex flex-col md:items-center md:justify-between md:flex-row overflow-y-scroll">
         <div className={`${styles.logo}`}>
           <Link href={"/"} onClick={() => OnClickClose(false)}>
             <Image
@@ -28,13 +28,24 @@ const MobileMenu = ({ OnClickClose }) => {
                   <Link href={obj.link} className={`${styles.links} `}>
                     {obj.lable}
                   </Link>
+                  {obj.subMenu && (
+                    <ul className={styles.subMenu}>
+                      {obj.subMenu.map((sublink, i)=>(
+                        <li key={i}>
+                          <Link href={sublink.link} className={styles.linkSub} >
+                            {sublink.lable}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
           </ul>
         </nav>
-        <div className="md:hidden flex flex-col justify-center items-center">
-          <HeroMenu />
-        </div>
+        {/*<div className="md:hidden flex flex-col justify-center items-center">*/}
+        {/*  <HeroMenu />*/}
+        {/*</div>*/}
         <Link href={"/contacts"} className={`${styles.contact}`}>
           Напишите Нам
         </Link>

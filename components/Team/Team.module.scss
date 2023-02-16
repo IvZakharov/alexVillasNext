@@ -1,8 +1,6 @@
 @import "styles/variables";
 
 .team {
-  overflow: hidden;
-
   .teamSwiper {
     .slide {
       height: auto;
@@ -21,6 +19,12 @@
         .image {
           -webkit-filter: grayscale(0);
           filter: grayscale(0);
+        }
+
+        .info {
+          visibility: visible;
+          opacity: 1;
+          z-index: 11;
         }
       }
     }
@@ -47,7 +51,7 @@
       color: white;
       padding: 20px 30px 50px;
       height: 100%;
-      transition: all 1s ease-in-out;
+      transition: opacity 0.3s ease-in-out, visibility 1s ease-in-out;
 
       @media (min-width: 768px) {
         padding: 30px;
@@ -55,11 +59,12 @@
 
       @media (min-width: 984px) {
         position: absolute;
-        height: 0;
         visibility: hidden;
         opacity: 0;
-        top: 0;
+        height: auto;
+        top: 300px;
         left: auto;
+        background: #292929;
       }
     }
 

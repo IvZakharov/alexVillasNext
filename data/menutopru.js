@@ -1,19 +1,51 @@
 export const menutopru = [
   {
-    link: '#',
+    link: '/#o-nas',
     lable: 'О НАС',
   },
   {
     link: '#',
     lable: 'УСЛУГИ',
+    subMenu:[
+      {
+        link: '/construction',
+        lable: 'Строительная компания',
+      },
+      {
+        link: '/agency',
+        lable: 'Агенство недвижимости',
+      },
+      {
+        link: '/management',
+        lable: 'Управляющая компания',
+      },
+      {
+        link: '/renovation',
+        lable: 'Реновация',
+      },
+    ]
   },
   {
     link: '#',
     lable: 'ПРОЕКТЫ',
-  },
-  {
-    link: '#',
-    lable: 'БЛОГ',
+    subMenu:[
+      {
+        link: '#',
+        lable: 'Комплекс 1',
+      },
+      {
+        link: '#',
+        lable: 'Комплекс 2',
+      },
+      {
+        link: '#',
+        lable: 'Комплекс 3',
+      },
+      {
+        link: '#',
+        lable: 'Комплекс 4',
+      },
+    ]
   },
   {
     link: '/vacancy',

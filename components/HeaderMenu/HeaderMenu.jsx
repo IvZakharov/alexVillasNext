@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Headermenu.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +6,9 @@ import { menutop } from "../../data/menutop";
 import { menutopru } from "../../data/menutopru";
 
 const HeaderMenu = () => {
+  const openMenu = () =>{
+    console.log('test');
+  }
   return (
     <div className={`container pt-6`}>
       <div className="flex flex-col md:items-center md:justify-between md:flex-row">
@@ -28,6 +31,17 @@ const HeaderMenu = () => {
                   <Link href={obj.link} className={`${styles.links}`}>
                     {obj.lable}
                   </Link>
+                  {obj.subMenu && (
+                    <ul className={styles.subMenu}>
+                      {obj.subMenu.map((sublink, i)=>(
+                        <li key={i}>
+                          <Link href={sublink.link} className={styles.linkSub} >
+                            {sublink.lable}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
           </ul>

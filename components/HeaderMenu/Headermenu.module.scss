@@ -5,6 +5,7 @@
   width: 750px;
   display: flex;
   align-items: center;
+  justify-content: center;
   @media (max-width: 767px) {
     display: none;
     margin-top: 20px;
@@ -43,6 +44,7 @@
         margin-right: unset;
       }
       .links{
+        position: relative;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 12px;
@@ -53,6 +55,30 @@
         color: #FFFFFF;
         @media (max-width: 983px) {
           font-size: 11px;
+        }
+      }
+      &:hover{
+        .subMenu{
+          display: block;
+        }
+      }
+      .subMenu{
+        position: absolute;
+        display: none;
+
+        .linkSub{
+          position: relative;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          /* identical to box height */
+          font-style: normal;
+          letter-spacing: 0.02em;
+          color: #FFFFFF;
+          @media (max-width: 983px) {
+            font-size: 11px;
+          }
         }
       }
     }
