@@ -22,7 +22,7 @@ import { menageProjects } from "../data/menageProjects";
 export default function Agency() {
   const arr = {
     type: 'image',
-    url: '/images/hero.png',
+    url: '/images/head/IMG_3581.JPG',
     alt: 'background image',
   }
   return (
@@ -33,12 +33,13 @@ export default function Agency() {
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
-          h1first={"ALEX VILLAS"}
-          h1second={"AGENCY "}
+          h1first={"УПРАВЛЯЮЩАЯ"}
+          h1second={"КОМПАНИЯ"}
           text={
-            "High-performing \nproperty renovations \n in prime locations of Bali"
+            "Комплексное управление объектами недвижимости на Бали для повышения доходности и качества сервиса "
           }
-          subLable={"STARTING FROM $189.000"}
+          link
+          form={"ПОДАТЬ ЗАЯВКУ НА УПРАВЛЕНИЕ"}
           back={arr}
         />
       </div>
