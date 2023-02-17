@@ -67,7 +67,7 @@
       }
       .yellow{
         width: fit-content;
-        padding-left: 32%;
+        padding-left: 29.5%;
         color: #FF9900;
         @media (max-width: 1239px) {
           padding-left: 20%;
@@ -241,6 +241,8 @@
     font-size: 18px;
     line-height: 21px;
     color: #ff9900;
+    font-family: var(--robotoCondensed-font);
+
     @media (max-width: 767px) {
       font-size: 15px;
       width: fit-content;
@@ -249,13 +251,29 @@
       border-radius: 15px;
       padding: 8px 10px;
     }
+    &:hover{
+      a{
+        border-bottom: 2px solid #ff9900;
+      }
+    }
     a {
+      border-bottom: 2px solid rgb(0,0,0,0);
+      transition: .5s all;
       display: flex;
       align-items: center;
     }
-
     svg {
-      margin-left: 24px;
+      margin-left: 10px;
     }
+    i {
+      transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &:hover {
+      i {
+        transform: translateX(10px);
+      }
+    }
+
   }
 }

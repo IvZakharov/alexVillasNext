@@ -11,7 +11,7 @@ const Table = ({ tableData }) => {
                 <p>{obj.name}</p>
                 <p>{obj.firstValue}</p>
                 <p>{obj.secondValue}</p>
-                <p>{obj.thirdValue}</p>
+                {/*<p>{obj.thirdValue}</p>*/}
               </div>
             ))}
         </div>

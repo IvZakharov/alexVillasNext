@@ -37,6 +37,9 @@
         width: fit-content;
         margin-bottom: 43px;
         margin-top: 5px;
+        @media (min-width: 1200px) {
+          padding-top: 0.75rem;
+        }
       }
       .Numbers {
         display: flex;
@@ -48,7 +51,10 @@
         .LineUp {
           margin-right: 35px;
           margin-bottom: 36px;
-          width: fit-content;
+          width: 25%;
+          @media (max-width: 983px) {
+            width: fit-content;
+          }
           @media (max-width: 767px) {
             width: 40%;
             &:nth-child(even) {

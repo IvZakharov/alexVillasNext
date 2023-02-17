@@ -13,7 +13,7 @@ export const menutopru = [
       },
       {
         link: '#',
-        lable: 'Агенство недвижимости',
+        lable: 'Агентство недвижимости',
       },
       {
         link: '/management',

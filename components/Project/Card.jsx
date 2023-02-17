@@ -10,6 +10,7 @@ const ProjectCard = ({
   imageUrl,
   properties,
   large,
+  link
 }) => {
   return (
     <article className={`${styles.card} ${large ? styles.cardLarge : ""}`}>
@@ -61,8 +62,8 @@ const ProjectCard = ({
                 ))}
               </ul>
             )}
-
-            <p className={styles.link}>
+            
+            <Link href={link} className={styles.link}>
               <span>Подробнее о {title}</span>
               <i>
                 <svg
@@ -78,7 +79,7 @@ const ProjectCard = ({
                   />
                 </svg>
               </i>
-            </p>
+            </Link>
           </div>
         </div>
       ) : (

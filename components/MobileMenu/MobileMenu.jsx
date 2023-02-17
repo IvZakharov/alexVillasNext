@@ -5,14 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { menutopru } from "../../data/menutopru";
 
-const MobileMenu = ({ OnClickClose }) => {
+const MobileMenu = ({ OnClickClose, logo }) => {
   return (
     <div className={`pt-6 ${styles.mobileMenu}`}>
       <div className="container flex flex-col md:items-center md:justify-between md:flex-row overflow-y-scroll">
         <div className={`${styles.logo}`}>
           <Link href={"/"} onClick={() => OnClickClose(false)}>
             <Image
-              src={"/images/logo.png"}
+              src={logo ? logo :"/images/logo.png"}
               quality={100}
               width={202}
               height={67}

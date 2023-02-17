@@ -13,25 +13,29 @@
     }
     li{
       width: 200px;
-      height: 79px;
-
+      //height: 79px;
+      border-bottom: 3px solid rgb(0,0,0,0);
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: 0.5s all;
       @media (max-width: 767px) {
         height: fit-content;
         margin-bottom: 30px;
         padding-bottom: 10px;
        // border-bottom: 1px solid #FFFFFF;
       }
+
       &:hover{
-        background: rgba(217, 217, 217, 0.3);
-        border-radius: 7px;
-        transition: .3s all;
-        @media (max-width: 767px) {
-          background: unset;
-          border-radius: unset;
-        }
+
+        border-bottom: 3px solid #FFFFFF;
+        //background: rgba(217, 217, 217, 0.3);
+        //border-radius: 7px;
+        //transition: .3s all;
+        //@media (max-width: 767px) {
+        //  background: unset;
+        //  border-radius: unset;
+        //}
       }
       &:first-child{
         margin-left: 129px;

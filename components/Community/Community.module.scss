@@ -13,6 +13,8 @@
       color: $primary;
       transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
       font-family: var(--robotoCondensed-font);
+      border-bottom: 2px solid rgb(0,0,0,0);
+      transition: 0.5s all;
 
       @media (min-width: 768px) {
         font-size: 18px;
@@ -24,6 +26,9 @@
     }
 
     &:hover {
+      span{
+        border-bottom: 2px solid $primary;
+      }
       i {
         transform: translateX(10px);
       }

@@ -8,7 +8,7 @@ const WhatsApp = ({ text, linkLabel, link }) => {
       <div className="container xl:pl-32 flex flex-col md:flex-row items-center justify-between">
         <div className={styles.text}>{text}</div>
         <Link href={link} className={styles.link}>
-          <span className="text"> {linkLabel}</span>
+          <span className="text uppercase"> {linkLabel}</span>
           <svg
             width="30"
             height="6"

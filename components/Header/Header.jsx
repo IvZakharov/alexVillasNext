@@ -2,10 +2,10 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 
-const Header = ({ onClickMenu }) => {
+const Header = ({ onClickMenu, logo }) => {
   return (
     <header className={`${styles.header}`}>
-      <HeaderMenu />
+      <HeaderMenu logo={logo} />
       <button
         onClick={() => onClickMenu(true)}
         className={`block md:hidden ${styles.menuBtn}`}

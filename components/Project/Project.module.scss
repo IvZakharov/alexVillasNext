@@ -159,6 +159,8 @@
   justify-content: left;
   gap: 15px;
 
+
+
   span {
     font-family: var(--robotoCondensed-font);
     font-weight: 700;
@@ -169,7 +171,8 @@
     text-transform: uppercase;
     color: $primary;
     transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-
+    border-bottom: 2px solid rgb(0,0,0,0);
+    transition: border-bottom-color 0.5s;
     @media (min-width: 1200px) {
       font-size: 18px;
       line-height: 26px;
@@ -181,7 +184,11 @@
   }
 
   &:hover {
+    span{
+      border-bottom: 2px solid $primary;
+    }
     i {
+
       transform: translateX(10px);
     }
   }

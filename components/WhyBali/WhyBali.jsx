@@ -38,7 +38,7 @@ const WhyBali = () => {
 
           <div
             className={
-              "grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:col-span-2 lg:gap-6"
+              "grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:col-span-2 lg:gap-6 xl:pt-5"
             }
           >
             <div className={styles.advantagesItem}>

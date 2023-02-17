@@ -37,6 +37,7 @@ const ProjectsGrid = ({ title, projects, link, linkLabel, description }) => {
                   properties={idx === 0 ? obj.complexProperties : null}
                   large={idx === 0}
                   key={obj.id}
+                  link={obj.link}
                 />
               </div>
             ))}

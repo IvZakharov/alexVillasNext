@@ -5,7 +5,7 @@ export const menuhero = [
   },
   {
     lable: "АГЕНТСТВО НЕДВИЖИМОСТИ",
-    link: "/agency",
+    link: "#",
   },
   {
     lable: "УПРАВЛЯЮЩАЯ КОМПАНИЯ",

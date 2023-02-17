@@ -31,7 +31,7 @@ const ManagementGrid = ({
               ? projects.map((project) => (
                   <div className={styles.card} key={project.id}>
                     {project.link && (
-                      <Link href={project.link} >
+                      <Link href={project.link} target={"_blank"}>
                         <Image
                           alt={"Project name"}
                           src={project.imageUrl}
@@ -67,26 +67,45 @@ const ManagementGrid = ({
                 ))
               : projects.slice(0, 3).map((project) => (
                   <div className={styles.card} key={project.id}>
-                    <Image
-                      alt={"Project name"}
-                      src={project.imageUrl}
-                      quality={80}
-                      fill
-                      priority
-                      sizes="(max-width: 576px) 100vw,
+                    {project.link && (
+                      <Link href={project.link} >
+                        <Image
+                          alt={"Project name"}
+                          src={project.imageUrl}
+                          quality={80}
+                          fill
+                          priority
+                          sizes="(max-width: 576px) 100vw,
+                (max-width: 984px) 50vw,
+                33vw"
+                          style={{
+                            objectFit: "cover",
+                          }}
+                        />
+                      </Link>
+                    )}
+                    {!project.link && (
+                      <Image
+                        alt={"Project name"}
+                        src={project.imageUrl}
+                        quality={80}
+                        fill
+                        priority
+                        sizes="(max-width: 576px) 100vw,
               (max-width: 984px) 50vw,
               33vw"
-                      style={{
-                        objectFit: "cover",
-                      }}
-                    />
+                        style={{
+                          objectFit: "cover",
+                        }}
+                      />
+                    )}
                   </div>
                 ))}
           </div>
         )}
 
         <div className={"flex justify-end"}>
-          <Link href={link} className={styles.link}>
+          <Link href={link} target={"_blank"} className={styles.link}>
             <span>{linkLabel}</span>
             <i>
               <svg

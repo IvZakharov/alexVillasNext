@@ -36,6 +36,7 @@
     }
   }
     .button{
+      font-family: var(--robotoCondensed-font);
       display: flex;
       align-items: center;
       text-align: inherit;
@@ -44,6 +45,7 @@
       line-height: 21px;
       color: #FF9900;
       white-space: pre-wrap;
+      text-transform: uppercase;
       @media (max-width: 767px) {
         font-size: 15px;
         width: fit-content;
@@ -53,11 +55,24 @@
         border-radius: 15px ;
         margin-top: 2em;
       }
+      p {
+        border-bottom: 2px solid rgb(0, 0, 0, 0);
+        transition: .5s all;
+      }
 
 
       .arrow{
-        margin-left: 29px;
+        margin-left: 10px;
         display: flex;
+      }
+      &:hover {
+        p{
+          border-bottom: 2px solid #ff9900;
+        }
+        .arrow svg {
+          transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transform: translateX(10px);
+        }
       }
     }
 

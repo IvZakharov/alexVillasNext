@@ -29,6 +29,7 @@ export default function Renovation() {
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
+      logo={"/images/logos/logo_renovation.png"}
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
@@ -46,10 +47,10 @@ export default function Renovation() {
       <div>
         <AlexVillas
           textBlock1={
-            "Реновируйте свою жилую или коммерческую недвижимость для  заметного повышения доходности или подберите идеальный объект с нами."
+            "Реновируйте свою жилую \nили коммерческую недвижимость \nдля  заметного повышения доходности \nили подберите идеальный объект с нами."
           }
           textBlock2={
-            "В нашей команде есть весь необходимый опыт и эффективные инструменты для того чтобы <span>сделать арендную недвижимость очень эффективным бизнесом.</span>"
+            "В нашей команде есть весь необходимый опыт и эффективные инструменты \nдля того чтобы <span>сделать арендную недвижимость очень эффективным бизнесом.</span>"
           }
         />
       </div>
@@ -84,7 +85,7 @@ export default function Renovation() {
         <RenovationSlider images={renovationImages} />
       </div>
       <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Повысьте заполняемость и средний чек вашего объекта"} linkLabel={'ПРОДОЛЖИТЬ В WHATSAPP'} link={"#"} />
+        <WhatsApp text={"Повысьте заполняемость \nи средний чек вашего объекта"} linkLabel={'ПРОДОЛЖИТЬ В WHATSAPP'} link={"#"} />
       </div>
       <div className={"mb-16 md:mb-24"}>
         <InvestExample
@@ -120,13 +121,10 @@ export default function Renovation() {
 
       <CtaSection
         title={
-          " FILL THE FORM BELOW \n<span>AND WILL SEND YOU</span>\n <span>THE CALCULATION PDF</span>"
-        }
-        description={
-          "Gain up to 12% annualy or set up your fine-cut base in the heart of the most lively area in the most visited tourist destination of recent years."
+          " ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ\n<span>И ФИНАНСОВУЮ МОДЕЛЬ</span>"
         }
         imageUrl={"/images/cta/bg2.jpg"}
-        submitButtonText={"send"}
+        submitButtonText={"Оставить заявку"}
         fields={[
           {
             name: "userName",

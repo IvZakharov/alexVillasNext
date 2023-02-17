@@ -10,6 +10,7 @@ const MainLayout = ({
   meteDescription,
   metaKeywords,
   metaImage,
+  logo
 }) => {
   const [openedMenu, setOpenedMenu] = React.useState(false);
 
@@ -21,13 +22,13 @@ const MainLayout = ({
         <meta name="keywords" content={metaKeywords} />
         <meta property="og:image" content={metaImage} />
       </Head>
-      <Header onClickMenu={(bool)=>setOpenedMenu(bool)}/>
+      <Header logo={logo} onClickMenu={(bool)=>setOpenedMenu(bool)}/>
       
       <div className="main">{children}</div>
       <Footer />
       {openedMenu && (
         <MobileMenu
-          OnClickClose={(bool) => setOpenedMenu(bool)}
+          OnClickClose={(bool) => setOpenedMenu(bool)} logo={logo}
         />
       )}
     </>

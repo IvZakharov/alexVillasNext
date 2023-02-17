@@ -49,6 +49,7 @@
     align-items: center;
     padding-left: 50px;
 
+
     @media (min-width: 768px) {
       justify-content: space-between;
       margin-top: auto;
@@ -63,7 +64,8 @@
       color: $primary;
       transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
       margin-right: 20px;
-
+      border-bottom: 2px solid rgb(0,0,0,0);
+      transition: 0.5s all;
       @media (min-width: 768px) {
         font-size: 18px;
       }
@@ -74,6 +76,10 @@
     }
 
     &:hover {
+      span{
+        border-bottom: 2px solid $primary;
+      }
+
       i {
         transform: translateX(10px);
       }

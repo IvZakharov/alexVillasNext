@@ -46,7 +46,7 @@ const Vacancy = () => {
       <CtaSection
         title={"ПОЛУЧИТЕ \n<span>Работу мечты</span>"}
         imageUrl={"/images/cta/DSC00003.JPG"}
-        label={"Увидемся\nВ нашей команде!"}
+        label={"Увидимся\nВ нашей команде!"}
         submitButtonText={"Заявка на работу"}
         gradient
         fields={[

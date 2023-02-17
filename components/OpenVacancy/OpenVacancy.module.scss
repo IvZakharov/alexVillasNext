@@ -29,6 +29,25 @@
                 color: $primary;
                 text-transform: uppercase;
                 font-weight: 700;
+                a{
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    border-bottom: 2px solid rgb(0,0,0,0);
+                    transition: .5s all;
+                    i{
+                        margin-left: 10px;
+                    }
+                }
+                &:hover{
+                    a{
+                        border-bottom: 2px solid $primary;
+                        i{
+                            transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+                            transform: translateX(10px);
+                        }
+                    }
+                }
             }
         }
     }

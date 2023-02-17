@@ -30,7 +30,7 @@ const Hero = ({ h1first, h1second, text, subLable, dot, form, link, back }) => {
         )}
       </div>
       <div className="container flex flex-col justify-between h-full sm:p-0">
-        <div className={`${styles.h1Block} mx-auto lg:mx-0 lg:ml-48`}>
+        <div className={`${styles.h1Block} mx-auto lg:mx-0 lg:ml-36 xl:ml-48`}>
           {dot && (
             <div className={styles.dot}>
               <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,9 +66,11 @@ const Hero = ({ h1first, h1second, text, subLable, dot, form, link, back }) => {
           {!link && (
             <div className={styles.link}>
               <Link href={'#'}>ПОДБЕРИТЕ ВАШ ТИП ИНВЕСТИЦИЙ
-                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z" fill="#FF9900"/>
-                </svg>
+                <i>
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z" fill="#FF9900"/>
+                  </svg>
+                </i>
               </Link>
             </div>
           )}

@@ -26,6 +26,7 @@ export default function Management() {
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
+      logo={'/images/logos/logo_management.png'}
     >
       <div className={"mb-16 xl:mb-24"}>
         <Hero
@@ -46,7 +47,7 @@ export default function Management() {
             "Уже 8 лет мы помогаем владельцам объектов недвижимости зарабатывать больше при значительно меньшем вовлечении."
           }
           textBlock3={
-            "<span>Мы ценим опыт, который получаем на каждом проекте, и все последующие получаются комфортнее для гостей и выгоднее для инвесторов. Это наш путь развития.</span>"
+            "<span>Мы ценим опыт, который получаем \nна каждом проекте, и все последующие получаются комфортнее для гостей \nи выгоднее для инвесторов. Это наш путь развития.</span>"
           }
         />
       </div>
@@ -70,18 +71,19 @@ export default function Management() {
               lable: "Годовая \nдоходность",
             },
           ]}
-          links={[
-            {
-              name: "download",
-              lable: "Скачать PDF",
-              link: "#",
-            },
-            {
-              name: "contact",
-              lable: "Написать нам",
-              link: "#",
-            },
-          ]}
+         
+          // links={[
+          //   {
+          //     name: "download",
+          //     lable: "Скачать PDF",
+          //     link: "#",
+          //   },
+          //   {
+          //     name: "contact",
+          //     lable: "Написать нам",
+          //     link: "#",
+          //   },
+          // ]}
         />
       </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
@@ -99,7 +101,7 @@ export default function Management() {
           "  ПЕРЕДАЙТЕ ВАШУ \nНЕДВИЖИМОСТЬ\n<span>В УПРАВЛЕНИЕ \nALEX VILLAS\nMANAGEMENT</span>"
         }
         imageUrl={"/images/cta/DSC01400.JPG"}
-        submitButtonText={"send"}
+        submitButtonText={"Отправить заявку"}
         fields={[
           {
             name: "userName",
