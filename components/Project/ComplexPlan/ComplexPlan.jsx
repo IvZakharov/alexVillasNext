@@ -15,12 +15,12 @@ const ComplexPlan = () => {
           <div className="container flex justify-center relative">
             <div className={styles.AcceptToBye}>
               <div className={styles.BlockAccept}>
-                <p className={"text"}>К покупке доступны:</p>
+                <p className={"text"}>{"К покупке \nдоступны:"}</p>
                 <ul className={"text"}>
-                  <li>1 трехспальная смарт-вилла</li>
-                  <li>2 односпальные смарт-виллы</li>
-                  <li>10<br /> таунхаусов</li>
-                  <li>13<br /> апартаментов</li>
+                  <li>{"1 трехспальная \nсмарт-вилла"}</li>
+                  <li>{"2 односпальные \nсмарт-виллы"}</li>
+                  <li>{"10 \nтаунхаусов"}</li>
+                  <li>{"13 \nапартаментов"}</li>
                 </ul>
               </div>
             </div>

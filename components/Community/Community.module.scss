@@ -15,6 +15,7 @@
       font-family: var(--robotoCondensed-font);
       border-bottom: 2px solid rgb(0,0,0,0);
       transition: 0.5s all;
+      text-transform: uppercase;
 
       @media (min-width: 768px) {
         font-size: 18px;

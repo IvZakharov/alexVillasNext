@@ -9,13 +9,25 @@ const Infrastruct = ({data}) => {
         <h2 className={'h2'}>
           Инфраструктура в <span>5 минутной <br /> доступности</span> от комплекса
         </h2>
-        <div className={styles.BlockImg}>
-          {data && data.map((obj, i)=>(
+      </div>
+      <div className={styles.BlockImg}>
+        {data && data.map((obj, i)=>(
+          <div className={styles.imgContainer} key={i}>
             <div className={styles.img} key={i}>
-              <Image src={obj}  fill={"cover"}/>
+              <Image src={obj} quality={100}
+                     width={280}
+                     height={180}
+                     sizes="100vw"
+                     styles={{
+                        objectFit:'cover',
+                      }}
+              />
             </div>
-          ))}
-        </div>
+          </div>
+    
+        ))}
+      </div>
+      <div className="container">
         <div className={styles.buttonBlock}>
           <div className={styles.button}>
             Читать о локации

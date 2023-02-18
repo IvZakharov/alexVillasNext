@@ -1,13 +1,17 @@
 import React from "react";
 import styles from "./InvestInBaly.module.scss"
 import Image from "next/image";
+import parse from "html-react-parser";
 
-const InvestInBaly = () => {
+const InvestInBaly = ({
+  title,
+  blockFirst,
+}) => {
   return (
     <section className={styles.Invest}>
       <div className="container">
         <div className={styles.h2Titile}>
-          <h2 className="h2"><span>10 причин</span> инвестировать в Бали</h2>
+          <h2 className="h2">{parse(title)}</h2>
         </div>
         {/*Круг со стрелкой*/}
         <div className={styles.background}>
@@ -20,7 +24,9 @@ const InvestInBaly = () => {
         {/*Официальная статистика блок*/}
         <div className={styles.static}>
           <div className={styles.textBlock+" "+styles.firstBlock}>
-            <span className={styles.bolder}>За 10 лет поток</span> туристов вырос
+            {parse(blockFirst)}
+            {/*<span className={styles.bolder}>За 10 лет поток </span> туристов вырос*/}
+            
           </div>
           <div className={styles.vertLine}></div>
           <div className={styles.bloks}>

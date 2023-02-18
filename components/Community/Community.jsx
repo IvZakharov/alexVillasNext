@@ -32,7 +32,7 @@ const Community = ({ imageUrl }) => {
           </p>
 
           <Link href={"#"} className={styles.link}>
-            <span>ОСТАВИТЬ ЗАЯВКУ НА УЧАСТИЕ</span>
+            <span>Внеси свой вклад</span>
             <i>
               <svg
                 width="73"

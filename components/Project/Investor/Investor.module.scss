@@ -1,7 +1,7 @@
 .Investor{
   .textBlock{
     width: 100%;
-    @media (min-width: 768px) {
+    @media (min-width: 984px) {
       width: 55%;
     }
 
@@ -10,8 +10,14 @@
     }
     .text{
       color: #FFFFFF;
-      width: 45%;
+      width: 100%;
       margin-bottom: 3em;
+      @media (min-width: 768px) {
+        width: 50%;
+      }
+      @media (min-width: 984px) {
+        width: 45%;
+      }
       .lable{
         color: #ff9900;
         text-transform: unset;
@@ -22,11 +28,13 @@
   }
   .imageBlock{
     display: unset;
-    @media (min-width: 768px) {
+    @media (min-width: 984px) {
       display: block;
       width: 40%;
     }
     .img{
+      width: 100%;
+      height: 100%;
       position: relative;
     }
   }

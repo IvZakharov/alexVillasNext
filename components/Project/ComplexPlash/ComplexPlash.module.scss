@@ -28,7 +28,9 @@
         @media (min-width: 768px) {
             font-size: 18px;
             line-height: 21px;
-            margin-bottom: unset;
+            &:last-child{
+                margin-bottom: unset;
+            }
         }
 
         .bot{

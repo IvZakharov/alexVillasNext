@@ -64,6 +64,12 @@
           @media (max-width: 395px) {
             margin-right: unset;
           }
+          @media (max-width: 376px) {
+            width: 45%;
+          }
+          @media (max-width: 321px) {
+            width: 50%;
+          }
 
           .BigNum {
             font-weight: 500;
