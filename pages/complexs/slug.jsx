@@ -12,9 +12,14 @@ import Investor from "../../components/Project/Investor/Investor";
 import About from "../../components/About/About";
 import OurBusiness from "../../components/OurBusiness/OurBusiness";
 import OurClientVideo from "../../components/OurClientVideo/OurClientVideo";
+import { fetchAPI } from "../../lib/api";
+import PropertiesGallery from "../../components/PropertiesGallery/PropertiesGallery";
+import FinanceModeling from "../../components/Project/FinanceModeling/FinanceModeling";
+import Quiz from "../../components/Project/Quiz/Quiz";
+import Faq from "../../components/Project/Faq/Faq";
 
 
-const Slug = () => {
+const Slug = ({properties, projects, global}) => {
   const arr = {
     type: 'image',
     url: '/images/hero.png',
@@ -65,15 +70,32 @@ const Slug = () => {
       <div className={"mb-16"}>
         <ComplexPlan />
       </div>
+      {properties && (
+        <div className={"mb-16 xl:mb-24"}>
+          <PropertiesGallery
+            properties={properties.attributes?.propertyGallerys}
+          />
+        </div>
+      )}
       <div className={"mb-16"}>
         <VillasParam />
       </div>
       <div className={"mb-16"}>
         <Infrastruct data={infrac} />
       </div>
+      {projects && (
+        <div className={"mb-16 xl:mb-32"}>
+          <FinanceModeling villas={projects[0].attributes?.financeModel} />
+        </div>
+      )}
       <div className={"mb-16"}>
         <Investor />
       </div>
+      {projects && (
+        <div className={"mb-16 xl:mb-24"}>
+          <Quiz />
+        </div>
+      )}
       <div className={"mb-16"}>
         <OurBusiness
           text={"Почему \n<span>ALEX</span>\n<span>VILLAS?</span>"}
@@ -82,9 +104,30 @@ const Slug = () => {
       <div className={"mb-16 xl:mb-24"}>
         <OurClientVideo />
       </div>
+      {projects && (
+        <div className={"mb-16 xl:mb-24"}>
+          <Faq array={projects[0].attributes?.faq} />
+        </div>
+      )}
       
     </MainLayout>
   );
 };
+export async function getStaticProps() {
+  const [propertyRes, projectRes, globalRes] = await Promise.all([
+    fetchAPI("/property-gallery", { populate: "deep" }),
+    fetchAPI("/projects", { populate: "deep" }),
+    fetchAPI("/global"),
+  ]);
+  
+  return {
+    props: {
+      properties: propertyRes.data,
+      projects: projectRes.data,
+      global: globalRes.data,
+    },
+    revalidate: 120,
+  };
+}
 
 export default Slug;
