@@ -1,0 +1,65 @@
+@import "../../styles/variables";
+
+.item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid white;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: left;
+    color: white;
+
+    @media (min-width: 768px) {
+      font-size: 22px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 26px;
+    }
+  }
+
+  .body {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      padding-right: 100px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 30px;
+      margin-bottom: 20px;
+      list-style: disc;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .icon {
+    margin-left: 30px;
+    transition: all 0.3s ease-in-out;
+
+    @media (min-width: 768px) {
+      margin-left: 60px;
+    }
+
+    @media (min-width: 1312px) {
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

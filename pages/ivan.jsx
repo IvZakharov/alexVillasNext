@@ -3,6 +3,11 @@ import Hero from "../components/Hero/Hero";
 import PropertiesGallery from "../components/PropertiesGallery/PropertiesGallery";
 import { fetchAPI } from "../lib/api";
 import FinanceModeling from "../components/Project/FinanceModeling/FinanceModeling";
+import Faq from "../components/Project/Faq/Faq";
+import Quiz from "../components/Project/Quiz/Quiz";
+import Map from "../components/Map/Map";
+import SimpleMap from "../components/MapTest/Map";
+import MapTest from "../components/MapTest/Map";
 
 export default function Ivan({ properties, projects, global }) {
   return (
@@ -21,6 +26,12 @@ export default function Ivan({ properties, projects, global }) {
         />
       </div>
 
+      {projects && (
+        <div className={"mb-16 xl:mb-24"}>
+          <Map />
+        </div>
+      )}
+
       {properties && (
         <div className={"mb-16 xl:mb-24"}>
           <PropertiesGallery
@@ -30,8 +41,20 @@ export default function Ivan({ properties, projects, global }) {
       )}
 
       {projects && (
-        <div className={"mb-16 xl:mb-24"}>
+        <div className={"mb-16 xl:mb-32"}>
           <FinanceModeling villas={projects[0].attributes?.financeModel} />
+        </div>
+      )}
+
+      {projects && (
+        <div className={"mb-16 xl:mb-24"}>
+          <Faq array={projects[0].attributes?.faq} />
+        </div>
+      )}
+
+      {projects && (
+        <div className={"mb-16 xl:mb-24"}>
+          <Quiz />
         </div>
       )}
     </MainLayout>

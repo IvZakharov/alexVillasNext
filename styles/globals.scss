@@ -182,7 +182,6 @@ a {
   font-family: var(--robotoCondensed-font);
   text-align: left;
   letter-spacing: -0.035em;
-  height: 174px;
   color: #ffffff;
 
   span {
@@ -217,6 +216,38 @@ a {
   @media (min-width: 1280px) {
     font-size: 90px;
     line-height: 100px;
+  }
+}
+
+.linkWithArrow {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-family: var(--robotoCondensed-font);
+    font-weight: 700;
+    line-height: 21px;
+    font-size: 14px;
+    white-space: nowrap;
+
+    text-transform: uppercase;
+    color: $primary;
+    transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @media (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  i {
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &:hover {
+    i {
+      transform: translateX(10px);
+    }
   }
 }
 

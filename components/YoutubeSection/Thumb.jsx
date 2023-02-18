@@ -11,7 +11,6 @@ const Thumb = ({ videoUrl }) => {
         src={`https://img.youtube.com/vi/${youtubeParser(videoUrl)}/0.jpg`}
         quality={80}
         fill
-        priority
         sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"

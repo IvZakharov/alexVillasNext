@@ -1,0 +1,50 @@
+@import "styles/variables";
+
+.marker {
+  position: relative;
+  display: block;
+
+  .title {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    transform: translateX(-50%);
+  }
+
+  .projectIcon {
+    position: relative;
+    width: 51px;
+    height: 62px;
+    line-height: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .projectIconActive {
+    transform: translate(-50%, -50%) scale(1.9);
+  }
+
+  .locationIcon {
+    position: relative;
+    line-height: 0;
+    width: 68px;
+    height: 68px;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .locationIconActive {
+    transform: translate(-50%, -50%) scale(1.5);
+    border: 3px solid $primary;
+
+    img {
+      transform: translateY(-1px);
+    }
+  }
+}
