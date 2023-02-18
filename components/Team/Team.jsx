@@ -12,17 +12,17 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const Team = ({ teamArr }) => {
-  // const [cardHover, setCardHover] = React.useState(false);
-  // const [gridSize, setGridSize] = React.useState({ width: 0, height: 0 });
-  // const gridRef = React.useRef(null);
-  //
-  // const handleMouseEnter = (event) => {
-  //   setCardHover(true);
-  // };
-  //
-  // const handleMouseLeave = () => {
-  //   setCardHover(false);
-  // };
+  const [cardHover, setCardHover] = React.useState(false);
+  const [gridSize, setGridSize] = React.useState();
+  const gridRef = React.useRef(null);
+
+  const handleMouseEnter = (event) => {
+    setCardHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setCardHover(false);
+  };
 
   return (
     <section className={styles.team}>

@@ -1,0 +1,11 @@
+@import "styles/variables";
+
+.faq {
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0 100px;
+  }
+}

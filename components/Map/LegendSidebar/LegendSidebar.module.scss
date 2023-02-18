@@ -1,0 +1,76 @@
+@import "styles/variables";
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  padding: 30px 20px;
+  height: 100%;
+  background-color: #292929;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(calc(100% + 40px));
+
+  @media (min-width: 768px) {
+    width: 430px;
+    padding: 30px 20px;
+  }
+
+  @media (min-width: 1024px) {
+    transform: translateX(0);
+  }
+
+  @media (min-width: 1280px) {
+    padding: 70px 120px 40px 25px;
+  }
+
+  .content {
+    height: 100%;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .closeButton {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #292929;
+    cursor: pointer;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .image {
+    position: relative;
+    height: 150px;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary;
+  }
+}
+
+.active {
+  transform: translateX(0);
+}
