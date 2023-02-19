@@ -12,18 +12,17 @@ const Infrastruct = ({data}) => {
       </div>
       <div className={styles.BlockImg}>
         {data && data.map((obj, i)=>(
-          <div className={styles.imgContainer} key={i}>
             <div className={styles.img} key={i}>
               <Image src={obj} quality={100}
                      width={280}
                      height={180}
                      sizes="100vw"
-                     styles={{
-                        objectFit:'cover',
-                      }}
+                     style={{
+                       width: '100%',
+                       height: 'auto',
+                     }}
               />
             </div>
-          </div>
     
         ))}
       </div>

@@ -49,13 +49,10 @@ const Footer = ({logo}) => {
           <div className={styles.menu}>
             <ul>
               <li>
-                <Link href={"#"}>Companies</Link>
+                <Link href={"/#o-nas"}>О нас</Link>
               </li>
               <li>
-                <Link href={"#"}>Project</Link>
-              </li>
-              <li>
-                <Link href={"#"}>Journal</Link>
+                <Link href={"/vacancy"}>Вакансии</Link>
               </li>
             </ul>
           </div>
