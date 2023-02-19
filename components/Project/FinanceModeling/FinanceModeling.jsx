@@ -146,6 +146,7 @@ const ProjectFinanceModeling = ({ villas }) => {
                         Доходность с <br />
                         <span>посуточной аренды</span>
                       </h3>
+                      <p className={styles.roiLabel}>Сумма</p>
                       <p className={styles.roiLabel}>ROI</p>
                     </div>
 
@@ -167,6 +168,7 @@ const ProjectFinanceModeling = ({ villas }) => {
                         Доходность с <br />
                         <span>помесячной аренды</span>
                       </h3>
+                      <p className={styles.roiLabel}>Сумма</p>
                       <p className={styles.roiLabel}>ROI</p>
                     </div>
 

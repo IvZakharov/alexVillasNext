@@ -27,8 +27,8 @@
     }
     &:focus, &:active, &:target{
       background: unset;
-      color: #FFFFFF;
-      border-bottom-color: #fff;
+      color: #fff;
+      border-bottom-color: $primary;
     }
   }
 

@@ -10,8 +10,11 @@ const SliderBaly = () => {
   return (
     <section className={styles.SliderBaly}>
       <div className="container">
-        <h2 className="h2">BALI</h2>
-        <p className={"text"}>Бали - это <span>райское место</span> для жизни и отдыха, с богатой культурой и природными красотами.</p>
+        <div className="md:grid md:grid-cols-3 mb-7 lg:mb-12">
+          <h2 className="h2 mb-4 md:mb-0">BALI</h2>
+          <p className={"text"}>это <span>райское место</span> для жизни и отдыха, с богатой культурой и природными красотами.</p>
+        </div>
+        
   
         <Swiper
           navigation={true}

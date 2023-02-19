@@ -9,9 +9,10 @@
     align-items: baseline;
     padding: 1em 0.5em;
     position: absolute;
-    top: -150px;
+    top: -110px;
     @media (min-width: 768px) {
         width: 70%;
+        top: -170px;
         padding: 2em;
     }
     .Items{

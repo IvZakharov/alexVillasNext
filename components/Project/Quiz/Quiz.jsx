@@ -9,7 +9,7 @@ import Range from "../../../ui/Range/Range";
 const inputs = [
   {
     id: 0,
-    title: "С какой целью планируете покупку недвижимости?",
+    title: "Для чего вам недвижимость на Бали?",
     fields: [
       { type: "checkbox", label: "Для жизни", name: "live", id: "live" },
       {
@@ -39,7 +39,7 @@ const inputs = [
       },
       {
         type: "radio",
-        label: "Аппартаменты",
+        label: "Апартаменты",
         name: "property",
         id: "apartments",
         checked: false,
@@ -48,7 +48,7 @@ const inputs = [
   },
   {
     id: 2,
-    title: "Строящийся или готовый?",
+    title: "Строящийся или готовый объект?",
     fields: [
       {
         type: "radio",
