@@ -167,6 +167,7 @@ const Quiz = ({ title }) => {
                               case "range":
                                 return (
                                   <Range
+                                    key={idx}
                                     defaultValue={field.defaultValue}
                                     min={field.min}
                                     max={field.max}

@@ -6,10 +6,12 @@ import FinanceModeling from "../components/Project/FinanceModeling/FinanceModeli
 import Faq from "../components/Project/Faq/Faq";
 import Quiz from "../components/Project/Quiz/Quiz";
 import Map from "../components/Map/Map";
-import SimpleMap from "../components/MapTest/Map";
-import MapTest from "../components/MapTest/Map";
 
-export default function Ivan({ properties, projects, global }) {
+
+export default function Ivan({ properties, projects, map, global }) {
+  
+  console.log(map);
+  
   const arr = {
     type: 'image',
     url: '/images/hero.png',
@@ -68,9 +70,10 @@ export default function Ivan({ properties, projects, global }) {
 }
 
 export async function getStaticProps() {
-  const [propertyRes, projectRes, globalRes] = await Promise.all([
+  const [propertyRes, projectRes, mapRes, globalRes] = await Promise.all([
     fetchAPI("/property-gallery", { populate: "deep" }),
     fetchAPI("/projects", { populate: "deep" }),
+    fetchAPI("/map", { populate: "deep" }),
     fetchAPI("/global"),
   ]);
 
@@ -78,6 +81,7 @@ export async function getStaticProps() {
     props: {
       properties: propertyRes.data,
       projects: projectRes.data,
+      map: mapRes.data,
       global: globalRes.data,
     },
     revalidate: 120,
