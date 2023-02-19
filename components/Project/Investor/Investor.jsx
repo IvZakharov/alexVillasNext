@@ -15,17 +15,17 @@ const Investor = () => {
             <div className="flex flex-wrap justify-between">
               {invest && invest.map((obj, i)=>(
                 <div className={`${styles.text}`}>
-                  <div className={`${styles.lable} h2`}>{obj.lable}</div>
+                  <div className={`${styles.lable}`}>{obj.lable}</div>
                   <div className={`${styles.span} text`}>{obj.text}</div>
                 </div>
               ))}
             </div>
           </div>
-          <div className={styles.imageBlock}>
-            <div className={styles.img}>
-              <Image src={"/images/projects/enthusiastic-salesma.png"} sizes={'100vw'} fill={"cover"}/>
-            </div>
-          </div>
+          {/*<div className={styles.imageBlock}>*/}
+          {/*  <div className={styles.img}>*/}
+          {/*    <Image src={"/images/projects/enthusiastic-salesma.png"} sizes={'100vw'} fill={"cover"}/>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
       </div>
     </section>

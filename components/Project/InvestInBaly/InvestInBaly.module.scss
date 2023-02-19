@@ -1,3 +1,4 @@
+@import "styles/variables";
 .Invest{
   position: relative;
   //height: 30.55vh;
@@ -5,13 +6,16 @@
     width: 110%;
     left: -5%;
     height: 60vh;
-    top:-350px;
-    border-bottom: 1px solid #ff9900;
-    border-left: 1px solid #ff9900;
-    border-right: 1px solid #ff9900;
+    top:-330px;
+    border-bottom: 1px solid $primary;
+    border-left: 1px solid $primary;
+    border-right: 1px solid $primary;
     position: absolute;
     border-radius: 50%;
     z-index: -101;
+    @media (min-width: 400px) {
+      top:-350px;
+    }
     @media (min-width: 768px) {
       top: -360px;
     }
@@ -51,7 +55,10 @@
     justify-content: center;
     h2{
       text-align: center;
-      margin-bottom: 40%;
+      margin-bottom: 46%;
+      @media (min-width: 400px) {
+        margin-bottom: 40%;
+      }
       @media (min-width: 768px) {
         text-align: center;
         margin-bottom: 18%;
@@ -112,6 +119,106 @@
         width: 65%;
       }
     }
+    .about{
+      display: flex;
+      align-items: self-start;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 90%;
+      @media (min-width: 480px) {
+        flex-direction: row;
+
+      }
+      @media (min-width: 768px) {
+        flex-wrap: unset;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+      }
+      @media (min-width: 984px) {
+        width: 50%;
+      }
+      @media (min-width: 1240px) {
+        justify-content: space-between;
+      }
+      .block{
+        width: 40%;
+
+        @media (min-width: 420px) {
+          width: 30%;
+        }
+
+        @media (min-width: 480px) {
+          margin-right: 50px;
+          width: fit-content;
+          &:last-child{
+            margin-right: unset;
+          }
+        }
+
+        @media (min-width: 768px) {
+          margin-left: unset;
+          margin-right: 90px;
+          &:nth-child(odd){
+            margin-left: unset;
+            margin-right: unset;
+          }
+          &:nth-child(even){
+            margin-right: unset;
+          }
+        }
+        @media (min-width: 984px) {
+          margin-right: 90px;
+          margin-bottom: unset;
+        }
+
+        .bigTitle{
+          font-size: 32px;
+          line-height: 36px;
+          letter-spacing: -0.01em;
+          color: #ff9900;
+          font-family: var(--roboto-font);
+          text-transform: uppercase;
+          font-weight: 400;
+          margin-bottom: 7px;
+          text-align: left;
+
+          @media (min-width: 768px) {
+            font-size: 42px;
+            line-height: 46px;
+            text-align: left;
+          }
+          @media (min-width: 1024px) {
+            //font-size: 42px;
+          }
+          @media (min-width: 1240px) {
+            font-size: 48px;
+            line-height: 50px;
+          }
+          span{
+            margin-left: 0.2em;
+            color: #ff9900;
+            margin-bottom: 10px;
+          }
+        }
+        .white{
+          color: #FFFFFF;
+        }
+        .lable{
+          font-weight: 700;
+          letter-spacing: -0.025em;
+          margin-bottom: 5px;
+          text-transform: uppercase;
+          font-family:var(--robotoCondensed-font);
+          white-space: pre-wrap;
+          text-align: left;
+          @media (min-width: 768px) {
+            text-align: left;
+            font-size: 18px;
+          }
+        }
+      }
+    }
     .textBlock{
       display: flex;
       flex-direction: column;
@@ -131,17 +238,7 @@
           margin-right: unset;
         }
       }
-      .bigNum{
-        font-size: 25px;
-        line-height: 31px;
-        color: #ff9900;
-       // margin-right: 0.5em;
-        @media (min-width: 768px) {
-          font-size: 44px;
-          line-height: 68px;
-          margin-right: 0.1em;
-        }
-      }
+
     }
     .firstBlock{
       margin-bottom: 1em;
@@ -210,7 +307,7 @@
       }
       .lineSecond{
         position: absolute;
-        top:39%;
+        top:40%;
         border-bottom: 1px dashed #fff;
         width: 70%;
         left: 15%;
@@ -218,7 +315,7 @@
       }
       .lineThird{
         position: absolute;
-        top:72%;
+        top:70%;
         border-bottom: 1px dashed #fff;
         width: 70%;
         left: 15%;
@@ -290,7 +387,7 @@
       }
       .block{
         width: 100%;
-        border: 1px dashed #ff9900;
+        border: 1px dashed $primary;
         border-radius: 15px 0px 15px 15px;
         color: #FFFFFF;
         padding: 1em 2em;

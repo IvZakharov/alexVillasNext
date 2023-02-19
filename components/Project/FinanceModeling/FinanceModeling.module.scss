@@ -24,6 +24,7 @@
       font-size: 16px;
       line-height: 12px;
       color: white;
+      font-family: var(--robotoCondensed-font);
     }
 
     .price {
@@ -68,9 +69,10 @@
 
   .roiLabel {
     font-size: 20px;
-    color: $primary;
+    color: white;
     font-weight: 700;
     text-transform: uppercase;
+    font-family: $condensed;
   }
 
   .row {

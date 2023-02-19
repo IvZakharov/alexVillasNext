@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../../ui/Button/Button";
 import parse from "html-react-parser";
 
-const Promo = ({ Data, width, links }) => {
+const Promo = ({ Data, width, links, color }) => {
   return (
     <section className="container">
       <div
@@ -14,7 +14,7 @@ const Promo = ({ Data, width, links }) => {
           {Data &&
             Data.map((obj, i) => (
               <div className={styles.block} key={i}>
-                <div className={`${styles.bigTitle} h2`}>{parse(obj.title)}</div>
+                <div className={`${styles.bigTitle} ${color && (styles.white)} h2`}>{parse(obj.title)}</div>
                 <div className={`${styles.lable} text`}>{obj.lable}</div>
               </div>
             ))}

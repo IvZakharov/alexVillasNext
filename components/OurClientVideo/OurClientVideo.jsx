@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./OurClientVideo.module.scss";
 import Modal from "../Modal/Modal";
+import Thumb from "../YoutubeSection/Thumb";
 
 const OurClientVideo = () => {
   const [activeModal, setActiveModal] = useState(false);
@@ -38,7 +39,11 @@ const OurClientVideo = () => {
                   strokeLinejoin="round"
                 />
               </svg>
+              <div className={styles.thumb}>
+                <Thumb videoUrl={"https://www.youtube.com/embed/UIU1Xc0jDiE"} />
+              </div>
             </div>
+
           </div>
         </div>
         <div className={styles.text}>

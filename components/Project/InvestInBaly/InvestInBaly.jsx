@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./InvestInBaly.module.scss"
 import Image from "next/image";
 import parse from "html-react-parser";
+import Promo from "../../Promo/Promo";
 
 const InvestInBaly = ({
   title,
@@ -29,13 +30,21 @@ const InvestInBaly = ({
             
           </div>
           <div className={styles.vertLine}></div>
-          <div className={styles.bloks}>
-            <div className={styles.textBlock}>
-              <span className={styles.bigNum}>272%</span> внешний
-            </div>
-            <div className={styles.textBlock}>
-              <span className={styles.bigNum}>346%</span> внутренний
-            </div>
+            <div className={styles.about}>
+                 <div className={styles.block}>
+                    <div className={`${styles.bigTitle} h2`}>272%</div>
+                    <div className={`${styles.lable} text`}>внешний</div>
+                  </div>
+              <div className={styles.block}>
+                    <div className={`${styles.bigTitle} h2`}>346%</div>
+                    <div className={`${styles.lable} text`}>внутренний</div>
+              </div>
+            {/*<div className={styles.textBlock}>*/}
+            {/*  <span className={styles.bigNum}>272%</span> внешний*/}
+            {/*</div>*/}
+            {/*<div className={styles.textBlock}>*/}
+            {/*  <span className={styles.bigNum}>346%</span> внутренний*/}
+            {/*</div>*/}
           </div>
         </div>
         <div className={styles.offstatic}>Официальная статистика от правительства Индонезии</div>
@@ -46,111 +55,88 @@ const InvestInBaly = ({
           <div className={styles.lineThird}></div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+  
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+
             </div>
-            <div className={styles.Lable}>надежная диверсификация капитала</div>
+            <div className={"text"}>надежная диверсификация капитала</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+  
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+
             </div>
-            <div className={styles.Lable}>постоянно растущая стоимость земли</div>
+            <div className={"text"}>постоянно растущая стоимость земли</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <div className={styles.Lable}>быстрая окупаемость инвестиций за счет арендного бизнеса</div>
+            <div className={"text"}>быстрая окупаемость инвестиций за счет арендного бизнеса</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <div className={styles.Lable}>комфортный инвестиционный клима</div>
+            <div className={"text"}>комфортный инвестиционный клима</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <div className={styles.Lable}>365 дней сезонность острова</div>
+            <div className={"text"}>365 дней сезонность острова</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <div className={styles.Lable}>высокая заполняемость острова 80-90%</div>
+            <div className={"text"}>высокая заполняемость острова 80-90%</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <div className={styles.Lable}>15-20% рост средней стоимости аренды в год</div>
+            <div className={"text"}>15-20% рост средней стоимости аренды в год</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <div className={styles.Lable}>низкий уровень инфляции</div>
+            <div className={"text"}>низкий уровень инфляции</div>
           </div>
           <div className={styles.Block}>
             <div className={styles.Image}>
-              <Image
-                alt={'check'}
-                src={'/images/icons/img1.png'}
-                quality={80}
-                width={60}
-                height={60}
-              />
+              <svg width="55" height="55" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39" cy="39" r="39" fill="#FF9900"/>
+                <path d="M27 39L35 47L51 31" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
-            <div className={styles.Lable}>гарантированный пассивный доход в стабильной валюте $</div>
+            <div className={"text"}>гарантированный пассивный доход в стабильной валюте $</div>
           </div>
         </div>
         {/* Блок недвижемости на бали */}

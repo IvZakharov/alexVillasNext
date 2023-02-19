@@ -17,6 +17,7 @@ import PropertiesGallery from "../../components/PropertiesGallery/PropertiesGall
 import FinanceModeling from "../../components/Project/FinanceModeling/FinanceModeling";
 import Quiz from "../../components/Project/Quiz/Quiz";
 import Faq from "../../components/Project/Faq/Faq";
+import Map from "../../components/Map/Map";
 
 
 const Slug = ({properties, projects, global}) => {
@@ -32,7 +33,7 @@ const Slug = ({properties, projects, global}) => {
     },
     {
       lable: "Инвестиции от",
-      sublable: '175.000$ - 445.000$',
+      sublable: '175 000$ - 445 000$',
     },
     {
       lable: 'Топ локация <b>Чангу,</b>',
@@ -47,15 +48,26 @@ const Slug = ({properties, projects, global}) => {
     >
       <div className={"mb-16 md:mb-32 xl:mb-24"}>
         <Hero
-          h1first={"ВЫГОДНЫЕ ИНВЕСТИЦИИ В"}
-          h1second={"НЕДВИЖИМОСТЬ НА БАЛИ"}
+          h1first={"ALEX VILLAS"}
+          h1second={"COMPLEX 6"}
           text={
             "с доходностью от 10 до 33 годовых в $"
           }
           back={arr}
+          dot={"BERAWA, CANGGU"}
+          form={"Получить персональное предложение"}
+          subLable={"Цены от $189.000"}
+          text={
+          "1-спальный таунхаус <span>x 10</span><br />"+
+          "1-спальные апартаменты <span>x 16</span><br />"+
+          "1-спальные смарт-виллы <span>x 5</span><br />"+
+          "2-спальные смарт-виллы <span>x 3</span><br />"+
+          "3-спальные смарт-виллы <span>x 1</span><br />"
+          }
+          link
         />
       </div>
-      <div className={"md:mb-16 lg:mb-10"}>
+      <div className={"mb-8 md:mb-16 lg:mb-10"}>
         <ComplexPlash items={complex} />
       </div>
       <div className={"mb-16 md:mb-16"}>
@@ -77,11 +89,14 @@ const Slug = ({properties, projects, global}) => {
           />
         </div>
       )}
-      <div className={"mb-16"}>
-        <VillasParam />
-      </div>
-      <div className={"mb-16"}>
-        <Infrastruct data={infrac} />
+      {projects && (
+        <div className={"mb-16"}>
+          <VillasParam Villas={projects[0].attributes?.villas} />
+        </div>
+      )}
+      
+      <div className={"mb-16 xl:mb-24"}>
+        <Map />
       </div>
       {projects && (
         <div className={"mb-16 xl:mb-32"}>
@@ -113,7 +128,8 @@ const Slug = ({properties, projects, global}) => {
     </MainLayout>
   );
 };
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
+  console.log(params)
   const [propertyRes, projectRes, globalRes] = await Promise.all([
     fetchAPI("/property-gallery", { populate: "deep" }),
     fetchAPI("/projects", { populate: "deep" }),

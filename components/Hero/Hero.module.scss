@@ -49,7 +49,7 @@
       text-transform: uppercase;
       @media (max-width: 1023px) {
         width: 65%;
-        text-align: center;
+        align-items: center;
         margin-bottom: 20px;
       }
       @media (max-width: 767px) {
@@ -72,7 +72,7 @@
         @media (max-width: 1239px) {
           padding-left: 20%;
         }
-        @media (max-width: 983px) {
+        @media (max-width: 1023px) {
           padding-left: unset;
         }
       }
@@ -87,31 +87,30 @@
       line-height: 30px;
       text-decoration-line: underline;
       color: white;
+      @media (max-width: 1240px) {
+        position: unset;
+        margin-bottom: 1em;
+      }
       @media (max-width: 767px) {
         font-size: 15px;
         line-height: 19px;
       }
-      @media (max-width: 983px) {
-        position: unset;
-        text-align: center;
-      }
     }
     .dot {
-      position: unset;
       margin-left: auto;
       margin-right: auto;
       color: #ffffff;
       display: flex;
       width: fit-content;
+      align-items: center;
 
       @media (min-width: 984px) {
-        top: -30px;
-        right: 0px;
-        position: absolute;
+        top: 20px;
+        right: 20%;
       }
       @media (min-width: 1240px) {
         top: 50px;
-        right: -250px;
+        right: 30%;
         position: absolute;
       }
       .address {
@@ -131,6 +130,10 @@
   }
   .FormText {
     display: flex;
+    @media (max-width: 983px) {
+      width: 100%;
+      justify-content: center;
+    }
     @media (max-width: 767px) {
       flex-direction: column-reverse;
       width: 100%;
@@ -197,7 +200,7 @@
       left: 35%;
     }
     @media (max-width: 983px) {
-      max-width: 40%;
+      max-width: 47%;
     }
     @media (max-width: 767px) {
       width: fit-content;
@@ -229,8 +232,7 @@
         text-align: center;
       }
       span {
-        text-decoration-line: underline;
-        color: #ffffff;
+       color: $primary;
       }
     }
   }
