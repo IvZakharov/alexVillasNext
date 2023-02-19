@@ -7,16 +7,14 @@ import Faq from "../components/Project/Faq/Faq";
 import Quiz from "../components/Project/Quiz/Quiz";
 import Map from "../components/Map/Map";
 
-
 export default function Ivan({ properties, projects, map, global }) {
-  
   console.log(map);
-  
+
   const arr = {
-    type: 'image',
-    url: '/images/hero.png',
-    alt: 'background image',
-  }
+    type: "image",
+    url: "/images/hero.png",
+    alt: "background image",
+  };
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -33,12 +31,6 @@ export default function Ivan({ properties, projects, map, global }) {
           back={arr}
         />
       </div>
-
-      {projects && (
-        <div className={"mb-16 xl:mb-24"}>
-          <Map />
-        </div>
-      )}
 
       {properties && (
         <div className={"mb-16 xl:mb-24"}>

@@ -22,6 +22,10 @@ h5,
 h6 {
   font-family: var(--robotoCondensed-font);
   font-weight: 700;
+
+  span {
+    color: $primary;
+  }
 }
 
 body {
@@ -121,7 +125,7 @@ a {
     }
   }
 }
-.ruText{
+.ruText {
   letter-spacing: normal;
 }
 
@@ -131,7 +135,9 @@ a {
   line-height: 20px;
   color: #ffffff;
 
-  span {
+  span,
+  strong,
+  a {
     color: $primary;
   }
 
@@ -177,8 +183,8 @@ a {
     line-height: 50px;
   }
 }
-.white{
-  color: #FFFFFF;
+.white {
+  color: #ffffff;
 }
 .h1 {
   text-transform: uppercase;

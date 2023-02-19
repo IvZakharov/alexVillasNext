@@ -8,22 +8,27 @@ import parse from "html-react-parser";
 const CtaSection = ({
   title,
   description,
-  imageUrl,
+  image,
   label,
   fields,
   submitButtonText,
-  gradient
+  gradient,
 }) => {
+  //images/cta/bg.jpg
   return (
-    <section className={`${styles.cta} ${gradient ? styles.gradient : ''}`} id={"form"}>
-      {imageUrl && (
+    <section
+      className={`${styles.cta} ${gradient ? styles.gradient : ""}`}
+      id={"form"}
+    >
+      {image && (
         <div className={styles.image}>
           <Image
             alt={title}
-            src={imageUrl}
+            src={image.data.attributes.url}
             quality={80}
+            blurDataURL={image.data.attributes.placeholder}
+            placeholder={"blur"}
             fill
-            priority
             sizes="50vw"
             style={{
               objectFit: "cover",
@@ -40,7 +45,9 @@ const CtaSection = ({
         <div className={"md:col-end-3 md:col-span-1"}>
           <div className={styles.content}>
             <h2 className={`${styles.title} h2`}>{parse(title)}</h2>
-            {description && <p className={`${styles.description} text`}>{description}</p>}
+            {description && (
+              <p className={`${styles.description} text`}>{description}</p>
+            )}
           </div>
           {label && (
             <div className={`${styles.label}`}>

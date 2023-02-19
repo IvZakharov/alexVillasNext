@@ -1,10 +1,11 @@
 import styles from "./Community.module.scss";
 import React from "react";
 import Image from "next/image";
+import md from "markdown-it";
 
 import Link from "next/link";
 
-const Community = ({ imageUrl }) => {
+const Community = ({ locale, description, imageUrl }) => {
   return (
     <section className={styles.community}>
       <div
@@ -14,22 +15,21 @@ const Community = ({ imageUrl }) => {
       >
         <div className={"md:flex md:flex-col"}>
           <h2 className={`h2 mb-8`}>
-            <span>ПОДДЕРЖКА </span> <br /> СООБЩЕСТВА
+            {locale == "en" ? (
+              <>
+                <span>COMMUNITY </span> <br /> SUPPORT
+              </>
+            ) : (
+              <>
+                <span>ПОДДЕРЖКА </span> <br /> СООБЩЕСТВА
+              </>
+            )}
           </h2>
 
-          <p className={"text mb-4 md:mt-auto"}>
-            Мы твёрдо убедены, что каждая компания должна помогать
-            <span> развитию локального сообщества.</span>
-          </p>
-
-          <p className={"text mb-4"}>
-            Также, мы верим, что добрые дела рождают добрые дела.{" "}
-          </p>
-
-          <p className={"text mb-6 md:mb-9"}>
-            Хотите присоединиться? Оставьте заявку, и мы расскажем как это можно
-            сделать.
-          </p>
+          <div
+            className={`${styles.description} text md:mt-auto mb-2 md:mb-5`}
+            dangerouslySetInnerHTML={{ __html: md().render(description) }}
+          ></div>
 
           <Link href={"#"} className={styles.link}>
             <span>Внеси свой вклад</span>

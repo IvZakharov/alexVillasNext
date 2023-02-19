@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/free-mode";
 
-const Index = ({ youtubeLinks }) => {
+const Index = ({ youtubeLinks, locale }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
 
@@ -25,13 +25,27 @@ const Index = ({ youtubeLinks }) => {
         >
           <div className={"md:flex md:flex-col"}>
             <h2 className={`h2 mb-8 xl:mb-16`}>
-              <span>СМОТРИТЕ</span>
-              <br />
-              НАШ
-              <br />
-              YOUTUBE
-              <br />
-              КАНАЛ
+              {locale == "en" ? (
+                <>
+                  <span>SUBSCRIBE</span>
+                  <br />
+                  TO OUR
+                  <br />
+                  YOUTUBE
+                  <br />
+                  CHANNEL
+                </>
+              ) : (
+                <>
+                  <span>СМОТРИТЕ</span>
+                  <br />
+                  НАШ
+                  <br />
+                  YOUTUBE
+                  <br />
+                  КАНАЛ
+                </>
+              )}
             </h2>
 
             <ul className={styles.list}>
@@ -54,7 +68,9 @@ const Index = ({ youtubeLinks }) => {
                   </svg>
                 </i>
                 <p className={"text"}>
-                  Еженедельные видео про инвестиции на Бали
+                  {locale == "en"
+                    ? "Weekly top quality videos about real estate in Bali"
+                    : "Еженедельные видео про инвестиции на Бали"}
                 </p>
               </li>
 
@@ -77,13 +93,15 @@ const Index = ({ youtubeLinks }) => {
                   </svg>
                 </i>
                 <p className={"text"}>
-                  Полезный контент от топовых игроков рынка
+                  {locale == "en"
+                    ? "Actionable content from the main market players"
+                    : "Полезный контент от топовых игроков рынка"}
                 </p>
               </li>
             </ul>
 
             <Link href={""} className={styles.link}>
-              <span>ПОДПИСАТЬСЯ</span>
+              <span> {locale == "en" ? "SUBSCRIBE" : "ПОДПИСАТЬСЯ"} </span>
               {/*<i>*/}
               {/*  <svg*/}
               {/*    width="73"*/}
@@ -112,11 +130,15 @@ const Index = ({ youtubeLinks }) => {
                 setActiveSlideIndex(activeIndex);
               }}
             >
-              {youtubeLinks.map((link, idx) => (
-                <SwiperSlide key={idx}>
-                  <Video videoUrl={link} isActive={activeSlideIndex === idx} />
-                </SwiperSlide>
-              ))}
+              {youtubeLinks &&
+                youtubeLinks.map((obj, idx) => (
+                  <SwiperSlide key={idx}>
+                    <Video
+                      videoUrl={obj.youtubeUrl}
+                      isActive={activeSlideIndex === idx}
+                    />
+                  </SwiperSlide>
+                ))}
             </Swiper>
 
             <Swiper
@@ -127,11 +149,12 @@ const Index = ({ youtubeLinks }) => {
               watchSlidesProgress={true}
               modules={[Thumbs]}
             >
-              {youtubeLinks.map((link, idx) => (
-                <SwiperSlide key={idx}>
-                  <Thumb videoUrl={link} />
-                </SwiperSlide>
-              ))}
+              {youtubeLinks &&
+                youtubeLinks.map((obj, idx) => (
+                  <SwiperSlide key={idx}>
+                    <Thumb videoUrl={obj.youtubeUrl} />
+                  </SwiperSlide>
+                ))}
             </Swiper>
           </div>
         </div>

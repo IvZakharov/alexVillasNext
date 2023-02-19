@@ -23,13 +23,25 @@
     font-size: 16px;
     line-height: 21px;
     color: #ffffff;
+    margin-bottom: 15px;
 
-    span {
+    strong {
       color: $primary;
     }
 
     @media (min-width: 984px) {
       font-size: 18px;
+    }
+  }
+
+  p {
+    display: block;
+    strong {
+      color: $primary;
+    }
+
+    a {
+      color: $primary;
     }
   }
 

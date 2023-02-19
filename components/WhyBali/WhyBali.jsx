@@ -5,10 +5,10 @@ import React from "react";
 import Link from "next/link";
 import trueSvg from "./img/true.svg";
 import falseSvg from "./img/false.svg";
-import { hotspots } from "../../data/hotspots";
-import { hotspotsRu } from "../../data/hotspotsRu";
 
-const WhyBali = () => {
+import md from "markdown-it";
+
+const WhyBali = ({ locale, advatages, hotspots }) => {
   return (
     <section className={styles.whyBali}>
       <div className={"container"}>
@@ -19,7 +19,15 @@ const WhyBali = () => {
             }
           >
             <h2 className={"h1"}>
-              Почему <br /> <span>бали?</span>
+              {locale == "en" ? (
+                <>
+                  Why <br /> <span>bali?</span>
+                </>
+              ) : (
+                <>
+                  Почему <br /> <span>бали?</span>
+                </>
+              )}
             </h2>
             <div className={"lg:hidden"}>
               <Image
@@ -41,50 +49,14 @@ const WhyBali = () => {
               "grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:col-span-2 lg:gap-6 xl:pt-5"
             }
           >
-            <div className={styles.advantagesItem}>
-              <h3 className={"mb-4"}>
-                ГОРЯЧАЯ ТОЧКА <span>ИНВЕСТИЦИЙ</span>
-              </h3>
-              <p className={"text textSmall"}>
-                Рынок недвижимости сошёл с ума с возвращением туризма.<span> </span>
-                <span>
-                  <Link href={"#"}>Читать отчёт</Link>
-                </span>
-              </p>
-            </div>
-
-            <div className={styles.advantagesItem}>
-              <h3 className={"mb-4"}>
-                МОЛОДАЯ И РАСТУЩАЯ <span>ЭКОНОМИКА</span>
-              </h3>
-              <p className={"text textSmall"}>
-                Индонезия сегодня ассоциируется с притоком зарубежных инвестиций
-                и<span> </span>
-                <span>
-                  <Link href={"#"}> небывалым ростом ВВП.</Link>
-                </span>
-              </p>
-            </div>
-
-            <div className={styles.advantagesItem}>
-              <h3 className={"mb-4"}>
-                ДОХОДНОСТЬ <span>10-22%</span>
-              </h3>
-              <p className={"text textSmall"}>
-                Просто сравните это
-                <span> стипичными 5-6% на рынках развитых стран!</span>
-              </p>
-            </div>
-
-            <div className={styles.advantagesItem}>
-              <h3 className={"mb-4"}>
-                ЛЕГАЛЬНОСТЬ <span>КРИПТОВАЛЮТ</span>
-              </h3>
-              <p className={"text textSmall"}>
-                Больше никаких трюков, чтобы заставить вашу крипту работать!
-                <span> 100% легально и просто.</span>
-              </p>
-            </div>
+            {advatages &&
+              advatages.map((obj) => (
+                <div
+                  key={obj.id}
+                  className={`${styles.advantagesItem} text textSmall`}
+                  dangerouslySetInnerHTML={{ __html: md().render(obj.content) }}
+                ></div>
+              ))}
           </div>
         </div>
 
@@ -105,34 +77,44 @@ const WhyBali = () => {
 
           <div className={"lg:col-span-2"}>
             <h3 className={"mb-7"}>
-              СРАВНЕНИЕ С ДРУГИМИ <br /> <span>ПОПУЛЯРНЫМИ РЕГИОНАМИ:</span>
+              {locale == "en" ? (
+                <>
+                  СРАВНЕНИЕ С ДРУГИМИ <br /> <span>ПОПУЛЯРНЫМИ РЕГИОНАМИ:</span>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  COMPARISON WITH OTHER <br />{" "}
+                  <span>REAL ESTATE HOTSPOTS:</span>
+                </>
+              )}
             </h3>
 
             <div className={"grid grid-cols-1 md:grid-cols-2 gap-6"}>
-              {hotspotsRu &&
-                hotspotsRu.map((hotspot, idx) => (
+              {hotspots &&
+                hotspots.map((hotspot, idx) => (
                   <div className={styles.hotspot} key={hotspot.id}>
                     <div className={"flex gap-2 md:gap-4 items-center mb-4"}>
                       <Image
-                        src={hotspot.flagUrl}
+                        src={hotspot.flag.data.attributes.url}
                         width={24}
                         height={24}
                         alt={"flag bali"}
                       />
-                      <h4 className={styles.title}>{hotspot.location}</h4>
+                      <h4 className={styles.title}>{hotspot.countryName}</h4>
                     </div>
 
                     <ul className={styles.list}>
-                      {hotspot.advantages &&
-                        hotspot.advantages.map((item, idx) => (
+                      {hotspot.listItem &&
+                        hotspot.listItem.map((item, idx) => (
                           <li key={idx}>
                             <Image
-                              src={item.isCheck ? trueSvg : falseSvg}
+                              src={item.good ? trueSvg : falseSvg}
                               alt={"svg icon"}
                             />
                             <span
                               className={`text textSmall ${
-                                !item.isCheck ? "opacity-50" : ""
+                                !item.good ? "opacity-50" : ""
                               }`}
                             >
                               {item.title}

@@ -2,48 +2,46 @@ import React from "react";
 import styles from "./OurBusiness.module.scss";
 import parse from "html-react-parser";
 
-const OurBusiness = ({ text }) => {
+const OurBusiness = ({ locale, stats }) => {
   return (
     <section className="container ">
       <div className={styles.OurBusiness}>
         <div className={styles.rowOne}>
-          <h2 className={`${styles.text} h1`}>{parse(text)}</h2>
+          <h2 className={`${styles.text} h1`}>
+            {locale == "en" ? (
+              <>
+                why <br />
+                <span>ALEX</span> <br />
+                <span>VILLAS?</span>
+              </>
+            ) : (
+              <>
+                почему <br />
+                <span>ALEX</span> <br />
+                <span>VILLAS?</span>
+              </>
+            )}
+          </h2>
           <div className={styles.stats}>
             <p className={`${styles.textGroup} text`}>
-              Alex Villas Group это <br /> инвестиционная компания <br /> с
-              8-летним опытом.
+              {locale == "en" ? (
+                <></>
+              ) : (
+                <>
+                  {" "}
+                  Alex Villas Group это <br /> инвестиционная компания <br /> с
+                  8-летним опытом.
+                </>
+              )}
             </p>
             <div className={styles.Numbers}>
-              <div className={styles.LineUp}>
-                <div className={styles.BigNum}>8</div>
-                <p className={styles.subTitle}>
-                  ЛЕТ НА РЫНКЕ <br /> НЕДВИЖИМОСТИ
-                </p>
-              </div>
-              <div className={styles.LineUp}>
-                <div className={styles.BigNum}>42</div>
-                <p className={styles.subTitle}>
-                  ОБЪЕКТА <br /> В УПРАВЛЕНИИ
-                </p>
-              </div>
-              <div className={styles.LineUp}>
-                <div className={styles.BigNum}>6</div>
-                <p className={styles.subTitle}>
-                  ИНВЕСТИЦИОННЫХ <br /> ПРОЕКТОВ
-                </p>
-              </div>
-              <div className={styles.LineUp}>
-                <div className={styles.BigNum}>$25M</div>
-                <p className={styles.subTitle}>
-                  ГОДОВОЙ <br /> ОБОРОТ (2022)
-                </p>
-              </div>
-              <div className={styles.LineUp}>
-                <div className={styles.BigNum}>$4M</div>
-                <p className={styles.subTitle}>
-                  ЗАРАБОТАНО ДЛЯ <br /> ИНВЕСТОРОВ
-                </p>
-              </div>
+              {stats &&
+                stats.map((obj, idx) => (
+                  <div className={styles.LineUp} key={idx}>
+                    <div className={styles.BigNum}>{obj.value}</div>
+                    <p className={styles.subTitle}>{obj.description}</p>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
