@@ -51,7 +51,6 @@ const Project = ({
     },
   ];
 
-  console.log(project);
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -186,19 +185,27 @@ const Project = ({
   );
 };
 
-export async function getStaticPaths() {
-  const projectsRes = await fetchAPI("/projects", { fields: ["slug"] });
+export async function getStaticPaths({ locales }) {
+  const projectsRes = await fetchAPI("/projects", {
+    fields: ["slug"],
+  });
+
+  const paths = projectsRes.data
+    .map((project) =>
+      locales.map((locale) => ({
+        params: { slug: project.attributes.slug },
+        locale,
+      }))
+    )
+    .flat();
+
   return {
-    paths: projectsRes.data.map((project) => ({
-      params: {
-        slug: project.attributes.slug,
-      },
-    })),
+    paths,
     fallback: false,
   };
 }
 
-export async function getStaticProps({ locale, params }) {
+export async function getStaticProps({ locale, locales, params }) {
   const [
     projectsRes,
     propertyRes,
@@ -212,8 +219,8 @@ export async function getStaticProps({ locale, params }) {
     fetchAPI("/projects", {
       filters: {
         slug: params.slug,
-        locale: locale,
       },
+      locale: locale,
       populate: "deep",
     }),
     fetchAPI("/property-gallery", { populate: "deep" }),

@@ -9,7 +9,6 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  overflow-x: hidden;
   font-family: var(--roboto-font);
   scroll-behavior: smooth;
 }
@@ -28,8 +27,12 @@ h6 {
   }
 }
 
+main {
+}
+
 body {
   background-color: $black;
+  overflow-x: hidden;
 }
 
 a {
