@@ -1,8 +1,2 @@
-export const projectsOnSaleFilter = (arr, onSale) => {
-  return arr.filter((obj) => {
-    if (obj.onSale === onSale) {
-      return obj;
-    }
-    return null;
-  });
-};
+export const projectsOnSaleFilter = (arr, statusArr) =>
+  arr.filter((obj) => statusArr.includes(obj.attributes.status));

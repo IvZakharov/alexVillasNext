@@ -77,11 +77,45 @@ const ctaEn = {
   ],
 };
 
-export default function Home({ page, map, airbnb, partner, youtube, global }) {
+const gridOnSaleProjectsRu = {
+  title: "ПРОЕКТЫ\nВ ПРОДАЖЕ",
+  description:
+    "Наш фокус - на лучших локациях, хорошей инфраструктуре и передовой архитектуре. \nЭто гарантирует максимальные рейтинги, обеспечивая высокую доходность инвесторам.",
+  buttonLabel: "БОЛЬШЕ ЗАВЕРШЁННЫХ ПРОЕКТОВ",
+};
+
+const gridOnSaleProjectsEn = {
+  title: "PROJECTS\nON SALE",
+  description:
+    "We focus on prime locations, decent infrastructure and cutting edge architecture \nThis ensures high ratings in booking services, which transforms into higher gains for our investors.",
+  buttonLabel: "MORE PROJECTS ON SALE",
+};
+
+const gridSoldOutProjectsRu = {
+  title: "ЗАВЕРШЁННЫЕ\nПРОЕКТЫ",
+  description:
+    "Здесь вы можете почитать про наши кейсы, глубже понять наш подход и увидеть завершённые проекты.",
+  buttonLabel: "БОЛЬШЕ ЗАВЕРШЁННЫХ ПРОЕКТОВ",
+};
+
+const gridSoldOutProjectsEn = {
+  title: "FINISHED\nPROJECTS",
+  description:
+    "Check our case studies to get a closer look at our approach and see the projects we finished.",
+  buttonLabel: "MORE PROJECTS ON SALE",
+};
+
+export default function Home({
+  page,
+  map,
+  projects,
+  airbnb,
+  partner,
+  youtube,
+  global,
+}) {
   const router = useRouter();
   const { locale } = router;
-
-  console.log(page);
 
   return (
     <MainLayout
@@ -117,29 +151,53 @@ export default function Home({ page, map, airbnb, partner, youtube, global }) {
         </div>
       )}
 
-      <div className={"mb-16 xl:mb-16"}>
-        <ProjectsGrid
-          projects={projectsOnSaleFilter(projects, true)}
-          title={"ПРОЕКТЫ\nВ ПРОДАЖЕ"}
-          description={
-            "Наш фокус - на лучших локациях, хорошей инфраструктуре и передовой архитектуре. \nЭто гарантирует максимальные рейтинги, обеспечивая высокую доходность инвесторам."
-          }
-          link={"#"}
-          linkLabel={"БОЛЬШЕ ПРОЕКТОВ В ПРОДАЖЕ"}
-        />
-      </div>
+      {projects && (
+        <div className={"mb-10 xl:mb-16"}>
+          <ProjectsGrid
+            projects={projectsOnSaleFilter(projects, ["onSale", "comingSoon"])}
+            title={
+              locale == "en"
+                ? gridOnSaleProjectsEn.title
+                : gridOnSaleProjectsRu.title
+            }
+            description={
+              locale == "en"
+                ? gridOnSaleProjectsEn.description
+                : gridOnSaleProjectsRu.description
+            }
+            linkLabel={
+              locale == "en"
+                ? gridOnSaleProjectsEn.buttonLabel
+                : gridOnSaleProjectsRu.buttonLabel
+            }
+            locale={locale}
+          />
+        </div>
+      )}
 
-      <div className={"mb-10 xl:mb-16"}>
-        <ProjectsGrid
-          projects={projectsOnSaleFilter(projects, false)}
-          title={"ЗАВЕРШЁННЫЕ\nПРОЕКТЫ"}
-          description={
-            "Наш фокус - на лучших локациях, хорошей инфраструктуре и передовой архитектуре. \nЭто гарантирует максимальные рейтинги, обеспечивая высокую доходность инвесторам."
-          }
-          link={"#"}
-          linkLabel={"БОЛЬШЕ ЗАВЕРШЁННЫХ ПРОЕКТОВ"}
-        />
-      </div>
+      {projects && (
+        <div className={"mb-10 xl:mb-16"}>
+          <ProjectsGrid
+            projects={projectsOnSaleFilter(projects, ["soldOut"])}
+            title={
+              locale == "en"
+                ? gridOnSaleProjectsEn.title
+                : gridOnSaleProjectsRu.title
+            }
+            description={
+              locale == "en"
+                ? gridOnSaleProjectsEn.description
+                : gridOnSaleProjectsRu.description
+            }
+            linkLabel={
+              locale == "en"
+                ? gridOnSaleProjectsEn.buttonLabel
+                : gridOnSaleProjectsRu.buttonLabel
+            }
+            locale={locale}
+          />
+        </div>
+      )}
 
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <RenovationGrid
@@ -256,26 +314,35 @@ export default function Home({ page, map, airbnb, partner, youtube, global }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes] =
-    await Promise.all([
-      fetchAPI("/pages", {
-        filters: {
-          slug: "home",
-        },
-        populate: "deep",
-        locale: locale,
-      }),
-      fetchAPI("/map", { populate: "deep", locale: locale }),
-      fetchAPI("/airbnb", { populate: "deep" }),
-      fetchAPI("/partner", { populate: "deep" }),
-      fetchAPI("/you-tube", { populate: "*" }),
-      fetchAPI("/global"),
-    ]);
+  const [
+    pageRes,
+    mapRes,
+    projectsRes,
+    airbnbRes,
+    partnerRes,
+    youtubeRes,
+    globalRes,
+  ] = await Promise.all([
+    fetchAPI("/pages", {
+      filters: {
+        slug: "home",
+      },
+      populate: "deep",
+      locale: locale,
+    }),
+    fetchAPI("/map", { populate: "deep", locale: locale }),
+    fetchAPI("/projects", { populate: "*", locale: locale }),
+    fetchAPI("/airbnb", { populate: "deep" }),
+    fetchAPI("/partner", { populate: "deep" }),
+    fetchAPI("/you-tube", { populate: "*" }),
+    fetchAPI("/global"),
+  ]);
 
   return {
     props: {
       page: pageRes.data[0],
       map: mapRes.data,
+      projects: projectsRes.data,
       airbnb: airbnbRes.data,
       partner: partnerRes.data,
       youtube: youtubeRes.data,

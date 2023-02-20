@@ -3,8 +3,10 @@ import React from "react";
 import ProjectCard from "./Card";
 import Link from "next/link";
 
-const ProjectsGrid = ({ title, projects, link, linkLabel, description }) => {
+const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
   const [isOpen, setIsOpen] = React.useState(false);
+
+  console.log(projects);
 
   return (
     <section>
@@ -30,14 +32,15 @@ const ProjectsGrid = ({ title, projects, link, linkLabel, description }) => {
                 }`}
               >
                 <ProjectCard
-                  title={obj.title}
-                  onSale={obj.onSale}
-                  imageUrl={obj.thumbnail}
-                  location={obj.location}
-                  properties={idx === 0 ? obj.complexProperties : null}
+                  title={obj.attributes.title}
+                  status={obj.attributes.status}
+                  image={obj.attributes?.thumbnail}
+                  location={obj.attributes.location}
+                  properties={idx === 0 ? obj.attributes?.propertyList : null}
                   large={idx === 0}
                   key={obj.id}
-                  link={obj.link}
+                  slug={obj.attributes.slug}
+                  locale={locale}
                 />
               </div>
             ))}
@@ -52,37 +55,43 @@ const ProjectsGrid = ({ title, projects, link, linkLabel, description }) => {
                 .slice(3)
                 .map((obj) => (
                   <ProjectCard
-                    title={obj.title}
-                    onSale={obj.onSale}
-                    imageUrl={obj.thumbnail}
-                    location={obj.location}
+                    title={obj.attributes.title}
+                    status={obj.attributes.status}
+                    image={obj.attributes?.thumbnail}
+                    location={obj.attributes.location}
                     properties={null}
                     large={false}
+                    link={`projects/${obj.attributes.slug}`}
                     key={obj.id}
+                    locale={locale}
                   />
                 ))}
           </div>
         )}
 
-        <div className={"pt-10 pl-8 md:pl-0 flex justify-start md:justify-end"}>
-          <Link href={link} className={styles.link}>
-            <span>{linkLabel}</span>
-            <i>
-              <svg
-                width="51"
-                height="7"
-                viewBox="0 0 51 7"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M50.0025 3.75L45.0025 0.863249V6.63675L50.0025 3.75ZM0 4.25H45.5025V3.25H0V4.25Z"
-                  fill="#FF9900"
-                />
-              </svg>
-            </i>
-          </Link>
-        </div>
+        {projects.length > 3 && (
+          <div
+            className={"pt-10 pl-8 md:pl-0 flex justify-start md:justify-end"}
+          >
+            <button className={styles.link}>
+              <span>{linkLabel}</span>
+              <i>
+                <svg
+                  width="51"
+                  height="7"
+                  viewBox="0 0 51 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M50.0025 3.75L45.0025 0.863249V6.63675L50.0025 3.75ZM0 4.25H45.5025V3.25H0V4.25Z"
+                    fill="#FF9900"
+                  />
+                </svg>
+              </i>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

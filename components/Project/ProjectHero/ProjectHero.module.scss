@@ -139,11 +139,12 @@
       padding-bottom: 1em;
     }
   }
-  .propertie {
+  .properties {
     position: absolute;
     top: 140px;
     max-width: 363px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     @media (max-width: 1239px) {
       position: unset;

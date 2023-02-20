@@ -78,60 +78,65 @@ const ProjectFinanceModeling = ({ villas }) => {
                 ))}
               </Swiper>
 
-              <button
-                disabled={activeTab === 0}
-                onClick={() => setActiveTab(activeTab - 1)}
-                className={`${styles.arrowPrev} iconButton`}
-                ref={arrowPrev}
-              >
-                <svg
-                  width="17"
-                  height="30"
-                  viewBox="0 0 17 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div className={styles.buttonWrapPrev}>
+                <button
+                  disabled={activeTab === 0}
+                  onClick={() => setActiveTab(activeTab - 1)}
+                  className={`${styles.arrowPrev} iconButton`}
+                  ref={arrowPrev}
                 >
-                  <path
-                    d="M15.7998 1.28571L1.39981 15L15.7998 28.7143"
-                    stroke="white"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <button
-                disabled={activeTab === villas.length - 1}
-                onClick={() => setActiveTab(activeTab + 1)}
-                className={`${styles.arrowNext} iconButton`}
-                ref={arrowNext}
-              >
-                <svg
-                  width="12"
-                  height="20"
-                  viewBox="0 0 12 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clipPath="url(#clip0_129_18)">
+                  <svg
+                    width="17"
+                    height="30"
+                    viewBox="0 0 17 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
-                      d="M1.5 18.5714L10.5 9.99998L1.5 1.42856"
+                      d="M15.7998 1.28571L1.39981 15L15.7998 28.7143"
                       stroke="white"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_129_18">
-                      <rect
-                        width="20"
-                        height="12"
-                        fill="white"
-                        transform="translate(0 20) rotate(-90)"
+                  </svg>
+                </button>
+              </div>
+
+              <div className={styles.buttonWrapNext}>
+                <button
+                  disabled={activeTab === villas.length - 1}
+                  onClick={() => setActiveTab(activeTab + 1)}
+                  className={`${styles.arrowNext} iconButton`}
+                  ref={arrowNext}
+                >
+                  <svg
+                    width="12"
+                    height="20"
+                    viewBox="0 0 12 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clipPath="url(#clip0_129_18)">
+                      <path
+                        d="M1.5 18.5714L10.5 9.99998L1.5 1.42856"
+                        stroke="white"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_129_18">
+                        <rect
+                          width="20"
+                          height="12"
+                          fill="white"
+                          transform="translate(0 20) rotate(-90)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+              </div>
             </div>
 
             {villas.map((villa, idx) =>

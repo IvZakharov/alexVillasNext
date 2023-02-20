@@ -21,11 +21,7 @@ import Map from "../../components/Map/Map";
 
 
 const Slug = ({properties, projects, global}) => {
-  const arr = {
-    type: 'image',
-    url: '/images/hero.png',
-    alt: 'background image',
-  }
+  
   const complex = [
     {
       lable: "Средняя окупаемость:",
@@ -53,7 +49,7 @@ const Slug = ({properties, projects, global}) => {
           text={
             "с доходностью от 10 до 33 годовых в $"
           }
-          back={arr}
+          backgroundMedia={project.attributes.hero.backgroundMedia.data}
           dot={"BERAWA, CANGGU"}
           form={"Получить персональное предложение"}
           subLable={"Цены от $189.000"}
@@ -129,7 +125,7 @@ const Slug = ({properties, projects, global}) => {
   );
 };
 export async function getStaticProps({ params }) {
-  console.log(params)
+
   const [propertyRes, projectRes, globalRes] = await Promise.all([
     fetchAPI("/property-gallery", { populate: "deep" }),
     fetchAPI("/projects", { populate: "deep" }),
