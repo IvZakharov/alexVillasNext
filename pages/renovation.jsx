@@ -21,9 +21,10 @@ import { useRouter } from "next/router";
 import { fetchAPI } from "../lib/api";
 import { menuFilters } from "../utils/menuFilters";
 
-export default function Renovation({page, menu, global, social}) {
+export default function Renovation({page, menu, global, social, principle}) {
   const router = useRouter();
   const { locale } = router;
+  //console.log(principle)
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -47,19 +48,6 @@ export default function Renovation({page, menu, global, social}) {
           />
         </div>
       )}
-      {/*<div className={"mb-16 xl:mb-24"}>*/}
-      {/*  <Hero*/}
-      {/*    h1first={"РЕНОВАЦИЯ"}*/}
-      {/*    h1second={"ВИЛЛ НА БАЛИ"}*/}
-      {/*    text={*/}
-      {/*      "Инвестируйте в арендную \nнедвижимость. Цикл: 3 года.\n" +*/}
-      {/*      "Доходность: 15-30% годовых"*/}
-      {/*    }*/}
-      {/*    form={"ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ \nИ ФИНАНСОВУЮ МОДЕЛЬ"}*/}
-      {/*    link*/}
-      {/*    back={arr}*/}
-      {/*  />*/}
-      {/*</div>*/}
       <div>
         <AlexVillas
           textBlock1={
@@ -117,14 +105,17 @@ export default function Renovation({page, menu, global, social}) {
           imageBefore={"/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"}
         />
       </div>
-      <div className={"mb-16 md:mb-24 xl:mb-28"}>
-        <Principles
-          title={
-            "<span>ВСЕ НАШИ\n ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ"
-          }
-          principles={principlesArr}
-        />
-      </div>
+      {principle && (
+        <div className={"mb-16 md:mb-24 xl:mb-28"}>
+          <Principles
+            title={
+              "<span>ВСЕ НАШИ\n ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ"
+            }
+            principles={principle.attributes?.items}
+          />
+        </div>
+      )}
+      
 
       <div className={"mb-16 xl:mb-24"}>
         <OurClientVideo />
@@ -161,7 +152,7 @@ export default function Renovation({page, menu, global, social}) {
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes ] =
+  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes, principleRes ] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -177,6 +168,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/global"),
       fetchAPI("/menu", { populate: "deep", locale:locale}),
       fetchAPI("/social"),
+      fetchAPI("/principle", { populate: "deep", locale:locale}),
     ]);
   
   return {
@@ -189,6 +181,7 @@ export async function getStaticProps({ locale }) {
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,
+      principle: principleRes.data,
     },
     revalidate: 120,
   };

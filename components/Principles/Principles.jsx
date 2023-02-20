@@ -14,7 +14,7 @@ const Principles = ({ title, principles }) => {
   const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
   const arrowPrev = React.useRef(null);
   const arrowNext = React.useRef(null);
-
+  console.log(principles)
   return (
     <section>
       <div className={"grid grid-cols-1 lg:grid-cols-3 container "}>
@@ -46,7 +46,7 @@ const Principles = ({ title, principles }) => {
                   <div className={`${styles.image} md:w-1/2`}>
                     <Image
                       alt="video placeholder"
-                      src={obj.imageUrl}
+                      src={obj.image.data.attributes?.url}
                       quality={80}
                       fill
                       sizes="100vw"
