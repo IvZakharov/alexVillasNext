@@ -7,7 +7,7 @@ import Link from "next/link";
 const Card = ({
   name,
   position,
-  imageUrl,
+  image,
   description,
   instagramLink,
   linkedinLink,
@@ -15,20 +15,21 @@ const Card = ({
   return (
     <article className={styles.card}>
       <div className={styles.image}>
-        <Image
-          alt={"Alex Villas Youtube placeholder"}
-          src={imageUrl}
-          quality={80}
-          fill
-          priority
-          sizes="(max-width: 576px) 50vw,
+        {image && (
+          <Image
+            alt={"Alex Villas Youtube placeholder"}
+            src={image.data.attributes.url}
+            quality={90}
+            fill
+            sizes="(max-width: 576px) 50vw,
               (max-width: 1200px) 33vw,
               25vw"
-          style={{
-            objectFit: "contain",
-            objectPosition: "bottom",
-          }}
-        />
+            style={{
+              objectFit: "contain",
+              objectPosition: "bottom",
+            }}
+          />
+        )}
       </div>
       <div className={styles.info}>
         <h3 className={`${styles.name} mb-4 md:mb-6`}>{name}</h3>
@@ -37,7 +38,7 @@ const Card = ({
         <ul className={styles.socials}>
           {instagramLink && (
             <li>
-              <Link href={instagramLink}>
+              <a target={"_blank"} href={instagramLink}>
                 <svg
                   width="44"
                   height="44"
@@ -74,13 +75,13 @@ const Card = ({
                     </clipPath>
                   </defs>
                 </svg>
-              </Link>
+              </a>
             </li>
           )}
 
           {linkedinLink && (
             <li>
-              <Link href={linkedinLink}>
+              <a target={"_blank"} href={linkedinLink}>
                 <svg
                   width="44"
                   height="44"
@@ -131,7 +132,7 @@ const Card = ({
                     </clipPath>
                   </defs>
                 </svg>
-              </Link>
+              </a>
             </li>
           )}
         </ul>

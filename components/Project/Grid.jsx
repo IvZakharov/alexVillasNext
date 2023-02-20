@@ -6,8 +6,6 @@ import Link from "next/link";
 const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  console.log(projects);
-
   return (
     <section>
       <div className={"container"}>

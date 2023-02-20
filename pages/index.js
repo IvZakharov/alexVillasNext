@@ -7,17 +7,16 @@ import WhyBali from "../components/WhyBali/WhyBali";
 import ProjectsGrid from "../components/Project/Grid";
 import YoutubeSection from "../components/YoutubeSection";
 import Community from "../components/Community/Community";
-import AlexVillas from "../components/AlexVillas/AlexVillas";
+
 import WhatsApp from "../components/WhatsApp/WhatsApp";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
 import ManagementGrid from "../components/Management/Grid";
 import RenovationGrid from "../components/Renovation/Grid/Grid";
 import Team from "../components/Team/Team";
 import { projectsOnSaleFilter } from "../utils/projectsOnSaleFilter";
-import { menageProjects } from "../data/menageProj";
-import { projects } from "../data/projects";
+
 import CtaSection from "../components/CtaSection/CtaSection";
-import teamData from "../data/teamData";
+
 import { fetchAPI } from "../lib/api";
 import { reverseArr } from "../utils/reverseArr";
 import Map from "../components/Map/Map";
@@ -105,17 +104,46 @@ const gridSoldOutProjectsEn = {
   buttonLabel: "MORE PROJECTS ON SALE",
 };
 
+const renovationGridRu = {
+  title: "ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ",
+  description:
+    "Инвестируйте от $70.000 c доходностью\n15-25% годовых. Цикл инвестиций 3 года.",
+  linkLabel: "УЗНАТЬ ПОДРОБНОСТИ",
+};
+
+const renovationGridEn = {
+  title: "INVESTMENTS\nIN RENOVATION",
+  description:
+    "Invest starting from $70.000 and gain \n15-25% yearly. Investment period is 3 years.",
+  linkLabel: "УЗНАТЬ ПОДРОБНОСТИ",
+};
+
+const mapRu = {
+  title: "ОБЪЕКТЫ \nНА КАРТЕ",
+  description:
+    "Наши комплексы находятся в  самых посещаемых локациях Бали. Рядом \nс ними вы всегда найдёте основные достопримечательности и развлечения.",
+};
+
+const mapEn = {
+  title: "PROJECTS \nON THE MAP",
+  description:
+    "Our complexes are located in the most visited areas in Bali. You will always have a choice of entertainment options and sights to see within 10-minute proximity.",
+};
+
 export default function Home({
   page,
   map,
   projects,
   airbnb,
   partner,
+  team,
   youtube,
   global,
 }) {
   const router = useRouter();
   const { locale } = router;
+
+  console.log(page);
 
   return (
     <MainLayout
@@ -198,23 +226,29 @@ export default function Home({
           />
         </div>
       )}
-
-      <div className={"mb-16 md:mb-24 xl:mb-36"}>
-        <RenovationGrid
-          title={"ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ"}
-          description={
-            "Инвестируйте от $70.000 c доходностью\n15-25% годовых. Цикл инвестиций 3 года."
-          }
-          imageAfter={
-            "/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"
-          }
-          imageBefore={
-            "/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"
-          }
-          link={"/renovation"}
-          linkLabel={"УЗНАТЬ ПОДРОБНОСТИ"}
-        />
-      </div>
+      {page.attributes.renovation && (
+        <div className={"mb-16 md:mb-24 xl:mb-36"}>
+          <RenovationGrid
+            locale={locale}
+            title={
+              locale === "en" ? renovationGridEn.title : renovationGridRu.title
+            }
+            description={
+              locale === "en"
+                ? renovationGridEn.description
+                : renovationGridRu.description
+            }
+            imageAfter={page.attributes.renovation.imageAfter}
+            imageBefore={page.attributes.renovation.imageBefore}
+            link={"/renovation"}
+            linkLabel={
+              locale === "en"
+                ? renovationGridEn.linkLabel
+                : renovationGridRu.linkLabel
+            }
+          />
+        </div>
+      )}
 
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         {airbnb && (
@@ -267,9 +301,11 @@ export default function Home({
         </div>
       )}
 
-      <div className={"mb-16 xl:mb-24"}>
-        <Team teamArr={teamData} />
-      </div>
+      {team && (
+        <div className={"mb-16 xl:mb-24"}>
+          <Team teamArr={team.attributes.items} />
+        </div>
+      )}
 
       {page.attributes.community && (
         <div className={"mb-16 md:mb-24 xl:mb-36"}>
@@ -320,6 +356,7 @@ export async function getStaticProps({ locale }) {
     projectsRes,
     airbnbRes,
     partnerRes,
+    teamRes,
     youtubeRes,
     globalRes,
   ] = await Promise.all([
@@ -334,6 +371,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/projects", { populate: "*", locale: locale }),
     fetchAPI("/airbnb", { populate: "deep" }),
     fetchAPI("/partner", { populate: "deep" }),
+    fetchAPI("/team", { populate: "deep", locale: locale }),
     fetchAPI("/you-tube", { populate: "*" }),
     fetchAPI("/global"),
   ]);
@@ -345,6 +383,7 @@ export async function getStaticProps({ locale }) {
       projects: projectsRes.data,
       airbnb: airbnbRes.data,
       partner: partnerRes.data,
+      team: teamRes.data,
       youtube: youtubeRes.data,
       global: globalRes.data,
     },

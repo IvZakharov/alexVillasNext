@@ -71,10 +71,10 @@ const Team = ({ teamArr }) => {
                 <Card
                   name={obj.name}
                   position={obj.position}
-                  imageUrl={obj.imageUrl}
+                  image={obj.image}
                   description={obj.description}
-                  instagramLink={obj.instagramLink}
-                  linkedinLink={obj.linkedinLink}
+                  instagramLink={obj.instagramUrl}
+                  linkedinLink={obj.linkedinUrl}
                 />
               </SwiperSlide>
             ))}
@@ -88,10 +88,10 @@ const Team = ({ teamArr }) => {
               <Card
                 name={obj.name}
                 position={obj.position}
-                imageUrl={obj.imageUrl}
+                image={obj.image}
                 description={obj.description}
-                instagramLink={obj.instagramLink}
-                linkedinLink={obj.linkedinLink}
+                instagramLink={obj.instagramUrl}
+                linkedinLink={obj.linkedinUrl}
               />
             </div>
           ))}

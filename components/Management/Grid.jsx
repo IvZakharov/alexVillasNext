@@ -36,7 +36,6 @@ const ManagementGrid = ({
                         src={project?.thumbnail?.data?.attributes?.url}
                         quality={80}
                         fill
-                        priority
                         sizes="(max-width: 576px) 100vw,
                 (max-width: 984px) 50vw,
                 33vw"
@@ -55,7 +54,6 @@ const ManagementGrid = ({
                         src={project?.thumbnail?.data?.attributes?.url}
                         quality={80}
                         fill
-                        priority
                         sizes="(max-width: 576px) 100vw,
                 (max-width: 984px) 50vw,
                 33vw"
