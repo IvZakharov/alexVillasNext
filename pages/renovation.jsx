@@ -24,7 +24,55 @@ import { menuFilters } from "../utils/menuFilters";
 export default function Renovation({page, menu, global, social, principle, whyAlex}) {
   const router = useRouter();
   const { locale } = router;
-  console.log(whyAlex)
+  
+  console.log(page)
+  
+  const Data = [
+      {
+        title: '15-30<span class="text">%</span>',
+        lable: "годовая \nдоходность",
+      },
+      {
+        title: '3<span class="text">года</span>',
+        lable: "Срок \nинвестиций",
+      },
+      {
+        title: "$70К",
+        lable: "МИНИМАЛЬНАЯ \nСУММА ВЛОЖЕНИЙ",
+      },
+      {
+        title: "50+",
+        lable: "ОТРЕСТАВРИРОВАННЫХ \nВИЛЛ",
+      },
+      {
+        title: '8 <span class="text">лет</span>',
+        lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
+      },
+    ]
+  
+  const DataEn = [
+      {
+        title: '15-30<span class="text">%</span>',
+        lable: "ANNUAL \nRETURNS",
+      },
+      {
+        title: '3<span class="text">YEARS</span>',
+        lable: "INVESTMENT \nPERIOD",
+      },
+      {
+        title: "$70К",
+        lable: "MINIMUM \nINVESTMENT",
+      },
+      {
+        title: "50+",
+        lable: "RENOVATED \nPROPERTIES",
+      },
+      {
+        title: '8 <span class="text">YEARS</span>',
+        lable: "EXPERIENCE \nIN BALI",
+      },
+    ]
+  
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -37,7 +85,7 @@ export default function Renovation({page, menu, global, social, principle, whyAl
       socialFooter={social}
     >
       {page.attributes.hero && (
-        <div className={"mb-16 xl:mb-0"}>
+        <div className={"mb-16 xl:mb-10"}>
           <Hero
             h1first={page.attributes.hero.title}
             h1second={page.attributes.hero.titleBottom}
@@ -48,43 +96,22 @@ export default function Renovation({page, menu, global, social, principle, whyAl
           />
         </div>
       )}
-      <div>
-        <AlexVillas
-          textBlock1={
-            "Реновируйте свою жилую \nили коммерческую недвижимость \nдля  заметного повышения доходности \nили подберите идеальный объект с нами."
-          }
-          textBlock2={
-            "В нашей команде есть весь необходимый опыт и эффективные инструменты \nдля того чтобы <span>сделать арендную недвижимость очень эффективным бизнесом.</span>"
-          }
-        />
-      </div>
-      <div className={"mb-16 xl:mb-24"}>
-        <Promo
-          Data = {[
-            {
-              title: '15-30<span class="text">%</span>',
-              lable: "годовая \nдоходность",
-            },
-            {
-              title: '3<span class="text">года</span>',
-              lable: "Срок \nинвестиций",
-            },
-            {
-              title: "$70К",
-              lable: "МИНИМАЛЬНАЯ \nСУММА ВЛОЖЕНИЙ",
-            },
-            {
-              title: "50+",
-              lable: "ОТРЕСТАВРИРОВАННЫХ \nВИЛЛ",
-            },
-            {
-              title: '8 <span class="text">лет</span>',
-              lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
-            },
-          ]}
-          width
-        />
-      </div>
+      {page.attributes?.alexVillasBack && (
+        <div>
+          <AlexVillas
+            firstText={page.attributes?.alexVillasBack.firstText}
+            secondText={page.attributes?.alexVillasBack.secondText}
+          />
+        </div>
+      )}
+      {page.attributes?.alexVillasBack && (
+        <div className={"mb-16 xl:mb-24"}>
+          <Promo
+            Data = {locale === 'en' ? DataEn : Data}
+            width
+          />
+        </div>
+      )}
       <div className={"mb-16 xl:mb-24"}>
         <RenovationSlider images={renovationImages} />
       </div>
@@ -156,7 +183,7 @@ export default function Renovation({page, menu, global, social, principle, whyAl
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes ] =
+  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes,  ] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -165,24 +192,17 @@ export async function getStaticProps({ locale }) {
         populate: "deep",
         locale: locale,
       }),
-      fetchAPI("/map", { populate: "deep", locale: locale }),
-      fetchAPI("/airbnb", { populate: "deep" }),
-      fetchAPI("/partner", { populate: "deep" }),
-      fetchAPI("/you-tube", { populate: "*" }),
       fetchAPI("/global"),
       fetchAPI("/menu", { populate: "deep", locale:locale}),
       fetchAPI("/social"),
       fetchAPI("/principle", { populate: "deep", locale:locale}),
+      fetchAPI("/why-alex", { populate: "deep", locale:locale}),
       fetchAPI("/why-alex", { populate: "deep", locale:locale}),
     ]);
   
   return {
     props: {
       page: pageRes.data[0],
-      map: mapRes.data,
-      airbnb: airbnbRes.data,
-      partner: partnerRes.data,
-      youtube: youtubeRes.data,
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,

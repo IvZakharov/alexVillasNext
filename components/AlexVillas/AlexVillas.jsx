@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./AlexVillas.module.scss"
 import Image from "next/image";
 import parse from "html-react-parser";
+import md from "markdown-it";
 
-const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
+const AlexVillas = ({firstText, secondText}) => {
   return (
     <section className={styles.section}>
       <div className="container">
@@ -12,6 +13,7 @@ const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
                  quality={80}
                  priority
                  fill
+                 alt={"Alex Villas"}
                  sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 10vw,
               33vw"
@@ -21,17 +23,18 @@ const AlexVillas = ({textBlock1, textBlock2, textBlock3}) => {
           />
         </div>
         <div className={`flex md:justify-between ${styles.textBlocks}`}>
-          <div className={`${styles.text}`}>
-            {textBlock1 &&
-              <p className="text mb-10">{parse(textBlock1)}</p>
-            }
-            {textBlock2 &&
-              <p className="text mb-10">{parse(textBlock2)}</p>
-            }
+          <div className={`${styles.text}`} >
+            <div className={"text"}  dangerouslySetInnerHTML={{ __html: md().render(firstText) }}></div>
+            {/*{textBlock1 &&*/}
+            {/*  <p className="text mb-10">{parse(textBlock1)}</p>*/}
+            {/*}*/}
+            {/*{textBlock2 &&*/}
+            {/*  <p className="text mb-10">{parse(textBlock2)}</p>*/}
+            {/*}*/}
           </div>
-          {textBlock3 &&
+          {secondText &&
             <div className={`${styles.blockThree} md:flex md:items-end`}>
-              <p className="text mb-10">{parse(textBlock3)}</p>
+              <p className="text mb-10">{parse(secondText)}</p>
             </div>
           }
         </div>
