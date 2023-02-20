@@ -1,17 +1,16 @@
 import styles from "./HeroMenu.module.scss";
 import Link from "next/link";
-import { menuhero } from '../../data/menuheroru'
-const lang = 'ru';
 
-const HeroMenu = () => {
+const HeroMenu = ({menu}) => {
   return (
     <div className={styles.HeroMenu}>
       <ul>
-        {menuhero &&
-          menuhero.map((obj, i) => (
-            <li key={i} className={lang === 'ru' ? styles.liRu : ""}>
-              <Link href={obj.link} className={lang === 'ru' ? styles.linksRu : styles.links}>
-                {obj.lable}
+        {menu &&
+          menu.map((obj) => (
+            <li key={obj.id} className={styles.liRu}>
+              {/*<Link href={obj.slug} className={lang === 'ru' ? styles.linksRu : styles.links}>*/}
+              <Link href={obj.slug} className={styles.linksRu}>
+                {obj.label}
               </Link>
             </li>
           ))}

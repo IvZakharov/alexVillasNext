@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { menutopru } from "../../data/menutopru";
 
-const MobileMenu = ({ OnClickClose, logo }) => {
+const MobileMenu = ({ OnClickClose, logo, menu, contact }) => {
   return (
     <div className={`pt-6 ${styles.mobileMenu}`}>
       <div className="container flex flex-col md:items-center md:justify-between md:flex-row overflow-y-scroll">
@@ -22,18 +22,18 @@ const MobileMenu = ({ OnClickClose, logo }) => {
         </div>
         <nav className={styles.nav}>
           <ul className={`${styles.menu} flex flex-col md:flex-row`}>
-            {menutopru &&
-              menutopru.map((obj, i) => (
-                <li key={i}>
-                  <Link href={obj.link} className={`${styles.links} `}>
-                    {obj.lable}
+            {menu &&
+              menu.map((obj, i) => (
+                <li className={styles.liLink} key={i}>
+                  <Link href={obj.slug} className={`${styles.links}`}>
+                    {obj.label}
                   </Link>
-                  {obj.subMenu && (
+                  {obj.subLinks && (
                     <ul className={styles.subMenu}>
-                      {obj.subMenu.map((sublink, i)=>(
-                        <li key={i}>
-                          <Link href={sublink.link} className={styles.linkSub} >
-                            {sublink.lable}
+                      {obj.subLinks.map((sublink, i)=>(
+                        <li className={styles.subLi} key={i}>
+                          <Link href={sublink.slug} className={styles.linkSub} >
+                            {sublink.label}
                           </Link>
                         </li>
                       ))}
@@ -43,12 +43,12 @@ const MobileMenu = ({ OnClickClose, logo }) => {
               ))}
           </ul>
         </nav>
-        {/*<div className="md:hidden flex flex-col justify-center items-center">*/}
-        {/*  <HeroMenu />*/}
-        {/*</div>*/}
-        <Link href={"/contacts"} className={`${styles.contact}`}>
-          Напишите Нам
-        </Link>
+        {contact && (
+    
+          <Link href={contact[0].slug} className={`${styles.contact} hidden md:block`}>
+            {contact[0].label}
+          </Link>
+        )}
         <button
           onClick={() => OnClickClose(false)}
           className={`block md:hidden ${styles.menuBtn}`}

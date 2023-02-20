@@ -14,6 +14,7 @@ import ManagementGrid from "../components/Management/Grid";
 import RenovationGrid from "../components/Renovation/Grid/Grid";
 import Team from "../components/Team/Team";
 import { projectsOnSaleFilter } from "../utils/projectsOnSaleFilter";
+import { menuFilters } from "../utils/menuFilters";
 import { menageProjects } from "../data/menageProj";
 import { projects } from "../data/projects";
 import CtaSection from "../components/CtaSection/CtaSection";
@@ -104,7 +105,6 @@ const gridSoldOutProjectsEn = {
     "Check our case studies to get a closer look at our approach and see the projects we finished.",
   buttonLabel: "MORE PROJECTS ON SALE",
 };
-
 export default function Home({
   page,
   map,
@@ -113,15 +113,24 @@ export default function Home({
   partner,
   youtube,
   global,
+  menu,
+  social
 }) {
   const router = useRouter();
   const { locale } = router;
-
+  //console.log(menu.attributes?.links)
+  //console.log(menuFilters(menu.attributes?.links, 'contact'));
+  
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
+      menu={menuFilters(menu.attributes?.links, 'header')}
+      footer={menuFilters(menu.attributes?.links, 'footer')}
+      contact={menuFilters(menu.attributes?.links, 'contact')}
+      footerContent={global}
+      socialFooter={social}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-0"}>
@@ -130,6 +139,8 @@ export default function Home({
             h1second={page.attributes.hero.titleBottom}
             text={page.attributes.hero.description}
             backgroundMedia={page.attributes.hero.backgroundMedia.data}
+            link={page.attributes.hero.linkLabel}
+            menu={menuFilters(menu.attributes?.links, 'hero')}
           />
         </div>
       )}
@@ -256,7 +267,7 @@ export default function Home({
           text={
             "Получите консультацию специалиста и набор материалов для инвестора."
           }
-          link={"#"}
+          link={global.attributes?.whatsappLink}
           linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
         />
       </div>
@@ -314,29 +325,24 @@ export default function Home({
 }
 
 export async function getStaticProps({ locale }) {
-  const [
-    pageRes,
-    mapRes,
-    projectsRes,
-    airbnbRes,
-    partnerRes,
-    youtubeRes,
-    globalRes,
-  ] = await Promise.all([
-    fetchAPI("/pages", {
-      filters: {
-        slug: "home",
-      },
-      populate: "deep",
-      locale: locale,
-    }),
-    fetchAPI("/map", { populate: "deep", locale: locale }),
-    fetchAPI("/projects", { populate: "*", locale: locale }),
-    fetchAPI("/airbnb", { populate: "deep" }),
-    fetchAPI("/partner", { populate: "deep" }),
-    fetchAPI("/you-tube", { populate: "*" }),
-    fetchAPI("/global"),
-  ]);
+  const [pageRes, mapRes, projectsRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes ] =
+    await Promise.all([
+      fetchAPI("/pages", {
+        filters: {
+          slug: "home",
+        },
+        populate: "deep",
+        locale: locale,
+      }),
+      fetchAPI("/map", { populate: "deep", locale: locale }),
+      fetchAPI("/projects", { populate: "*", locale: locale }),
+      fetchAPI("/airbnb", { populate: "deep" }),
+      fetchAPI("/partner", { populate: "deep" }),
+      fetchAPI("/you-tube", { populate: "*" }),
+      fetchAPI("/global"),
+      fetchAPI("/menu", { populate: "deep", locale:locale}),
+      fetchAPI("/social"),
+    ]);
 
   return {
     props: {
@@ -347,6 +353,8 @@ export async function getStaticProps({ locale }) {
       partner: partnerRes.data,
       youtube: youtubeRes.data,
       global: globalRes.data,
+      menu: menuRes.data,
+      social: socialRes.data,
     },
     revalidate: 120,
   };
