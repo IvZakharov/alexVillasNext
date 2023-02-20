@@ -137,7 +137,6 @@ export default function Home({
   map,
   projects,
   airbnb,
-  partner,
   team,
   youtube,
   global,
@@ -146,8 +145,6 @@ export default function Home({
 }) {
   const router = useRouter();
   const { locale } = router;
-
-  console.log(page);
 
   return (
     <MainLayout
@@ -179,14 +176,20 @@ export default function Home({
             description={page.attributes.about?.description}
             videoUrl={page.attributes.about.videoUrl}
             image={page.attributes.about.image}
-            links={locale == "en" ? aboutLinks.en : aboutLinks.ru}
+            links={locale === "en" ? aboutLinks.en : aboutLinks.ru}
           />
         </div>
       )}
 
       {map && (
         <div className={"mb-16 xl:mb-24"}>
-          <Map objects={reverseArr(map.attributes?.objects)} />
+          <Map
+            title={locale === "en" ? mapEn.title : mapRu.title}
+            description={
+              locale === "en" ? mapEn.description : mapRu.description
+            }
+            objects={reverseArr(map.attributes?.objects)}
+          />
         </div>
       )}
 
@@ -195,17 +198,17 @@ export default function Home({
           <ProjectsGrid
             projects={projectsOnSaleFilter(projects, ["onSale", "comingSoon"])}
             title={
-              locale == "en"
+              locale === "en"
                 ? gridOnSaleProjectsEn.title
                 : gridOnSaleProjectsRu.title
             }
             description={
-              locale == "en"
+              locale === "en"
                 ? gridOnSaleProjectsEn.description
                 : gridOnSaleProjectsRu.description
             }
             linkLabel={
-              locale == "en"
+              locale === "en"
                 ? gridOnSaleProjectsEn.buttonLabel
                 : gridOnSaleProjectsRu.buttonLabel
             }
@@ -366,10 +369,11 @@ export async function getStaticProps({ locale }) {
     mapRes,
     projectsRes,
     airbnbRes,
-    partnerRes,
     teamRes,
     youtubeRes,
     globalRes,
+    menuRes,
+    socialRes,
   ] = await Promise.all([
     fetchAPI("/pages", {
       filters: {
@@ -381,10 +385,11 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/map", { populate: "deep", locale: locale }),
     fetchAPI("/projects", { populate: "*", locale: locale }),
     fetchAPI("/airbnb", { populate: "deep" }),
-    fetchAPI("/partner", { populate: "deep" }),
     fetchAPI("/team", { populate: "deep", locale: locale }),
     fetchAPI("/you-tube", { populate: "*" }),
     fetchAPI("/global"),
+    fetchAPI("/menu", { populate: "*", locale: locale }),
+    fetchAPI("/social"),
   ]);
 
   return {
@@ -393,7 +398,7 @@ export async function getStaticProps({ locale }) {
       map: mapRes.data,
       projects: projectsRes.data,
       airbnb: airbnbRes.data,
-      partner: partnerRes.data,
+
       team: teamRes.data,
       youtube: youtubeRes.data,
       global: globalRes.data,

@@ -43,12 +43,12 @@ const HeaderMenu = ({logo, menu, contact}) => {
               ))}
           </ul>
         </nav>
-        {contact && (
-          
-          <Link href={contact[0].slug} className={`${styles.contact} hidden md:block`}>
-            {contact[0].label}
-          </Link>
-        )}
+        {/*{contact && (*/}
+        {/*  */}
+        {/*  <Link href={contact[0].slug} className={`${styles.contact} hidden md:block`}>*/}
+        {/*    {contact[0].label}*/}
+        {/*  </Link>*/}
+        {/*)}*/}
         
       </div>
     </div>

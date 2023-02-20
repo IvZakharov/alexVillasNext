@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const LegendSidebar = ({
-  object,
   objects,
   activeObjectIndex,
   prevObject,
@@ -104,10 +103,10 @@ const LegendSidebar = ({
                 </p>
 
                 {object.type === "complex" && (
-                  <ul className={"mb-7 xl:mb-20"}>
+                  <ul className={"mb-7"}>
                     {object.propertyList &&
                       object.propertyList.map((obj, idx) => (
-                        <li key={idx} className={"text mb-1"}>
+                        <li key={idx} className={"text textSmall mb-1"}>
                           {obj.title}
                           <span> x {obj.count}</span>
                         </li>

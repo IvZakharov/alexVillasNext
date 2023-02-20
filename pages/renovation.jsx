@@ -21,66 +21,73 @@ import { useRouter } from "next/router";
 import { fetchAPI } from "../lib/api";
 import { menuFilters } from "../utils/menuFilters";
 
-export default function Renovation({page, menu, global, social, principle, whyAlex}) {
+export default function Renovation({
+  page,
+  menu,
+  global,
+  social,
+  principle,
+  whyAlex,
+}) {
   const router = useRouter();
   const { locale } = router;
-  
-  console.log(page)
-  
+
+  console.log(page);
+
   const Data = [
-      {
-        title: '15-30<span class="text">%</span>',
-        lable: "годовая \nдоходность",
-      },
-      {
-        title: '3<span class="text">года</span>',
-        lable: "Срок \nинвестиций",
-      },
-      {
-        title: "$70К",
-        lable: "МИНИМАЛЬНАЯ \nСУММА ВЛОЖЕНИЙ",
-      },
-      {
-        title: "50+",
-        lable: "ОТРЕСТАВРИРОВАННЫХ \nВИЛЛ",
-      },
-      {
-        title: '8 <span class="text">лет</span>',
-        lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
-      },
-    ]
-  
+    {
+      title: '15-30<span class="text">%</span>',
+      lable: "годовая \nдоходность",
+    },
+    {
+      title: '3<span class="text">года</span>',
+      lable: "Срок \nинвестиций",
+    },
+    {
+      title: "$70К",
+      lable: "МИНИМАЛЬНАЯ \nСУММА ВЛОЖЕНИЙ",
+    },
+    {
+      title: "50+",
+      lable: "ОТРЕСТАВРИРОВАННЫХ \nВИЛЛ",
+    },
+    {
+      title: '8 <span class="text">лет</span>',
+      lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
+    },
+  ];
+
   const DataEn = [
-      {
-        title: '15-30<span class="text">%</span>',
-        lable: "ANNUAL \nRETURNS",
-      },
-      {
-        title: '3<span class="text">YEARS</span>',
-        lable: "INVESTMENT \nPERIOD",
-      },
-      {
-        title: "$70К",
-        lable: "MINIMUM \nINVESTMENT",
-      },
-      {
-        title: "50+",
-        lable: "RENOVATED \nPROPERTIES",
-      },
-      {
-        title: '8 <span class="text">YEARS</span>',
-        lable: "EXPERIENCE \nIN BALI",
-      },
-    ]
-  
+    {
+      title: '15-30<span class="text">%</span>',
+      lable: "ANNUAL \nRETURNS",
+    },
+    {
+      title: '3<span class="text">YEARS</span>',
+      lable: "INVESTMENT \nPERIOD",
+    },
+    {
+      title: "$70К",
+      lable: "MINIMUM \nINVESTMENT",
+    },
+    {
+      title: "50+",
+      lable: "RENOVATED \nPROPERTIES",
+    },
+    {
+      title: '8 <span class="text">YEARS</span>',
+      lable: "EXPERIENCE \nIN BALI",
+    },
+  ];
+
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
-      menu={menuFilters(menu.attributes?.links, 'header')}
-      footer={menuFilters(menu.attributes?.links, 'footer')}
-      contact={menuFilters(menu.attributes?.links, 'contact')}
+      menu={menuFilters(menu.attributes?.links, "header")}
+      footer={menuFilters(menu.attributes?.links, "footer")}
+      contact={menuFilters(menu.attributes?.links, "contact")}
       footerContent={global}
       socialFooter={social}
     >
@@ -92,7 +99,7 @@ export default function Renovation({page, menu, global, social, principle, whyAl
             text={page.attributes.hero.description}
             backgroundMedia={page.attributes.hero.backgroundMedia.data}
             form={page.attributes.hero.linkLabel}
-            menu={menuFilters(menu.attributes?.links, 'hero')}
+            menu={menuFilters(menu.attributes?.links, "hero")}
           />
         </div>
       )}
@@ -106,61 +113,59 @@ export default function Renovation({page, menu, global, social, principle, whyAl
       )}
       {page.attributes?.alexVillasBack && (
         <div className={"mb-16 xl:mb-24"}>
-          <Promo
-            Data = {locale === 'en' ? DataEn : Data}
-            width
-          />
+          <Promo Data={locale === "en" ? DataEn : Data} width />
         </div>
       )}
       <div className={"mb-16 xl:mb-24"}>
         <RenovationSlider images={renovationImages} />
       </div>
       <div className={"mb-16 md:mb-24"}>
-        <WhatsApp text={"Повысьте заполняемость \nи средний чек вашего объекта"} linkLabel={'ПРОДОЛЖИТЬ В WHATSAPP'} link={"#"} />
+        <WhatsApp
+          text={"Повысьте заполняемость \nи средний чек вашего объекта"}
+          linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
+          link={"#"}
+        />
       </div>
       <div className={"mb-16 md:mb-24"}>
-        <InvestExample
-          title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"}
-        />
+        <InvestExample title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"} />
       </div>
       <div className={"container mb-16 md:mb-24 xl:pl-32 xl:pr-64"}>
         <Table tableData={investModeling} />
       </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <RenovationSteps
-          imageAfter={"/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"}
-          imageBefore={"/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"}
+          imageAfter={
+            "/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"
+          }
+          imageBefore={
+            "/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"
+          }
         />
       </div>
       {principle && (
         <div className={"mb-16 md:mb-24 xl:mb-28"}>
           <Principles
             title={
-              locale === 'ru' ? "<span>ВСЕ НАШИ\n ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ": "<span>EVERYTHING\n WE RENOVATE \nFOLLOWS</span> \nTHESE 5 \nPRINCIPLES"
+              locale === "ru"
+                ? "<span>ВСЕ НАШИ\n ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ"
+                : "<span>EVERYTHING\n WE RENOVATE \nFOLLOWS</span> \nTHESE 5 \nPRINCIPLES"
             }
             principles={principle.attributes?.items}
           />
         </div>
       )}
-      
 
       <div className={"mb-16 xl:mb-24"}>
         <OurClientVideo />
       </div>
       {whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
-          <OurBusiness
-            locale={locale}
-            stats={whyAlex}
-          />
+          <OurBusiness locale={locale} stats={whyAlex} />
         </div>
       )}
-      
 
       <CtaSection
-        title={
-          " ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ\n<span>И ФИНАНСОВУЮ МОДЕЛЬ</span>"
-        }
+        title={" ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ\n<span>И ФИНАНСОВУЮ МОДЕЛЬ</span>"}
         imageUrl={"/images/cta/bg2.jpg"}
         submitButtonText={"Оставить заявку"}
         fields={[
@@ -183,7 +188,7 @@ export default function Renovation({page, menu, global, social, principle, whyAl
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes,  ] =
+  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -193,13 +198,12 @@ export async function getStaticProps({ locale }) {
         locale: locale,
       }),
       fetchAPI("/global"),
-      fetchAPI("/menu", { populate: "deep", locale:locale}),
+      fetchAPI("/menu", { populate: "deep", locale: locale }),
       fetchAPI("/social"),
-      fetchAPI("/principle", { populate: "deep", locale:locale}),
-      fetchAPI("/why-alex", { populate: "deep", locale:locale}),
-      fetchAPI("/why-alex", { populate: "deep", locale:locale}),
+      fetchAPI("/principle", { populate: "deep", locale: locale }),
+      fetchAPI("/why-alex", { populate: "deep", locale: locale }),
     ]);
-  
+
   return {
     props: {
       page: pageRes.data[0],

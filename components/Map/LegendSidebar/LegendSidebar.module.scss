@@ -27,10 +27,21 @@
   .content {
     height: 100%;
 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+
     @media (min-width: 768px) {
       display: flex;
       flex-direction: column;
     }
+
+    @media (min-width: 1280px) {
+      overflow: unset;
+    }
+  }
+
+  .content::-webkit-scrollbar {
+    display: none;
   }
 
   .closeButton {
@@ -54,6 +65,7 @@
   .image {
     position: relative;
     height: 150px;
+    min-height: 150px;
     margin-bottom: 30px;
 
     @media (min-width: 768px) {

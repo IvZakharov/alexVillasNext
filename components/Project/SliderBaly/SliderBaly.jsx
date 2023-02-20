@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 const SliderBaly = ({ images }) => {
-  console.log(images);
   return (
     <section className={styles.SliderBaly}>
       <div className="container">
@@ -27,7 +26,7 @@ const SliderBaly = ({ images }) => {
         >
           {images &&
             images.map((image, idx) => (
-              <SwiperSlide>
+              <SwiperSlide key={idx}>
                 <div className={styles.image}>
                   <Image
                     alt={"Bali image"}

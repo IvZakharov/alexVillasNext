@@ -19,8 +19,20 @@ import ProjectHero from "../../components/Project/ProjectHero/ProjectHero";
 
 import { useRouter } from "next/router";
 import { reverseArr } from "../../utils/reverseArr";
+import { menuFilters } from "../../utils/menuFilters";
+import AlexVillas from "../../components/AlexVillas/AlexVillas";
+import ProjectGallery from "../../components/Project/ProjectGallery/ProjectGallery";
 
-const Project = ({ project, properties, map, baliGallery, global }) => {
+const Project = ({
+  project,
+  properties,
+  map,
+  baliGallery,
+  whyAlex,
+  global,
+  social,
+  menu,
+}) => {
   const router = useRouter();
   const { locale } = router;
 
@@ -45,6 +57,11 @@ const Project = ({ project, properties, map, baliGallery, global }) => {
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
+      menu={menuFilters(menu.attributes?.links, "header")}
+      footer={menuFilters(menu.attributes?.links, "footer")}
+      contact={menuFilters(menu.attributes?.links, "contact")}
+      footerContent={global}
+      socialFooter={social}
     >
       <div className={"mb-16 md:mb-32 xl:mb-24"}>
         {/*<Hero*/}
@@ -70,72 +87,100 @@ const Project = ({ project, properties, map, baliGallery, global }) => {
           h1second={project.attributes.hero.titleBottom}
           properties={project.attributes.propertyList}
           backgroundImage={project.attributes?.thumbnail}
-          form={"Получить персональное предложение"}
+          form={
+            project.attributes.status === "onSale"
+              ? "Получить персональное предложение"
+              : null
+          }
           location={project.attributes.location}
           startingPrice={project.attributes.price}
         />
       </div>
-      <div className={"mb-8 md:mb-16 lg:mb-10"}>
-        <ComplexPlash items={complex} />
-      </div>
-      <div className={"mb-16 md:mb-16"}>
-        <InvestInBaly
-          title={"<span>10 причин</span> \nинвестировать в Бали"}
-          blockFirst={"<b>За 10 лет поток </b> туристов вырос"}
-        />
-      </div>
-      {baliGallery && (
-        <div className={"mb-16"}>
-          <SliderBaly images={baliGallery.attributes?.gallery?.data} />
-        </div>
+
+      {project.attributes.status === "soldOut" && (
+        <>
+          {project.attributes.alexVillasBack && (
+            <div className={"mb-12 xl:mb-24"}>
+              <AlexVillas
+                firstText={page.attributes?.alexVillasBack.firstText}
+                secondText={page.attributes?.alexVillasBack.secondText}
+              />
+            </div>
+          )}
+
+          {project.attributes.gallery && (
+            <div className={"mb-12 xl:mb-24"}>
+              <ProjectGallery images={project.attributes.gallery.data} />
+            </div>
+          )}
+        </>
       )}
 
-      <div className={"mb-16"}>
-        <ComplexPlan />
-      </div>
-      {properties && (
-        <div className={"mb-16 xl:mb-24"}>
-          <PropertiesGallery
-            properties={properties.attributes?.propertyGallerys}
-          />
-        </div>
-      )}
-      {project && (
-        <div className={"mb-16"}>
-          <VillasParam Villas={project.attributes?.villas} />
-        </div>
-      )}
+      {project.attributes.status === "onSale" && (
+        <>
+          <div className={"mb-8 md:mb-16 lg:mb-10"}>
+            <ComplexPlash items={complex} />
+          </div>
+          <div className={"mb-16 md:mb-16"}>
+            <InvestInBaly
+              title={"<span>10 причин</span> \nинвестировать в Бали"}
+              blockFirst={"<b>За 10 лет поток </b> туристов вырос"}
+            />
+          </div>
+          {baliGallery && (
+            <div className={"mb-16"}>
+              <SliderBaly images={baliGallery.attributes?.gallery?.data} />
+            </div>
+          )}
 
-      {map && (
-        <div className={"mb-16 xl:mb-24"}>
-          <Map objects={reverseArr(map.attributes?.objects)} />
-        </div>
-      )}
-      {project && (
-        <div className={"mb-16 xl:mb-32"}>
-          <FinanceModeling villas={project.attributes?.financeModel} />
-        </div>
-      )}
-      <div className={"mb-16"}>
-        <Investor />
-      </div>
-      {project && (
-        <div className={"mb-16 xl:mb-24"}>
-          <Quiz />
-        </div>
-      )}
-      <div className={"mb-16"}>
-        <OurBusiness
-          text={"Почему \n<span>ALEX</span>\n<span>VILLAS?</span>"}
-        />
-      </div>
-      <div className={"mb-16 xl:mb-24"}>
-        <OurClientVideo />
-      </div>
-      {project && (
-        <div className={"mb-16 xl:mb-24"}>
-          <Faq array={project.attributes?.faq} />
-        </div>
+          <div className={"mb-16"}>
+            <ComplexPlan />
+          </div>
+          {properties && (
+            <div className={"mb-16 xl:mb-24"}>
+              <PropertiesGallery
+                properties={properties.attributes?.propertyGallerys}
+              />
+            </div>
+          )}
+          {project && (
+            <div className={"mb-16"}>
+              <VillasParam Villas={project.attributes?.villas} />
+            </div>
+          )}
+
+          {map && (
+            <div className={"mb-16 xl:mb-24"}>
+              <Map objects={reverseArr(map.attributes?.objects)} />
+            </div>
+          )}
+          {project && (
+            <div className={"mb-16 xl:mb-32"}>
+              <FinanceModeling villas={project.attributes?.financeModel} />
+            </div>
+          )}
+          <div className={"mb-16"}>
+            <Investor />
+          </div>
+          {project && (
+            <div className={"mb-16 xl:mb-24"}>
+              <Quiz />
+            </div>
+          )}
+          {whyAlex && (
+            <div className={"mb-16"}>
+              <OurBusiness locale={locale} stats={whyAlex} />
+            </div>
+          )}
+          <div className={"mb-16 xl:mb-24"}>
+            <OurClientVideo />
+          </div>
+          {project && (
+            <div className={"mb-16 xl:mb-24"}>
+              <Faq array={project.attributes?.faq} />
+            </div>
+          )}
+        </>
       )}
     </MainLayout>
   );
@@ -154,20 +199,31 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ locale, params }) {
-  const [projectsRes, propertyRes, mapRes, baliGalleryRes, globalRes] =
-    await Promise.all([
-      fetchAPI("/projects", {
-        filters: {
-          slug: params.slug,
-          locale: locale,
-        },
-        populate: "deep",
-      }),
-      fetchAPI("/property-gallery", { populate: "deep" }),
-      fetchAPI("/map", { populate: "deep", locale: locale }),
-      fetchAPI("/bali-gallery", { populate: "*" }),
-      fetchAPI("/global"),
-    ]);
+  const [
+    projectsRes,
+    propertyRes,
+    mapRes,
+    baliGalleryRes,
+    whyAlexRes,
+    globalRes,
+    menuRes,
+    socialRes,
+  ] = await Promise.all([
+    fetchAPI("/projects", {
+      filters: {
+        slug: params.slug,
+        locale: locale,
+      },
+      populate: "deep",
+    }),
+    fetchAPI("/property-gallery", { populate: "deep" }),
+    fetchAPI("/map", { populate: "deep", locale: locale }),
+    fetchAPI("/bali-gallery", { populate: "*" }),
+    fetchAPI("/wht-alex", { populate: "*" }),
+    fetchAPI("/global"),
+    fetchAPI("/menu", { populate: "*", locale: locale }),
+    fetchAPI("/social"),
+  ]);
 
   return {
     props: {
@@ -175,7 +231,10 @@ export async function getStaticProps({ locale, params }) {
       properties: propertyRes.data,
       map: mapRes.data,
       baliGallery: baliGalleryRes.data,
+      whyAlex: whyAlexRes.data,
       global: globalRes.data,
+      menu: menuRes.data,
+      social: socialRes.data,
     },
     revalidate: 120,
   };

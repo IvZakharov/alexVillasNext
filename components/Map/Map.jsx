@@ -7,7 +7,7 @@ import { mapStyles } from "../../data/mapStyles";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-const Map = ({ objects }) => {
+const Map = ({ title, description, objects }) => {
   const [legendIsOpen, setLegendIsOpen] = React.useState(false);
   const [activeObjectIndex, setActiveObjectIndex] = React.useState(0);
 
@@ -51,7 +51,19 @@ const Map = ({ objects }) => {
 
   return (
     <section className={styles.map}>
-      <div className={"h-full w-full"}>
+      <div className={"container"}>
+        {title || description ? (
+          <div
+            className={
+              "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-7 lg:mb-12 "
+            }
+          >
+            <h2 className={"h2 whitespace-pre-line"}>{title}</h2>
+            <p className={"text textSmall md:mt-auto"}>{description}</p>
+          </div>
+        ) : null}
+      </div>
+      <div className={"h-full w-full relative"}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAj4aa1VwSEdy4Wnq7lTN0PbX7Nkbwz_d8" }}
           defaultCenter={defaultProps.center}
@@ -75,16 +87,16 @@ const Map = ({ objects }) => {
               />
             ))}
         </GoogleMapReact>
-      </div>
 
-      <LegendSidebar
-        objects={objects}
-        activeObjectIndex={activeObjectIndex}
-        isActive={legendIsOpen}
-        closeLegend={handleCloseLegend}
-        prevObject={handleClickPrevBtn}
-        nextObject={handleClickNextBtn}
-      />
+        <LegendSidebar
+          objects={objects}
+          activeObjectIndex={activeObjectIndex}
+          isActive={legendIsOpen}
+          closeLegend={handleCloseLegend}
+          prevObject={handleClickPrevBtn}
+          nextObject={handleClickNextBtn}
+        />
+      </div>
     </section>
   );
 };
