@@ -15,6 +15,7 @@ const Hero = ({
   form,
   link,
   backgroundMedia,
+  menu
 }) => {
   const getMediaType = (mime) => {
     return mime.split("/")[0];
@@ -105,10 +106,10 @@ const Hero = ({
               </div>
             )}
           </div>
-          {!link && (
+          {link && !form && (
             <div className={styles.link}>
               <Link href={"#"}>
-                ПОДБЕРИТЕ ВАШ ТИП ИНВЕСТИЦИЙ
+                {link}
                 <i>
                   <svg
                     width="12"
@@ -128,7 +129,7 @@ const Hero = ({
           )}
         </div>
         <div className={"hidden md:block"}>
-          <HeroMenu />
+          <HeroMenu menu={menu}/>
         </div>
       </div>
     </section>

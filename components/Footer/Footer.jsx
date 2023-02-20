@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Footer = ({logo}) => {
+const Footer = ({logo, menu}) => {
   return (
     <footer className={`${styles.footer} container`}>
       <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between py-24">
@@ -48,12 +48,11 @@ const Footer = ({logo}) => {
         <div className={styles.footerNav}>
           <div className={styles.menu}>
             <ul>
-              <li>
-                <Link href={"/#o-nas"}>О нас</Link>
-              </li>
-              <li>
-                <Link href={"/vacancy"}>Вакансии</Link>
-              </li>
+              {menu && menu.map((obj)=>(
+                <li key={obj.id}>
+                  <Link href={obj.slug}>{obj.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className={styles.BlockAdCont}>

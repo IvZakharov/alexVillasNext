@@ -14,6 +14,7 @@ import ManagementGrid from "../components/Management/Grid";
 import RenovationGrid from "../components/Renovation/Grid/Grid";
 import Team from "../components/Team/Team";
 import { projectsOnSaleFilter } from "../utils/projectsOnSaleFilter";
+import { menuFilters } from "../utils/menuFilters";
 import { menageProjects } from "../data/menageProj";
 import { projects } from "../data/projects";
 import CtaSection from "../components/CtaSection/CtaSection";
@@ -77,17 +78,20 @@ const ctaEn = {
   ],
 };
 
-export default function Home({ page, map, airbnb, partner, youtube, global }) {
+export default function Home({ page, map, airbnb, partner, youtube, global, menu }) {
   const router = useRouter();
   const { locale } = router;
-
-  console.log(page);
-
+  //console.log(menu.attributes?.links)
+  //console.log(menuFilters(menu.attributes?.links, 'contact'));
+  
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
+      menu={menuFilters(menu.attributes?.links, 'header')}
+      footer={menuFilters(menu.attributes?.links, 'footer')}
+      contact={menuFilters(menu.attributes?.links, 'contact')}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-0"}>
@@ -96,6 +100,8 @@ export default function Home({ page, map, airbnb, partner, youtube, global }) {
             h1second={page.attributes.hero.titleBottom}
             text={page.attributes.hero.description}
             backgroundMedia={page.attributes.hero.backgroundMedia.data}
+            link={page.attributes.hero.linkLabel}
+            menu={menuFilters(menu.attributes?.links, 'hero')}
           />
         </div>
       )}
@@ -256,7 +262,7 @@ export default function Home({ page, map, airbnb, partner, youtube, global }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes] =
+  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes ] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -270,6 +276,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/partner", { populate: "deep" }),
       fetchAPI("/you-tube", { populate: "*" }),
       fetchAPI("/global"),
+      fetchAPI("/menu", { populate: "deep", locale:locale}),
     ]);
 
   return {
@@ -280,6 +287,7 @@ export async function getStaticProps({ locale }) {
       partner: partnerRes.data,
       youtube: youtubeRes.data,
       global: globalRes.data,
+      menu: menuRes.data,
     },
     revalidate: 120,
   };
