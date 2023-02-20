@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RenovationGrid = ({
+  locale,
   title,
   description,
   imageBefore,
@@ -25,37 +26,50 @@ const RenovationGrid = ({
 
         <div className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"}>
           <div className={styles.imageBefore}>
-            <Image
-              alt={"Project name"}
-              src={imageBefore}
-              quality={80}
-              fill
-              priority
-              sizes="(max-width: 576px) 100vw,
+            {imageBefore && (
+              <Image
+                alt={"Project name"}
+                src={imageBefore.data.attributes.url}
+                quality={80}
+                fill
+                blurDataURL={imageBefore.data.attributes.placeholder}
+                placeholder={"blur"}
+                sizes="(max-width: 576px) 100vw,
               (max-width: 984px) 50vw,
               33vw"
-              style={{
-                objectFit: "cover",
-              }}
-            />
-            <span className={`${styles.label} h2`}>До</span>
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            )}
+
+            <span className={`${styles.label} h2`}>
+              {" "}
+              {locale === "en" ? "before" : "до"}{" "}
+            </span>
           </div>
 
           <div className={styles.imageAfter}>
-            <Image
-              alt={"Project name"}
-              src={imageAfter}
-              quality={80}
-              fill
-              priority
-              sizes="(max-width: 576px) 100vw,
+            {imageAfter && (
+              <Image
+                alt={"Project name"}
+                src={imageAfter.data.attributes.url}
+                quality={80}
+                fill
+                blurDataURL={imageAfter.data.attributes.placeholder}
+                placeholder={"blur"}
+                sizes="(max-width: 576px) 100vw,
               (max-width: 984px) 50vw,
               33vw"
-              style={{
-                objectFit: "cover",
-              }}
-            />
-            <span className={`${styles.label} h2`}>После</span>
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            )}
+            <span className={`${styles.label} h2`}>
+              {" "}
+              {locale === "en" ? "after" : "После"}{" "}
+            </span>
           </div>
 
           <div
