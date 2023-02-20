@@ -21,10 +21,10 @@ import { useRouter } from "next/router";
 import { fetchAPI } from "../lib/api";
 import { menuFilters } from "../utils/menuFilters";
 
-export default function Renovation({page, menu, global, social, principle}) {
+export default function Renovation({page, menu, global, social, principle, whyAlex}) {
   const router = useRouter();
   const { locale } = router;
-  //console.log(principle)
+  console.log(whyAlex)
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -109,7 +109,7 @@ export default function Renovation({page, menu, global, social, principle}) {
         <div className={"mb-16 md:mb-24 xl:mb-28"}>
           <Principles
             title={
-              "<span>ВСЕ НАШИ\n ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ"
+              locale === 'ru' ? "<span>ВСЕ НАШИ\n ПРОЕКТЫ\nСЛЕДУЮТ</span> \nЭТИМ 5\nПРИНЦИПАМ": "<span>EVERYTHING\n WE RENOVATE \nFOLLOWS</span> \nTHESE 5 \nPRINCIPLES"
             }
             principles={principle.attributes?.items}
           />
@@ -120,11 +120,15 @@ export default function Renovation({page, menu, global, social, principle}) {
       <div className={"mb-16 xl:mb-24"}>
         <OurClientVideo />
       </div>
-      <div className={"mb-16 xl:mb-32"}>
-        <OurBusiness
-          text={"Почему \n<span>Alex</span>\n<span>Villas?</span>"}
-        />
-      </div>
+      {whyAlex && (
+        <div className={"mb-16 xl:mb-32"}>
+          <OurBusiness
+            locale={locale}
+            stats={whyAlex}
+          />
+        </div>
+      )}
+      
 
       <CtaSection
         title={
@@ -152,7 +156,7 @@ export default function Renovation({page, menu, global, social, principle}) {
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes, principleRes ] =
+  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes ] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -169,6 +173,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/menu", { populate: "deep", locale:locale}),
       fetchAPI("/social"),
       fetchAPI("/principle", { populate: "deep", locale:locale}),
+      fetchAPI("/why-alex", { populate: "deep", locale:locale}),
     ]);
   
   return {
@@ -182,6 +187,7 @@ export async function getStaticProps({ locale }) {
       menu: menuRes.data,
       social: socialRes.data,
       principle: principleRes.data,
+      whyAlex: whyAlexRes.data,
     },
     revalidate: 120,
   };

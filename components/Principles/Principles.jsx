@@ -14,7 +14,7 @@ const Principles = ({ title, principles }) => {
   const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
   const arrowPrev = React.useRef(null);
   const arrowNext = React.useRef(null);
-  console.log(principles)
+
   return (
     <section>
       <div className={"grid grid-cols-1 lg:grid-cols-3 container "}>
