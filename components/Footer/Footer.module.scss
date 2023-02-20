@@ -10,6 +10,18 @@
       justify-content: center;
       a{
         margin-right: 10px;
+        svg{
+          path{
+            transition: .3s ease-in-out;
+          }
+        }
+        &:hover{
+          svg{
+            path{
+              stroke: $primary;
+            }
+          }
+        }
       }
     }
   }

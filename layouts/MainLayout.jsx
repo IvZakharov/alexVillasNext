@@ -13,7 +13,9 @@ const MainLayout = ({
   logo,
   menu,
   footer,
-  contact
+  contact,
+  footerContent,
+  socialFooter
 }) => {
   const [openedMenu, setOpenedMenu] = React.useState(false);
 
@@ -28,7 +30,7 @@ const MainLayout = ({
       <Header logo={logo} menu={menu} contact={contact} onClickMenu={(bool)=>setOpenedMenu(bool)}/>
       
       <div className="main">{children}</div>
-      <Footer menu={footer} />
+      <Footer menu={footer} content={footerContent} social={socialFooter}/>
       {openedMenu && (
         <MobileMenu
           menu={menu}

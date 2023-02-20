@@ -78,7 +78,7 @@ const ctaEn = {
   ],
 };
 
-export default function Home({ page, map, airbnb, partner, youtube, global, menu }) {
+export default function Home({ page, map, airbnb, partner, youtube, global, menu, social }) {
   const router = useRouter();
   const { locale } = router;
   //console.log(menu.attributes?.links)
@@ -92,6 +92,8 @@ export default function Home({ page, map, airbnb, partner, youtube, global, menu
       menu={menuFilters(menu.attributes?.links, 'header')}
       footer={menuFilters(menu.attributes?.links, 'footer')}
       contact={menuFilters(menu.attributes?.links, 'contact')}
+      footerContent={global}
+      socialFooter={social}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-0"}>
@@ -204,7 +206,7 @@ export default function Home({ page, map, airbnb, partner, youtube, global, menu
           text={
             "Получите консультацию специалиста и набор материалов для инвестора."
           }
-          link={"#"}
+          link={global.attributes?.whatsappLink}
           linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
         />
       </div>
@@ -262,7 +264,7 @@ export default function Home({ page, map, airbnb, partner, youtube, global, menu
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes ] =
+  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes ] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -277,6 +279,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/you-tube", { populate: "*" }),
       fetchAPI("/global"),
       fetchAPI("/menu", { populate: "deep", locale:locale}),
+      fetchAPI("/social"),
     ]);
 
   return {
@@ -288,6 +291,7 @@ export async function getStaticProps({ locale }) {
       youtube: youtubeRes.data,
       global: globalRes.data,
       menu: menuRes.data,
+      social: socialRes.data,
     },
     revalidate: 120,
   };

@@ -17,33 +17,49 @@ import OurClientVideo from "../components/OurClientVideo/OurClientVideo";
 import React from "react";
 import OurBusiness from "../components/OurBusiness/OurBusiness";
 import Promo from "../components/Promo/Promo";
+import { useRouter } from "next/router";
+import { fetchAPI } from "../lib/api";
+import { menuFilters } from "../utils/menuFilters";
 
-export default function Renovation() {
-  const arr = {
-    type: 'image',
-    url: '/images/hero.png',
-    alt: 'background image',
-  }
+export default function Renovation({page, menu, global, social}) {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
-      logo={"/images/logos/logo_renovation.png"}
+      menu={menuFilters(menu.attributes?.links, 'header')}
+      footer={menuFilters(menu.attributes?.links, 'footer')}
+      contact={menuFilters(menu.attributes?.links, 'contact')}
+      footerContent={global}
+      socialFooter={social}
     >
-      <div className={"mb-16 xl:mb-24"}>
-        <Hero
-          h1first={"РЕНОВАЦИЯ"}
-          h1second={"ВИЛЛ НА БАЛИ"}
-          text={
-            "Инвестируйте в арендную \nнедвижимость. Цикл: 3 года.\n" +
-            "Доходность: 15-30% годовых"
-          }
-          form={"ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ \nИ ФИНАНСОВУЮ МОДЕЛЬ"}
-          link
-          back={arr}
-        />
-      </div>
+      {page.attributes.hero && (
+        <div className={"mb-16 xl:mb-0"}>
+          <Hero
+            h1first={page.attributes.hero.title}
+            h1second={page.attributes.hero.titleBottom}
+            text={page.attributes.hero.description}
+            backgroundMedia={page.attributes.hero.backgroundMedia.data}
+            form={page.attributes.hero.linkLabel}
+            menu={menuFilters(menu.attributes?.links, 'hero')}
+          />
+        </div>
+      )}
+      {/*<div className={"mb-16 xl:mb-24"}>*/}
+      {/*  <Hero*/}
+      {/*    h1first={"РЕНОВАЦИЯ"}*/}
+      {/*    h1second={"ВИЛЛ НА БАЛИ"}*/}
+      {/*    text={*/}
+      {/*      "Инвестируйте в арендную \nнедвижимость. Цикл: 3 года.\n" +*/}
+      {/*      "Доходность: 15-30% годовых"*/}
+      {/*    }*/}
+      {/*    form={"ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ \nИ ФИНАНСОВУЮ МОДЕЛЬ"}*/}
+      {/*    link*/}
+      {/*    back={arr}*/}
+      {/*  />*/}
+      {/*</div>*/}
       <div>
         <AlexVillas
           textBlock1={
@@ -142,4 +158,38 @@ export default function Renovation() {
       />
     </MainLayout>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  const [pageRes, mapRes, airbnbRes, partnerRes, youtubeRes, globalRes, menuRes, socialRes ] =
+    await Promise.all([
+      fetchAPI("/pages", {
+        filters: {
+          slug: "renovation",
+        },
+        populate: "deep",
+        locale: locale,
+      }),
+      fetchAPI("/map", { populate: "deep", locale: locale }),
+      fetchAPI("/airbnb", { populate: "deep" }),
+      fetchAPI("/partner", { populate: "deep" }),
+      fetchAPI("/you-tube", { populate: "*" }),
+      fetchAPI("/global"),
+      fetchAPI("/menu", { populate: "deep", locale:locale}),
+      fetchAPI("/social"),
+    ]);
+  
+  return {
+    props: {
+      page: pageRes.data[0],
+      map: mapRes.data,
+      airbnb: airbnbRes.data,
+      partner: partnerRes.data,
+      youtube: youtubeRes.data,
+      global: globalRes.data,
+      menu: menuRes.data,
+      social: socialRes.data,
+    },
+    revalidate: 120,
+  };
 }
