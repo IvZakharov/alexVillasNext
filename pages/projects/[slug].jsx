@@ -228,7 +228,7 @@ export async function getStaticProps({ locale, locales, params }) {
     fetchAPI("/bali-gallery", { populate: "*" }),
     fetchAPI("/wht-alex", { populate: "*" }),
     fetchAPI("/global"),
-    fetchAPI("/menu", { populate: "*", locale: locale }),
+    fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
   ]);
 
