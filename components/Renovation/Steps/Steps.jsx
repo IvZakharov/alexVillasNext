@@ -4,7 +4,6 @@ import Image from "next/image";
 import parse from "html-react-parser";
 
 const RenovationSteps = ({ data, imageBefore, imageAfter, locale }) => {
-  console.log(data)
   const textRu = {
     after: "После",
     before: "До",
@@ -72,8 +71,8 @@ const RenovationSteps = ({ data, imageBefore, imageAfter, locale }) => {
             </p>
             {obj.Cheks.length != 0 ? (
               <ul className={styles.servicesList}>
-                {obj.Cheks.map((chek)=>(
-                  <li>{parse(chek.label)}</li>
+                {obj.Cheks.map((chek, i)=>(
+                  <li key={i}>{parse(chek.label)}</li>
                 ))}
               </ul>
             ) : (

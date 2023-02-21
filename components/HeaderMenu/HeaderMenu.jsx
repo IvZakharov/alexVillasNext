@@ -31,9 +31,8 @@ const HeaderMenu = ({logo, menu, contact, menuProject, locale}) => {
                   </Link>
                   {obj.subLinks.length != 0 && (
                     <ul className={styles.subMenu}>
-                      {console.log(obj.subLinks)}
-                      {obj.subLinks.map((sublink, i)=>(
-                        <li className={styles.subLi} key={i}>
+                      {obj.subLinks.map((sublink, idx)=>(
+                        <li className={styles.subLi} key={idx}>
                           <Link href={sublink.slug} className={styles.linkSub} >
                             {sublink.label}
                           </Link>
@@ -43,17 +42,16 @@ const HeaderMenu = ({logo, menu, contact, menuProject, locale}) => {
                   )}
                   {obj.project && (
                     <ul className={styles.subMenu}>
-                      {console.log(obj.project)}
-                      {menuProject && menuProject.map((sales)=>(
+                      {menuProject && menuProject.map((sales, r)=>(
                         <>
-                          <li className={styles.nolink}>
+                          <li className={styles.nolink} key={r}>
                             {sales.status === "onSale" ?
                               locale === 'en' ? "On sale":"В продаже" :
                               locale === 'en' ? "Sold out":"Завершенные"
                             }
                           </li>
-                          {sales.links && sales.links.map((sale)=>(
-                            <li className={styles.subLi}>
+                          {sales.links && sales.links.map((sale, i)=>(
+                            <li className={styles.subLi} key={i}>
                               <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
                                 {sale.title}</Link>
                             </li>
