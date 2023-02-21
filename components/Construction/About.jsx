@@ -36,7 +36,7 @@ const ConstructionAbout = () => {
                   </svg>
                 </i>
                 <h4 className={"text-white uppercase text-xl"}>
-                  ВЫСОКАЯ СТОИМОСТЬ <br /> ЭФФЕКТИВНОСТЬ
+                  Экономическая <br /> ЭФФЕКТИВНОСТЬ
                 </h4>
               </div>
 
@@ -83,7 +83,7 @@ const ConstructionAbout = () => {
                   </svg>
                 </i>
                 <h4 className={"text-white uppercase text-xl"}>
-                  Повышенная <br />
+                  Высокая <br />
                   Долговечность
                 </h4>
               </div>
@@ -91,8 +91,8 @@ const ConstructionAbout = () => {
 
             <ul className={styles.list}>
               <li>ПРОИЗВОДСТВО БЕТОНА</li>
-              <li>МЕБЕЛЬНОЕ ПРОИЗВОДСТВО</li>
-              <li>СТЕКОЛЬНОЕ ПРОИЗВОДСТВО</li>
+              <li>ПРОИЗВОДСТВО МЕБЕЛЬНОЕ</li>
+              <li>ПРОИЗВОДСТВО СТЕКОЛЬНОЕ</li>
             </ul>
           </div>
         </div>

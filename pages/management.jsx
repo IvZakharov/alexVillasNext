@@ -120,7 +120,7 @@ export default function Management({ page, airbnb, global, menu, social, project
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
-      logo={"/images/logos/logo_management.png"}
+      logo={page.attributes?.logo.data.attributes.url ? page.attributes.logo.data.attributes.url : "/images/logos/logo_management.png"}
       menu={menuFilters(menu.attributes?.links, "header")}
       footer={menuFilters(menu.attributes?.links, "footer")}
       contact={menuFilters(menu.attributes?.links, "contact")}
@@ -146,6 +146,7 @@ export default function Management({ page, airbnb, global, menu, social, project
           <AlexVillas
             firstText={page.attributes?.alexVillasBack.firstText}
             secondText={page.attributes?.alexVillasBack.secondText}
+            logo={page.attributes?.logo.data.attributes.url}
           />
         </div>
       )}

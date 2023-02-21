@@ -127,6 +127,7 @@ export default function Renovation({
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
+      logo={page.attributes?.logo.data.attributes.url ? page.attributes.logo.data.attributes.url : ""}
       menu={menuFilters(menu.attributes?.links, "header")}
       footer={menuFilters(menu.attributes?.links, "footer")}
       contact={menuFilters(menu.attributes?.links, "contact")}
@@ -152,6 +153,7 @@ export default function Renovation({
           <AlexVillas
             firstText={page.attributes?.alexVillasBack.firstText}
             secondText={page.attributes?.alexVillasBack.secondText}
+            logo={page.attributes?.logo.data.attributes.url}
           />
         </div>
       )}

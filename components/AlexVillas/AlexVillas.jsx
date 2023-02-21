@@ -4,12 +4,12 @@ import Image from "next/image";
 import parse from "html-react-parser";
 import md from "markdown-it";
 
-const AlexVillas = ({firstText, secondText}) => {
+const AlexVillas = ({firstText, secondText, logo}) => {
   return (
     <section className={styles.section}>
       <div className="container">
         <div className={`${styles.background} mx-auto mb-4 lg:mb-14`}>
-          <Image src={'/images/alexvillas/alexvillas.png'}
+          <Image src={ logo ? logo : '/images/alexvillas/alexvillas.png'}
                  quality={80}
                  priority
                  fill

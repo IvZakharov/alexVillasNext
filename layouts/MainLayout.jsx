@@ -32,7 +32,7 @@ const MainLayout = ({
       <Header logo={logo} menu={menu}  contact={contact} onClickMenu={(bool)=>setOpenedMenu(bool)} project={menuProject} locale={locale}/>
       
       <div className="main">{children}</div>
-      <Footer menu={footer} content={footerContent} social={socialFooter}/>
+      <Footer menu={footer} content={footerContent} social={socialFooter} logo={logo}/>
       {openedMenu && (
         <MobileMenu
           menu={menu}

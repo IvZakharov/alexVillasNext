@@ -134,12 +134,13 @@ export default function Construction({
 }) {
   const router = useRouter();
   const { locale } = router;
+  console.log(page)
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
-      logo={"/images/logos/logo_construction.png"}
+      logo={page.attributes?.logo.data.attributes.url ? page.attributes.logo.data.attributes.url : "/images/logos/logo_construction.png"}
       menu={menuFilters(menu.attributes?.links, "header")}
       footer={menuFilters(menu.attributes?.links, "footer")}
       contact={menuFilters(menu.attributes?.links, "contact")}
@@ -160,12 +161,14 @@ export default function Construction({
           />
         </div>
       )}
+      
       <div className={"mb-16 xl:mb-24"}>
         {page.attributes?.alexVillasBack && (
           <div>
             <AlexVillas
               firstText={page.attributes?.alexVillasBack.firstText}
               secondText={page.attributes?.alexVillasBack.secondText}
+              logo={page.attributes?.logo.data.attributes.url}
             />
           </div>
         )}
@@ -281,7 +284,7 @@ export default function Construction({
         </div>
       )}
       <div className={"mb-16 xl:mb-24"}>
-        <OurClientVideo />
+        <OurClientVideo locale={locale}  />
       </div>
       {whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
