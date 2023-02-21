@@ -1,6 +1,5 @@
 import styles from "./Team.module.scss";
 import Image from "next/image";
-import { youtubeParser } from "../../utils/youtubeParser";
 import React from "react";
 import Link from "next/link";
 

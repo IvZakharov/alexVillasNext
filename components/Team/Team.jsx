@@ -33,11 +33,11 @@ const Team = ({ teamArr, locale }) => {
       >
         <div>
           <h2 className={`h2 mb-8 md:mb-0`}>
-            {locale==='en' ? (
+            {locale === "en" ? (
               <>
-              <span>WE ARE</span> <br />
-              ALEX <br />
-              VILLAS!
+                <span>WE ARE</span> <br />
+                ALEX <br />
+                VILLAS!
               </>
             ) : (
               <>
@@ -46,36 +46,36 @@ const Team = ({ teamArr, locale }) => {
                 VILLAS!
               </>
             )}
-            
           </h2>
         </div>
 
         <div>
-          {locale==='en' ? (
+          {locale === "en" ? (
             <>
               <p className={"text textSmall mb-5"}>
-                Team is our highest valued asset.
-                We gathered the finest professionals
-                with expansive experience in their respective fields.
+                Team is our highest valued asset. We gathered the finest
+                professionals with expansive experience in their respective
+                fields.
               </p>
               <p className={"text textSmall mb-5"}>
-                ALEX VILLAS is the young generation<br /> of forward-looking cosmopolitans united<br /> by the values they share.
+                ALEX VILLAS is the young generation
+                <br /> of forward-looking cosmopolitans united
+                <br /> by the values they share.
               </p>
             </>
-          ): (
+          ) : (
             <>
               <p className={"text textSmall mb-5"}>
-              Команда - наш самый большой актив. <br />
-              Мы собрали лучших экспертов с многолетним <br />
-              опытом работы в своих областях.
-            </p>
+                Команда - наш самый большой актив. <br />
+                Мы собрали лучших экспертов с многолетним <br />
+                опытом работы в своих областях.
+              </p>
               <p className={"text textSmall mb-5"}>
-                ALEX VILLAS - это молодое поколение <br /> космополитов, разделяющих{" "}
-                <br /> одни и те же ценности.
+                ALEX VILLAS - это молодое поколение <br /> космополитов,
+                разделяющих <br /> одни и те же ценности.
               </p>
             </>
           )}
-          
         </div>
       </div>
 

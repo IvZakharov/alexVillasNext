@@ -23,6 +23,7 @@ import { fetchAPI } from "../lib/api";
 import { reverseArr } from "../utils/reverseArr";
 import Map from "../components/Map/Map";
 import { aboutLinks } from "../data/aboutLinks";
+import slug from "./projects/[slug]";
 
 const ctaRu = {
   title: "ПОЛУЧИТЕ \n<span>КОНСУЛЬТАЦИЮ</span>",
@@ -147,7 +148,27 @@ export default function Home({
   const router = useRouter();
   const { locale } = router;
 
-  console.log(page);
+  const getProjectsLinks = (projects, projectStatuses) => {
+    const newArr = [];
+
+    projectStatuses.map((status) => {
+      const links = [];
+      projects.map((project) => {
+        if (status === project.attributes.status) {
+          links.push({
+            title: project.attributes.title,
+            slug: project.attributes.slug,
+          });
+        }
+      });
+      newArr.push({ status: status, links: links });
+    });
+
+    return newArr;
+  };
+
+  console.log(getProjectsLinks(projects, ["onSale", "soldOut"]));
+
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -400,7 +421,6 @@ export async function getStaticProps({ locale }) {
       map: mapRes.data,
       projects: projectsRes.data,
       airbnb: airbnbRes.data,
-
       team: teamRes.data,
       youtube: youtubeRes.data,
       whyAlex: whyAlexRes.data,
