@@ -68,11 +68,12 @@ export default function Renovation({
   social,
   principle,
   whyAlex,
+  investModel,
 }) {
   const router = useRouter();
   const { locale } = router;
 
-  console.log(page);
+  console.log(investModel);
 
   const Data = [
     {
@@ -169,11 +170,27 @@ export default function Renovation({
         </div>
       )}
       <div className={"mb-16 md:mb-24"}>
-        <InvestExample title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"} />
+        {locale === 'en' ? (
+          <InvestExample title={"<span>WHY</span>\nRENOVATION"}
+            firstBlock={"Sometimes it only takes minimum<br /> intervention to drastically improve the <br />performance of investment property."}
+            secondBlock={"We know how to find perfect villas, make an <br />budget-efficient renovations and rent it out for <br />higher gains."}
+          />
+        ): (
+          <InvestExample title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"}
+           firstBlock={"Иногда требуется лишь минимальное<br /> вмешательство, " +
+             "чтобы радикально <br />улучшить отдачу для инвестора."}
+             secondBlock={"Мы умеем находить такие объекты, <br />проводить " +
+               "точечную реновацию <br />и в дальнейшем выгодно их сдавать."}
+          />
+        )}
+        
       </div>
-      <div className={"container mb-16 md:mb-24 xl:pl-32 xl:pr-64"}>
-        <Table tableData={investModeling} />
-      </div>
+      {investModel && (
+        <div className={"container mb-16 md:mb-24 xl:pl-32 xl:pr-64"}>
+          <Table tableData={investModel.attributes?.item} />
+        </div>
+      )}
+      
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         <RenovationSteps
           imageAfter={
@@ -227,7 +244,7 @@ export default function Renovation({
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes] =
+  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes, investModelRes] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -241,6 +258,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/social"),
       fetchAPI("/principle", { populate: "deep", locale: locale }),
       fetchAPI("/why-alex", { populate: "deep", locale: locale }),
+      fetchAPI("/invest-model", { populate: "deep", locale: locale }),
     ]);
 
   return {
@@ -251,6 +269,7 @@ export async function getStaticProps({ locale }) {
       social: socialRes.data,
       principle: principleRes.data,
       whyAlex: whyAlexRes.data,
+      investModel: investModelRes.data,
     },
     revalidate: 120,
   };

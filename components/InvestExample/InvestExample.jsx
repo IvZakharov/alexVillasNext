@@ -2,7 +2,7 @@ import styles from "./InvestExample.module.scss";
 import React from "react";
 import parse from "html-react-parser";
 
-const InvestExample = ({ title }) => {
+const InvestExample = ({ title, firstBlock, secondBlock }) => {
   return (
     <section>
       <div className={"container"}>
@@ -11,10 +11,10 @@ const InvestExample = ({ title }) => {
 
           <div className={"md:col-span-2"}>
             <p className={"text mb-5"}>
-              Иногда требуется лишь минимальное<br /> вмешательство, чтобы радикально <br />улучшить отдачу для инвестора.
+              {parse(firstBlock)}
             </p>
             <p className={"text mb-10"}>
-              Мы умеем находить такие объекты, <br />проводить точечную реновацию <br />и в дальнейшем выгодно их сдавать.
+              {parse(secondBlock)}
             </p>
             {/*<div className={styles.investDemo}>*/}
             {/*  <div className={"grid md:grid-cols-2 gap-8 md:gap-0"}>*/}
