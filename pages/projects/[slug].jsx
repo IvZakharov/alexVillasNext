@@ -34,6 +34,7 @@ const Project = ({
   social,
   menu,
   projects,
+  review,
 }) => {
   const router = useRouter();
   const { locale } = router;
@@ -175,9 +176,17 @@ const Project = ({
               <OurBusiness locale={locale} stats={whyAlex} />
             </div>
           )}
-          <div className={"mb-16 xl:mb-24"}>
-            <OurClientVideo />
-          </div>
+
+          {review && (
+            <div className={"mb-16 xl:mb-24"}>
+              <OurClientVideo
+                locale={locale}
+                youtubeUrl={review.attributes.videoUrl}
+                authorName={review.attributes.authorName}
+                authorQuote={review.attributes.authorQuote}
+              />
+            </div>
+          )}
           {project && (
             <div className={"mb-16 xl:mb-24"}>
               <Faq array={project.attributes?.faq} />
@@ -220,6 +229,7 @@ export async function getStaticProps({ locale, locales, params }) {
     menuRes,
     socialRes,
     projectsRes,
+    reviewRes,
   ] = await Promise.all([
     fetchAPI("/projects", {
       filters: {
@@ -236,6 +246,7 @@ export async function getStaticProps({ locale, locales, params }) {
     fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
     fetchAPI("/projects", { locale: locale }),
+    fetchAPI("/review"),
   ]);
 
   return {
@@ -249,6 +260,7 @@ export async function getStaticProps({ locale, locales, params }) {
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,
+      review: reviewRes.data,
     },
     revalidate: 120,
   };

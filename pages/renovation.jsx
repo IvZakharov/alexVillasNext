@@ -72,10 +72,10 @@ export default function Renovation({
   investModel,
   stepsRenovation,
   projects,
+  review,
 }) {
   const router = useRouter();
   const { locale } = router;
-  
 
   const Data = [
     {
@@ -166,27 +166,36 @@ export default function Renovation({
       {page.attributes.whatsapp && (
         <div className={"mb-16 xl:mb-24"}>
           <WhatsApp
-            text={ page.attributes.whatsapp?.description}
+            text={page.attributes.whatsapp?.description}
             link={global.attributes?.whatsappLink}
             linkLabel={page.attributes.whatsapp?.buttonLabel}
           />
         </div>
       )}
       <div className={"mb-16 md:mb-24"}>
-        {locale === 'en' ? (
-          <InvestExample title={"<span>WHY</span>\nRENOVATION"}
-            firstBlock={"Sometimes it only takes minimum<br /> intervention to drastically improve the <br />performance of investment property."}
-            secondBlock={"We know how to find perfect villas, make an <br />budget-efficient renovations and rent it out for <br />higher gains."}
+        {locale === "en" ? (
+          <InvestExample
+            title={"<span>WHY</span>\nRENOVATION"}
+            firstBlock={
+              "Sometimes it only takes minimum<br /> intervention to drastically improve the <br />performance of investment property."
+            }
+            secondBlock={
+              "We know how to find perfect villas, make an <br />budget-efficient renovations and rent it out for <br />higher gains."
+            }
           />
-        ): (
-          <InvestExample title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"}
-           firstBlock={"Иногда требуется лишь минимальное<br /> вмешательство, " +
-             "чтобы радикально <br />улучшить отдачу для инвестора."}
-             secondBlock={"Мы умеем находить такие объекты, <br />проводить " +
-               "точечную реновацию <br />и в дальнейшем выгодно их сдавать."}
+        ) : (
+          <InvestExample
+            title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"}
+            firstBlock={
+              "Иногда требуется лишь минимальное<br /> вмешательство, " +
+              "чтобы радикально <br />улучшить отдачу для инвестора."
+            }
+            secondBlock={
+              "Мы умеем находить такие объекты, <br />проводить " +
+              "точечную реновацию <br />и в дальнейшем выгодно их сдавать."
+            }
           />
         )}
-        
       </div>
       {investModel && (
         <div className={"container mb-16 md:mb-24 xl:pl-32 xl:pr-64"}>
@@ -197,16 +206,16 @@ export default function Renovation({
         <div className={"mb-16 md:mb-24 xl:mb-36"}>
           <RenovationSteps
             data={stepsRenovation}
-              imageAfter={page.attributes.renovation.imageAfter ?
-                (page.attributes.renovation.imageAfter.data.attributes.url) :
-                ("/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg")
-              }
-              imageBefore={page.attributes.renovation.imageBefore ?
-                (page.attributes.renovation.imageBefore.data.attributes.url):
-                ("/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg")
-              
+            imageAfter={
+              page.attributes.renovation.imageAfter
+                ? page.attributes.renovation.imageAfter.data.attributes.url
+                : "/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"
             }
-            
+            imageBefore={
+              page.attributes.renovation.imageBefore
+                ? page.attributes.renovation.imageBefore.data.attributes.url
+                : "/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"
+            }
             locale={locale}
           />
         </div>
@@ -224,16 +233,25 @@ export default function Renovation({
           />
         </div>
       )}
+
+      {review && (
         <div className={"mb-16 xl:mb-24"}>
-          <OurClientVideo locale={locale}  />
+          <OurClientVideo
+            locale={locale}
+            youtubeUrl={review.attributes.videoUrl}
+            authorName={review.attributes.authorName}
+            authorQuote={review.attributes.authorQuote}
+          />
         </div>
+      )}
+
       {whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
           <OurBusiness locale={locale} stats={whyAlex} />
         </div>
       )}
-  
-      {locale == "en" ? (
+
+      {locale === "en" ? (
         <CtaSection
           title={ctaEn.title}
           image={page.attributes.formImage}
@@ -255,24 +273,36 @@ export default function Renovation({
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes, investModelRes, stepsRenovationRes, projectsRes] =
-    await Promise.all([
-      fetchAPI("/pages", {
-        filters: {
-          slug: "renovation",
-        },
-        populate: "deep",
-        locale: locale,
-      }),
-      fetchAPI("/global"),
-      fetchAPI("/menu", { populate: "deep", locale: locale }),
-      fetchAPI("/social"),
-      fetchAPI("/principle", { populate: "deep", locale: locale }),
-      fetchAPI("/why-alex", { populate: "deep", locale: locale }),
-      fetchAPI("/invest-model", { populate: "deep", locale: locale }),
-      fetchAPI("/steps-renovation", { populate: "deep", locale: locale }),
-      fetchAPI("/projects", { populate: "*", locale: locale }),
-    ]);
+  const [
+    pageRes,
+    globalRes,
+    menuRes,
+    socialRes,
+    principleRes,
+    whyAlexRes,
+    reviewRes,
+    investModelRes,
+    stepsRenovationRes,
+    projectsRes,
+  ] = await Promise.all([
+    fetchAPI("/pages", {
+      filters: {
+        slug: "renovation",
+      },
+      populate: "deep",
+      locale: locale,
+    }),
+    fetchAPI("/global"),
+    fetchAPI("/menu", { populate: "deep", locale: locale }),
+    fetchAPI("/social"),
+
+    fetchAPI("/principle", { populate: "deep", locale: locale }),
+    fetchAPI("/why-alex", { populate: "deep", locale: locale }),
+    fetchAPI("/review"),
+    fetchAPI("/invest-model", { populate: "deep", locale: locale }),
+    fetchAPI("/steps-renovation", { populate: "deep", locale: locale }),
+    fetchAPI("/projects", { populate: "*", locale: locale }),
+  ]);
 
   return {
     props: {
@@ -282,6 +312,7 @@ export async function getStaticProps({ locale }) {
       social: socialRes.data,
       principle: principleRes.data,
       whyAlex: whyAlexRes.data,
+      review: reviewRes.data,
       investModel: investModelRes.data,
       stepsRenovation: stepsRenovationRes.data,
       projects: projectsRes.data,

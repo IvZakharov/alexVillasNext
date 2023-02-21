@@ -96,20 +96,6 @@ const gridSoldOutProjectsEn = {
   buttonLabel: "MORE PROJECTS ON SALE",
 };
 
-const renovationGridRu = {
-  title: "ИНВЕСТИЦИИ\nВ РЕНОВАЦИЮ",
-  description:
-    "Инвестируйте от $70.000 c доходностью\n15-25% годовых. Цикл инвестиций 3 года.",
-  linkLabel: "УЗНАТЬ ПОДРОБНОСТИ",
-};
-
-const renovationGridEn = {
-  title: "INVESTMENTS\nIN RENOVATION",
-  description:
-    "Invest starting from $70.000 and gain \n15-25% yearly. Investment period is 3 years.",
-  linkLabel: "УЗНАТЬ ПОДРОБНОСТИ",
-};
-
 const mapRu = {
   title: "ОБЪЕКТЫ \nНА КАРТЕ",
   description:
@@ -131,9 +117,12 @@ export default function Construction({
   global,
   menu,
   social,
+  review,
 }) {
   const router = useRouter();
   const { locale } = router;
+  console.log(principle);
+
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -226,19 +215,19 @@ export default function Construction({
           <ProjectsGrid
             projects={projectsOnSaleFilter(projects, ["soldOut"])}
             title={
-              locale == "en"
-                ? gridOnSaleProjectsEn.title
-                : gridOnSaleProjectsRu.title
+              locale === "en"
+                ? gridSoldOutProjectsEn.title
+                : gridSoldOutProjectsRu.title
             }
             description={
-              locale == "en"
-                ? gridOnSaleProjectsEn.description
-                : gridOnSaleProjectsRu.description
+              locale === "en"
+                ? gridSoldOutProjectsEn.description
+                : gridSoldOutProjectsRu.description
             }
             linkLabel={
-              locale == "en"
-                ? gridOnSaleProjectsEn.buttonLabel
-                : gridOnSaleProjectsRu.buttonLabel
+              locale === "en"
+                ? gridSoldOutProjectsEn.buttonLabel
+                : gridSoldOutProjectsRu.buttonLabel
             }
             locale={locale}
           />
@@ -259,7 +248,7 @@ export default function Construction({
       {page.attributes.whatsapp && (
         <div className={"mb-16 xl:mb-24"}>
           <WhatsApp
-            text={ page.attributes.whatsapp?.description}
+            text={page.attributes.whatsapp?.description}
             link={global.attributes?.whatsappLink}
             linkLabel={page.attributes.whatsapp?.buttonLabel}
           />
@@ -280,16 +269,25 @@ export default function Construction({
           />
         </div>
       )}
-      <div className={"mb-16 xl:mb-24"}>
-        <OurClientVideo />
-      </div>
+
+      {review && (
+        <div className={"mb-16 xl:mb-24"}>
+          <OurClientVideo
+            locale={locale}
+            youtubeUrl={review.attributes.videoUrl}
+            authorName={review.attributes.authorName}
+            authorQuote={review.attributes.authorQuote}
+          />
+        </div>
+      )}
+
       {whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
           <OurBusiness locale={locale} stats={whyAlex} />
         </div>
       )}
 
-      {locale == "en" ? (
+      {locale === "en" ? (
         <CtaSection
           title={ctaEn.title}
           description={ctaEn.description}
@@ -317,6 +315,7 @@ export async function getStaticProps({ locale }) {
     projectsRes,
     principleRes,
     whyAlexRes,
+    reviewRes,
     globalRes,
     menuRes,
     socialRes,
@@ -332,8 +331,9 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/projects", { populate: "*", locale: locale }),
     fetchAPI("/principle", { populate: "deep", locale: locale }),
     fetchAPI("/why-alex", { populate: "deep", locale: locale }),
+    fetchAPI("/review"),
     fetchAPI("/global"),
-    fetchAPI("/menu", { populate: "deep" , locale: locale }),
+    fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
   ]);
 
@@ -342,8 +342,9 @@ export async function getStaticProps({ locale }) {
       page: pageRes.data[0],
       map: mapRes.data,
       projects: projectsRes.data,
-      principle: principleRes,
+      principle: principleRes.data,
       whyAlex: whyAlexRes.data,
+      review: reviewRes.data,
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,

@@ -62,7 +62,14 @@ const ctaEn = {
   ],
 };
 
-export default function Contacts({ page, map, menu, social, global, projects }) {
+export default function Contacts({
+  page,
+  map,
+  menu,
+  social,
+  global,
+  projects,
+}) {
   const router = useRouter();
   const { locale } = router;
 
@@ -135,21 +142,21 @@ export default function Contacts({ page, map, menu, social, global, projects }) 
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, globalRes, menuRes, socialRes, projectsRes] = await Promise.all([
-    fetchAPI("/pages", {
-      filters: {
-        slug: "contacts",
-      },
-      populate: "deep",
-      locale: locale,
-    }),
-    fetchAPI("/map", { populate: "deep", locale: locale }),
-
-    fetchAPI("/global"),
-    fetchAPI("/menu", { populate: "deep", locale: locale  }),
-    fetchAPI("/social"),
-    fetchAPI("/projects", { locale: locale }),
-  ]);
+  const [pageRes, mapRes, globalRes, menuRes, socialRes, projectsRes] =
+    await Promise.all([
+      fetchAPI("/pages", {
+        filters: {
+          slug: "contacts",
+        },
+        populate: "deep",
+        locale: locale,
+      }),
+      fetchAPI("/map", { populate: "deep", locale: locale }),
+      fetchAPI("/global"),
+      fetchAPI("/menu", { populate: "deep", locale: locale }),
+      fetchAPI("/social"),
+      fetchAPI("/projects", { locale: locale }),
+    ]);
 
   return {
     props: {

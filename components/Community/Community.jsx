@@ -15,7 +15,7 @@ const Community = ({ locale, description, imageUrl }) => {
       >
         <div className={"md:flex md:flex-col"}>
           <h2 className={`h2 mb-8`}>
-            {locale == "en" ? (
+            {locale === "en" ? (
               <>
                 <span>COMMUNITY </span> <br /> SUPPORT
               </>
@@ -32,7 +32,12 @@ const Community = ({ locale, description, imageUrl }) => {
           ></div>
 
           <Link href={"#"} className={styles.link}>
-            <span>Внеси свой вклад</span>
+            {locale === "en" ? (
+              <span>Внеси свой вклад</span>
+            ) : (
+              <span>contribution</span>
+            )}
+
             <i>
               <svg
                 width="73"

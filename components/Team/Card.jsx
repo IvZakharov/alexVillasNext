@@ -2,7 +2,6 @@ import styles from "./Team.module.scss";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-
 const Card = ({
   name,
   position,
@@ -11,8 +10,23 @@ const Card = ({
   instagramLink,
   linkedinLink,
 }) => {
+  const handleMouseEnter = (event) => {
+    const item = event.currentTarget;
+    console.log(item.offsetTop);
+    item.style.transform = `translateY(-${item.offsetTop}px)`;
+  };
+
+  const handleMouseLeave = (event) => {
+    const item = event.currentTarget;
+    item.style.transform = `translateY(0)`;
+  };
+
   return (
-    <article className={styles.card}>
+    <article
+      className={styles.card}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className={styles.image}>
         {image && (
           <Image
@@ -30,6 +44,7 @@ const Card = ({
           />
         )}
       </div>
+
       <div className={styles.info}>
         <h3 className={`${styles.name} mb-4 md:mb-6`}>{name}</h3>
         <p className={"text mb-4 md:mb-7 text-center"}>{position}</p>

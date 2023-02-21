@@ -2,31 +2,33 @@ import React, { useState } from "react";
 import styles from "./OurClientVideo.module.scss";
 import Modal from "../Modal/Modal";
 import Thumb from "../YoutubeSection/Thumb";
+import VideoModal from "../Modal/VideoModal/VideoModal";
+import parse from "html-react-parser";
 
-const OurClientVideo = ({locale}) => {
-  const [activeModal, setActiveModal] = useState(false);
- 
+const OurClientVideo = ({ locale, authorName, authorQuote, youtubeUrl }) => {
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const closeModal = () => {
-    setActiveModal(false);
+    setModalIsOpen(false);
   };
+
   return (
     <section className="container">
       <div className={styles.OurClient}>
         <h2 className={`h2 mb-8 ${styles.h2}`}>
-          {locale === 'ru' ? (
+          {locale === "ru" ? (
             <>
               Отзывы наших <span>Клиентов:</span>
             </>
           ) : (
             <>
-              HERE’S WHAT  <span> OUR CLIENTS  SAY:</span>
+              HERE’S WHAT <span> OUR CLIENTS SAY:</span>
             </>
           )}
         </h2>
         <div
           className={`${styles.video} mb-8`}
           onClick={() => {
-            setActiveModal(true);
+            setModalIsOpen(true);
           }}
         >
           <div className={`${styles.OutLine} mx-auto`}>
@@ -50,35 +52,19 @@ const OurClientVideo = ({locale}) => {
                 <Thumb videoUrl={"https://www.youtube.com/embed/UIU1Xc0jDiE"} />
               </div>
             </div>
-
           </div>
         </div>
         <div className={styles.text}>
-          <p className="text mb-4">
-            {locale === 'ru' ? (
-              <>
-                “Выбрать один из отзывов <span> from 4 to 6 years.</span>”
-              </>
-            ) : (
-              <>
-                “In simple words, your payback period is expected to be <span> from 4 to 6 years.</span>”
-              </>
-            )}
-          </p>
-          <span className={styles.name}>
-            {locale === 'ru' ? (
-            <>
-              THEODORE PATTERSON
-            </>
-          ) : (
-            <>
-              THEODORE PATTERSON
-            </>
-          )}
-          </span>
+          <p className="text mb-4">{parse(authorQuote)}</p>
+          <span className={styles.name}>{parse(authorName)}</span>
         </div>
       </div>
-      <Modal active={activeModal} closeModal={closeModal} />
+
+      <VideoModal
+        active={modalIsOpen}
+        closeModal={closeModal}
+        videoUrl={youtubeUrl}
+      />
     </section>
   );
 };
