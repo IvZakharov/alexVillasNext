@@ -98,16 +98,20 @@ export default function Contacts({ page, map, menu, social, global, projects }) 
       )}
 
       <div className={"mb-16"}>
-        <ContactAlex />
+        <ContactAlex socials={social} global={global} />
       </div>
-
-      <WhatsApp
-        text={
-          "Поговорите с живым человеком и получите пакет материалов инвестора."
-        }
-        link={"#"}
-        linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
-      />
+  
+  
+      {page.attributes.whatsapp && (
+        <div className={"mb-16 xl:mb-24"}>
+          <WhatsApp
+            text={ page.attributes.whatsapp?.description}
+            link={global.attributes?.whatsappLink}
+            linkLabel={page.attributes.whatsapp?.buttonLabel}
+          />
+        </div>
+      )}
+      
 
       {map && <Map objects={reverseArr(map.attributes?.objects)} />}
 

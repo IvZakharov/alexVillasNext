@@ -25,16 +25,10 @@ const AlexVillas = ({firstText, secondText, logo}) => {
         <div className={`flex md:justify-between ${styles.textBlocks}`}>
           <div className={`${styles.text}`} >
             <div className={"text"}  dangerouslySetInnerHTML={{ __html: md().render(firstText) }}></div>
-            {/*{textBlock1 &&*/}
-            {/*  <p className="text mb-10">{parse(textBlock1)}</p>*/}
-            {/*}*/}
-            {/*{textBlock2 &&*/}
-            {/*  <p className="text mb-10">{parse(textBlock2)}</p>*/}
-            {/*}*/}
           </div>
           {secondText &&
             <div className={`${styles.blockThree} md:flex md:items-end`}>
-              <p className="text mb-10">{parse(secondText)}</p>
+              <div className="text mb-10" dangerouslySetInnerHTML={{ __html: md().render(secondText) }}></div>
             </div>
           }
         </div>

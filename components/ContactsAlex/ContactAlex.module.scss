@@ -34,6 +34,7 @@
             font-size: 26px;
             line-height: 31px;
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
         .where{
             font-weight: 400;
@@ -58,6 +59,18 @@
             margin-left: -5px;
             a{
                 margin-right: 20px;
+                svg{
+                    path{
+                        transition: .3s ease-in-out;
+                    }
+                }
+                &:hover{
+                    svg{
+                        path{
+                            stroke: #ff9900;
+                        }
+                    }
+                }
             }
         }
     }
