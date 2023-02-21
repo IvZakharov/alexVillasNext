@@ -6,6 +6,7 @@ import { menutop } from "../../data/menutop";
 import { menutopru } from "../../data/menutopru";
 
 const HeaderMenu = ({logo, menu, contact}) => {
+
   return (
     <div className={`container pt-6`}>
       <div className="flex flex-col md:items-center md:justify-between md:flex-row">
@@ -43,12 +44,12 @@ const HeaderMenu = ({logo, menu, contact}) => {
               ))}
           </ul>
         </nav>
-        {/*{contact && (*/}
-        {/*  */}
-        {/*  <Link href={contact[0].slug} className={`${styles.contact} hidden md:block`}>*/}
-        {/*    {contact[0].label}*/}
-        {/*  </Link>*/}
-        {/*)}*/}
+        {contact && (
+          
+          <Link href={contact[0].slug} className={`${styles.contact} hidden md:block`}>
+            {contact[0].label}
+          </Link>
+        )}
         
       </div>
     </div>

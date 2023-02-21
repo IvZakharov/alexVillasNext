@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 
-const Team = ({ teamArr }) => {
+const Team = ({ teamArr, locale }) => {
   const [cardHover, setCardHover] = React.useState(false);
   const [gridSize, setGridSize] = React.useState();
   const gridRef = React.useRef(null);
@@ -33,20 +33,49 @@ const Team = ({ teamArr }) => {
       >
         <div>
           <h2 className={`h2 mb-8 md:mb-0`}>
-            <span>Мы - </span> <br /> ALEX <br /> VILLAS!
+            {locale==='en' ? (
+              <>
+              <span>WE ARE</span> <br />
+              ALEX <br />
+              VILLAS!
+              </>
+            ) : (
+              <>
+                <span>Мы - </span> <br />
+                ALEX <br />
+                VILLAS!
+              </>
+            )}
+            
           </h2>
         </div>
 
         <div>
-          <p className={"text textSmall mb-5"}>
-            Команда - наш самый большой актив. <br />
-            Мы собрали лучших экспертов с многолетним <br />
-            опытом работы в своих областях.
-          </p>
-          <p className={"text textSmall mb-5"}>
-            ALEX VILLAS - это молодое поколение <br /> космополитов, разделяющих{" "}
-            <br /> одни и те же ценности.
-          </p>
+          {locale==='en' ? (
+            <>
+              <p className={"text textSmall mb-5"}>
+                Team is our highest valued asset.
+                We gathered the finest professionals
+                with expansive experience in their respective fields.
+              </p>
+              <p className={"text textSmall mb-5"}>
+                ALEX VILLAS is the young generation<br /> of forward-looking cosmopolitans united<br /> by the values they share.
+              </p>
+            </>
+          ): (
+            <>
+              <p className={"text textSmall mb-5"}>
+              Команда - наш самый большой актив. <br />
+              Мы собрали лучших экспертов с многолетним <br />
+              опытом работы в своих областях.
+            </p>
+              <p className={"text textSmall mb-5"}>
+                ALEX VILLAS - это молодое поколение <br /> космополитов, разделяющих{" "}
+                <br /> одни и те же ценности.
+              </p>
+            </>
+          )}
+          
         </div>
       </div>
 

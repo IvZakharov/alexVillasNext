@@ -3,9 +3,9 @@ import styles from "./OurClientVideo.module.scss";
 import Modal from "../Modal/Modal";
 import Thumb from "../YoutubeSection/Thumb";
 
-const OurClientVideo = () => {
+const OurClientVideo = ({locale}) => {
   const [activeModal, setActiveModal] = useState(false);
-
+ 
   const closeModal = () => {
     setActiveModal(false);
   };
@@ -13,8 +13,15 @@ const OurClientVideo = () => {
     <section className="container">
       <div className={styles.OurClient}>
         <h2 className={`h2 mb-8 ${styles.h2}`}>
-          Отзывы наших <br />
-          <span>Клиентов:</span>
+          {locale === 'ru' ? (
+            <>
+              Отзывы наших <span>Клиентов:</span>
+            </>
+          ) : (
+            <>
+              HERE’S WHAT  <span> OUR CLIENTS  SAY:</span>
+            </>
+          )}
         </h2>
         <div
           className={`${styles.video} mb-8`}
@@ -48,10 +55,27 @@ const OurClientVideo = () => {
         </div>
         <div className={styles.text}>
           <p className="text mb-4">
-            “Выбрать один из отзывов{" "}
-            <span>from 4 to 6 years.</span>”
+            {locale === 'ru' ? (
+              <>
+                “Выбрать один из отзывов <span> from 4 to 6 years.</span>”
+              </>
+            ) : (
+              <>
+                “In simple words, your payback period is expected to be <span> from 4 to 6 years.</span>”
+              </>
+            )}
           </p>
-          <span className={styles.name}>THEODORE PATTERSON</span>
+          <span className={styles.name}>
+            {locale === 'ru' ? (
+            <>
+              THEODORE PATTERSON
+            </>
+          ) : (
+            <>
+              THEODORE PATTERSON
+            </>
+          )}
+          </span>
         </div>
       </div>
       <Modal active={activeModal} closeModal={closeModal} />

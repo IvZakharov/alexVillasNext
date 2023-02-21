@@ -21,6 +21,46 @@ import { useRouter } from "next/router";
 import { fetchAPI } from "../lib/api";
 import { menuFilters } from "../utils/menuFilters";
 
+const ctaRu = {
+  title: "ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ\n<span>И ФИНАНСОВУЮ МОДЕЛЬ</span>",
+  submitButtonText: "Оставить заявку",
+  gradient: true,
+  fields: [
+    {
+      name: "userName",
+      type: "text",
+      placeholder: "Ваше имя:",
+      required: true,
+    },
+    {
+      name: "userTel",
+      type: "tel",
+      placeholder: "Номер телефона:",
+      required: true,
+    },
+  ],
+};
+
+const ctaEn = {
+  title: "GET PROPERTIES CATALOG \n<span>AND FINANCIAL MODEL</span>",
+  submitButtonText: "Submit your application",
+  gradient: true,
+  fields: [
+    {
+      name: "userName",
+      type: "text",
+      placeholder: "Your name:",
+      required: true,
+    },
+    {
+      name: "userTel",
+      type: "tel",
+      placeholder: "Phone number:",
+      required: true,
+    },
+  ],
+};
+
 export default function Renovation({
   page,
   menu,
@@ -119,13 +159,15 @@ export default function Renovation({
       <div className={"mb-16 xl:mb-24"}>
         <RenovationSlider images={renovationImages} />
       </div>
-      <div className={"mb-16 md:mb-24"}>
-        <WhatsApp
-          text={"Повысьте заполняемость \nи средний чек вашего объекта"}
-          linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
-          link={"#"}
-        />
-      </div>
+      {page.attributes.whatsapp && (
+        <div className={"mb-16 xl:mb-24"}>
+          <WhatsApp
+            text={ page.attributes.whatsapp?.description}
+            link={global.attributes?.whatsappLink}
+            linkLabel={page.attributes.whatsapp?.buttonLabel}
+          />
+        </div>
+      )}
       <div className={"mb-16 md:mb-24"}>
         <InvestExample title={"<span>ПОЧЕМУ\nИМЕННО</span>\nРЕНОВАЦИЯ"} />
       </div>
@@ -154,35 +196,32 @@ export default function Renovation({
           />
         </div>
       )}
-
-      <div className={"mb-16 xl:mb-24"}>
-        <OurClientVideo />
-      </div>
+        <div className={"mb-16 xl:mb-24"}>
+          <OurClientVideo locale={locale}  />
+        </div>
       {whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
           <OurBusiness locale={locale} stats={whyAlex} />
         </div>
       )}
-
-      <CtaSection
-        title={" ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ\n<span>И ФИНАНСОВУЮ МОДЕЛЬ</span>"}
-        imageUrl={"/images/cta/bg2.jpg"}
-        submitButtonText={"Оставить заявку"}
-        fields={[
-          {
-            name: "userName",
-            type: "text",
-            placeholder: "Your name:",
-            required: true,
-          },
-          {
-            name: "userTel",
-            type: "tel",
-            placeholder: "Phone number:",
-            required: true,
-          },
-        ]}
-      />
+  
+      {locale == "en" ? (
+        <CtaSection
+          title={ctaEn.title}
+          image={page.attributes.formImage}
+          submitButtonText={ctaEn.submitButtonText}
+          gradient={ctaEn.gradient}
+          fields={ctaEn.fields}
+        />
+      ) : (
+        <CtaSection
+          title={ctaRu.title}
+          image={page.attributes.formImage}
+          submitButtonText={ctaRu.submitButtonText}
+          gradient={ctaRu.gradient}
+          fields={ctaRu.fields}
+        />
+      )}
     </MainLayout>
   );
 }

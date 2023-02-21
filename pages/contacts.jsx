@@ -143,7 +143,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/map", { populate: "deep", locale: locale }),
 
     fetchAPI("/global"),
-    fetchAPI("/menu", { populate: "*" }),
+    fetchAPI("/menu", { populate: "deep", locale: locale  }),
     fetchAPI("/social"),
   ]);
 

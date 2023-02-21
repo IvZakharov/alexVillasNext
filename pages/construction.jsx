@@ -253,15 +253,15 @@ export default function Construction({
           />
         </div>
       )}
-      <div className={"mb-16 md:mb-24"}>
-        <WhatsApp
-          text={
-            "Постройте виллу своей мечты и позвольте нам заставить ее взорвать рынок"
-          }
-          link={"#"}
-          linkLabel={"Перейти в WhatsApp"}
-        />
-      </div>
+      {page.attributes.whatsapp && (
+        <div className={"mb-16 xl:mb-24"}>
+          <WhatsApp
+            text={ page.attributes.whatsapp?.description}
+            link={global.attributes?.whatsappLink}
+            linkLabel={page.attributes.whatsapp?.buttonLabel}
+          />
+        </div>
+      )}
       <div className={"mb-16 md:mb-24"}>
         <ConstructionAbout />
       </div>
@@ -330,7 +330,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/principle", { populate: "deep", locale: locale }),
     fetchAPI("/why-alex", { populate: "deep", locale: locale }),
     fetchAPI("/global"),
-    fetchAPI("/menu", { populate: "*" }),
+    fetchAPI("/menu", { populate: "deep" , locale: locale }),
     fetchAPI("/social"),
   ]);
 

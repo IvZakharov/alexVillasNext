@@ -117,7 +117,7 @@ const renovationGridEn = {
   title: "INVESTMENTS\nIN RENOVATION",
   description:
     "Invest starting from $70.000 and gain \n15-25% yearly. Investment period is 3 years.",
-  linkLabel: "УЗНАТЬ ПОДРОБНОСТИ",
+  linkLabel: "MORE ON RENOVATIONS",
 };
 
 const mapRu = {
@@ -146,6 +146,7 @@ export default function Home({
   const router = useRouter();
   const { locale } = router;
 
+  console.log(page)
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -298,16 +299,16 @@ export default function Home({
           />
         </div>
       )}
-
-      <div className={"mb-16 xl:mb-24"}>
-        <WhatsApp
-          text={
-            "Получите консультацию специалиста и набор материалов для инвестора."
-          }
-          link={global.attributes?.whatsappLink}
-          linkLabel={"ПРОДОЛЖИТЬ В WHATSAPP"}
-        />
-      </div>
+      {page.attributes.whatsapp && (
+        <div className={"mb-16 xl:mb-24"}>
+          <WhatsApp
+            text={ page.attributes.whatsapp?.description}
+            link={global.attributes?.whatsappLink}
+            linkLabel={page.attributes.whatsapp?.buttonLabel}
+          />
+        </div>
+      )}
+      
 
       {page.attributes.whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
@@ -317,7 +318,7 @@ export default function Home({
 
       {team && (
         <div className={"mb-16 xl:mb-24"}>
-          <Team teamArr={team.attributes.items} />
+          <Team teamArr={team.attributes.items} locale={locale} />
         </div>
       )}
 
@@ -388,7 +389,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/team", { populate: "deep", locale: locale }),
     fetchAPI("/you-tube", { populate: "*" }),
     fetchAPI("/global"),
-    fetchAPI("/menu", { populate: "*", locale: locale }),
+    fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
   ]);
 

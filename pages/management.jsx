@@ -245,7 +245,7 @@ export async function getStaticProps({ locale }) {
       }),
       fetchAPI("/airbnb", { populate: "deep" }),
       fetchAPI("/global"),
-      fetchAPI("/menu", { populate: "*" }),
+      fetchAPI("/menu", { populate: "deep", locale: locale  }),
       fetchAPI("/social"),
     ]
   );

@@ -94,7 +94,7 @@ const Hero = ({
             )}
 
             {text && !form && (
-              <div className={styles.textBlock}>
+              <div className={styles.propertie}>
                 {" "}
                 <div className={`${styles.text} text `}>{parse(text)}</div>
               </div>
