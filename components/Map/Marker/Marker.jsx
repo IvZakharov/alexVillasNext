@@ -26,8 +26,8 @@ const MapMarker = ({
               alt={"complex marker"}
               src={
                 markerIsActive
-                  ? "/images/map/projectLabelActive.png"
-                  : "/images/map/projectLabel.png"
+                  ? "/images/map/complexMarkerActive.svg"
+                  : "/images/map/complexMarker.svg"
               }
               width={51}
               height={62}
@@ -46,17 +46,21 @@ const MapMarker = ({
             markerIsActive && styles.locationIconActive
           }`}
         >
-          <Image
-            alt={"location marker"}
-            src={iconUrl}
-            width={68}
-            height={68}
-            sizes="68px"
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
+          <div className={styles.wrap}>
+            <Image
+              alt={"location marker"}
+              src={iconUrl}
+              width={68}
+              height={68}
+              sizes="68px"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+
+          {markerIsActive && <h3 className={styles.title}>{title}</h3>}
         </div>
       )}
     </div>

@@ -4,50 +4,66 @@
   position: relative;
   display: block;
 
-  .title {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    font-weight: 700;
-    font-size: 9px;
-    line-height: 21px;
-    white-space: nowrap;
-    text-transform: uppercase;
-    text-align: center;
-    color: #ffffff;
-    transform: translateX(-50%);
-  }
-
   .projectIcon {
     position: relative;
     width: 51px;
     height: 62px;
     line-height: 0;
     transform: translate(-50%, -50%);
+
+    .title {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      font-weight: 700;
+      font-size: 9px;
+      line-height: 21px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      text-align: center;
+      color: #ffffff;
+      transform: translateX(-50%);
+    }
   }
 
   .projectIconActive {
-    transform: translate(-50%, -50%) scale(1.9);
+    transform: translate(-50%, -50%) scale(2);
     z-index: 100;
   }
 
   .locationIcon {
     position: relative;
-    overflow: hidden;
     line-height: 0;
-    width: 68px;
-    height: 68px;
-    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+
+    .wrap {
+      border-radius: 100%;
+      overflow: hidden;
+    }
+
     transform: translate(-50%, -50%);
+
+    .title {
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      font-weight: 700;
+      font-size: 7px;
+      line-height: 21px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      text-align: center;
+      color: #ffffff;
+      transform: translateX(-50%);
+    }
   }
 
   .locationIconActive {
-    transform: translate(-50%, -50%) scale(1.5);
-    border: 3px solid $primary;
-    z-index: 100;
-
-    img {
-      transform: translateY(-1px);
+    .wrap {
+      border: 2px solid $primary;
     }
+    transform: translate(-50%, -50%) scale(2.5);
+    z-index: 100;
   }
 }
