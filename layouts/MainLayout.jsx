@@ -15,7 +15,9 @@ const MainLayout = ({
   footer,
   contact,
   footerContent,
-  socialFooter
+  socialFooter,
+  menuProject,
+  locale
 }) => {
   const [openedMenu, setOpenedMenu] = React.useState(false);
 
@@ -27,7 +29,7 @@ const MainLayout = ({
         <meta name="keywords" content={metaKeywords} />
         <meta property="og:image" content={metaImage} />
       </Head>
-      <Header logo={logo} menu={menu} contact={contact} onClickMenu={(bool)=>setOpenedMenu(bool)}/>
+      <Header logo={logo} menu={menu}  contact={contact} onClickMenu={(bool)=>setOpenedMenu(bool)} project={menuProject} locale={locale}/>
       
       <div className="main">{children}</div>
       <Footer menu={footer} content={footerContent} social={socialFooter}/>
@@ -36,6 +38,8 @@ const MainLayout = ({
           menu={menu}
           contact={contact}
           OnClickClose={(bool) => setOpenedMenu(bool)} logo={logo}
+
+          project={menuProject} locale={locale}
         />
       )}
     </>

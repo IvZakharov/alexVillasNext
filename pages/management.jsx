@@ -9,6 +9,7 @@ import Promo from "../components/Promo/Promo";
 import { fetchAPI } from "../lib/api";
 import { menuFilters } from "../utils/menuFilters";
 import { useRouter } from "next/router";
+import { getProjectsLinks } from "../utils/getProjectsLinks";
 
 const Data = [
   {
@@ -110,7 +111,7 @@ const ctaEn = {
   ],
 };
 
-export default function Management({ page, airbnb, global, menu, social }) {
+export default function Management({ page, airbnb, global, menu, social, projects }) {
   const router = useRouter();
   const { locale } = router;
 
@@ -125,6 +126,8 @@ export default function Management({ page, airbnb, global, menu, social }) {
       contact={menuFilters(menu.attributes?.links, "contact")}
       footerContent={global}
       socialFooter={social}
+      menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
+      locale={locale}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-0"}>
@@ -234,7 +237,7 @@ export default function Management({ page, airbnb, global, menu, social }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, airbnbRes, globalRes, menuRes, socialRes] = await Promise.all(
+  const [pageRes, airbnbRes, globalRes, menuRes, socialRes, projectRes] = await Promise.all(
     [
       fetchAPI("/pages", {
         filters: {
@@ -247,6 +250,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/global"),
       fetchAPI("/menu", { populate: "deep", locale: locale  }),
       fetchAPI("/social"),
+      fetchAPI("/projects", { locale: locale }),
     ]
   );
 
@@ -257,6 +261,7 @@ export async function getStaticProps({ locale }) {
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,
+      projects: projectRes.data,
     },
     revalidate: 120,
   };

@@ -22,6 +22,7 @@ import { reverseArr } from "../../utils/reverseArr";
 import { menuFilters } from "../../utils/menuFilters";
 import AlexVillas from "../../components/AlexVillas/AlexVillas";
 import ProjectGallery from "../../components/Project/ProjectGallery/ProjectGallery";
+import { getProjectsLinks } from "../../utils/getProjectsLinks";
 
 const Project = ({
   project,
@@ -32,6 +33,7 @@ const Project = ({
   global,
   social,
   menu,
+  projects,
 }) => {
   const router = useRouter();
   const { locale } = router;
@@ -61,6 +63,8 @@ const Project = ({
       contact={menuFilters(menu.attributes?.links, "contact")}
       footerContent={global}
       socialFooter={social}
+      menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
+      locale={locale}
     >
       <div className={"mb-16 md:mb-32 xl:mb-24"}>
         {/*<Hero*/}
@@ -207,7 +211,7 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps({ locale, locales, params }) {
   const [
-    projectsRes,
+    projectRes,
     propertyRes,
     mapRes,
     baliGalleryRes,
@@ -215,6 +219,7 @@ export async function getStaticProps({ locale, locales, params }) {
     globalRes,
     menuRes,
     socialRes,
+    projectsRes,
   ] = await Promise.all([
     fetchAPI("/projects", {
       filters: {
@@ -230,11 +235,13 @@ export async function getStaticProps({ locale, locales, params }) {
     fetchAPI("/global"),
     fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
+    fetchAPI("/projects", { locale: locale }),
   ]);
 
   return {
     props: {
-      project: projectsRes.data[0],
+      project: projectRes.data[0],
+      projects: projectsRes.data,
       properties: propertyRes.data,
       map: mapRes.data,
       baliGallery: baliGalleryRes.data,

@@ -20,6 +20,7 @@ import Promo from "../components/Promo/Promo";
 import { useRouter } from "next/router";
 import { fetchAPI } from "../lib/api";
 import { menuFilters } from "../utils/menuFilters";
+import { getProjectsLinks } from "../utils/getProjectsLinks";
 
 const ctaRu = {
   title: "ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ\n<span>И ФИНАНСОВУЮ МОДЕЛЬ</span>",
@@ -70,11 +71,11 @@ export default function Renovation({
   whyAlex,
   investModel,
   stepsRenovation,
+  projects,
 }) {
   const router = useRouter();
   const { locale } = router;
-
-  //console.log(stepsRenovation);
+  
 
   const Data = [
     {
@@ -121,7 +122,6 @@ export default function Renovation({
       lable: "EXPERIENCE \nIN BALI",
     },
   ];
-
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -130,8 +130,10 @@ export default function Renovation({
       menu={menuFilters(menu.attributes?.links, "header")}
       footer={menuFilters(menu.attributes?.links, "footer")}
       contact={menuFilters(menu.attributes?.links, "contact")}
+      menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
       footerContent={global}
       socialFooter={social}
+      locale={locale}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-10"}>
@@ -195,12 +197,16 @@ export default function Renovation({
         <div className={"mb-16 md:mb-24 xl:mb-36"}>
           <RenovationSteps
             data={stepsRenovation}
-            imageAfter={
-              "/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"
+              imageAfter={page.attributes.renovation.imageAfter ?
+                (page.attributes.renovation.imageAfter.data.attributes.url) :
+                ("/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg")
+              }
+              imageBefore={page.attributes.renovation.imageBefore ?
+                (page.attributes.renovation.imageBefore.data.attributes.url):
+                ("/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg")
+              
             }
-            imageBefore={
-              "/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"
-            }
+            
             locale={locale}
           />
         </div>
@@ -249,7 +255,7 @@ export default function Renovation({
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes, investModelRes, stepsRenovationRes] =
+  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes, investModelRes, stepsRenovationRes, projectsRes] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -265,6 +271,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/why-alex", { populate: "deep", locale: locale }),
       fetchAPI("/invest-model", { populate: "deep", locale: locale }),
       fetchAPI("/steps-renovation", { populate: "deep", locale: locale }),
+      fetchAPI("/projects", { populate: "*", locale: locale }),
     ]);
 
   return {
@@ -277,6 +284,7 @@ export async function getStaticProps({ locale }) {
       whyAlex: whyAlexRes.data,
       investModel: investModelRes.data,
       stepsRenovation: stepsRenovationRes.data,
+      projects: projectsRes.data,
     },
     revalidate: 120,
   };

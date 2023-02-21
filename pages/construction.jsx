@@ -21,6 +21,7 @@ import { menuFilters } from "../utils/menuFilters";
 import { useRouter } from "next/router";
 import Map from "../components/Map/Map";
 import { reverseArr } from "../utils/reverseArr";
+import { getProjectsLinks } from "../utils/getProjectsLinks";
 
 const ctaRu = {
   title: "СВЯЗАТЬСЯ С ОТДЕЛОМ \n<span>ПРОДАЖ</span>",
@@ -144,6 +145,8 @@ export default function Construction({
       contact={menuFilters(menu.attributes?.links, "contact")}
       footerContent={global}
       socialFooter={social}
+      menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
+      locale={locale}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-24"}>

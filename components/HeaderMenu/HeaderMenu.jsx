@@ -5,7 +5,7 @@ import Link from "next/link";
 import { menutop } from "../../data/menutop";
 import { menutopru } from "../../data/menutopru";
 
-const HeaderMenu = ({logo, menu, contact}) => {
+const HeaderMenu = ({logo, menu, contact, menuProject, locale}) => {
 
   return (
     <div className={`container pt-6`}>
@@ -40,6 +40,28 @@ const HeaderMenu = ({logo, menu, contact}) => {
                       ))}
                     </ul>
                   )}
+                  {obj.project && (
+                    <ul className={styles.subMenu}>
+                      {menuProject && menuProject.map((sales)=>(
+                        <>
+                          <li className={styles.nolink}>
+                            {sales.status === "onSale" ?
+                              locale === 'en' ? "On sale":"В продаже" :
+                              locale === 'en' ? "Sold out":"Завершенные"
+                            }
+                          </li>
+                          {sales.links && sales.links.map((sale)=>(
+                            <li className={styles.subLi}>
+                              <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
+                                {sale.title}</Link>
+                            </li>
+                          ))}
+                        </>
+                      ))}
+                    </ul>
+                  )}
+                  
+                  
                 </li>
               ))}
           </ul>

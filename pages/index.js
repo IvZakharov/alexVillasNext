@@ -23,6 +23,7 @@ import { fetchAPI } from "../lib/api";
 import { reverseArr } from "../utils/reverseArr";
 import Map from "../components/Map/Map";
 import { aboutLinks } from "../data/aboutLinks";
+import {getProjectsLinks} from "../utils/getProjectsLinks";
 import slug from "./projects/[slug]";
 
 const ctaRu = {
@@ -148,25 +149,6 @@ export default function Home({
   const router = useRouter();
   const { locale } = router;
 
-  const getProjectsLinks = (projects, projectStatuses) => {
-    const newArr = [];
-
-    projectStatuses.map((status) => {
-      const links = [];
-      projects.map((project) => {
-        if (status === project.attributes.status) {
-          links.push({
-            title: project.attributes.title,
-            slug: project.attributes.slug,
-          });
-        }
-      });
-      newArr.push({ status: status, links: links });
-    });
-
-    return newArr;
-  };
-
   console.log(getProjectsLinks(projects, ["onSale", "soldOut"]));
 
   return (
@@ -179,6 +161,8 @@ export default function Home({
       contact={menuFilters(menu.attributes?.links, "contact")}
       footerContent={global}
       socialFooter={social}
+      menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
+      locale={locale}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-0"}>

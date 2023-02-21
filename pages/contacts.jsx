@@ -10,6 +10,7 @@ import { menuFilters } from "../utils/menuFilters";
 import Map from "../components/Map/Map";
 import { reverseArr } from "../utils/reverseArr";
 import { useRouter } from "next/router";
+import { getProjectsLinks } from "../utils/getProjectsLinks";
 
 const ctaRu = {
   title: "МЫ ВСЕГДА\n<span>НА СВЯЗИ:\n</span>",
@@ -61,7 +62,7 @@ const ctaEn = {
   ],
 };
 
-export default function Contacts({ page, map, menu, social, global }) {
+export default function Contacts({ page, map, menu, social, global, projects }) {
   const router = useRouter();
   const { locale } = router;
 
@@ -75,6 +76,8 @@ export default function Contacts({ page, map, menu, social, global }) {
       contact={menuFilters(menu.attributes?.links, "contact")}
       footerContent={global}
       socialFooter={social}
+      menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
+      locale={locale}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-24"}>
@@ -132,7 +135,7 @@ export default function Contacts({ page, map, menu, social, global }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, mapRes, globalRes, menuRes, socialRes] = await Promise.all([
+  const [pageRes, mapRes, globalRes, menuRes, socialRes, projectsRes] = await Promise.all([
     fetchAPI("/pages", {
       filters: {
         slug: "contacts",
@@ -145,6 +148,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/global"),
     fetchAPI("/menu", { populate: "deep", locale: locale  }),
     fetchAPI("/social"),
+    fetchAPI("/projects", { locale: locale }),
   ]);
 
   return {
@@ -154,6 +158,7 @@ export async function getStaticProps({ locale }) {
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,
+      projects: projectsRes.data,
     },
     revalidate: 120,
   };

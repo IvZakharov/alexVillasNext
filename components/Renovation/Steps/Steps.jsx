@@ -73,7 +73,7 @@ const RenovationSteps = ({ data, imageBefore, imageAfter, locale }) => {
             {obj.Cheks.length != 0 ? (
               <ul className={styles.servicesList}>
                 {obj.Cheks.map((chek)=>(
-                  <li>{chek.label}</li>
+                  <li>{parse(chek.label)}</li>
                 ))}
               </ul>
             ) : (

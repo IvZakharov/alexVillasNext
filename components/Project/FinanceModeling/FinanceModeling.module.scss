@@ -201,7 +201,7 @@
   background-color: black;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 
   @media (min-width: 576px) {
     width: 40px;

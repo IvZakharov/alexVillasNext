@@ -10,6 +10,7 @@ import OpenVacancy from "../components/OpenVacancy/OpenVacancy";
 import { fetchAPI } from "../lib/api";
 import { useRouter } from "next/router";
 import { menuFilters } from "../utils/menuFilters";
+import { getProjectsLinks } from "../utils/getProjectsLinks";
 
 const ctaRu = {
   title: "ПОЛУЧИТЕ \n<span>РАБОТУ МЕЧТЫ</span>",
@@ -64,7 +65,7 @@ export default function Vacancy({
 
   team,
   whyAlex,
-
+  projects,
   global,
   menu,
   social,
@@ -82,6 +83,8 @@ export default function Vacancy({
       contact={menuFilters(menu.attributes?.links, "contact")}
       footerContent={global}
       socialFooter={social}
+      menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
+      locale={locale}
     >
       {page.attributes.hero && (
         <div className={"mb-16 xl:mb-24"}>
@@ -132,7 +135,7 @@ export default function Vacancy({
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, teamRes, whyAlexRes, globalRes, menuRes, socialRes] =
+  const [pageRes, teamRes, whyAlexRes, globalRes, menuRes, socialRes, projectRes] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -147,6 +150,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/global"),
       fetchAPI("/menu", { populate: "deep", locale: locale }),
       fetchAPI("/social"),
+      fetchAPI("/projects", { locale: locale }),
     ]);
 
   return {
@@ -157,6 +161,7 @@ export async function getStaticProps({ locale }) {
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,
+      projects: projectRes.data,
     },
     revalidate: 120,
   };
