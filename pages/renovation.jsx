@@ -69,11 +69,12 @@ export default function Renovation({
   principle,
   whyAlex,
   investModel,
+  stepsRenovation,
 }) {
   const router = useRouter();
   const { locale } = router;
 
-  console.log(investModel);
+  //console.log(stepsRenovation);
 
   const Data = [
     {
@@ -190,17 +191,21 @@ export default function Renovation({
           <Table tableData={investModel.attributes?.item} />
         </div>
       )}
-      
-      <div className={"mb-16 md:mb-24 xl:mb-36"}>
-        <RenovationSteps
-          imageAfter={
-            "/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"
-          }
-          imageBefore={
-            "/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"
-          }
-        />
-      </div>
+      {stepsRenovation && (
+        <div className={"mb-16 md:mb-24 xl:mb-36"}>
+          <RenovationSteps
+            data={stepsRenovation}
+            imageAfter={
+              "/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"
+            }
+            imageBefore={
+              "/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"
+            }
+            locale={locale}
+          />
+        </div>
+      )}
+
       {principle && (
         <div className={"mb-16 md:mb-24 xl:mb-28"}>
           <Principles
@@ -244,7 +249,7 @@ export default function Renovation({
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes, investModelRes] =
+  const [pageRes, globalRes, menuRes, socialRes, principleRes, whyAlexRes, investModelRes, stepsRenovationRes] =
     await Promise.all([
       fetchAPI("/pages", {
         filters: {
@@ -259,6 +264,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/principle", { populate: "deep", locale: locale }),
       fetchAPI("/why-alex", { populate: "deep", locale: locale }),
       fetchAPI("/invest-model", { populate: "deep", locale: locale }),
+      fetchAPI("/steps-renovation", { populate: "deep", locale: locale }),
     ]);
 
   return {
@@ -270,6 +276,7 @@ export async function getStaticProps({ locale }) {
       principle: principleRes.data,
       whyAlex: whyAlexRes.data,
       investModel: investModelRes.data,
+      stepsRenovation: stepsRenovationRes.data,
     },
     revalidate: 120,
   };
