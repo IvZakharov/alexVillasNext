@@ -13,9 +13,9 @@ const Map = ({ title, description, objects }) => {
   const defaultProps = {
     center: {
       lat: -8.657406,
-      lng: 115.1813728,
+      lng: 115.1413728,
     },
-    zoom: 13,
+    zoom: 15,
   };
   const handleCloseLegend = () => {
     setLegendIsOpen(false);

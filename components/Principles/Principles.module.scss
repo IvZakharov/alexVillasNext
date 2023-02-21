@@ -27,14 +27,12 @@
   .slideTitle {
     max-width: 180px;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 36px;
-    letter-spacing: 0.025em;
+    letter-spacing: -0.025em;
     color: #ffffff;
     margin-bottom: 20px;
 
     @media (min-width: 1200px) {
-      font-size: 48px;
+      font-size: 36px;
       line-height: 50px;
     }
   }

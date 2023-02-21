@@ -4,6 +4,11 @@
 @import "./variables";
 @import "./libs/normalize";
 
+:root {
+  --roboto-font: "Roboto", sans-serif;
+  --robotoCondensed-font: "Roboto Condensed", sans-serif;
+}
+
 html,
 body {
   padding: 0;
@@ -11,6 +16,7 @@ body {
   position: relative;
   font-family: var(--roboto-font);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1,
@@ -32,7 +38,6 @@ main {
 
 body {
   background-color: $black;
-  overflow-x: hidden;
 }
 
 a {

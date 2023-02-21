@@ -18,7 +18,7 @@ const Principles = ({ title, principles }) => {
   return (
     <section>
       <div className={"grid grid-cols-1 lg:grid-cols-3 container "}>
-        <div className={"mb-12 lg:mb-0 xl:py-10"}>
+        <div className={"mb-12 lg:mb-0"}>
           <h2 className={`h2 ${styles.title}`}>{parse(title)}</h2>
         </div>
 
@@ -63,7 +63,7 @@ const Principles = ({ title, principles }) => {
                       }
                     >
                       <h3 className={styles.slideTitle}>{obj.title}</h3>
-                      <p className={`${styles.description} text`}>
+                      <p className={`${styles.description} text textSmall`}>
                         {obj.description}
                       </p>
                     </div>
