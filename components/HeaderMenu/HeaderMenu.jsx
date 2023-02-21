@@ -6,7 +6,7 @@ import { menutop } from "../../data/menutop";
 import { menutopru } from "../../data/menutopru";
 
 const HeaderMenu = ({logo, menu, contact, menuProject, locale}) => {
-
+  console.log(menu)
   return (
     <div className={`container pt-6`}>
       <div className="flex flex-col md:items-center md:justify-between md:flex-row">
@@ -29,8 +29,9 @@ const HeaderMenu = ({logo, menu, contact, menuProject, locale}) => {
                   <Link href={obj.slug} className={`${styles.links}`}>
                     {obj.label}
                   </Link>
-                  {obj.subLinks && (
+                  {obj.subLinks.length != 0 && (
                     <ul className={styles.subMenu}>
+                      {console.log(obj.subLinks)}
                       {obj.subLinks.map((sublink, i)=>(
                         <li className={styles.subLi} key={i}>
                           <Link href={sublink.slug} className={styles.linkSub} >
@@ -42,6 +43,7 @@ const HeaderMenu = ({logo, menu, contact, menuProject, locale}) => {
                   )}
                   {obj.project && (
                     <ul className={styles.subMenu}>
+                      {console.log(obj.project)}
                       {menuProject && menuProject.map((sales)=>(
                         <>
                           <li className={styles.nolink}>
