@@ -139,6 +139,7 @@ export default function Home({
   airbnb,
   team,
   youtube,
+  whyAlex,
   global,
   menu,
   social,
@@ -146,7 +147,7 @@ export default function Home({
   const router = useRouter();
   const { locale } = router;
 
-  console.log(page)
+  console.log(page);
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -302,20 +303,18 @@ export default function Home({
       {page.attributes.whatsapp && (
         <div className={"mb-16 xl:mb-24"}>
           <WhatsApp
-            text={ page.attributes.whatsapp?.description}
+            text={page.attributes.whatsapp?.description}
             link={global.attributes?.whatsappLink}
             linkLabel={page.attributes.whatsapp?.buttonLabel}
           />
         </div>
       )}
-      
 
-      {page.attributes.whyAlex && (
+      {whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
-          <OurBusiness locale={locale} stats={page.attributes.whyAlex} />
+          <OurBusiness locale={locale} stats={whyAlex} />
         </div>
       )}
-
       {team && (
         <div className={"mb-16 xl:mb-24"}>
           <Team teamArr={team.attributes.items} locale={locale} />
@@ -372,6 +371,7 @@ export async function getStaticProps({ locale }) {
     airbnbRes,
     teamRes,
     youtubeRes,
+    whyAlexRes,
     globalRes,
     menuRes,
     socialRes,
@@ -388,6 +388,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/airbnb", { populate: "deep" }),
     fetchAPI("/team", { populate: "deep", locale: locale }),
     fetchAPI("/you-tube", { populate: "*" }),
+    fetchAPI("/why-alex", { populate: "deep", locale: locale }),
     fetchAPI("/global"),
     fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
@@ -402,6 +403,7 @@ export async function getStaticProps({ locale }) {
 
       team: teamRes.data,
       youtube: youtubeRes.data,
+      whyAlex: whyAlexRes.data,
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,

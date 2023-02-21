@@ -1,9 +1,12 @@
 @import "styles/variables";
 
 .map {
-  height: 500px;
   position: relative;
   overflow: hidden;
+}
+
+.mapWrapper {
+  height: 500px;
 
   @media (min-width: 768px) {
     height: 750px;

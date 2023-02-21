@@ -4,7 +4,6 @@ import GoogleMapReact from "google-map-react";
 import LegendSidebar from "./LegendSidebar/LegendSidebar";
 import MapMarker from "./Marker/Marker";
 import { mapStyles } from "../../data/mapStyles";
-
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Map = ({ title, description, objects }) => {
@@ -63,7 +62,7 @@ const Map = ({ title, description, objects }) => {
           </div>
         ) : null}
       </div>
-      <div className={"h-full w-full relative"}>
+      <div className={`${styles.mapWrapper} h-full w-full relative `}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAj4aa1VwSEdy4Wnq7lTN0PbX7Nkbwz_d8" }}
           defaultCenter={defaultProps.center}
