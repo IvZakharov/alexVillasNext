@@ -1,7 +1,16 @@
 @import "styles/variables";
 
+.quiz {
+  overflow-x: hidden;
+}
+
 .form {
   height: 170px;
+  border: 1px solid black;
+}
+
+.error {
+  border: 1px solid red;
 }
 
 .stepContent {
@@ -10,6 +19,7 @@
   height: 100%;
   visibility: hidden;
   opacity: 0;
+
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   .title {
@@ -71,4 +81,11 @@
   i {
     transform: rotate(180deg);
   }
+}
+
+.errorMessage {
+  display: block;
+  transform: translateY(5px);
+  font-size: 14px;
+  color: red;
 }

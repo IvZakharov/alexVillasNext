@@ -15,7 +15,7 @@ const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
   }, [bodyHeight]);
 
   return (
-    <section>
+    <section className={"overflow-x-hidden"}>
       <div className={"container"}>
         <div className={"mb-7 lg:mb-12 md:flex items-end"}>
           <h2
@@ -78,9 +78,7 @@ const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
         </div>
 
         {projects.length > 3 && (
-          <div
-            className={"pt-10 pl-8 md:pl-0 flex justify-start md:justify-end"}
-          >
+          <div className={"pt-10 md:pl-0 flex justify-start md:justify-end"}>
             {!isOpen && (
               <button
                 onClick={() => setIsOpen(!isOpen)}

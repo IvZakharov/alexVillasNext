@@ -147,7 +147,7 @@ export default function Home({
   menu,
   social,
 }) {
-  const [modalIsOpen, setModalIsOpen] = React.useState(true);
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const router = useRouter();
   const { locale } = router;
 

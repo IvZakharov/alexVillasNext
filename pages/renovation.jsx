@@ -204,7 +204,7 @@ export default function Renovation({
         )}
       </div>
       {investModel && (
-        <div className={"container mb-16 md:mb-24 xl:pl-32 xl:pr-64"}>
+        <div className={"container mb-16 md:mb-24 xl:pl-16 xl:pr-16"}>
           <Table tableData={investModel.attributes?.item} />
         </div>
       )}

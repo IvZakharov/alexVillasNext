@@ -4,7 +4,6 @@ import FormContactHero from "../FormContactHero/FormContactHero";
 import HeroMenu from "../HeroMenu/HeroMenu";
 import parse from "html-react-parser";
 import Link from "next/link";
-import alexVillas from "../AlexVillas/AlexVillas";
 
 const Hero = ({
   h1first,
@@ -25,32 +24,34 @@ const Hero = ({
 
   return (
     <section className={styles.hero}>
-      <div className={styles.background}>
-        {backgroundMedia &&
-        getMediaType(backgroundMedia.attributes.mime) === "video" ? (
-          <video loop autoPlay muted className={styles.videoBack}>
-            <source
-              src={`https://${backgroundMedia.attributes.url}`}
-              type={backgroundMedia.attributes.mime}
+      {backgroundMedia && (
+        <div className={styles.background}>
+          {getMediaType(backgroundMedia.attributes.mime) === "video" ? (
+            <video loop autoPlay muted className={styles.videoBack}>
+              <source
+                src={`https://${backgroundMedia.attributes.url}`}
+                type={backgroundMedia.attributes.mime}
+              />
+            </video>
+          ) : (
+            <Image
+              alt={"ALEX VILLAS"}
+              src={backgroundMedia.attributes.url}
+              blurDataURL={backgroundMedia.attributes.placeholder}
+              placeholder={"blur"}
+              quality={80}
+              fill
+              priority
+              sizes="100vw"
+              style={{
+                objectFit: "cover",
+                opacity: 0.5,
+              }}
             />
-          </video>
-        ) : (
-          <Image
-            alt={"ALEX VILLAS"}
-            src={backgroundMedia.attributes.url}
-            blurDataURL={backgroundMedia.attributes.placeholder}
-            placeholder={"blur"}
-            quality={80}
-            fill
-            priority
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-              opacity: 0.5,
-            }}
-          />
-        )}
-      </div>
+          )}
+        </div>
+      )}
+
       <div className="container flex flex-col justify-between h-full sm:p-0">
         <div className={`${styles.h1Block} mx-auto lg:mx-0 lg:ml-36 xl:ml-48`}>
           {dot && (

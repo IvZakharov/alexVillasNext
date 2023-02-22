@@ -2,7 +2,16 @@
 
 .table {
   overflow-x: scroll;
-  min-width: 600px;
+
+  .tableWrap {
+    @media (min-width: 576px) {
+      width: 900px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 1000px;
+    }
+  }
 
   &::-webkit-scrollbar {
     background-color: #000;
@@ -36,8 +45,7 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 150%;
-      letter-spacing: 0.025em;
-      white-space: nowrap;
+
       color: #fff;
 
       &:first-child {
@@ -49,23 +57,19 @@
         width: 15%;
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: 1280px) {
         font-size: 18px;
       }
-
-
     }
 
     &:last-child {
       p {
         font-weight: 600;
 
-        @media (min-width: 1200px) {
+        @media (min-width: 1280px) {
           font-size: 22px;
         }
       }
     }
   }
 }
-
-
