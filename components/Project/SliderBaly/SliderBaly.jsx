@@ -6,16 +6,23 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import parse from "html-react-parser";
 
 const SliderBaly = ({ images }) => {
+  const router = useRouter();
+  const { locale } = router;
+  
   return (
     <section className={styles.SliderBaly}>
       <div className="container">
         <div className="md:grid md:grid-cols-3 mb-7 lg:mb-12">
           <h2 className="h2 mb-4 md:mb-0">BALI</h2>
           <p className={"text"}>
-            это <span>райское место</span> для жизни и отдыха, с богатой
-            культурой и природными красотами.
+            {locale === 'ru'?
+              parse("это <span>райское место</span> для жизни и отдыха, с богатой культурой и природными красотами.")
+              : parse("Bali is <span>a wonderful place </span> to feel comfortable and safe 365 days a year")
+            }
           </p>
         </div>
 

@@ -8,19 +8,11 @@
   @media (min-width: 984px) {
    flex-direction: row;
   }
-  @media (min-width: 1240px) {
-    padding-left: 6rem;
-  }
-  .width{
-    width: 100%!important;
-    @media (min-width: 768px) {
-      width: 90%!important;
-    }
-  }
   .about{
     display: flex;
     align-items: self-start;
     flex-wrap: wrap;
+    width: 100%;
     @media (min-width: 480px) {
       flex-direction: row;
       justify-content: center;
@@ -28,12 +20,7 @@
     @media (min-width: 768px) {
       flex-wrap: unset;
       justify-content: space-between;
-    }
-    @media (min-width: 984px) {
-      width: 65%;
-    }
-    @media (max-width: 1240px) {
-      justify-content: space-between;
+      width: 90%;
     }
     .block{
       margin-bottom: 30px;
@@ -47,6 +34,7 @@
       @media (min-width: 768px) {
         margin-left: unset;
         margin-right: 90px;
+        min-width: 20%;
         &:nth-child(odd){
           margin-left: unset;
           margin-right: unset;
@@ -64,7 +52,7 @@
         font-size: 32px;
         line-height: 36px;
         letter-spacing: -0.01em;
-        color: #ff9900;
+        color: #FFFFFF;
         font-family: var(--roboto-font);
         text-transform: uppercase;
         font-weight: 400;
@@ -105,56 +93,6 @@
           text-align: left;
           font-size: 18px;
         }
-      }
-    }
-  }
-  .second{
-    display: flex;
-    flex-direction: column;
-    @media (min-width: 768px) {
-      justify-content: flex-end;
-      align-items: flex-end;
-    }
-    @media (min-width: 984px) {
-      min-width: 20%;
-    }
-    .download{
-      font-family: var(--robotoCondensed-font);
-      font-weight: 700;
-      font-size: 26px;
-      line-height: 31px;
-      text-align: center;
-      letter-spacing: 0.025em;
-      color: #FF9900;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      @media (max-width: 767px) {
-        text-align: left;
-        font-size: 20px;
-        line-height: 25px;
-      }
-    }
-    .contact{
-      font-family: var(--robotoCondensed-font);
-      font-weight: 700;
-      font-size: 26px;
-      line-height: 31px;
-      text-align: center;
-      letter-spacing: 0.025em;
-      text-transform: uppercase;
-      @media (max-width: 767px) {
-        text-align: left;
-        font-size: 20px;
-        line-height: 25px;
-      }
-    }
-    .button{
-      font-family: var(--robotoCondensed-font);
-      height: 100%;
-      display: flex;
-      align-items: flex-start;
-      @media (min-width: 768px) {
-        align-items: center;
       }
     }
   }

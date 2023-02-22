@@ -7,9 +7,10 @@ const ComplexPlash = ({items}) => {
     <div className="container flex justify-center relative">
       <div className={styles.ComplexPlash}>
         {items && items.map((obj, i)=>(
+          //console.log(obj)
           <div className={styles.Items} key={i}>
-            <span>{parse(obj.lable)}</span>
-            <span className={styles.bot}>{obj.sublable}</span>
+            <span>{parse(obj.description)}</span>
+            <span className={styles.bot}>{obj.value}</span>
           </div>
         ))}
       </div>

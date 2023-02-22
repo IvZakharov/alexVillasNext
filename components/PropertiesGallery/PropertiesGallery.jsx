@@ -2,15 +2,19 @@ import styles from "./PropertiesGallery.module.scss";
 import React from "react";
 import Image from "next/image";
 import Fancybox from "../Fancybox/Fancybox";
+import { useRouter } from "next/router";
+import parse from "html-react-parser";
 
 const PropertiesGallery = ({ properties }) => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <section className={styles.propertiesGallery}>
       <div className={"container"}>
         <div className={"md:grid md:grid-cols-2 mb-7 lg:mb-12"}>
-          <h2 className={"h2 mb-4 md:mb-0"}>НЕДВИЖИМОСТЬ</h2>
+          <h2 className={"h2 mb-4 md:mb-0"}>{locale === 'ru' ? "НЕДВИЖИМОСТЬ" : "INSPIRING REAL ESTATE"}</h2>
           <p className={"text"}>
-            которая будет вдохновлять <br /> вас <span> каждый день</span>
+            {locale === 'ru' ? <>которая будет вдохновлять <br /> вас <span> каждый день</span></> : "for everyday life"}
           </p>
         </div>
 

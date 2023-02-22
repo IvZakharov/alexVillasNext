@@ -35,25 +35,11 @@ const Project = ({
   menu,
   projects,
   review,
+  investor,
 }) => {
   const router = useRouter();
   const { locale } = router;
-
-  const complex = [
-    {
-      lable: "Средняя окупаемость:",
-      sublable: "5-6 лет",
-    },
-    {
-      lable: "Инвестиции от",
-      sublable: "175 000$ - 445 000$",
-    },
-    {
-      lable: "Топ локация <b>Чангу,</b>",
-      sublable: "5 минут до океана",
-    },
-  ];
-
+  
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -119,31 +105,33 @@ const Project = ({
           )}
         </>
       )}
-
+      
       {project.attributes.status === "onSale" && (
         <>
-          <div className={"mb-8 md:mb-16 lg:mb-10"}>
-            <ComplexPlash items={complex} />
-          </div>
+          {project.attributes?.Plash && (
+            <div className={"mb-8 md:mb-16 lg:mb-10"}>
+              <ComplexPlash items={project.attributes.Plash} />
+            </div>
+          )}
+          
           <div className={"mb-16 md:mb-16"}>
-            <InvestInBaly
-              title={"<span>10 причин</span> \nинвестировать в Бали"}
-              blockFirst={"<b>За 10 лет поток </b> туристов вырос"}
-            />
+            <InvestInBaly />
           </div>
           {baliGallery && (
             <div className={"mb-16"}>
               <SliderBaly images={baliGallery.attributes?.gallery?.data} />
             </div>
           )}
-
-          <div className={"mb-16"}>
-            <ComplexPlan />
-          </div>
-          {properties && (
+          {project.attributes?.ComplexPlan && (
+            <div className={"mb-16"}>
+              <ComplexPlan ComplexPlan={project.attributes.ComplexPlan}/>
+            </div>
+          )}
+          
+          {project && (
             <div className={"mb-16 xl:mb-24"}>
               <PropertiesGallery
-                properties={properties.attributes?.propertyGallerys}
+                properties={project.attributes?.Property}
               />
             </div>
           )}
@@ -163,9 +151,13 @@ const Project = ({
               <FinanceModeling villas={project.attributes?.financeModel} />
             </div>
           )}
-          <div className={"mb-16"}>
-            <Investor />
-          </div>
+          
+          {investor && (
+            <div className={"mb-16"}>
+              <Investor invest={investor.attributes} />
+            </div>
+          )}
+          
           {project && (
             <div className={"mb-16 xl:mb-24"}>
               <Quiz />
@@ -230,6 +222,7 @@ export async function getStaticProps({ locale, locales, params }) {
     socialRes,
     projectsRes,
     reviewRes,
+    InvestorRes,
   ] = await Promise.all([
     fetchAPI("/projects", {
       filters: {
@@ -247,6 +240,7 @@ export async function getStaticProps({ locale, locales, params }) {
     fetchAPI("/social"),
     fetchAPI("/projects", { locale: locale }),
     fetchAPI("/review"),
+    fetchAPI("/what-get-investor", { populate: "deep", locale: locale }),
   ]);
 
   return {
@@ -261,6 +255,7 @@ export async function getStaticProps({ locale, locales, params }) {
       menu: menuRes.data,
       social: socialRes.data,
       review: reviewRes.data,
+      investor: InvestorRes.data,
     },
     revalidate: 120,
   };

@@ -6,8 +6,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper";
+import { useRouter } from "next/router";
 
 const ProjectFinanceModeling = ({ villas }) => {
+  const router = useRouter();
+  const { locale } = router;
   const [activeTab, setActiveTab] = React.useState(0);
   const [swiper, setSwiper] = React.useState(null);
   const arrowPrev = React.useRef(null);
@@ -26,7 +29,7 @@ const ProjectFinanceModeling = ({ villas }) => {
     <section className={styles.financeModeling}>
       <div className={"container"}>
         <div className={"mb-7 lg:mb-12"}>
-          <h2 className={"h2"}>ФИНАНСОВАЯ МОДЕЛЬ</h2>
+          <h2 className={"h2"}>{locale === 'ru' ? "ФИНАНСОВАЯ МОДЕЛЬ" : "FINANCIAL MODEL"}</h2>
         </div>
         {villas && (
           <>
@@ -71,7 +74,6 @@ const ProjectFinanceModeling = ({ villas }) => {
                       tabIndex={idx}
                       onClick={(event) => handleTabClick(event)}
                     >
-                      <p className={styles.price}>230 000 $</p>
                       <p className={styles.name}>{villa.villaTitle}</p>
                     </div>
                   </SwiperSlide>
@@ -148,10 +150,19 @@ const ProjectFinanceModeling = ({ villas }) => {
                   <div>
                     <div className={"flex justify-between items-end"}>
                       <h3 className={styles.title}>
-                        Доходность с <br />
-                        <span>посуточной аренды</span>
+                        {locale === 'ru' ?
+                          <>
+                            Доходность с <br />
+                            <span>посуточной аренды</span>
+                          </> :
+                          <>
+                            Daily<br />
+                            <span>rental plan</span>
+                          </>
+                        }
+                        
                       </h3>
-                      <p className={styles.roiLabel}>Сумма</p>
+                      <p className={styles.roiLabel}>{locale === 'ru' ? "Сумма" : "Sum"}</p>
                       <p className={styles.roiLabel}>ROI</p>
                     </div>
 
@@ -170,10 +181,19 @@ const ProjectFinanceModeling = ({ villas }) => {
                   <div>
                     <div className={"flex justify-between items-end"}>
                       <h3 className={styles.title}>
-                        Доходность с <br />
-                        <span>помесячной аренды</span>
+                        {locale === 'ru' ?
+                          <>
+                            Доходность с <br />
+                            <span>помесячной аренды</span>
+                          </>:
+                          <>
+                            Monthly<br />
+                            <span>rental plan</span>
+                          </>
+                        }
+                        
                       </h3>
-                      <p className={styles.roiLabel}>Сумма</p>
+                      <p className={styles.roiLabel}>{locale === 'ru' ? "Сумма" : "Sum"}</p>
                       <p className={styles.roiLabel}>ROI</p>
                     </div>
 

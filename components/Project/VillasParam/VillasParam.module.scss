@@ -50,6 +50,46 @@
     @media (min-width: 768px) {
       flex-direction: row;
     }
+    .paramBlockSmall{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 70%;
+      }
+      @media (min-width: 984px) {
+        width: 50%;
+      }
+      @media (min-width: 1240px) {
+        width: 45%;
+      }
+      .param{
+        width: 45%;
+        margin-bottom: 2em;
+        @media (min-width: 768px) {
+          width: 46%;
+          margin-right: 20px;
+          max-width: 210px;
+        }
+
+        .value{
+          font-size: 20px;
+          color: #ff9900;
+          @media (min-width: 768px) {
+            font-size: 35px;
+          }
+        }
+        .lableParam{
+          font-size: 14px;
+          color: #FFFFFF;
+          @media (min-width: 768px) {
+            font-size: 18px;
+          }
+        }
+      }
+
+    }
     .paramBlock{
       display: flex;
       flex-wrap: wrap;
@@ -58,8 +98,6 @@
       @media (min-width: 768px) {
         width: 70%;
       }
-
-
       .param{
         width: 45%;
         margin-bottom: 2em;
@@ -84,6 +122,7 @@
         }
       }
     }
+
     .Slider{
       width: 100%;
       @media (min-width: 768px) {
