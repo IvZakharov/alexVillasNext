@@ -10,7 +10,7 @@ const OurBusiness = ({ locale, stats }) => {
       <div className={styles.OurBusiness}>
         <div className={styles.rowOne}>
           <h2 className={`${styles.text} h1`}>
-            {locale == "en" ? (
+            {locale === "en" ? (
               <>
                 why <br />
                 <span>ALEX</span> <br />
@@ -26,13 +26,12 @@ const OurBusiness = ({ locale, stats }) => {
           </h2>
           <div className={styles.stats}>
             <p className={`${styles.textGroup} text`}>
-              {locale == "en" ? (
+              {locale === "en" ? (
                 <>
                 
                 </>
               ) : (
                 <>
-                  {" "}
                   Alex Villas Group это <br /> инвестиционная компания <br /> с
                   8-летним опытом.
                 </>
@@ -52,7 +51,7 @@ const OurBusiness = ({ locale, stats }) => {
         <div className={styles.logosBlock}>
           {stats.attributes?.partners && stats.attributes?.partners.map((obj, idx) =>(
             <div className={styles.logos} key={idx}>
-              <Link href={obj.url}>
+              <Link href={obj.url} target={'_blank'} rel={'noreferrer'}>
                 <Image src={obj.image.data.attributes?.url}
                        width={obj.image.data.attributes?.width}
                        height={obj.image.data.attributes?.height}

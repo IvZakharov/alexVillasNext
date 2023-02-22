@@ -1,6 +1,7 @@
 import styles from "./Quiz.module.scss";
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
+import { useForm } from "react-hook-form";
 import Checkbox from "../../../ui/Checkbox/Checkbox";
 import Radio from "../../../ui/Radio/Radio";
 import TextField from "../../../ui/TextField/TextField";
@@ -85,16 +86,26 @@ const inputs = [
 ];
 
 const Quiz = ({ title }) => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
+
   const [step, setStep] = React.useState(0);
+  const [validate, setValidate] = React.useState(true);
 
   const nextStep = () => {
-    if (step === inputs.length - 1) {
-      console.log("send");
-    } else {
-      setStep((prev) => prev + 1);
+    if (validate) {
+      if (step === inputs.length - 1) {
+        console.log("send");
+      } else {
+        setStep((prev) => prev + 1);
+      }
     }
   };
-
   const prevStep = () => {
     setStep((prev) => prev - 1);
   };
@@ -129,7 +140,7 @@ const Quiz = ({ title }) => {
           </div>
 
           <div className={"mb-10 md:mb-16 relative"}>
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
               {inputs &&
                 inputs.map((obj, idx) => (
                   <div
@@ -219,14 +230,14 @@ const Quiz = ({ title }) => {
             >
               <i>
                 <svg
-                  width="41"
+                  width="12"
                   height="7"
-                  viewBox="0 0 51 7"
+                  viewBox="0 0 12 7"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M50.0025 3.75L45.0025 0.863249V6.63675L50.0025 3.75ZM0 4.25H45.5025V3.25H0V4.25Z"
+                    d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z"
                     fill="#FF9900"
                   />
                 </svg>
@@ -234,20 +245,24 @@ const Quiz = ({ title }) => {
               <span>Назад</span>
             </button>
 
-            <button className={styles.buttonNext} onClick={nextStep}>
+            <button
+              type={step === inputs.length - 1 ? "submit" : "button"}
+              className={styles.buttonNext}
+              onClick={nextStep}
+            >
               <span>
                 {step === inputs.length - 1 ? "Получить подборку" : "Далее"}
               </span>
               <i>
                 <svg
-                  width="41"
+                  width="12"
                   height="7"
-                  viewBox="0 0 51 7"
+                  viewBox="0 0 12 7"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M50.0025 3.75L45.0025 0.863249V6.63675L50.0025 3.75ZM0 4.25H45.5025V3.25H0V4.25Z"
+                    d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z"
                     fill="#FF9900"
                   />
                 </svg>

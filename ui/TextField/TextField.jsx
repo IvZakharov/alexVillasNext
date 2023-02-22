@@ -1,14 +1,13 @@
 import styles from "./TextField.module.scss";
 
+import { useForm } from "react-hook-form";
+
 const TextField = ({ type, name, placeholder, required }) => {
+  const { register } = useForm();
+
   return (
-    <div className={styles.field}>
-      <input
-        type={type}
-        name={name}
-        placeholder={placeholder}
-        required={required}
-      />
+    <div className={"textField"}>
+      <input type={type} name={name} placeholder={placeholder} />
     </div>
   );
 };

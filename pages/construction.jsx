@@ -126,7 +126,11 @@ export default function Construction({
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
-      logo={page.attributes?.logo.data.attributes.url ? page.attributes.logo.data.attributes.url : "/images/logos/logo_construction.png"}
+      logo={
+        page.attributes?.logo.data.attributes.url
+          ? page.attributes.logo.data.attributes.url
+          : "/images/logos/logo_construction.png"
+      }
       menu={menuFilters(menu.attributes?.links, "header")}
       footer={menuFilters(menu.attributes?.links, "footer")}
       contact={menuFilters(menu.attributes?.links, "contact")}
@@ -147,7 +151,7 @@ export default function Construction({
           />
         </div>
       )}
-      
+
       <div className={"mb-16 xl:mb-24"}>
         {page.attributes?.alexVillasBack && (
           <div>
@@ -280,7 +284,7 @@ export default function Construction({
           />
         </div>
       )}
-      
+
       {whyAlex && (
         <div className={"mb-16 xl:mb-32"}>
           <OurBusiness locale={locale} stats={whyAlex} />
@@ -328,7 +332,11 @@ export async function getStaticProps({ locale }) {
       locale: locale,
     }),
     fetchAPI("/map", { populate: "deep", locale: locale }),
-    fetchAPI("/projects", { populate: "*", locale: locale }),
+    fetchAPI("/projects", {
+      populate: "*",
+      locale: locale,
+      sort: "updatedAt:DESC",
+    }),
     fetchAPI("/principle", { populate: "deep", locale: locale }),
     fetchAPI("/why-alex", { populate: "deep", locale: locale }),
     fetchAPI("/review"),

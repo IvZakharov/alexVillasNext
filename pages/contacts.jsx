@@ -107,18 +107,16 @@ export default function Contacts({
       <div className={"mb-16"}>
         <ContactAlex socials={social} global={global} />
       </div>
-  
-  
+
       {page.attributes.whatsapp && (
         <div className={"mb-16 xl:mb-24"}>
           <WhatsApp
-            text={ page.attributes.whatsapp?.description}
+            text={page.attributes.whatsapp?.description}
             link={global.attributes?.whatsappLink}
             linkLabel={page.attributes.whatsapp?.buttonLabel}
           />
         </div>
       )}
-      
 
       {map && <Map objects={reverseArr(map.attributes?.objects)} />}
 
@@ -159,7 +157,7 @@ export async function getStaticProps({ locale }) {
       fetchAPI("/global"),
       fetchAPI("/menu", { populate: "deep", locale: locale }),
       fetchAPI("/social"),
-      fetchAPI("/projects", { locale: locale }),
+      fetchAPI("/projects", { locale: locale, sort: "updatedAt:DESC" }),
     ]);
 
   return {

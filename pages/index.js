@@ -1,5 +1,5 @@
+import React from "react";
 import { useRouter } from "next/router";
-
 import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
@@ -24,7 +24,8 @@ import { reverseArr } from "../utils/reverseArr";
 import Map from "../components/Map/Map";
 import { aboutLinks } from "../data/aboutLinks";
 import { getProjectsLinks } from "../utils/getProjectsLinks";
-import slug from "./projects/[slug]";
+import VideoModal from "../components/Modal/VideoModal/VideoModal";
+import QuizModal from "../components/Modal/QuizModal/QuizModal";
 
 const ctaRu = {
   title: "ПОЛУЧИТЕ \n<span>КОНСУЛЬТАЦИЮ</span>",
@@ -146,6 +147,7 @@ export default function Home({
   menu,
   social,
 }) {
+  const [modalIsOpen, setModalIsOpen] = React.useState(true);
   const router = useRouter();
   const { locale } = router;
 
@@ -171,6 +173,8 @@ export default function Home({
             backgroundMedia={page.attributes.hero.backgroundMedia.data}
             link={page.attributes.hero.linkLabel}
             menu={menuFilters(menu.attributes?.links, "hero")}
+            quiz
+            openQuizModal={() => setModalIsOpen(true)}
           />
         </div>
       )}
@@ -343,7 +347,7 @@ export default function Home({
         )}
       </div>
 
-      {locale == "en" ? (
+      {locale === "en" ? (
         <CtaSection
           title={ctaEn.title}
           image={page.attributes.formImage}
@@ -362,6 +366,11 @@ export default function Home({
           fields={ctaRu.fields}
         />
       )}
+
+      <QuizModal
+        active={modalIsOpen}
+        closeModal={() => setModalIsOpen(false)}
+      />
     </MainLayout>
   );
 }
@@ -387,7 +396,11 @@ export async function getStaticProps({ locale }) {
       locale: locale,
     }),
     fetchAPI("/map", { populate: "deep", locale: locale }),
-    fetchAPI("/projects", { populate: "*", locale: locale }),
+    fetchAPI("/projects", {
+      populate: "*",
+      locale: locale,
+      sort: "updatedAt:DESC",
+    }),
     fetchAPI("/airbnb", { populate: "deep" }),
     fetchAPI("/team", { populate: "deep", locale: locale }),
     fetchAPI("/you-tube", { populate: "*" }),

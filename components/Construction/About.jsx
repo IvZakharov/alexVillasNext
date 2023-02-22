@@ -91,8 +91,8 @@ const ConstructionAbout = () => {
 
             <ul className={styles.list}>
               <li>ПРОИЗВОДСТВО БЕТОНА</li>
-              <li>ПРОИЗВОДСТВО МЕБЕЛЬНОЕ</li>
-              <li>ПРОИЗВОДСТВО СТЕКОЛЬНОЕ</li>
+              <li>ПРОИЗВОДСТВО МЕБЕЛИ</li>
+              <li>ПРОИЗВОДСТВО СТЕКЛА</li>
             </ul>
           </div>
         </div>

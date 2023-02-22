@@ -127,7 +127,11 @@ export default function Renovation({
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
-      logo={page.attributes?.logo.data.attributes.url ? page.attributes.logo.data.attributes.url : ""}
+      logo={
+        page.attributes?.logo.data.attributes.url
+          ? page.attributes.logo.data.attributes.url
+          : ""
+      }
       menu={menuFilters(menu.attributes?.links, "header")}
       footer={menuFilters(menu.attributes?.links, "footer")}
       contact={menuFilters(menu.attributes?.links, "contact")}
@@ -303,7 +307,11 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/review"),
     fetchAPI("/invest-model", { populate: "deep", locale: locale }),
     fetchAPI("/steps-renovation", { populate: "deep", locale: locale }),
-    fetchAPI("/projects", { populate: "*", locale: locale }),
+    fetchAPI("/projects", {
+      populate: "*",
+      locale: locale,
+      sort: "updatedAt:DESC",
+    }),
   ]);
 
   return {

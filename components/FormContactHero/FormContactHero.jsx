@@ -1,5 +1,6 @@
 import styles from "./FormContactHero.module.scss";
 import TextField from "../../ui/TextField/TextField";
+import parse from "html-react-parser";
 
 const FormContactHero = ({ hrefLabel, arrow }) => {
   return (
@@ -7,7 +8,7 @@ const FormContactHero = ({ hrefLabel, arrow }) => {
       <TextField type={'text'} name={'Name'} placeholder={'Ваше Имя: '} required/>
       <TextField type={'text'} name={'Phone'} placeholder={'Телефон: '} required/>
       <button type="submit" className={`${styles.button}`}>
-        <p>{hrefLabel}</p>
+        <p>{parse(hrefLabel)}</p>
         {arrow && (
           <div className={styles.arrow}>
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">

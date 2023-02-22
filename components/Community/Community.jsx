@@ -33,11 +33,11 @@ const Community = ({ locale, description, imageUrl }) => {
 
           <Link href={"#"} className={styles.link}>
             {locale === "en" ? (
-              <span>Внеси свой вклад</span>
+                <span>make a contribution</span>
+          
             ) : (
-              <span>contribution</span>
+              <span>Внеси свой вклад</span>
             )}
-
             <i>
               <svg
                 width="73"

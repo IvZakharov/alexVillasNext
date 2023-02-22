@@ -39,9 +39,11 @@
     height: 40px;
     transition: transform 0.2s ease-in-out;
 
+
     .wrap {
       border-radius: 100%;
       overflow: hidden;
+      border: 2.5px solid white;
     }
 
     transform: translate(-50%, -50%);

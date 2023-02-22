@@ -135,23 +135,30 @@ export default function Vacancy({
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, teamRes, whyAlexRes, globalRes, menuRes, socialRes, projectRes] =
-    await Promise.all([
-      fetchAPI("/pages", {
-        filters: {
-          slug: "vacancy",
-        },
-        populate: "deep",
-        locale: locale,
-      }),
+  const [
+    pageRes,
+    teamRes,
+    whyAlexRes,
+    globalRes,
+    menuRes,
+    socialRes,
+    projectRes,
+  ] = await Promise.all([
+    fetchAPI("/pages", {
+      filters: {
+        slug: "vacancy",
+      },
+      populate: "deep",
+      locale: locale,
+    }),
 
-      fetchAPI("/team", { populate: "deep", locale: locale }),
-      fetchAPI("/why-alex", { populate: "deep", locale: locale }),
-      fetchAPI("/global"),
-      fetchAPI("/menu", { populate: "deep", locale: locale }),
-      fetchAPI("/social"),
-      fetchAPI("/projects", { locale: locale }),
-    ]);
+    fetchAPI("/team", { populate: "deep", locale: locale }),
+    fetchAPI("/why-alex", { populate: "deep", locale: locale }),
+    fetchAPI("/global"),
+    fetchAPI("/menu", { populate: "deep", locale: locale }),
+    fetchAPI("/social"),
+    fetchAPI("/projects", { locale: locale, sort: "updatedAt:DESC" }),
+  ]);
 
   return {
     props: {

@@ -1,3 +1,4 @@
+@import "styles/variables";
 
 .FormContactHero{
   display: flex;
@@ -46,13 +47,16 @@
       color: #FF9900;
       white-space: pre-wrap;
       text-transform: uppercase;
+      border: 1px solid #ff9900;
+      padding: 8px 10px;
+      width: fit-content;
+      border-radius: 15px ;
+      transition: background-color .3s ease-in-out;
+
       @media (max-width: 767px) {
         font-size: 15px;
-        width: fit-content;
         margin: 0 auto;
-        border: 1px solid #ff9900;
-        padding: 8px 10px;
-        border-radius: 15px ;
+
         margin-top: 2em;
       }
       p {
@@ -66,13 +70,14 @@
         display: flex;
       }
       &:hover {
-        p{
-          border-bottom: 2px solid #ff9900;
-        }
-        .arrow svg {
-          transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-          transform: translateX(10px);
-        }
+        background-color: rgba($primary, .2);
+        //p{
+        //  border-bottom: 2px solid #ff9900;
+        //}
+        //.arrow svg {
+        //  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        //  transform: translateX(10px);
+        //}
       }
     }
 

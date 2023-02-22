@@ -3,6 +3,7 @@
 .hero {
   height: 100vh;
   position: relative;
+  min-height: 600px;
   width: 100%;
   padding-top: 210px;
   padding-bottom: 64px;
@@ -243,22 +244,29 @@
     line-height: 21px;
     color: #ff9900;
     font-family: var(--robotoCondensed-font);
+    border: 1px solid #ff9900;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 8px 10px;
+    transition: background-color 0.3s ease-in-out;
 
     @media (max-width: 767px) {
       font-size: 15px;
-      width: fit-content;
       margin: 0 auto;
-      border: 1px solid #ff9900;
-      border-radius: 15px;
-      padding: 8px 10px;
     }
     &:hover {
+      background-color: rgba($primary, 0.2);
+
       a {
-        border-bottom: 2px solid #ff9900;
+        //border-bottom: 2px solid #ff9900;
       }
     }
+
+    &:active {
+      background-color: rgba($primary, 0.4);
+    }
     a {
-      border-bottom: 2px solid rgb(0, 0, 0, 0);
+      //border-bottom: 2px solid rgb(0, 0, 0, 0);
       transition: 0.5s all;
       display: flex;
       align-items: center;
@@ -270,10 +278,10 @@
       transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    &:hover {
-      i {
-        transform: translateX(10px);
-      }
-    }
+    //&:hover {
+    //  i {
+    //    transform: translateX(10px);
+    //  }
+    //}
   }
 }
