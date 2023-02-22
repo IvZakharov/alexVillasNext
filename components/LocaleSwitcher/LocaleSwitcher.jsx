@@ -40,14 +40,7 @@ export default function LocaleSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         ref={dropdownRef}
       >
-        <div className={styles.image}>
-          <Image
-            width={20}
-            height={20}
-            src={`/images/flags/${activeLocale}.svg`}
-            alt={`${activeLocale} flag icon`}
-          />
-        </div>
+      
 
         <span className={"text textSmall uppercase cursor-pointer"}>
           {activeLocale}
@@ -79,13 +72,6 @@ export default function LocaleSwitcher() {
                   legacyBehavior
                 >
                   <div className={"flex items-center gap-1 cursor-pointer"}>
-                    <Image
-                      width={20}
-                      height={20}
-                      src={`/images/flags/${locale}.svg`}
-                      alt={`${locale} flag icon`}
-                    />
-
                     <span className={"text textSmall uppercase"}>
                       {" "}
                       {locale}

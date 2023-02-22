@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AlexVillas.module.scss"
 import Image from "next/image";
-import parse from "html-react-parser";
+
 import md from "markdown-it";
 
 const AlexVillas = ({firstText, secondText, logo}) => {
@@ -15,10 +15,10 @@ const AlexVillas = ({firstText, secondText, logo}) => {
                  fill
                  alt={"Alex Villas"}
                  sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 10vw,
-              33vw"
+              (max-width: 1200px) 80vw,
+             50vw"
                  style={{
-                   objectFit: "cale-down",
+                   objectFit: "contain",
                  }}
           />
         </div>

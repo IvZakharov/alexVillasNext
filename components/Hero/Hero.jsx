@@ -15,7 +15,9 @@ const Hero = ({
   form,
   link,
   backgroundMedia,
-  menu
+  menu,
+  quiz,
+  openQuizModal,
 }) => {
   const getMediaType = (mime) => {
     return mime.split("/")[0];
@@ -85,14 +87,13 @@ const Hero = ({
             {form && (
               <FormContactHero
                 hrefLabel={
-                  form == ""
+                  form === ""
                     ? "ПОЛУЧИТЕ КАТАЛОГ ОБЪЕКТОВ \nИ ФИНАНСОВУЮ МОДЕЛЬ"
                     : form
                 }
                 arrow
               />
             )}
-
             {text && !form && (
               <div className={styles.propertie}>
                 {" "}
@@ -101,35 +102,54 @@ const Hero = ({
             )}
             {text && form && (
               <div className={styles.textBlockWithForm}>
-                {" "}
                 <div className={`${styles.text} text`}>{parse(text)}</div>
               </div>
             )}
           </div>
           {link && !form && (
             <div className={styles.link}>
-              <Link href={"#"}>
-                {link}
-                <i>
-                  <svg
-                    width="12"
-                    height="7"
-                    viewBox="0 0 12 7"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z"
-                      fill="#FF9900"
-                    />
-                  </svg>
-                </i>
-              </Link>
+              {quiz ? (
+                <button onClick={openQuizModal} className={"flex items-center"}>
+                  {link}
+                  <i>
+                    <svg
+                      width="12"
+                      height="7"
+                      viewBox="0 0 12 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z"
+                        fill="#FF9900"
+                      />
+                    </svg>
+                  </i>
+                </button>
+              ) : (
+                <Link href={"#"}>
+                  {link}
+                  <i>
+                    <svg
+                      width="12"
+                      height="7"
+                      viewBox="0 0 12 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.0245 3.5L6.02448 0.613249V6.38675L11.0245 3.5ZM0.974609 4H6.52448V3H0.974609V4Z"
+                        fill="#FF9900"
+                      />
+                    </svg>
+                  </i>
+                </Link>
+              )}
             </div>
           )}
         </div>
         <div className={"hidden md:block"}>
-          <HeroMenu menu={menu}/>
+          <HeroMenu menu={menu} />
         </div>
       </div>
     </section>

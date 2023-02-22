@@ -111,7 +111,14 @@ const ctaEn = {
   ],
 };
 
-export default function Management({ page, airbnb, global, menu, social, projects }) {
+export default function Management({
+  page,
+  airbnb,
+  global,
+  menu,
+  social,
+  projects,
+}) {
   const router = useRouter();
   const { locale } = router;
 
@@ -120,7 +127,11 @@ export default function Management({ page, airbnb, global, menu, social, project
       metaTitle={"Alex Villas"}
       metaDescription={"Alex Villas"}
       metaKeywords={"alex villas"}
-      logo={page.attributes?.logo.data.attributes.url ? page.attributes.logo.data.attributes.url : "/images/logos/logo_management.png"}
+      logo={
+        page.attributes?.logo.data.attributes.url
+          ? page.attributes.logo.data.attributes.url
+          : "/images/logos/logo_management.png"
+      }
       menu={menuFilters(menu.attributes?.links, "header")}
       footer={menuFilters(menu.attributes?.links, "footer")}
       contact={menuFilters(menu.attributes?.links, "contact")}
@@ -238,8 +249,8 @@ export default function Management({ page, airbnb, global, menu, social, project
 }
 
 export async function getStaticProps({ locale }) {
-  const [pageRes, airbnbRes, globalRes, menuRes, socialRes, projectRes] = await Promise.all(
-    [
+  const [pageRes, airbnbRes, globalRes, menuRes, socialRes, projectRes] =
+    await Promise.all([
       fetchAPI("/pages", {
         filters: {
           slug: "management",
@@ -249,11 +260,10 @@ export async function getStaticProps({ locale }) {
       }),
       fetchAPI("/airbnb", { populate: "deep" }),
       fetchAPI("/global"),
-      fetchAPI("/menu", { populate: "deep", locale: locale  }),
+      fetchAPI("/menu", { populate: "deep", locale: locale }),
       fetchAPI("/social"),
-      fetchAPI("/projects", { locale: locale }),
-    ]
-  );
+      fetchAPI("/projects", { locale: locale, sort: "updatedAt:DESC" }),
+    ]);
 
   return {
     props: {

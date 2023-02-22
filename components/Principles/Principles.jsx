@@ -63,7 +63,7 @@ const Principles = ({ title, principles }) => {
                         "p-4 pb-6 md:px-6 md:py-8 xl:px-8 xl:py-10 md:w-1/2"
                       }
                     >
-                      <h3 className={styles.slideTitle}>{obj.title}</h3>
+                      <h3 className={styles.slideTitle}> { parse(obj.title) }</h3>
                       <p className={`${styles.description} text textSmall`}>
                         {obj.description}
                       </p>

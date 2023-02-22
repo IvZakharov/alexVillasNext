@@ -67,7 +67,7 @@ const HeaderMenu = ({ logo, menu, contact, menuProject, locale }) => {
               ))}
           </ul>
         </nav>
-        <div className={"mr-5"}>
+        <div className={"flex justify-end md:block md:mr-5"}>
           <LocaleSwitcher />
         </div>
         {contact && (
