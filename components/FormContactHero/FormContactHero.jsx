@@ -1,12 +1,15 @@
 import styles from "./FormContactHero.module.scss";
 import TextField from "../../ui/TextField/TextField";
 import parse from "html-react-parser";
+import { useRouter } from "next/router";
 
 const FormContactHero = ({ hrefLabel, arrow }) => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <form className={styles.FormContactHero}>
-      <TextField type={'text'} name={'Name'} placeholder={'Ваше Имя: '} required/>
-      <TextField type={'text'} name={'Phone'} placeholder={'Телефон: '} required/>
+      <TextField type={'text'} name={'Name'} placeholder={locale === 'ru' ? 'Ваше Имя: ': 'Your name:'} required/>
+      <TextField type={'text'} name={'Phone'} placeholder={locale === 'ru' ? 'Телефон: ' : 'Phone/WhatsApp'} required/>
       <button type="submit" className={`${styles.button}`}>
         <p>{parse(hrefLabel)}</p>
         {arrow && (

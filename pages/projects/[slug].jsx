@@ -54,24 +54,6 @@ const Project = ({
       locale={locale}
     >
       <div className={"mb-16 md:mb-32 xl:mb-24"}>
-        {/*<Hero*/}
-        {/*  h1first={"ALEX VILLAS"}*/}
-        {/*  h1second={"COMPLEX 6"}*/}
-        {/*  text={"с доходностью от 10 до 33 годовых в $"}*/}
-        {/*  backgroundMedia={project.attributes.hero.backgroundMedia.data}*/}
-        {/*  dot={"BERAWA, CANGGU"}*/}
-        {/*  form={"Получить персональное предложение"}*/}
-        {/*  subLable={"Цены от $189.000"}*/}
-        {/*  text={*/}
-        {/*    "1-спальный таунхаус <span>x 10</span><br />" +*/}
-        {/*    "1-спальные апартаменты <span>x 16</span><br />" +*/}
-        {/*    "1-спальные смарт-виллы <span>x 5</span><br />" +*/}
-        {/*    "2-спальные смарт-виллы <span>x 3</span><br />" +*/}
-        {/*    "3-спальные смарт-виллы <span>x 1</span><br />"*/}
-        {/*  }*/}
-        {/*  link*/}
-        {/*/>*/}
-
         <ProjectHero
           h1first={project.attributes.hero.title}
           h1second={project.attributes.hero.titleBottom}
