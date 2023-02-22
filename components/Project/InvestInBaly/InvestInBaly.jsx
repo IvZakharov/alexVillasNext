@@ -80,7 +80,7 @@ const InvestInBaly = ({ title, blockFirst }) => {
               <div className={`${styles.bigTitle} h2`}>{locale == 'ru' ? parse(dataRu.out) : parse(dataEn.out)}</div>
               <div className={`${styles.lable} text`}>{locale == 'ru' ? parse(dataRu.outLabel) : parse(dataEn.outLabel)}</div>
             </div>
-            <div className={styles.vertLine}></div>
+            <div className={`${styles.vertLine} hidden md:block`}></div>
             <div className={styles.block}>
               <div className={`${styles.bigTitle} h2`}>{locale == 'ru' ? parse(dataRu.in) : parse(dataEn.in)}</div>
               <div className={`${styles.lable} text`}>{locale == 'ru' ? parse(dataRu.inLabel) : parse(dataEn.inLabel)}</div>

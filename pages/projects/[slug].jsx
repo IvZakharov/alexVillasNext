@@ -61,7 +61,7 @@ const Project = ({
           backgroundImage={project.attributes?.thumbnail}
           form={
             project.attributes.status === "onSale"
-              ? "Получить персональное предложение"
+              ? project.attributes.hero.linkLabel
               : null
           }
           location={project.attributes.location}

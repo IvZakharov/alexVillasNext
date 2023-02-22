@@ -5,7 +5,6 @@ import Image from "next/image";
 import parse from "html-react-parser";
 
 const Investor = ({invest}) => {
-  {console.log(invest)}
   return (
     <section className={styles.Investor}>
       <div className="container">
@@ -23,11 +22,6 @@ const Investor = ({invest}) => {
               ))}
             </div>
           </div>
-          {/*<div className={styles.imageBlock}>*/}
-          {/*  <div className={styles.img}>*/}
-          {/*    <Image src={"/images/projects/enthusiastic-salesma.png"} sizes={'100vw'} fill={"cover"}/>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
         </div>
       </div>
     </section>

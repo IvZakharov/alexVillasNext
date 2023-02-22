@@ -22,7 +22,7 @@ const ComplexPlan = ({ComplexPlan}) => {
             <Image src={ComplexPlan.Plan.data.attributes?.url} fill={'cover'} />
           </div>
           
-          <div className="container flex justify-center relative">
+          <div className="container p-0 flex justify-center relative">
             <div className={styles.AcceptToBye}>
               <div className={styles.BlockAccept}>
                 <h3 className={"h2 white mb-4 md:mb-0"} >{locale === 'ru' ? "К покупке доступны:" : "Available now:"}</h3>

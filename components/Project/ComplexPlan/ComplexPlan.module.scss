@@ -13,14 +13,15 @@
       position: relative;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 16em;
+      margin-bottom: 2em;
       @media (min-width: 768px) {
         height: 860px;
+      }
+      @media (min-width: 984px) {
         margin-bottom: 8em;
       }
     }
     .AcceptToBye{
-      position: absolute;
       width: 100%;
       min-height: 70px;
       background: $primary;
@@ -30,13 +31,12 @@
       justify-content: space-around;
       align-items: baseline;
       padding: 1em 0.5em;
-      bottom: -20px;
-      @media (min-width: 376px) {
-        bottom: 0px;
-      }
-      @media (min-width: 768px) {
+
+
+      @media (min-width: 984px) {
         width: 90%;
-        bottom: 0;
+        position: absolute;
+        bottom: -20px;
       }
       @media (min-width: 1024px) {
         width: 80%;
