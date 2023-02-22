@@ -23,7 +23,7 @@ import { fetchAPI } from "../lib/api";
 import { reverseArr } from "../utils/reverseArr";
 import Map from "../components/Map/Map";
 import { aboutLinks } from "../data/aboutLinks";
-import {getProjectsLinks} from "../utils/getProjectsLinks";
+import { getProjectsLinks } from "../utils/getProjectsLinks";
 import slug from "./projects/[slug]";
 
 const ctaRu = {
@@ -149,8 +149,6 @@ export default function Home({
   const router = useRouter();
   const { locale } = router;
 
-  console.log(getProjectsLinks(projects, ["onSale", "soldOut"]));
-
   return (
     <MainLayout
       metaTitle={"Alex Villas"}
@@ -229,19 +227,19 @@ export default function Home({
           <ProjectsGrid
             projects={projectsOnSaleFilter(projects, ["soldOut"])}
             title={
-              locale == "en"
-                ? gridOnSaleProjectsEn.title
-                : gridOnSaleProjectsRu.title
+              locale === "en"
+                ? gridSoldOutProjectsEn.title
+                : gridSoldOutProjectsRu.title
             }
             description={
-              locale == "en"
-                ? gridOnSaleProjectsEn.description
-                : gridOnSaleProjectsRu.description
+              locale === "en"
+                ? gridSoldOutProjectsEn.description
+                : gridSoldOutProjectsRu.description
             }
             linkLabel={
-              locale == "en"
-                ? gridOnSaleProjectsEn.buttonLabel
-                : gridOnSaleProjectsRu.buttonLabel
+              locale === "en"
+                ? gridSoldOutProjectsEn.buttonLabel
+                : gridSoldOutProjectsEn.buttonLabel
             }
             locale={locale}
           />
@@ -275,19 +273,19 @@ export default function Home({
         {airbnb && (
           <ManagementGrid
             title={
-              locale == "en"
+              locale === "en"
                 ? "PROPERTIES\nWE MANAGE"
                 : "ОБЪЕКТЫ \nВ УПРАВЛЕНИИ "
             }
             description={
-              locale == "en"
+              locale === "en"
                 ? ""
                 : "Инвестируйте от $70.000 c доходностью 15-25% годовых. Цикл инвестиций 3 года."
             }
             projects={airbnb.attributes?.objects}
             link={"/management"}
             linkLabel={
-              locale == "en"
+              locale === "en"
                 ? "MORE MANAGED PROPERTIES"
                 : "БОЛЬШЕ ОБ УПРАВЛЯЮЩЕЙ КОМПАНИИ"
             }
@@ -300,7 +298,7 @@ export default function Home({
         <div className={"mb-16 xl:mb-24"}>
           <WhyBali
             locale={locale}
-            advatages={page.attributes.whyBali?.advantages}
+            advantages={page.attributes.whyBali?.advantages}
             hotspots={page.attributes?.countryComparison}
           />
         </div>

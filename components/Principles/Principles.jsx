@@ -38,12 +38,13 @@ const Principles = ({ title, principles }) => {
                 const { activeIndex } = swiperCore;
                 setActiveSlideIndex(activeIndex);
               }}
+              autoHeight={true}
               slidesPerView={1}
               effect={"fade"}
               className={styles.slider}
             >
               {principles.map((obj) => (
-                <SwiperSlide key={obj.id}>
+                <SwiperSlide key={obj.id} className={"h-full"}>
                   <div className={styles.content}>
                     <div className={`${styles.image} md:w-1/2`}>
                       <Image

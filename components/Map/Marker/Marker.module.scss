@@ -10,6 +10,7 @@
     height: 62px;
     line-height: 0;
     transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-in-out;
 
     .title {
       position: absolute;
@@ -36,6 +37,7 @@
     line-height: 0;
     width: 40px;
     height: 40px;
+    transition: transform 0.2s ease-in-out;
 
     .wrap {
       border-radius: 100%;

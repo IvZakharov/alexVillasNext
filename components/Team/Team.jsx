@@ -12,18 +12,6 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const Team = ({ teamArr, locale }) => {
-  const [cardHover, setCardHover] = React.useState(false);
-  const [gridSize, setGridSize] = React.useState();
-  const gridRef = React.useRef(null);
-
-  const handleMouseEnter = (event) => {
-    setCardHover(true);
-  };
-
-  const handleMouseLeave = () => {
-    setCardHover(false);
-  };
-
   return (
     <section className={styles.team}>
       <div
@@ -110,19 +98,22 @@ const Team = ({ teamArr, locale }) => {
         </Swiper>
       </div>
 
-      <div className={"container hidden lg:flex lg:flex-wrap relative"}>
+      <div
+        className={
+          "container hidden lg:flex lg:flex-wrap relative overflow-hidden"
+        }
+      >
         {teamArr &&
           teamArr.map((obj, idx) => (
-            <div className={styles.cardWrapper} key={idx}>
-              <Card
-                name={obj.name}
-                position={obj.position}
-                image={obj.image}
-                description={obj.description}
-                instagramLink={obj.instagramUrl}
-                linkedinLink={obj.linkedinUrl}
-              />
-            </div>
+            <Card
+              key={idx}
+              name={obj.name}
+              position={obj.position}
+              image={obj.image}
+              description={obj.description}
+              instagramLink={obj.instagramUrl}
+              linkedinLink={obj.linkedinUrl}
+            />
           ))}
       </div>
     </section>

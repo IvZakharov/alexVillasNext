@@ -19,9 +19,7 @@ const MapMarker = ({
               markerIsActive && styles.projectIconActive
             }`}
           >
-            {markerIsActive && (
-              <h3 className={styles.title}>ALEX VILLAS {title}</h3>
-            )}
+            {markerIsActive && <h3 className={styles.title}>{title}</h3>}
             <Image
               alt={"complex marker"}
               src={

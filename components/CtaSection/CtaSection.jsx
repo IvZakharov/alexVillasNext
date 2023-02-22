@@ -14,7 +14,6 @@ const CtaSection = ({
   submitButtonText,
   gradient,
 }) => {
-  //images/cta/bg.jpg
   return (
     <section
       className={`${styles.cta} ${gradient ? styles.gradient : ""}`}

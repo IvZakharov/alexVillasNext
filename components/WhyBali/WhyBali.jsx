@@ -8,7 +8,7 @@ import falseSvg from "./img/false.svg";
 
 import md from "markdown-it";
 
-const WhyBali = ({ locale, advatages, hotspots }) => {
+const WhyBali = ({ locale, advantages, hotspots }) => {
   return (
     <section className={styles.whyBali}>
       <div className={"container"}>
@@ -19,7 +19,7 @@ const WhyBali = ({ locale, advatages, hotspots }) => {
             }
           >
             <h2 className={"h1"}>
-              {locale == "en" ? (
+              {locale === "en" ? (
                 <>
                   Why <br /> <span>bali?</span>
                 </>
@@ -49,8 +49,8 @@ const WhyBali = ({ locale, advatages, hotspots }) => {
               "grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:col-span-2 lg:gap-6 xl:pt-5"
             }
           >
-            {advatages &&
-              advatages.map((obj) => (
+            {advantages &&
+              advantages.map((obj) => (
                 <div
                   key={obj.id}
                   className={`${styles.advantagesItem} text textSmall`}
@@ -77,15 +77,14 @@ const WhyBali = ({ locale, advatages, hotspots }) => {
 
           <div className={"lg:col-span-2"}>
             <h3 className={"mb-7"}>
-              {locale == "en" ? (
+              {locale === "en" ? (
                 <>
-                  СРАВНЕНИЕ С ДРУГИМИ <br /> <span>ПОПУЛЯРНЫМИ РЕГИОНАМИ:</span>
+                  COMPARISON WITH OTHER <br />{" "}
+                  <span>REAL ESTATE HOTSPOTS:</span>
                 </>
               ) : (
                 <>
-                  {" "}
-                  COMPARISON WITH OTHER <br />{" "}
-                  <span>REAL ESTATE HOTSPOTS:</span>
+                  СРАВНЕНИЕ С ДРУГИМИ <br /> <span>ПОПУЛЯРНЫМИ РЕГИОНАМИ:</span>
                 </>
               )}
             </h3>
