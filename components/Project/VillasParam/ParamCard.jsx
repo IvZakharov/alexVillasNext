@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import styles from './VillasParam.module.scss'
 
 const ParamCard = ({Param, index}) => {
-  //console.log(Param)
   return (
     <div className={styles.ParamCard} key={index}>
       <div className={styles.lable}>Основные параметры</div>
@@ -27,8 +26,8 @@ const ParamCard = ({Param, index}) => {
             modules={[Navigation]}
             className={styles.mySwiper}
           >
-            {Param.slider && Param.slider.map((obj, i)=>(
-              <SwiperSlide key={i}><img src={obj} /></SwiperSlide>
+            {Param.gallery?.data && Param.gallery.data.map((obj, i)=>(
+              <SwiperSlide key={i}><img src={obj.attributes?.url} /></SwiperSlide>
             ))}
           </Swiper>
         </div>
