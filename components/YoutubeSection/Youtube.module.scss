@@ -1,6 +1,16 @@
 @import "styles/variables";
 
 .youtube {
+  width: 200px;
+  @media (min-width: 310px) {
+    width: 300px;
+  }
+  @media (min-width: 410px) {
+    width: 400px;
+  }
+  @media (min-width: 510px) {
+    width: 500px;
+  }
   .list {
     margin-bottom: 40px;
 
