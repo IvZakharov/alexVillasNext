@@ -23,6 +23,49 @@ import { menuFilters } from "../../utils/menuFilters";
 import AlexVillas from "../../components/AlexVillas/AlexVillas";
 import ProjectGallery from "../../components/Project/ProjectGallery/ProjectGallery";
 import { getProjectsLinks } from "../../utils/getProjectsLinks";
+import CtaSection from "../../components/CtaSection/CtaSection";
+
+const ctaRu = {
+  title: "ПОЛУЧИТЕ \n<span>КОНСУЛЬТАЦИЮ</span>",
+  label: "БУДЕМ\nНА СВЯЗИ!",
+  submitButtonText: "ОТПРАВИТЬ",
+  gradient: true,
+  fields: [
+    {
+      name: "userName",
+      type: "text",
+      placeholder: "Ваше имя:",
+      required: true,
+    },
+    {
+      name: "userTel",
+      type: "tel",
+      placeholder: "Номер телефона/WhatsApp:",
+      required: true,
+    },
+  ],
+};
+
+const ctaEn = {
+  title: "GET IN TOUCH \n<span>WITH US:</span>",
+  label: "HOPE TO HEAR\nFROM YOU!",
+  submitButtonText: "SEND",
+  gradient: true,
+  fields: [
+    {
+      name: "userName",
+      type: "text",
+      placeholder: "Your name:",
+      required: true,
+    },
+    {
+      name: "userTel",
+      type: "tel",
+      placeholder: "Phone number/WhatsApp:",
+      required: true,
+    },
+  ],
+};
 
 const Project = ({
   project,
@@ -165,6 +208,25 @@ const Project = ({
             <div className={"mb-16 xl:mb-24"}>
               <Faq array={project.attributes?.faq} />
             </div>
+          )}
+          {locale === "en" ? (
+            <CtaSection
+              title={ctaEn.title}
+              image={project.attributes.formImage}
+              label={ctaEn.label}
+              submitButtonText={ctaEn.submitButtonText}
+              gradient={ctaEn.gradient}
+              fields={ctaEn.fields}
+            />
+          ) : (
+            <CtaSection
+              title={ctaRu.title}
+              image={project.attributes.formImage}
+              label={ctaRu.label}
+              submitButtonText={ctaRu.submitButtonText}
+              gradient={ctaRu.gradient}
+              fields={ctaRu.fields}
+            />
           )}
         </>
       )}
