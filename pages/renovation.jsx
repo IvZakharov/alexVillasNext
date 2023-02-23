@@ -73,6 +73,8 @@ export default function Renovation({
   stepsRenovation,
   projects,
   review,
+  renovationYoutube,
+  
 }) {
   const router = useRouter();
   const { locale } = router;
@@ -212,6 +214,7 @@ export default function Renovation({
         <div className={"mb-16 md:mb-24 xl:mb-36"}>
           <RenovationSteps
             data={stepsRenovation}
+            youtube={renovationYoutube}
             imageAfter={
               page.attributes.renovation.imageAfter
                 ? page.attributes.renovation.imageAfter.data.attributes.url
@@ -289,6 +292,7 @@ export async function getStaticProps({ locale }) {
     reviewRes,
     investModelRes,
     stepsRenovationRes,
+    renovationRes,
     projectsRes,
   ] = await Promise.all([
     fetchAPI("/pages", {
@@ -307,6 +311,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/review"),
     fetchAPI("/invest-model", { populate: "deep", locale: locale }),
     fetchAPI("/steps-renovation", { populate: "deep", locale: locale }),
+    fetchAPI("/renovation-youtube", { populate: "deep", locale: locale }),
     fetchAPI("/projects", {
       populate: "*",
       locale: locale,
@@ -325,6 +330,7 @@ export async function getStaticProps({ locale }) {
       review: reviewRes.data,
       investModel: investModelRes.data,
       stepsRenovation: stepsRenovationRes.data,
+      renovationYoutube: renovationRes.data,
       projects: projectsRes.data,
     },
     revalidate: 120,

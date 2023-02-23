@@ -3,11 +3,7 @@ import React from "react";
 import Image from "next/image";
 import parse from "html-react-parser";
 import Renovation from "../../YoutubeSection/Renovation";
-const video = {
-  [youtubeUrl: "https://www.youtube.com/watch?v=Qi5ktHOvQAw",],
-  [youtubeUrl: "https://www.youtube.com/watch?v=X-0VnYZ0IiQ",],
-}
-const RenovationSteps = ({ data, imageBefore, imageAfter, locale }) => {
+const RenovationSteps = ({ data, imageBefore, imageAfter, youtube, locale }) => {
   const textRu = {
     after: "После",
     before: "До",
@@ -17,6 +13,7 @@ const RenovationSteps = ({ data, imageBefore, imageAfter, locale }) => {
     after: "After",
     before: "Before",
   }
+  //console.log(youtube)
   return (
     <section className={styles.steps}>
       <div className={"container"}>
@@ -80,41 +77,8 @@ const RenovationSteps = ({ data, imageBefore, imageAfter, locale }) => {
                 ))}
               </ul>
             ) : (
-              <div className={"grid sm:grid-cols-2 xl:pr-52"}>
-                <Renovation youtubeLinks={video} locale={locale} />
-              {/*  <div className={styles.imageBefore}>*/}
-              {/*    <Image*/}
-              {/*      alt={"Project name"}*/}
-              {/*      src={imageBefore}*/}
-              {/*      quality={80}*/}
-              {/*      fill*/}
-              {/*      priority*/}
-              {/*      sizes="(max-width: 576px) 100vw,*/}
-              {/*(max-width: 984px) 50vw,*/}
-              {/*33vw"*/}
-              {/*      style={{*/}
-              {/*        objectFit: "cover",*/}
-              {/*      }}*/}
-              {/*    />*/}
-              {/*    <span className={styles.label}>{locale === 'ru' ? textRu.before : textEn.before}</span>*/}
-              {/*  </div>*/}
-              
-              {/*  <div className={styles.imageAfter}>*/}
-              {/*    <Image*/}
-              {/*      alt={"Project name"}*/}
-              {/*      src={imageAfter}*/}
-              {/*      quality={80}*/}
-              {/*      fill*/}
-              {/*      priority*/}
-              {/*      sizes="(max-width: 576px) 100vw,*/}
-              {/*(max-width: 984px) 50vw,*/}
-              {/*33vw"*/}
-              {/*      style={{*/}
-              {/*        objectFit: "cover",*/}
-              {/*      }}*/}
-              {/*    />*/}
-              {/*    <span className={styles.label}>{locale === 'ru' ? textRu.after : textEn.after}</span>*/}
-              {/*  </div>*/}
+              <div className={"grid md:grid-cols-2"}>
+                <Renovation youtubeLinks={youtube.attributes?.YouTubeUrl} locale={locale} />
               </div>
             )}
           </div>

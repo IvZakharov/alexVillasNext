@@ -14,89 +14,11 @@ import "swiper/css/free-mode";
 const Index = ({ youtubeLinks, locale }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
-
+  {console.log(youtubeLinks)}
   return (
     <section className={styles.youtube}>
       <div className={"container"}>
-        <div
-          className={
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:pl-24 xl:pr-48"
-          }
-        >
-          <div className={"md:flex md:flex-col"}>
-
-            <ul className={styles.list}>
-              <li className={styles.item}>
-                <i className={styles.icon}>
-                  <svg
-                    width="32"
-                    height="22"
-                    viewBox="0 0 32 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.16699 11.1965L11.3337 20.3631L29.667 2.02979"
-                      stroke="#FF9900"
-                      strokeWidth="2.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </i>
-                <p className={"text"}>
-                  {locale == "en"
-                    ? "Weekly top quality videos about real estate in Bali"
-                    : "Еженедельные видео про инвестиции на Бали"}
-                </p>
-              </li>
-
-              <li className={styles.item}>
-                <i className={styles.icon}>
-                  <svg
-                    width="32"
-                    height="22"
-                    viewBox="0 0 32 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.16699 11.1965L11.3337 20.3631L29.667 2.02979"
-                      stroke="#FF9900"
-                      strokeWidth="2.75"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </i>
-                <p className={"text"}>
-                  {locale == "en"
-                    ? "Actionable content from the main market players"
-                    : "Полезный контент от топовых игроков рынка"}
-                </p>
-              </li>
-            </ul>
-
-            <Link href={""} className={styles.link}>
-              <span> {locale == "en" ? "SUBSCRIBE" : "ПОДПИСАТЬСЯ"} </span>
-              {/*<i>*/}
-              {/*  <svg*/}
-              {/*    width="73"*/}
-              {/*    height="7"*/}
-              {/*    viewBox="0 0 73 7"*/}
-              {/*    fill="none"*/}
-              {/*    xmlns="http://www.w3.org/2000/svg"*/}
-              {/*  >*/}
-              {/*    <path*/}
-              {/*      d="M73 3.19629L68 0.309538V6.08304L73 3.19629ZM0 3.69629H68.5V2.69629H0V3.69629Z"*/}
-              {/*      fill="#FF9900"*/}
-              {/*    />*/}
-              {/*  </svg>*/}
-              {/*</i>*/}
-            </Link>
-          </div>
-
-          <div className={"lg:col-span-2"}>
+          <div className={""}>
             <Swiper
               spaceBetween={20}
               effect={"fade"}
@@ -134,7 +56,6 @@ const Index = ({ youtubeLinks, locale }) => {
                 ))}
             </Swiper>
           </div>
-        </div>
       </div>
     </section>
   );
