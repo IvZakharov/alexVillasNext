@@ -21,42 +21,37 @@
     display: flex;
     align-items: self-start;
     flex-wrap: wrap;
+    padding-left: 2em;
     @media (min-width: 480px) {
       flex-direction: row;
-      justify-content: center;
     }
     @media (min-width: 768px) {
-      flex-wrap: unset;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-left: unset;
     }
     @media (min-width: 984px) {
       width: 65%;
-    }
-    @media (max-width: 1240px) {
       justify-content: space-between;
     }
     .block{
       margin-bottom: 30px;
-      width: 50%;
-
+      width: 100%;
+      @media (min-width: 264px) {
+        min-width: 180px;
+      }
       @media (min-width: 480px) {
-        margin-right: 50px;
+        //margin-right: 50px;
         width: fit-content;
+
       }
 
       @media (min-width: 768px) {
         margin-left: unset;
-        margin-right: 90px;
-        &:nth-child(odd){
-          margin-left: unset;
-          margin-right: unset;
-        }
-        &:nth-child(even){
-          margin-right: unset;
-        }
+        margin-right: 20px;
+        min-width: unset;
       }
       @media (min-width: 984px) {
-        margin-right: 90px;
+        margin-right: unset;
         margin-bottom: unset;
       }
 

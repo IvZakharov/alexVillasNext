@@ -16,9 +16,9 @@ const SliderBaly = ({ images }) => {
   return (
     <section className={styles.SliderBaly}>
       <div className="container">
-        <div className="md:grid md:grid-cols-3 mb-7 lg:mb-12">
-          <h2 className="h2 mb-4 md:mb-0">BALI</h2>
-          <p className={"text"}>
+        <div className="mb-7 lg:mb-12 md:flex items-end">
+          <h2 className="h2 whitespace-pre-line mb-5 md:mb-0 md:mr-14 xl:mr-20">BALI</h2>
+          <p className={"text textSmall max-w-sm"}>
             {locale === 'ru'?
               parse("это <span>райское место</span> для жизни и отдыха, с богатой культурой и природными красотами.")
               : parse("Bali is <span>a wonderful place </span> to feel comfortable and safe 365 days a year")

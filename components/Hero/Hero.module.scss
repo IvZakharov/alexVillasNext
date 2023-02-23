@@ -130,6 +130,7 @@
   }
   .FormText {
     display: flex;
+    margin-bottom: 1em;
     @media (max-width: 983px) {
       width: 100%;
       justify-content: center;
@@ -137,6 +138,7 @@
     @media (max-width: 767px) {
       flex-direction: column-reverse;
       width: 100%;
+
       padding-bottom: 1em;
     }
   }
@@ -151,7 +153,9 @@
       margin-bottom: 10px;
     }
     @media (max-width: 983px) {
-      max-width: 100%;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
     @media (max-width: 767px) {
       width: fit-content;
@@ -162,7 +166,7 @@
       margin-bottom: 2em;
     }
     .text {
-      margin-top: 23px;
+      //margin-top: 23px;
       font-weight: 300;
       font-size: 20px;
       line-height: 128.02%;

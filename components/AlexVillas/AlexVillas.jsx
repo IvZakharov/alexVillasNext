@@ -3,6 +3,7 @@ import styles from "./AlexVillas.module.scss"
 import Image from "next/image";
 
 import md from "markdown-it";
+import parse from "html-react-parser";
 
 const AlexVillas = ({firstText, secondText, logo}) => {
   return (
@@ -28,7 +29,7 @@ const AlexVillas = ({firstText, secondText, logo}) => {
           </div>
           {secondText &&
             <div className={`${styles.blockThree} md:flex md:items-end`}>
-              <div className="text mb-10" dangerouslySetInnerHTML={{ __html: md().render(secondText) }}></div>
+              <div className={`text ${styles.second}`}>{parse(secondText)}</div>
             </div>
           }
         </div>

@@ -166,40 +166,6 @@ export default function Management({
           <Promo Data={locale === "en" ? DataEn : Data} width />
         </div>
       )}
-      <div className={"mb-16 xl:mb-24"}>
-        <Promo
-          Data={[
-            {
-              title: "42",
-              lable: "виллы \nв управлении",
-            },
-            {
-              title: "3500",
-              lable: "Отзывов \nна AIRBNB",
-            },
-            {
-              title: "80%",
-              lable: "Средняя \nзагрузка ",
-            },
-            {
-              title: "10-20%",
-              lable: "Годовая \nдоходность",
-            },
-          ]}
-          links={[
-            {
-              name: "download",
-              lable: "Скачать PDF",
-              link: "#",
-            },
-            {
-              name: "contact",
-              lable: "Написать нам",
-              link: "#",
-            },
-          ]}
-        />
-      </div>
       <div className={"mb-16 md:mb-24 xl:mb-36"}>
         {airbnb && (
           <ManagementGrid

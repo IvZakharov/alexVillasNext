@@ -19,16 +19,6 @@ const Promo = ({ Data, width, links, color }) => {
               </div>
             ))}
         </div>
-        { links &&
-          <div className={styles.second}>
-            {links && links.map((obj, i)=>(
-              <div key={i} className={obj.name == 'download' ? styles.download : obj.name == 'contact'?  styles.contact : styles.button}>
-                { obj.name != 'button' ? <Link href={obj.link}>{obj.lable}</Link> : <Button color={'#FF9900'}  children={obj.lable} /> }
-              </div>
-            ))}
-          </div>
-          
-        }
         
         
       </div>

@@ -42,9 +42,9 @@
 
     .text{
       width: 90%;
+      white-space: pre-wrap;
       @media (min-width: 768px) {
         width: 37%;
-        white-space: pre-wrap;
       }
       span{
         color: #FF9900;
@@ -56,9 +56,15 @@
         width: 370px;
         white-space: pre-wrap;
       }
+      .second{
+        @media (min-width: 768px) {
+          padding-bottom: 1em;
+        }
 
+      }
       span{
         color: #FF9900;
+        padding-bottom: 1em;
       }
     }
 

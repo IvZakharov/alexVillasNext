@@ -13,9 +13,9 @@ const ComplexPlan = ({ComplexPlan}) => {
   return (
     <section className={styles.ComplexPlan}>
       <div className="container">
-        <div className="md:grid md:grid-cols-2 mb-7 lg:mb-12">
-          <h2 className="h2 mb-4 md:mb-0">{ComplexPlan.Title}</h2>
-          <p className={`text md:w-1/2`}>{parse(ComplexPlan.description)}</p>
+        <div className="mb-7 lg:mb-12 md:flex items-end">
+          <h2 className="h2 whitespace-pre-line mb-5 md:mb-0 md:mr-14 xl:mr-20">{ComplexPlan.Title}</h2>
+          <p className={`text textSmall max-w-sm`}>{parse(ComplexPlan.description)}</p>
         </div>
         <div className={styles.PlanBlock}>
           <div className={styles.PlanImg}>

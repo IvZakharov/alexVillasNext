@@ -11,9 +11,9 @@ const PropertiesGallery = ({ properties }) => {
   return (
     <section className={styles.propertiesGallery}>
       <div className={"container"}>
-        <div className={"md:grid md:grid-cols-2 mb-7 lg:mb-12"}>
-          <h2 className={"h2 mb-4 md:mb-0"}>{locale === 'ru' ? "НЕДВИЖИМОСТЬ" : "INSPIRING REAL ESTATE"}</h2>
-          <p className={"text"}>
+        <div className={"mb-7 lg:mb-12 md:flex items-end"}>
+          <h2 className={"h2 whitespace-pre-line mb-5 md:mb-0 md:mr-14 xl:mr-20"}>{locale === 'ru' ? "НЕДВИЖИМОСТЬ" : "INSPIRING REAL ESTATE"}</h2>
+          <p className={"text textSmall max-w-sm"}>
             {locale === 'ru' ? <>которая будет вдохновлять <br /> вас <span> каждый день</span></> : "for everyday life"}
           </p>
         </div>
