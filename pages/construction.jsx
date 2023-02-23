@@ -48,7 +48,7 @@ const ctaRu = {
 const ctaEn = {
   title: "GET IN TOUCH \n<span>WITH US:</span>",
   description:
-    "Мы строим современную недвижимость в лучших локациях для жизни и инвестиций. Срок строительства: 1 год. Доходность: 10-30%.",
+    "We build modern real estate in the best locations for living and investment. Construction period: 1 year. Yield: 10-30%.",
   label: "HOPE TO HEAR\nFROM YOU!",
   submitButtonText: "SEND",
   gradient: true,
@@ -108,6 +108,54 @@ const mapEn = {
     "Our complexes are located in the most visited areas in Bali. You will always have a choice of entertainment options and sights to see within 10-minute proximity.",
 };
 
+const DataEN = [
+  {
+    title: "7",
+    lable: "Complexes \nbuilt",
+  },
+  {
+    title: "146",
+    lable: "Total Qty \nunits",
+  },
+  {
+    title: "1 <span class='text'>year</span>",
+    lable: "Average \nconstruction time ",
+  },
+  {
+    title: "30+",
+    lable: "ROLLERS ABOUT CONSTRUCTION ON\n" +
+      "OUR YOUTUBE CHANNEL",
+  },
+  {
+    title: "8 <span class='text'>years</span>",
+    lable: "EXPERIENCE ON\n" +
+      "BALI MARKET",
+  },
+]
+
+const DataRu = [
+  {
+    title: "7",
+    lable: "Комплексов \nпостроенно",
+  },
+  {
+    title: "146",
+    lable: "Общее кол-во \nЮнитов",
+  },
+  {
+    title: "1 <span class='text'>год</span>",
+    lable: "Средний срок \nстроительства ",
+  },
+  {
+    title: "30+",
+    lable: "РОЛИКОВ О СТРОЙКЕ НА  \nНАШЕМ YOUTUBE-КАНАЛЕ",
+  },
+  {
+    title: "8 <span class='text'>лет</span>",
+    lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
+  },
+]
+
 export default function Construction({
   page,
   map,
@@ -118,6 +166,7 @@ export default function Construction({
   menu,
   social,
   review,
+  constructAbout,
 }) {
   const router = useRouter();
   const { locale } = router;
@@ -164,31 +213,7 @@ export default function Construction({
         )}
       </div>
       <div className={"mb-16 xl:mb-24"}>
-        <Promo
-          Data={[
-            {
-              title: "7",
-              lable: "Комплексов \nпостроенно",
-            },
-            {
-              title: "146",
-              lable: "Общее кол-во \nЮнитов",
-            },
-            {
-              title: "1 <span class='text'>год</span>",
-              lable: "Средний срок \nстроительства ",
-            },
-            {
-              title: "30+",
-              lable: "РОЛИКОВ О СТРОЙКЕ НА  \nНАШЕМ YOUTUBE-КАНАЛЕ",
-            },
-            {
-              title: "8 <span class='text'>лет</span>",
-              lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
-            },
-          ]}
-          width
-        />
+        <Promo Data={locale === "en" ? DataEN : DataRu} width />
       </div>
       {projects && (
         <div className={"mb-10 xl:mb-16"}>
@@ -258,9 +283,12 @@ export default function Construction({
           />
         </div>
       )}
-      <div className={"mb-16 md:mb-24"}>
-        <ConstructionAbout />
-      </div>
+      {constructAbout && (
+        <div className={"mb-16 md:mb-24"}>
+          <ConstructionAbout data={constructAbout}/>
+        </div>
+      )}
+      
       {principle && (
         <div className={"mb-16 md:mb-24 xl:mb-28"}>
           <Principles
@@ -273,7 +301,7 @@ export default function Construction({
           />
         </div>
       )}
-
+      {console.log(review)}
       {review && (
         <div className={"mb-16 xl:mb-24"}>
           <OurClientVideo
@@ -323,6 +351,7 @@ export async function getStaticProps({ locale }) {
     globalRes,
     menuRes,
     socialRes,
+    constructAboutRes,
   ] = await Promise.all([
     fetchAPI("/pages", {
       filters: {
@@ -339,10 +368,11 @@ export async function getStaticProps({ locale }) {
     }),
     fetchAPI("/principle", { populate: "deep", locale: locale }),
     fetchAPI("/why-alex", { populate: "deep", locale: locale }),
-    fetchAPI("/review"),
+    fetchAPI("/review", {locale: locale}),
     fetchAPI("/global"),
     fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
+    fetchAPI("/construction-about", { populate: "deep", locale: locale }),
   ]);
 
   return {
@@ -356,6 +386,7 @@ export async function getStaticProps({ locale }) {
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,
+      constructAbout: constructAboutRes.data,
     },
     revalidate: 120,
   };

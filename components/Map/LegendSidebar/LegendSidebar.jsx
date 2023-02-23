@@ -2,6 +2,7 @@ import styles from "./LegendSidebar.module.scss";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const LegendSidebar = ({
   objects,
@@ -11,6 +12,8 @@ const LegendSidebar = ({
   isActive,
   closeLegend,
 }) => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <aside className={`${styles.sidebar} ${isActive && styles.active}`}>
       {objects &&
@@ -116,7 +119,7 @@ const LegendSidebar = ({
 
                 {object.type === "complex" && (
                   <Link href={"#form"} className={"linkWithArrow mt-auto"}>
-                    <span className={"mr-7"}>ЗАБРОНИРОВАТЬ ПРОСМОТР</span>
+                    <span className={"mr-7"}>{locale === 'ru' ? "ЗАБРОНИРОВАТЬ ПРОСМОТР" : "BOOK VIEWING"}</span>
                     <i>
                       <svg
                         width="28"

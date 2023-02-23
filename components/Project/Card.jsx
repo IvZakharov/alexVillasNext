@@ -70,7 +70,7 @@ const ProjectCard = ({
               )}
 
               <div className={styles.link}>
-                <span>Подробнее о {title}</span>
+                <span>{locale === 'ru' ? "Подробнее о" : "More about"} {title}</span>
                 <i>
                   <svg
                     width="51"

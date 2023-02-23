@@ -4,13 +4,15 @@ import Modal from "../Modal/Modal";
 import Thumb from "../YoutubeSection/Thumb";
 import VideoModal from "../Modal/VideoModal/VideoModal";
 import parse from "html-react-parser";
+import { useRouter } from "next/router";
 
-const OurClientVideo = ({ locale, authorName, authorQuote, youtubeUrl }) => {
+const OurClientVideo = ({ authorName, authorQuote, youtubeUrl }) => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const closeModal = () => {
     setModalIsOpen(false);
   };
-
+  const router = useRouter();
+  const { locale } = router;
   return (
     <section className="container">
       <div className={styles.OurClient}>
