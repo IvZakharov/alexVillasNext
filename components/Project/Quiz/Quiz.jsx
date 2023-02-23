@@ -339,7 +339,7 @@ const Quiz = ({ title }) => {
                       <span className={styles.errorMessage}>
                         {locale === "en"
                           ? "Please fill out all required fields"
-                          : "Пожалуйста заполните поля"}
+                          : "Пожалуйста, заполните поля"}
                       </span>
                     )}
                   </div>
@@ -426,7 +426,7 @@ const Quiz = ({ title }) => {
                       <span className={styles.errorMessage}>
                         {locale === "en"
                           ? "Please fill out all required fields"
-                          : "Пожалуйста заполните поля"}
+                          : "Пожалуйста, заполните поля"}
                       </span>
                     )}
                   </div>
