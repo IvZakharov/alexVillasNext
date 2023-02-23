@@ -135,7 +135,7 @@ const Index = ({ youtubeLinks, locale }) => {
                   <SwiperSlide key={idx}>
                     <Video
                       videoUrl={obj.youtubeUrl}
-                      isActive={activeSlideIndex === idx}
+                      NoActive
                     />
                   </SwiperSlide>
                 ))}

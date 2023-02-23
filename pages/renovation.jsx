@@ -215,16 +215,6 @@ export default function Renovation({
           <RenovationSteps
             data={stepsRenovation}
             youtube={renovationYoutube}
-            imageAfter={
-              page.attributes.renovation.imageAfter
-                ? page.attributes.renovation.imageAfter.data.attributes.url
-                : "/images/renovation/renovation 2 rc9.00_11_05_02.Still002.jpg"
-            }
-            imageBefore={
-              page.attributes.renovation.imageBefore
-                ? page.attributes.renovation.imageBefore.data.attributes.url
-                : "/images/renovation/renovation 2 rc9.00_11_04_12.Still001.jpg"
-            }
             locale={locale}
           />
         </div>

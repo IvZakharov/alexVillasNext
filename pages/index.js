@@ -26,6 +26,7 @@ import { aboutLinks } from "../data/aboutLinks";
 import { getProjectsLinks } from "../utils/getProjectsLinks";
 import VideoModal from "../components/Modal/VideoModal/VideoModal";
 import QuizModal from "../components/Modal/QuizModal/QuizModal";
+import Video from "../components/YoutubeSection/Video";
 
 const ctaRu = {
   title: "ПОЛУЧИТЕ \n<span>КОНСУЛЬТАЦИЮ</span>",
@@ -146,6 +147,7 @@ export default function Home({
   global,
   menu,
   social,
+  community,
 }) {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
   const router = useRouter();
@@ -327,13 +329,12 @@ export default function Home({
           <Team teamArr={team.attributes.items} locale={locale} />
         </div>
       )}
-
       {page.attributes.community && (
         <div className={"mb-16 md:mb-24 xl:mb-36"}>
           <Community
             locale={locale}
             description={page.attributes.community.text}
-            imageUrl={"/images/team/1/socials.jpg"}
+            imageUrl={community.attributes.Image.data.attributes.url}
           />
         </div>
       )}
@@ -387,6 +388,7 @@ export async function getStaticProps({ locale }) {
     globalRes,
     menuRes,
     socialRes,
+    communityRes,
   ] = await Promise.all([
     fetchAPI("/pages", {
       filters: {
@@ -408,6 +410,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/global"),
     fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
+    fetchAPI("/sommunity-image", {populate: "deep"}),
   ]);
 
   return {
@@ -422,6 +425,7 @@ export async function getStaticProps({ locale }) {
       global: globalRes.data,
       menu: menuRes.data,
       social: socialRes.data,
+      community: communityRes.data,
     },
     revalidate: 120,
   };

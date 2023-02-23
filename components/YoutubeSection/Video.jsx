@@ -5,7 +5,7 @@ import { youtubeParser } from "../../utils/youtubeParser";
 import YouTube from "react-youtube";
 let youtubeElem;
 
-const Video = ({ videoUrl, isActive }) => {
+const Video = ({ videoUrl, isActive, NoActive }) => {
   const [videoIsHidden, setVideoIsHidden] = React.useState(true);
 
   const opts = {
