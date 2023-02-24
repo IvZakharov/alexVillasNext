@@ -59,7 +59,7 @@ const ctaEn = {
   ],
 };
 
-export default function Vacancy({
+export default function Jobs({
   page,
   team,
   whyAlex,
@@ -149,7 +149,7 @@ export async function getStaticProps({ locale }) {
   ] = await Promise.all([
     fetchAPI("/pages", {
       filters: {
-        slug: "vacancy",
+        slug: "jobs",
       },
       populate: "deep",
       locale: locale,
