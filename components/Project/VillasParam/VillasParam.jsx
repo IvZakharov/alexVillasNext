@@ -14,11 +14,12 @@ const VillasParam = ({Villas}) => {
     <section className={styles.VillasParam}>
       <div className="container">
         <h2 className={"h2"}>{ locale === 'ru' ? <><span>Информация</span> о виллах</> : <>ABOUT <span>VILLAS</span></>}</h2>
+        <div className={styles.lable}>{locale ==='ru' ? "Основные параметры" : "Main settings"}</div>
         {Villas && Villas.map((obj) =>(
           <ParamCard Param={obj} index={obj.id} />
           ))}
         <div className={styles.buttonBlock}>
-          <Link href={'#form'} className={`${styles.Button} text`}>
+          <Link href={'#form'} className={`button text`}>
             {locale === 'ru' ? "Получить расчёт возврата инвестиций" : "Get ROI CALCULATION" }
           </Link>
         </div>

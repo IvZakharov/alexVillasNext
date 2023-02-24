@@ -376,6 +376,43 @@ a {
     border-color: $primary;
   }
 }
+.button{
+  font-family: var(--robotoCondensed-font);
+  display: flex;
+  align-items: center;
+  text-align: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  white-space: pre-wrap;
+  text-transform: uppercase;
+  border: 1px solid #ff9900;
+  padding: 10px 12px;
+  width: fit-content;
+  border-radius: 15px ;
+  transition: background-color .3s ease-in-out;
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+    margin: 0 auto;
+
+    margin-top: 2em;
+  }
+  p {
+    border-bottom: 2px solid rgb(0, 0, 0, 0);
+    transition: .5s all;
+  }
+
+
+  .arrow{
+    margin-left: 10px;
+    display: flex;
+  }
+  &:hover {
+    background-color: $primary;
+  }
+}
 
 /* для элемента input c type="radio" */
 .radio {

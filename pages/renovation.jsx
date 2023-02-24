@@ -7,6 +7,7 @@ import InvestExample from "../components/InvestExample/InvestExample";
 import Table from "../components/Table/Table";
 import RenovationSteps from "../components/Renovation/Steps/Steps";
 import Principles from "../components/Principles/Principles";
+import RenovationYoutube from "../components/YoutubeSection/RenovationYoutube";
 // data
 import { renovationImages } from "../data/renovationImages";
 import { investModeling } from "../data/investModeling";
@@ -168,9 +169,18 @@ export default function Renovation({
           <Promo Data={locale === "en" ? DataEn : Data} width />
         </div>
       )}
-      <div className={"mb-16 xl:mb-24"}>
-        <RenovationSlider images={renovationImages} />
-      </div>
+      {/*<div className={"mb-16 xl:mb-24"}>*/}
+      {/*  <RenovationSlider images={renovationImages} />*/}
+      {/*</div>*/}
+      {renovationYoutube && (
+        <div className={"mb-16 xl:mb-24"}>
+          <div className={"container"}>
+            <div className={"grid md:grid-cols-2"}>
+              <RenovationYoutube youtubeLinks={renovationYoutube.attributes?.YouTubeUrl} locale={locale} />
+            </div>
+          </div>
+        </div>
+      )}
       {page.attributes.whatsapp && (
         <div className={"mb-16 xl:mb-24"}>
           <WhatsApp

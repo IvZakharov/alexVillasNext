@@ -10,8 +10,11 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
+import { useRouter } from "next/router";
 
-const Team = ({ teamArr, locale }) => {
+const Team = ({ teamArr }) => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <section className={styles.team}>
       <div

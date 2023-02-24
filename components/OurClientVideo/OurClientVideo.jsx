@@ -58,7 +58,7 @@ const OurClientVideo = ({ authorName, authorQuote, youtubeUrl }) => {
         </div>
         <div className={styles.text}>
           <p className="text mb-4">{parse(authorQuote)}</p>
-          <span className={styles.name}>{parse(authorName)}</span>
+          <span className={`${styles.name} uppercase`}>{parse(authorName)}</span>
         </div>
       </div>
 

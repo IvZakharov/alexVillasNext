@@ -20,7 +20,7 @@ const ManagementGrid = ({
           }
         >
           <h2 className={"h2 whitespace-pre-line"}>{title}</h2>
-          <p className={"text textSmall md:mt-auto"}>{description}</p>
+          <p className={"text textSmall md:mt-auto lg:whitespace-pre"}>{description}</p>
         </div>
 
         {projects && (

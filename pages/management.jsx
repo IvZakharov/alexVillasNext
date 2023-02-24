@@ -147,7 +147,7 @@ export default function Management({
             h1second={page.attributes.hero.titleBottom}
             text={page.attributes.hero.description}
             backgroundMedia={page.attributes.hero.backgroundMedia.data}
-            link={page.attributes.hero.linkLabel}
+            form={page.attributes.hero.linkLabel}
             menu={menuFilters(menu.attributes?.links, "hero")}
           />
         </div>

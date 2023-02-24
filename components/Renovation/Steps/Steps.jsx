@@ -2,7 +2,6 @@ import styles from "./Steps.module.scss";
 import React from "react";
 import Image from "next/image";
 import parse from "html-react-parser";
-import Renovation from "../../YoutubeSection/Renovation";
 const RenovationSteps = ({ data, imageBefore, imageAfter, youtube, locale }) => {
   const textRu = {
     after: "После",
@@ -77,9 +76,10 @@ const RenovationSteps = ({ data, imageBefore, imageAfter, youtube, locale }) => 
                 ))}
               </ul>
             ) : (
-              <div className={"grid md:grid-cols-2"}>
-                <Renovation youtubeLinks={youtube.attributes?.YouTubeUrl} locale={locale} />
-              </div>
+              ""
+              // <div className={"grid md:grid-cols-2"}>
+              //   <Renovation youtubeLinks={youtube.attributes?.YouTubeUrl} locale={locale} />
+              // </div>
             )}
           </div>
         ))}

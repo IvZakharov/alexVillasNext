@@ -26,7 +26,7 @@ import { getProjectsLinks } from "../utils/getProjectsLinks";
 const ctaRu = {
   title: "СВЯЗАТЬСЯ С ОТДЕЛОМ \n<span>ПРОДАЖ</span>",
   description:
-    "Мы строим современную недвижимость в лучших локациях для жизни и инвестиций. Срок строительства: 1 год. Доходность: 10-30%.",
+    "Мы строим современную недвижимость в лучших локациях для жизни и инвестиций. <br />Срок строительства: 1 год.<br /> Доходность: 10-30%.",
   submitButtonText: "ОТПРАВИТЬ",
   gradient: true,
   fields: [
@@ -48,7 +48,7 @@ const ctaRu = {
 const ctaEn = {
   title: "GET IN TOUCH \n<span>WITH US:</span>",
   description:
-    "We build modern real estate in the best locations for living and investment. Construction period: 1 year. Yield: 10-30%.",
+    "We build modern real estate in the best locations for living and investment.<br /> Construction period: 1 year. <br />Yield: 10-30%.",
   label: "HOPE TO HEAR\nFROM YOU!",
   submitButtonText: "SEND",
   gradient: true,
@@ -301,7 +301,6 @@ export default function Construction({
           />
         </div>
       )}
-      {console.log(review)}
       {review && (
         <div className={"mb-16 xl:mb-24"}>
           <OurClientVideo

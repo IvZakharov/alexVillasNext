@@ -1,7 +1,19 @@
 @import "styles/variables";
 .VillasParam{
   h2{
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+  }
+  .lable{
+    font-family: var(--robotoCondensed-font);
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-bottom: 1em;
+
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
   }
   .buttonBlock{
     display: flex;

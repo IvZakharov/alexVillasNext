@@ -61,13 +61,13 @@ const ctaEn = {
 
 export default function Vacancy({
   page,
-
   team,
   whyAlex,
   projects,
   global,
   menu,
   social,
+  job,
 }) {
   const router = useRouter();
   const { locale } = router;
@@ -107,9 +107,12 @@ export default function Vacancy({
           <OurBusiness locale={locale} stats={whyAlex} />
         </div>
       )}
-      <div className={"mb-16 xl:mb-32"}>
-        <OpenVacancy />
-      </div>
+      {job && (
+        <div className={"mb-16 xl:mb-32"}>
+          <OpenVacancy jobs={job} />
+        </div>
+      )}
+      
       {locale == "en" ? (
         <CtaSection
           title={ctaEn.title}
@@ -142,6 +145,7 @@ export async function getStaticProps({ locale }) {
     menuRes,
     socialRes,
     projectRes,
+    jobRes,
   ] = await Promise.all([
     fetchAPI("/pages", {
       filters: {
@@ -157,6 +161,7 @@ export async function getStaticProps({ locale }) {
     fetchAPI("/menu", { populate: "deep", locale: locale }),
     fetchAPI("/social"),
     fetchAPI("/projects", { locale: locale, sort: "updatedAt:DESC" }),
+    fetchAPI("/job", { populate: "deep", locale: locale }),
   ]);
 
   return {
@@ -168,6 +173,7 @@ export async function getStaticProps({ locale }) {
       menu: menuRes.data,
       social: socialRes.data,
       projects: projectRes.data,
+      job: jobRes.data,
     },
     revalidate: 120,
   };

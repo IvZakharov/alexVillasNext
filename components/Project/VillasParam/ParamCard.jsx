@@ -12,7 +12,6 @@ const ParamCard = ({Param, index}) => {
   const { locale } = router;
   return (
     <div className={styles.ParamCard} key={index}>
-      <div className={styles.lable}>{locale ==='ru' ? "Основные параметры" : ""}</div>
       <div className={styles.title}>{Param.title}</div>
       <div className={styles.Content}>
         <div className={`${Param.parameters.length != 6 ? styles.paramBlockSmall : styles.paramBlock}`}>

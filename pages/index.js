@@ -107,7 +107,7 @@ const gridSoldOutProjectsEn = {
   title: "FINISHED\nPROJECTS",
   description:
     "Check our case studies to get a closer look at our approach and see the projects we finished.",
-  buttonLabel: "MORE PROJECTS ON SALE",
+  buttonLabel: "MORE COMPLETED PROJECTS",
 };
 
 const renovationGridRu = {
@@ -245,7 +245,7 @@ export default function Home({
             linkLabel={
               locale === "en"
                 ? gridSoldOutProjectsEn.buttonLabel
-                : gridSoldOutProjectsEn.buttonLabel
+                : gridSoldOutProjectsRu.buttonLabel
             }
             locale={locale}
           />
@@ -285,8 +285,8 @@ export default function Home({
             }
             description={
               locale === "en"
-                ? ""
-                : "Инвестируйте от $70.000 c доходностью 15-25% годовых. Цикл инвестиций 3 года."
+                ? "ALEX VILLAS has been managing properties for 8 years. \nToday we have pumped up booking platforms accounts \nand 42 villas that we rent out gaining 15-20% for our \ninvestors."
+                : "ALEX VILLAS 8 лет занимается управлением. У нас \nраскачанные букинг-площадки и 42 виллы, которые \nмы успешно сдаём в аренду, зарабатывая 15-20% \nгодовых для инвесторов."
             }
             projects={airbnb.attributes?.objects}
             link={"/management"}
