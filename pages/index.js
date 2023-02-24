@@ -334,7 +334,7 @@ export default function Home({
           <Community
             locale={locale}
             description={page.attributes.community.text}
-            imageUrl={community.attributes.Image.data.attributes.url}
+            imageUrl={community.attributes?.Image?.data.attributes.url}
           />
         </div>
       )}

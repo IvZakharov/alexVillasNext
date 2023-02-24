@@ -21,7 +21,7 @@ const Video = ({ videoUrl, isActive, NoActive }) => {
   };
 
   React.useEffect(() => {
-    if (youtubeElem) {
+    if (!videoIsHidden && youtubeElem) {
       !isActive && youtubeElem.target.pauseVideo();
     }
   }, [isActive]);
