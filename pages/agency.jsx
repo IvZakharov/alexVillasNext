@@ -91,6 +91,7 @@ export default function Contacts({
           <Hero
             h1first={page.attributes.hero.title}
             h1second={page.attributes.hero.titleBottom}
+            text={page.attributes.hero.description}
             backgroundMedia={page.attributes.hero.backgroundMedia.data}
             form={page.attributes.hero.linkLabel}
           />

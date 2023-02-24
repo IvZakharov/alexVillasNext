@@ -48,10 +48,22 @@
       line-height: 21px;
       white-space: nowrap;
       color: $primary;
-      transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1), background-color .3s ease-in-out;
       border: 1px solid #ff9900;
       padding: 20px;
       border-radius: 50px;
+      &:hover {
+        background-color: rgba($primary, 0.2);
+
+        a {
+          //border-bottom: 2px solid #ff9900;
+        }
+      }
+
+      &:active {
+        background-color: rgba($primary, 0.4);
+      }
+
 
       @media (min-width: 768px) {
         font-size: 18px;

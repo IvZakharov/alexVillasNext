@@ -2,8 +2,7 @@ import React from "react";
 import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/Hero/Hero";
 import Team from "../components/Team/Team";
-import teamData from "../data/teamData";
-import WhyBali from "../components/WhyBali/WhyBali";
+
 import OurBusiness from "../components/OurBusiness/OurBusiness";
 import CtaSection from "../components/CtaSection/CtaSection";
 import OpenVacancy from "../components/OpenVacancy/OpenVacancy";

@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/free-mode";
 
-const Index = ({ youtubeLinks, locale }) => {
+const YoutubeSection = ({ youtubeLinks, locale }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
 
@@ -25,7 +25,7 @@ const Index = ({ youtubeLinks, locale }) => {
         >
           <div className={"md:flex md:flex-col"}>
             <h2 className={`h2 mb-8 xl:mb-16`}>
-              {locale == "en" ? (
+              {locale === "en" ? (
                 <>
                   <span>SUBSCRIBE</span>
                   <br />
@@ -68,7 +68,7 @@ const Index = ({ youtubeLinks, locale }) => {
                   </svg>
                 </i>
                 <p className={"text"}>
-                  {locale == "en"
+                  {locale === "en"
                     ? "Weekly top quality videos about real estate in Bali"
                     : "Еженедельные видео про инвестиции на Бали"}
                 </p>
@@ -163,4 +163,4 @@ const Index = ({ youtubeLinks, locale }) => {
   );
 };
 
-export default Index;
+export default YoutubeSection;
