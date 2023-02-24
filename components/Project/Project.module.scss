@@ -1,5 +1,10 @@
 @import "styles/variables";
 
+.gridWrap {
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 .card {
   position: relative;
   overflow: hidden;
@@ -127,15 +132,14 @@
 }
 
 .cardLarge {
-  height: 100%;
-  min-height: 260px;
+  height: 480px;
 
   @media (min-width: 768px) {
-    min-height: 400px;
+    height: 340px;
   }
 
-  @media (min-width: 984px) {
-    height: 100%;
+  @media (min-width: 1024px) {
+    height: 540px;
   }
 
   .info {
@@ -159,8 +163,6 @@
   justify-content: left;
   gap: 15px;
 
-
-
   span {
     font-family: var(--robotoCondensed-font);
     font-weight: 700;
@@ -171,7 +173,7 @@
     text-transform: uppercase;
     color: $primary;
     transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-bottom: 2px solid rgb(0,0,0,0);
+    border-bottom: 2px solid rgb(0, 0, 0, 0);
     transition: border-bottom-color 0.5s;
     @media (min-width: 1200px) {
       font-size: 18px;
@@ -184,11 +186,10 @@
   }
 
   &:hover {
-    span{
+    span {
       border-bottom: 2px solid $primary;
     }
     i {
-
       transform: translateX(10px);
     }
   }

@@ -2,69 +2,69 @@ export const aboutLinks = {
   ru: [
     {
       label: "СТРОИТЕЛЬСТВО",
-      link: "#",
+      link: "/construction",
     },
     {
       label: "ПРОДАЖА",
-      link: "#",
+      link: "/agency",
     },
     {
       label: "УПРАВЛЕНИЕ",
-      link: "#",
+      link: "/management",
     },
     {
       label: "РЕНОВАЦИЯ",
-      link: "#",
+      link: "/renovation",
     },
     {
       label: "АРЕНДА",
-      link: "#",
+      link: "#form",
     },
     {
       label: "ДИЗАЙН И АРХИТЕКТУРА",
-      link: "#",
+      link: "#form",
     },
     {
       label: "ПОКУПКА ЗЕМЛИ",
-      link: "#",
+      link: "#form",
     },
     {
       label: "ЮРИДИЧЕСКИЕ УСЛУГИ",
-      link: "#",
+      link: "#form",
     },
   ],
   en: [
     {
-      label: "VILLA RENTALS",
-      link: "#",
+      label: "CONSTRUCTION",
+      link: "/construction",
     },
     {
-      label: "VILLA SALES",
-      link: "#",
+      label: "SALES",
+      link: "/agency",
     },
     {
-      label: "VILLA CONSTRUCTION",
-      link: "#",
+      label: "MANAGEMENT",
+      link: "/management",
     },
     {
-      label: "VILLA RENOVATION",
-      link: "#",
+      label: "RENOVATION",
+      link: "/renovation",
     },
     {
-      label: "PROPERTY MANAGEMENT",
-      link: "#",
+      label: "RENT",
+      link: "#form",
     },
     {
       label: "DESIGN & ARCHITECTURE",
-      link: "#",
+      link: "#form",
     },
     {
       label: "LAND ACQUISITION",
-      link: "#",
+      link: "#form",
     },
     {
       label: "LEGAL SERVICES",
-      link: "#",
+      link: "#form",
     },
   ],
 };

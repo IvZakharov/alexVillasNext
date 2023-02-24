@@ -4,6 +4,7 @@ import ProjectCard from "./Card";
 import Link from "next/link";
 
 const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
+  const size = useWindowSize();
   const [isOpen, setIsOpen] = React.useState(false);
   const [bodyHeight, setBodyHeight] = React.useState();
   const bodyRef = React.useRef(null);
@@ -13,6 +14,20 @@ const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
       setBodyHeight(bodyRef.current.scrollHeight);
     }
   }, [bodyHeight]);
+
+  const getSize = () => {
+    if (isOpen) {
+      return bodyHeight;
+    } else {
+      if (size.width >= 1024) {
+        return 540;
+      } else if (size.width >= 768) {
+        return 600;
+      } else {
+        return 760;
+      }
+    }
+  };
 
   return (
     <section className={"overflow-x-hidden"}>
@@ -27,54 +42,35 @@ const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
         </div>
 
         <div
-          className={`grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-5 mb-5`}
-        >
-          {projects &&
-            projects.slice(0, 3).map((obj, idx) => (
-              <div
-                key={obj.id}
-                className={`${
-                  idx === 0 ? "md:col-span-2 lg:row-span-2" : "md:col-span-1"
-                }`}
-              >
-                <ProjectCard
-                  title={obj.attributes.title}
-                  status={obj.attributes.status}
-                  image={obj.attributes?.thumbnail}
-                  location={obj.attributes.location}
-                  properties={idx === 0 ? obj.attributes?.propertyList : null}
-                  large={idx === 0}
-                  key={obj.id}
-                  slug={obj.attributes.slug}
-                  locale={locale}
-                />
-              </div>
-            ))}
-        </div>
-
-        <div
-          className={
-            "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 overflow-hidden transition-all"
-          }
-          style={{ maxHeight: isOpen ? bodyHeight : 0 }}
+          className={styles.gridWrap}
+          style={{ maxHeight: getSize() }}
           ref={bodyRef}
         >
-          {projects &&
-            projects
-              .slice(3)
-              .map((obj) => (
-                <ProjectCard
-                  title={obj.attributes.title}
-                  status={obj.attributes.status}
-                  image={obj.attributes?.thumbnail}
-                  location={obj.attributes.location}
-                  properties={null}
-                  large={false}
-                  link={`projects/${obj.attributes.slug}`}
+          <div
+            className={`grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-5 mb-5`}
+          >
+            {projects &&
+              projects.map((obj, idx) => (
+                <div
                   key={obj.id}
-                  locale={locale}
-                />
+                  className={`${
+                    idx === 0 ? "md:col-span-2 lg:row-span-2" : "md:col-span-1"
+                  }`}
+                >
+                  <ProjectCard
+                    title={obj.attributes.title}
+                    status={obj.attributes.status}
+                    image={obj.attributes?.thumbnail}
+                    location={obj.attributes.location}
+                    properties={idx === 0 ? obj.attributes?.propertyList : null}
+                    large={idx === 0}
+                    key={obj.id}
+                    slug={obj.attributes.slug}
+                    locale={locale}
+                  />
+                </div>
               ))}
+          </div>
         </div>
 
         {projects.length > 3 && (
@@ -109,3 +105,32 @@ const ProjectsGrid = ({ title, projects, linkLabel, description, locale }) => {
 };
 
 export default ProjectsGrid;
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = React.useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  React.useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}
