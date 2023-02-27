@@ -119,7 +119,7 @@ const About = ({ description, links, videoUrl, image }) => {
               onClick={() => setOpen(true)}
               className={`${styles.link} flex items-center`}
             >
-              {locale === "en " ? "SHOW MORE" : "Показать больше"}
+              {locale === "en" ? "SHOW MORE" : "Показать больше"}
               <i>
                 <svg
                   width="12"
