@@ -116,7 +116,7 @@ const About = ({ description, links, videoUrl, image }) => {
             </nav>
 
             <button
-              onClick={() => setOpen(true)}
+              onClick={() => setOpen(!open)}
               className={`${styles.link} flex items-center`}
             >
               {locale === "en" ? "SHOW MORE" : "Показать больше"}
