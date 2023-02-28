@@ -117,8 +117,8 @@ const Project = ({
           {project.attributes.alexVillasBack && (
             <div className={"mb-12 xl:mb-24"}>
               <AlexVillas
-                firstText={page.attributes?.alexVillasBack.firstText}
-                secondText={page.attributes?.alexVillasBack.secondText}
+                firstText={project.attributes?.alexVillasBack.firstText}
+                secondText={project.attributes?.alexVillasBack.secondText}
               />
             </div>
           )}
