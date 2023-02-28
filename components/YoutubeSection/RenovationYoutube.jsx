@@ -14,7 +14,6 @@ import "swiper/css/free-mode";
 const Index = ({ youtubeLinks, locale }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
-  {console.log(youtubeLinks)}
   return (
     <section className={styles.youtube + " " + styles.renovation}>
       <div className={"container"}>
