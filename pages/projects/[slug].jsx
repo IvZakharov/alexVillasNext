@@ -134,7 +134,7 @@ const Project = ({
       {project.attributes.status === "onSale" && (
         <>
           {project.attributes?.Plash && (
-            <div className={"mb-8 md:mb-16 lg:mb-10"}>
+            <div className={"mb-16 md:mb-16 lg:mb-10"}>
               <ComplexPlash items={project.attributes.Plash} />
             </div>
           )}
