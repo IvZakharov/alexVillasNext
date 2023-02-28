@@ -1,6 +1,6 @@
 import styles from "./MobileMenu.module.scss";
 import HeroMenu from "../HeroMenu/HeroMenu";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { menutopru } from "../../data/menutopru";
@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
   const router = useRouter();
   const { locale } = router;
+  
   return (
     <div className={`pt-6 ${styles.mobileMenu}`}>
       <div className="container flex flex-col md:items-center md:justify-between md:flex-row overflow-y-scroll">
@@ -35,7 +36,7 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
                     <ul className={styles.subMenu}>
                       {obj.subLinks.map((sublink, i)=>(
                         <li className={styles.subLi} key={i}>
-                          <Link href={sublink.slug} className={styles.linkSub} onClick={() => OnClickClose(false)}>
+                          <Link href={sublink.slug} className={styles.linkSub}>
                             {sublink.label}
                           </Link>
                         </li>
@@ -57,7 +58,7 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
                           </li>
                           {sales.links && sales.links.map((sale, i)=>(
                             <li className={styles.subLi} key={i}>
-                              <Link href={"/projects/"+sale.slug} className={styles.linkSub} onClick={() => OnClickClose(false)}>
+                              <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
                                 {sale.title}</Link>
                             </li>
                           ))}

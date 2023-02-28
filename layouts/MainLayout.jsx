@@ -1,8 +1,9 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import MobileMenu from "../components/MobileMenu/MobileMenu";
+import { useRouter } from "next/router";
 
 const MainLayout = ({
   children,
@@ -20,6 +21,16 @@ const MainLayout = ({
   locale
 }) => {
   const [openedMenu, setOpenedMenu] = React.useState(false);
+  const router = useRouter();
+  useEffect(()=>{
+    
+    const handleRouterChange = (url, {shallow}) => {
+      console.log(openedMenu)
+        setOpenedMenu(false)
+    }
+    
+    router.events.on("routeChangeComplete", handleRouterChange)
+  }, [])
 
   return (
     <>
