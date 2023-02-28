@@ -10,6 +10,7 @@ const nextConfig = {
       "img.youtube.com",
       "alexvillas.sgp1.digitaloceanspaces.com",
       "a0.muscache.com",
+      "alexvillas.sgp1.cdn.digitaloceanspaces.com"
     ],
   },
   i18n: {

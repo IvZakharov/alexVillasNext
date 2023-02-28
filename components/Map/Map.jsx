@@ -4,7 +4,6 @@ import GoogleMapReact from "google-map-react";
 import LegendSidebar from "./LegendSidebar/LegendSidebar";
 import MapMarker from "./Marker/Marker";
 import { mapStyles } from "../../data/mapStyles";
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Map = ({ title, description, objects }) => {
   const [legendIsOpen, setLegendIsOpen] = React.useState(false);

@@ -24,8 +24,8 @@ const MapMarker = ({
               alt={"complex marker"}
               src={
                 markerIsActive
-                  ? "/images/map/complexMarkerActive.svg"
-                  : "/images/map/complexMarker.svg"
+                  ? "/images/map/marker.svg"
+                  : "/images/map/marker.svg"
               }
               width={51}
               height={62}

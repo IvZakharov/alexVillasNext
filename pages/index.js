@@ -92,7 +92,7 @@ const gridOnSaleProjectsRu = {
 const gridOnSaleProjectsEn = {
   title: "PROJECTS\nON SALE",
   description:
-    "We focus on prime locations, decent infrastructure and cutting edge architecture \nThis ensures high ratings in booking services, which transforms into higher gains for our investors.",
+    "We focus on prime locations, decent infrastructure and cutting edge architecture. \nThis ensures high ratings in booking services, which transforms into higher gains for our investors.",
   buttonLabel: "MORE PROJECTS ON SALE",
 };
 

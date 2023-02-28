@@ -44,7 +44,7 @@ const Team = ({ teamArr }) => {
           {locale === "en" ? (
             <>
               <p className={"text textSmall mb-5"}>
-                Team is our highest valued asset. We gathered the finest
+                Team is our highest valued asset. <br/> We gathered the finest
                 professionals with expansive experience in their respective
                 fields.
               </p>

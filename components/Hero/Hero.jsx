@@ -21,7 +21,7 @@ const Hero = ({
   const getMediaType = (mime) => {
     return mime.split("/")[0];
   };
-
+  
   return (
     <section className={styles.hero}>
       {backgroundMedia && (
@@ -29,7 +29,7 @@ const Hero = ({
           {getMediaType(backgroundMedia.attributes.mime) === "video" ? (
             <video loop autoPlay preload muted className={styles.videoBack}>
               <source
-                src={`https://${backgroundMedia.attributes.url}`}
+                src={backgroundMedia.attributes.url}
                 type={backgroundMedia.attributes.mime}
               />
             </video>
