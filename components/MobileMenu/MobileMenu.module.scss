@@ -22,6 +22,7 @@
       margin-bottom: 2em;
     .menu{
       width: fit-content;
+
       li{
         margin-bottom: 30px;
         padding-bottom: 10px;
@@ -29,6 +30,7 @@
         &:last-child{
           margin-bottom: unset;
         }
+
         .links{
           display: block;
           width: 200px;
@@ -41,7 +43,6 @@
           color: #FFFFFF;
           letter-spacing: -0.01em;
         }
-
         &:hover{
           .subMenu{
             display: block;
@@ -63,7 +64,7 @@
           li{
             margin-top: 10px;
             margin-bottom: 5px;
-            border-bottom: 1px solid #FFFFFF;
+
             padding-bottom: 3px;
           }
           .linkSub{
@@ -76,7 +77,11 @@
             font-style: normal;
             letter-spacing: 0.02em;
             color: #FFFFFF;
-
+            padding: 5px;
+            p{
+              margin: 10px 0px;
+              border-bottom: 1px solid #FFFFFF;
+            }
           }
         }
       }

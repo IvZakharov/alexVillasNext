@@ -25,7 +25,6 @@ const MainLayout = ({
   useEffect(()=>{
     
     const handleRouterChange = (url, {shallow}) => {
-      console.log(openedMenu)
         setOpenedMenu(false)
     }
     
