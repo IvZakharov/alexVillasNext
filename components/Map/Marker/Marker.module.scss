@@ -6,15 +6,15 @@
 
   .projectIcon {
     position: relative;
-    width: 51px;
-    height: 62px;
+    width: 41px;
+    height: 55px;
     line-height: 0;
     transform: translate(-50%, -50%);
     transition: transform 0.2s ease-in-out;
 
     .title {
       position: absolute;
-      top: -12px;
+      top: -18px;
       left: 50%;
       font-weight: 700;
       font-size: 9px;

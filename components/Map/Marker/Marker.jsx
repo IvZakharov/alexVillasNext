@@ -24,12 +24,12 @@ const MapMarker = ({
               alt={"complex marker"}
               src={
                 markerIsActive
-                  ? "/images/map/marker.svg"
-                  : "/images/map/marker.svg"
+                  ? "/images/map/AVYellowMarker.svg"
+                  : "/images/map/AVBlackMarker.svg"
               }
-              width={51}
-              height={62}
-              sizes="51px"
+              width={41}
+              height={52}
+              sizes="41px"
               style={{
                 width: "100%",
                 height: "auto",
