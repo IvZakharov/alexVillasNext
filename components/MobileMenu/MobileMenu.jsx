@@ -28,14 +28,14 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
             {menu &&
               menu.map((obj, i) => (
                 <li className={styles.liLink} key={i}>
-                  <Link href={obj.slug} className={`${styles.links}`}>
+                  <Link href={obj.slug} className={`${styles.links}`} >
                     {obj.label}
                   </Link>
                   {obj.subLinks && (
                     <ul className={styles.subMenu}>
                       {obj.subLinks.map((sublink, i)=>(
                         <li className={styles.subLi} key={i}>
-                          <Link href={sublink.slug} className={styles.linkSub} >
+                          <Link href={sublink.slug} className={styles.linkSub} onClick={() => OnClickClose(false)}>
                             {sublink.label}
                           </Link>
                         </li>
@@ -57,7 +57,7 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
                           </li>
                           {sales.links && sales.links.map((sale, i)=>(
                             <li className={styles.subLi} key={i}>
-                              <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
+                              <Link href={"/projects/"+sale.slug} className={styles.linkSub} onClick={() => OnClickClose(false)}>
                                 {sale.title}</Link>
                             </li>
                           ))}
