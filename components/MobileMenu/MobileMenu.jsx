@@ -37,7 +37,7 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
                       {obj.subLinks.map((sublink, i)=>(
                         <li className={styles.subLi} key={i}>
                           <Link href={sublink.slug} className={styles.linkSub}>
-                            <p>{sublink.label}</p>
+                            {sublink.label}
                           </Link>
                         </li>
                       ))}
@@ -59,7 +59,7 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
                           {sales.links && sales.links.map((sale, i)=>(
                             <li className={styles.subLi} key={i}>
                               <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
-                                <p>{sale.title}</p>
+                                {sale.title}
                               </Link>
                             </li>
                           ))}

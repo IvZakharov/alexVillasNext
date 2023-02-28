@@ -23,7 +23,7 @@ const MainLayout = ({
   const [openedMenu, setOpenedMenu] = React.useState(false);
   const router = useRouter();
   useEffect(()=>{
-    
+    console.log(openedMenu)
     const handleRouterChange = (url, {shallow}) => {
         setOpenedMenu(false)
     }
