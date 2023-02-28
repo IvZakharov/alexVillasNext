@@ -1,11 +1,15 @@
 @import "styles/variables";
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   width: 100%;
-  padding-top: 210px;
-  padding-bottom: 64px;
+  padding-top: 150px;
+  padding-bottom: 20px;
+  @media only screen and (min-height: 810px) and (max-width: 768px) {
+    padding-top: 210px;
+    padding-bottom: 64px;
+  }
 
   .background {
     position: absolute;
@@ -102,6 +106,7 @@
       display: flex;
       width: fit-content;
       align-items: center;
+      margin-bottom: 1em;
 
       @media (min-width: 984px) {
         top: 20px;

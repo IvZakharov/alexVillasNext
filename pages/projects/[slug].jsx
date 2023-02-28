@@ -96,7 +96,7 @@ const Project = ({
       menuProject={getProjectsLinks(projects, ["onSale", "soldOut"])}
       locale={locale}
     >
-      <div className={"mb-16 md:mb-32 xl:mb-24"}>
+      <div className={"mb-4 sm:mb-16 md:mb-32 xl:mb-24"}>
         <ProjectHero
           h1first={project.attributes.hero.title}
           h1second={project.attributes.hero.titleBottom}
