@@ -4,8 +4,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { menutopru } from "../../data/menutopru";
+import { useRouter } from "next/router";
 
-const MobileMenu = ({ OnClickClose, logo, menu, contact }) => {
+const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <div className={`pt-6 ${styles.mobileMenu}`}>
       <div className="container flex flex-col md:items-center md:justify-between md:flex-row overflow-y-scroll">
@@ -36,6 +39,29 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact }) => {
                             {sublink.label}
                           </Link>
                         </li>
+                      ))}
+                    </ul>
+                  )}
+                  {obj.project && (
+                    <ul className={styles.subMenu}>
+                      {project && project.map((sales, r)=>(
+                        <>
+                          <li className={styles.nolink} key={r}>
+                            {sales.status === "onSale"
+                              ? locale === "en"
+                                ? "On sale"
+                                : "В продаже"
+                              : locale === "en"
+                                ? "Sold out"
+                                : "Завершенные"}
+                          </li>
+                          {sales.links && sales.links.map((sale, i)=>(
+                            <li className={styles.subLi} key={i}>
+                              <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
+                                {sale.title}</Link>
+                            </li>
+                          ))}
+                        </>
                       ))}
                     </ul>
                   )}
