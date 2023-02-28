@@ -33,7 +33,12 @@
     gap: 20px;
     border-bottom: 1px solid white;
     margin-bottom: 20px;
-
+    &:first-child{
+      p{
+        text-transform: uppercase;
+        font-family: var(--robotoCondensed-font);
+      }
+    }
     &:last-child {
       margin-top: 20px;
       border-bottom: none;

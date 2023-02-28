@@ -198,7 +198,7 @@ export default function Renovation({
               "Sometimes it only takes minimum<br /> intervention to drastically improve the <br />performance of investment property."
             }
             secondBlock={
-              "We know how to find perfect villas, make an <br />budget-efficient renovations and rent it out for <br />higher gains."
+              "We know how to find perfect villas, make <br />budget-efficient renovations and rent it out for <br />higher gains."
             }
           />
         ) : (
