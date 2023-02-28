@@ -27,7 +27,7 @@ const Hero = ({
       {backgroundMedia && (
         <div className={styles.background}>
           {getMediaType(backgroundMedia.attributes.mime) === "video" ? (
-            <video loop autoPlay preload muted playsinline className={styles.videoBack}>
+            <video loop autoPlay preload muted playsInline className={styles.videoBack}>
               <source
                 src={backgroundMedia.attributes.url}
                 type={backgroundMedia.attributes.mime}
