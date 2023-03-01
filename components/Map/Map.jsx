@@ -11,8 +11,8 @@ const Map = ({ title, description, objects }) => {
   
   const defaultProps = {
     center: {
-      lat: -8.657406,
-      lng: 115.1413728,
+      lat: -8.647479107911783,
+      lng: 115.13215561071966,
     },
     zoom: 15,
   };
