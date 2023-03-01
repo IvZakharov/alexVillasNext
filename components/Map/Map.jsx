@@ -17,7 +17,7 @@ const Map = ({ title, description, objects }) => {
       lat: -8.657479107911783,
       lng: 115.13805561071966,
     },
-    zoom: size < 768 ? 15 : 14,
+    zoom: size.width < 768 ? 14 : 15,
   };
   const handleCloseLegend = () => {
     setLegendIsOpen(false);
