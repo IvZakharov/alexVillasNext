@@ -16,7 +16,9 @@
     cursor: pointer;
 
     &:hover {
-      background-color: #292929;
+      @media (min-width: 576px) {
+        background-color: #292929;
+      }
     }
 
     .name {
@@ -39,7 +41,9 @@
   }
 
   .active {
-    background-color: #292929;
+    @media (min-width: 576px) {
+      background-color: #292929;
+    }
   }
 }
 

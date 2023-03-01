@@ -9,7 +9,7 @@ const FormContactHero = ({ hrefLabel, arrow }) => {
   return (
     <form className={styles.FormContactHero}>
       <TextField type={'text'} name={'Name'} placeholder={locale === 'ru' ? 'Ваше Имя: ': 'Your name:'} required/>
-      <TextField type={'text'} name={'Phone'} placeholder={locale === 'ru' ? 'Телефон: ' : 'Phone/WhatsApp'} required/>
+      <TextField type={'text'} name={'Phone'} placeholder={locale === 'ru' ? 'Телефон/WhatsApp: ' : 'Phone/WhatsApp:'} required/>
       <button type="submit" className={`${styles.button}`}>
         <p>{parse(hrefLabel)}</p>
         {arrow && (

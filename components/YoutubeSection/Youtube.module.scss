@@ -139,19 +139,19 @@
 }
 
 .renovation{
-  width: 200px;
-  @media (min-width: 310px) {
-    width: 300px;
-  }
-  @media (min-width: 410px) {
-    width: 400px;
-  }
-  @media (min-width: 510px) {
-    width: 500px;
-  }
-  @media (min-width: 610px) {
-    width: auto;
-  }
+  min-width: 200px;
+  //@media (min-width: 310px) {
+  //  width: 300px;
+  //}
+  //@media (min-width: 410px) {
+  //  width: 400px;
+  //}
+  //@media (min-width: 510px) {
+  //  width: 500px;
+  //}
+  //@media (min-width: 610px) {
+  //  width: auto;
+  //}
 }
 
 .thumb {

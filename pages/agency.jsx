@@ -25,7 +25,7 @@ const ctaRu = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Номер телефона:",
+      placeholder: "Номер телефона/WhatsApp:",
       required: true,
     },
     {
@@ -50,7 +50,7 @@ const ctaEn = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Phone number:",
+      placeholder: "Phone number/WhatsApp:",
       required: true,
     },
     {

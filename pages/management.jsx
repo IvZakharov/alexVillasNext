@@ -13,11 +13,11 @@ import { getProjectsLinks } from "../utils/getProjectsLinks";
 
 const Data = [
   {
-    title: '15-30<span class="text">%</span>',
+    title: '15-30<span class="text weight500">%</span>',
     lable: "годовая \nдоходность",
   },
   {
-    title: '3<span class="text">года</span>',
+    title: '3<span class="text weight500">года</span>',
     lable: "Срок \nинвестиций",
   },
   {
@@ -29,18 +29,18 @@ const Data = [
     lable: "ОТРЕСТАВРИРОВАННЫХ \nВИЛЛ",
   },
   {
-    title: '8 <span class="text">лет</span>',
+    title: '8<span class="text weight500">лет</span>',
     lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
   },
 ];
 
 const DataEn = [
   {
-    title: '15-30<span class="text">%</span>',
+    title: '15-30<span class="text weight500">%</span>',
     lable: "ANNUAL \nRETURNS",
   },
   {
-    title: '3<span class="text">YEARS</span>',
+    title: '3<span class="text weight500">YEARS</span>',
     lable: "INVESTMENT \nPERIOD",
   },
   {
@@ -52,7 +52,7 @@ const DataEn = [
     lable: "RENOVATED \nPROPERTIES",
   },
   {
-    title: '8 <span class="text">YEARS</span>',
+    title: '8<span class="text weight500">YEARS</span>',
     lable: "EXPERIENCE \nIN BALI",
   },
 ];
@@ -183,7 +183,7 @@ export default function Management({
             link={airbnb.attributes.airbnbLink}
             linkLabel={
               locale == "en"
-                ? "MORE OUR PROPERTIES ON AIRBNB"
+                ? "MORE PROPERTIES ON AIRBNB"
                 : "БОЛЬШЕ НАШИХ ОБЪЕКТОВ НА AIRBNB"
             }
             full={true}

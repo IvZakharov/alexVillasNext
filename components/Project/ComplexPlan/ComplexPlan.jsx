@@ -34,7 +34,7 @@ const ComplexPlan = ({ComplexPlan}) => {
           </div>
           <div className={styles.buttonBlock}>
             <a href={"#form"} className={` button text`}>
-              {locale === 'ru'? "Забронировать" : "BOOK THE PROPERTY"}
+              {locale === 'ru'? "Забронировать" : "BOOK YOUR PROPERTY"}
             </a>
           </div>
         </div>

@@ -17,7 +17,7 @@ const Index = ({ youtubeLinks, locale }) => {
   return (
     <section className={styles.youtube + " " + styles.renovation}>
       <div className={"container"}>
-          <div className={""}>
+          <div className={"h-full"}>
             <Swiper
               spaceBetween={20}
               effect={"fade"}

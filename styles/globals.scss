@@ -137,7 +137,6 @@ a {
 .ruText {
   letter-spacing: normal;
 }
-
 .text {
   font-weight: 300;
   font-size: 16px;
@@ -303,6 +302,7 @@ a {
   }
 
   input {
+    font-family: var(--roboto-font);
     width: 100%;
     background: unset;
     border-bottom: 1px solid #858585;
@@ -468,3 +468,7 @@ a {
 .radio:disabled + label::before {
   background-color: $primary;
 }
+.weight500{
+  font-weight: 500;
+}
+

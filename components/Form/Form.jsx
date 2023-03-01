@@ -2,8 +2,11 @@ import styles from "./Form.module.scss";
 import Button from "../../ui/Button/Button";
 import Link from "next/link";
 import TextField from "../../ui/TextField/TextField";
+import { useRouter } from "next/router";
 
 const Form = ({ fields, submitButtonText }) => {
+  const router = useRouter();
+  const { locale } = router;
   return (
     <form className={styles.form}>
       {fields &&
@@ -21,7 +24,7 @@ const Form = ({ fields, submitButtonText }) => {
         <Button type={"submit"}>{submitButtonText}</Button>
 
         <Link href={"#"} className={styles.policyLink}>
-          Политика конфиденциальности
+          {locale === 'ru' ? "Политика конфиденциальности" : "Privacy Policy" }
         </Link>
       </div>
     </form>
