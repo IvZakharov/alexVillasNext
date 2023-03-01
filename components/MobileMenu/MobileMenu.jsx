@@ -28,14 +28,14 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
           <ul className={`${styles.menu} flex flex-col md:flex-row`}>
             {menu &&
               menu.map((obj, i) => (
-                <li className={styles.liLink} key={i}>
+                <li className={styles.liLink} key={i + obj.slug}>
                   <Link href={obj.slug} className={`${styles.links}`} >
                     {obj.label}
                   </Link>
                   {obj.subLinks && (
                     <ul className={styles.subMenu}>
                       {obj.subLinks.map((sublink, i)=>(
-                        <li className={styles.subLi} key={i}>
+                        <li className={styles.subLi} key={i + sublink.slug}>
                           <Link href={sublink.slug} className={styles.linkSub}>
                             {sublink.label}
                           </Link>
@@ -47,7 +47,7 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
                     <ul className={styles.subMenu}>
                       {project && project.map((sales, r)=>(
                         <>
-                          <li className={styles.nolink} key={r}>
+                          <li className={styles.nolink} key={r + sales.status}>
                             {sales.status === "onSale"
                               ? locale === "en"
                                 ? "On sale"
@@ -56,8 +56,8 @@ const MobileMenu = ({ OnClickClose, logo, menu, contact, project }) => {
                                 ? "Sold out"
                                 : "Завершенные"}
                           </li>
-                          {sales.links && sales.links.map((sale, i)=>(
-                            <li className={styles.subLi} key={i}>
+                          {sales.links && sales.links.sort((a,b) => (a.title < b.title) ? 1 : ((b.title < a.title) ? -1 : 0)).map((sale, i)=>(
+                            <li className={styles.subLi} key={i + sale.slug}>
                               <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
                                 {sale.title}
                               </Link>

@@ -28,13 +28,13 @@ export const mapStyles = [
         saturation: 36,
       },
       {
-        color: "#000000",
+        color: "#000",
       },
       {
-        lightness: 40,
+        lightness: 70,
       },
       {
-        visibility: "off",
+        visibility: "on",
       },
     ],
   },
@@ -43,10 +43,10 @@ export const mapStyles = [
     elementType: "labels.text.stroke",
     stylers: [
       {
-        visibility: "off",
+        visibility: "on",
       },
       {
-        color: "#000000",
+        color: "#000",
       },
       {
         lightness: 16,

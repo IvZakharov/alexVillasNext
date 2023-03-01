@@ -8,7 +8,7 @@ import { mapStyles } from "../../data/mapStyles";
 const Map = ({ title, description, objects }) => {
   const [legendIsOpen, setLegendIsOpen] = React.useState(false);
   const [activeObjectIndex, setActiveObjectIndex] = React.useState(0);
-
+  
   const defaultProps = {
     center: {
       lat: -8.657406,

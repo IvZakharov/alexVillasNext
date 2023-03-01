@@ -53,7 +53,7 @@ const HeaderMenu = ({ logo, menu, contact, menuProject, locale }) => {
                                 ? "Sold out"
                                 : "Завершенные"}
                           </li>
-                          {sales.links && sales.links.map((sale, i)=>(
+                          {sales.links && sales.links.sort((a,b) => (a.title < b.title) ? 1 : ((b.title < a.title) ? -1 : 0)).map((sale, i)=>(
                             <li className={styles.subLi} key={i}>
                               <Link href={"/projects/"+sale.slug} className={styles.linkSub}>
                                 {sale.title}</Link>
