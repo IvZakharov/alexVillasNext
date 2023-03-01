@@ -7,10 +7,11 @@
   background: black;
   position: fixed;
   top:0;
+  bottom: 0;
   z-index: 100;
   min-width: 100vw;
   height: 100vh;
-  scroll-behavior: auto;
+  overflow: auto;
   .logo{
     width: fit-content;
   }

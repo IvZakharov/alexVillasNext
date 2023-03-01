@@ -16,7 +16,7 @@ const ManagementGrid = ({
       <div className={"container"}>
         <div
           className={
-            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-7 lg:mb-12 "
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5 lg:mb-12 "
           }
         >
           <h2 className={"h2 whitespace-pre-line"}>{title}</h2>
