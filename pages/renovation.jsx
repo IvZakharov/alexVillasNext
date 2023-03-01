@@ -37,7 +37,7 @@ const ctaRu = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Номер телефона:",
+      placeholder: "Номер телефона/WhatsApp:",
       required: true,
     },
   ],
@@ -45,7 +45,7 @@ const ctaRu = {
 
 const ctaEn = {
   title: "GET PROPERTIES CATALOG \n<span>AND FINANCIAL MODEL</span>",
-  submitButtonText: "Submit your application",
+  submitButtonText: "Get",
   gradient: true,
   fields: [
     {
@@ -57,7 +57,7 @@ const ctaEn = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Phone number:",
+      placeholder: "Phone number/WhatsApp:",
       required: true,
     },
   ],
@@ -82,11 +82,11 @@ export default function Renovation({
 
   const Data = [
     {
-      title: '15-30<span class="text">%</span>',
+      title: '15-30<span class="text weight500">%</span>',
       lable: "годовая \nдоходность",
     },
     {
-      title: '3<span class="text">года</span>',
+      title: '3<span class="text weight500">года</span>',
       lable: "Срок \nинвестиций",
     },
     {
@@ -98,18 +98,18 @@ export default function Renovation({
       lable: "ОТРЕСТАВРИРОВАННЫХ \nВИЛЛ",
     },
     {
-      title: '8 <span class="text">лет</span>',
+      title: '8<span class="text weight500">лет</span>',
       lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
     },
   ];
 
   const DataEn = [
     {
-      title: '15-30<span class="text">%</span>',
+      title: '15-30<span class="text weight500">%</span>',
       lable: "ANNUAL \nRETURNS",
     },
     {
-      title: '3<span class="text">YEARS</span>',
+      title: '3<span class="text weight500">YEARS</span>',
       lable: "INVESTMENT \nPERIOD",
     },
     {
@@ -121,7 +121,7 @@ export default function Renovation({
       lable: "RENOVATED \nPROPERTIES",
     },
     {
-      title: '8 <span class="text">YEARS</span>',
+      title: '8<span class="text weight500">YEARS</span>',
       lable: "EXPERIENCE \nIN BALI",
     },
   ];
@@ -175,7 +175,12 @@ export default function Renovation({
       {renovationYoutube && (
         <div className={"mb-16 xl:mb-24"}>
           <div className={"container"}>
+            <div className={'grid grid-cols-1 lg:grid-cols-2'}>
+              <h2 className={'h2 uppercase mb-7'}>{locale === 'ru' ? <><span>Больше на нашем</span><br /> YouTube-канале</> : <><span>More on our</span><br /> YouTube channel</>}</h2>
+            </div>
+            
             <div className={"grid md:grid-cols-2"}>
+              
               <RenovationYoutube youtubeLinks={renovationYoutube.attributes?.YouTubeUrl} locale={locale} />
             </div>
           </div>
@@ -308,7 +313,7 @@ export async function getStaticProps({ locale }) {
 
     fetchAPI("/principle", { populate: "deep", locale: locale }),
     fetchAPI("/why-alex", { populate: "deep", locale: locale }),
-    fetchAPI("/review"),
+    fetchAPI("/review", {locale: locale }),
     fetchAPI("/invest-model", { populate: "deep", locale: locale }),
     fetchAPI("/steps-renovation", { populate: "deep", locale: locale }),
     fetchAPI("/renovation-youtube", { populate: "deep", locale: locale }),

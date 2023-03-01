@@ -162,8 +162,8 @@ const ProjectFinanceModeling = ({ villas }) => {
                         }
                         
                       </h3>
-                      <p className={styles.roiLabel}>{locale === 'ru' ? "Сумма" : "Sum"}</p>
-                      <p className={styles.roiLabel}>ROI</p>
+                      <p className={styles.title}>{locale === 'ru' ? "Сумма" : "Sum"}</p>
+                      <p className={styles.title}>ROI</p>
                     </div>
 
                     <div className={styles.table}>
@@ -193,8 +193,8 @@ const ProjectFinanceModeling = ({ villas }) => {
                         }
                         
                       </h3>
-                      <p className={styles.roiLabel}>{locale === 'ru' ? "Сумма" : "Sum"}</p>
-                      <p className={styles.roiLabel}>ROI</p>
+                      <p className={styles.title}>{locale === 'ru' ? "Сумма" : "Sum"}</p>
+                      <p className={styles.title}>ROI</p>
                     </div>
 
                     <div className={styles.table}>

@@ -14,7 +14,7 @@ const VillasParam = ({Villas}) => {
     <section className={styles.VillasParam}>
       <div className="container">
         <h2 className={"h2"}>{ locale === 'ru' ? <><span>Информация</span> о виллах</> : <>ABOUT <span>VILLAS</span></>}</h2>
-        <div className={`${styles.lable} uppercase`}>{locale ==='ru' ? "Основные параметры" : "Main settings"}</div>
+        <div className={`${styles.lable} uppercase`}>{locale ==='ru' ? "Основные параметры" : "Specifications"}</div>
         {Villas && Villas.map((obj) =>(
           <ParamCard Param={obj} index={obj.id} />
           ))}

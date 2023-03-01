@@ -78,7 +78,7 @@ const gridOnSaleProjectsRu = {
 const gridOnSaleProjectsEn = {
   title: "PROJECTS\nON SALE",
   description:
-    "We focus on prime locations, decent infrastructure and cutting edge architecture \nThis ensures high ratings in booking services, which transforms into higher gains for our investors.",
+    "We focus on prime locations, decent infrastructure and cutting edge architecture. \nThis ensures high ratings in booking services, which transforms into higher gains for our investors.",
   buttonLabel: "MORE PROJECTS ON SALE",
 };
 
@@ -115,20 +115,20 @@ const DataEN = [
   },
   {
     title: "146",
-    lable: "Total Qty \nunits",
+    lable: "Total Qty \n of units",
   },
   {
-    title: "1 <span class='text'>year</span>",
+    title: "1<span class='text weight500'>year</span>",
     lable: "Average \nconstruction time ",
   },
   {
     title: "30+",
-    lable: "ROLLERS ABOUT CONSTRUCTION ON\n" +
-      "OUR YOUTUBE CHANNEL",
+    lable: "construction-related videos\n" +
+      "on our YouTube channel",
   },
   {
-    title: "8 <span class='text'>years</span>",
-    lable: "EXPERIENCE ON\n" +
+    title: "8<span class='text weight500'>years</span>",
+    lable: "EXPERIENCE IN\n" +
       "BALI MARKET",
   },
 ]
@@ -143,7 +143,7 @@ const DataRu = [
     lable: "Общее кол-во \nЮнитов",
   },
   {
-    title: "1 <span class='text'>год</span>",
+    title: "1<span class='text weight500'>год</span>",
     lable: "Средний срок \nстроительства ",
   },
   {
@@ -151,7 +151,7 @@ const DataRu = [
     lable: "РОЛИКОВ О СТРОЙКЕ НА  \nНАШЕМ YOUTUBE-КАНАЛЕ",
   },
   {
-    title: "8 <span class='text'>лет</span>",
+    title: "8<span class='text weight500'>лет</span>",
     lable: "ОПЫТА НА \nРЫНКЕ БАЛИ",
   },
 ]

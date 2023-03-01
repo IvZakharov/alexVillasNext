@@ -77,14 +77,17 @@
     }
 
     p {
-     // font-family: var(--oswald-font);
       font-weight: 500;
-      font-size: 16px;
-      line-height: 138%;
+      font-size: 12px;
+      line-height: 15px;
       text-align: center;
       text-transform: uppercase;
       color: #ffffff;
       white-space: pre-line;
+      @media (min-width: 768px) {
+        font-size: 16px;
+        line-height: 138%;
+      }
 
       @media (min-width: 984px) {
         font-size: 20px;

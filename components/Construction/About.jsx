@@ -16,9 +16,9 @@ const ConstructionAbout = ({data}) => {
               {parse(data.attributes?.description)}
             </p>
 
-            <div className={"flex flex-wrap gap-8 md:gap-12 mb-8"}>
+            <div className={"flex flex-wrap gap-10 md:gap-12 mb-10"}>
               {data.attributes?.Cheks && data.attributes.Cheks.map((obj, i)=>(
-                <div key={i} className={"mb-8"}>
+                <div key={i} className={"md:mb-8"}>
                   <i className={"block mb-5"}>
                     <svg
                       width="18"
