@@ -26,7 +26,7 @@ const ctaRu = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Номер телефона:",
+      placeholder: "Номер телефона/WhatsApp:",
       required: true,
     },
   ],
@@ -47,14 +47,8 @@ const ctaEn = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Phone number:",
+      placeholder: "Phone number/WhatsApp:",
       required: true,
-    },
-    {
-      name: "userMessage",
-      type: "text",
-      placeholder: "Your message:",
-      required: false,
     },
   ],
 };
@@ -113,7 +107,7 @@ export default function Jobs({
         </div>
       )}
       
-      {locale == "en" ? (
+      {locale === "en" ? (
         <CtaSection
           title={ctaEn.title}
           image={page.attributes.formImage}

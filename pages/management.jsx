@@ -72,7 +72,7 @@ const ctaRu = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Номер телефона:",
+      placeholder: "Номер телефона/WhatsApp:",
       required: true,
     },
     {
@@ -99,7 +99,7 @@ const ctaEn = {
     {
       name: "userTel",
       type: "tel",
-      placeholder: "Phone number:",
+      placeholder: "Phone number/WhatsApp:",
       required: true,
     },
     {
@@ -170,19 +170,19 @@ export default function Management({
         {airbnb && (
           <ManagementGrid
             title={
-              locale == "en"
+              locale === "en"
                 ? "PROPERTIES\nWE MANAGE"
                 : "ОБЪЕКТЫ \nВ УПРАВЛЕНИИ "
             }
             description={
-              locale == "en"
+              locale === "en"
                 ? ""
                 : "Инвестируйте от $70.000 c доходностью 15-25% годовых. Цикл инвестиций 3 года."
             }
             projects={airbnb.attributes?.objects}
             link={airbnb.attributes.airbnbLink}
             linkLabel={
-              locale == "en"
+              locale === "en"
                 ? "MORE PROPERTIES ON AIRBNB"
                 : "БОЛЬШЕ НАШИХ ОБЪЕКТОВ НА AIRBNB"
             }
@@ -191,7 +191,7 @@ export default function Management({
         )}
       </div>
 
-      {locale == "en" ? (
+      {locale === "en" ? (
         <CtaSection
           title={ctaEn.title}
           image={page.attributes.formImage}
