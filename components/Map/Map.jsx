@@ -4,17 +4,20 @@ import GoogleMapReact from "google-map-react";
 import LegendSidebar from "./LegendSidebar/LegendSidebar";
 import MapMarker from "./Marker/Marker";
 import { mapStyles } from "../../data/mapStyles";
+import {useWindowSize} from "../../utils/useWindowSize";
+
 
 const Map = ({ title, description, objects }) => {
+  const size = useWindowSize();
   const [legendIsOpen, setLegendIsOpen] = React.useState(false);
   const [activeObjectIndex, setActiveObjectIndex] = React.useState(0);
   
   const defaultProps = {
     center: {
-      lat: -8.647479107911783,
-      lng: 115.13215561071966,
+      lat: -8.657479107911783,
+      lng: 115.13805561071966,
     },
-    zoom: 15,
+    zoom: size < 768 ? 15 : 14,
   };
   const handleCloseLegend = () => {
     setLegendIsOpen(false);
