@@ -45,6 +45,10 @@ const About = ({ description, links, videoUrl, image }) => {
     <section className={styles.about}>
       <div className={"container"}>
         <div className={"xl:pt-32 xl:pb-32"}>
+          <div className={"xl:translate-x-32 mb-5 md:mb-8"}>
+            <h2 className="h2"> {locale==='ru' ? "О нас" : "ABOUT US"} </h2>
+          </div>
+          
           <div className={`${styles.videoPlaceholder}`}>
             {image && (
               <Image
