@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-
-import { Fancybox as NativeFancybox } from "@fancyapps/ui";
+import React, { useEffect } from 'react';
+import { Fancybox as NativeFancybox } from '@fancyapps/ui';
 import "@fancyapps/ui/dist/fancybox.css";
 
 const MyFancybox = (props) => {
-  const delegate = props.delegate || "[data-fancybox]";
+  const delegate = props.delegate || '[data-fancybox]';
 
   useEffect(() => {
     const opts = props.options || {};
